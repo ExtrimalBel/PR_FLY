@@ -1,0 +1,50 @@
+﻿Сборка начата 16.07.2017 12:02:15.
+     1>Проект "G:\PR_FLY\PR_FLY\PR_FLY.vcxproj" в узле 2 (целевые объекты Build).
+     1>Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"G:\PR_FLY\Static_Debug\PR_FLY.exe" /INCREMENTAL /NOLOGO /LIBPATH:".\SFML-2.4.2\lib" "sfml-main-d.lib" "sfml-graphics-s-d.lib" "sfml-window-s-d.lib" "sfml-system-s-d.lib" opengl32.lib winmm.lib gdi32.lib jpeg.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"G:\PR_FLY\Static_Debug\PR_FLY.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /ENTRY:"main" /DYNAMICBASE /NXCOMPAT /IMPLIB:"G:\PR_FLY\Static_Debug\PR_FLY.lib" /MACHINE:X86 Static_Debug\main.obj
+     1>msvcprtd.lib(locale0_implib.obj) : warning LNK4210: ёхъЎш  .CRT ёє∙хёЄтєхЄ; ьюуєЄ ёє∙хёЄтютрЄ№ эхюсЁрсюЄрээ√х ёЄрЄшўхёъшх шэшЎшрышчрЄюЁ√ шыш чэръш чртхЁ°хэш
+     1>main.obj : warning LNK4210: ёхъЎш  .CRT ёє∙хёЄтєхЄ; ьюуєЄ ёє∙хёЄтютрЄ№ эхюсЁрсюЄрээ√х ёЄрЄшўхёъшх шэшЎшрышчрЄюЁ√ шыш чэръш чртхЁ°хэш
+     1>sfml-graphics-s-d.lib(Color.cpp.obj) : warning LNK4210: ёхъЎш  .CRT ёє∙хёЄтєхЄ; ьюуєЄ ёє∙хёЄтютрЄ№ эхюсЁрсюЄрээ√х ёЄрЄшўхёъшх шэшЎшрышчрЄюЁ√ шыш чэръш чртхЁ°хэш
+     1>sfml-graphics-s-d.lib(Shape.cpp.obj) : warning LNK4210: ёхъЎш  .CRT ёє∙хёЄтєхЄ; ьюуєЄ ёє∙хёЄтютрЄ№ эхюсЁрсюЄрээ√х ёЄрЄшўхёъшх шэшЎшрышчрЄюЁ√ шыш чэръш чртхЁ°хэш
+     1>sfml-graphics-s-d.lib(CircleShape.cpp.obj) : warning LNK4210: ёхъЎш  .CRT ёє∙хёЄтєхЄ; ьюуєЄ ёє∙хёЄтютрЄ№ эхюсЁрсюЄрээ√х ёЄрЄшўхёъшх шэшЎшрышчрЄюЁ√ шыш чэръш чртхЁ°хэш
+     1>sfml-graphics-s-d.lib(RenderTarget.cpp.obj) : warning LNK4210: ёхъЎш  .CRT ёє∙хёЄтєхЄ; ьюуєЄ ёє∙хёЄтютрЄ№ эхюсЁрсюЄрээ√х ёЄрЄшўхёъшх шэшЎшрышчрЄюЁ√ шыш чэръш чртхЁ°хэш
+     1>sfml-graphics-s-d.lib(RenderWindow.cpp.obj) : warning LNK4210: ёхъЎш  .CRT ёє∙хёЄтєхЄ; ьюуєЄ ёє∙хёЄтютрЄ№ эхюсЁрсюЄрээ√х ёЄрЄшўхёъшх шэшЎшрышчрЄюЁ√ шыш чэръш чртхЁ°хэш
+     1>sfml-graphics-s-d.lib(RenderStates.cpp.obj) : warning LNK4210: ёхъЎш  .CRT ёє∙хёЄтєхЄ; ьюуєЄ ёє∙хёЄтютрЄ№ эхюсЁрсюЄрээ√х ёЄрЄшўхёъшх шэшЎшрышчрЄюЁ√ шыш чэръш чртхЁ°хэш
+     1>sfml-graphics-s-d.lib(Transform.cpp.obj) : warning LNK4210: ёхъЎш  .CRT ёє∙хёЄтєхЄ; ьюуєЄ ёє∙хёЄтютрЄ№ эхюсЁрсюЄрээ√х ёЄрЄшўхёъшх шэшЎшрышчрЄюЁ√ шыш чэръш чртхЁ°хэш
+     1>sfml-graphics-s-d.lib(Transformable.cpp.obj) : warning LNK4210: ёхъЎш  .CRT ёє∙хёЄтєхЄ; ьюуєЄ ёє∙хёЄтютрЄ№ эхюсЁрсюЄрээ√х ёЄрЄшўхёъшх шэшЎшрышчрЄюЁ√ шыш чэръш чртхЁ°хэш
+     1>sfml-graphics-s-d.lib(VertexArray.cpp.obj) : warning LNK4210: ёхъЎш  .CRT ёє∙хёЄтєхЄ; ьюуєЄ ёє∙хёЄтютрЄ№ эхюсЁрсюЄрээ√х ёЄрЄшўхёъшх шэшЎшрышчрЄюЁ√ шыш чэръш чртхЁ°хэш
+     1>sfml-graphics-s-d.lib(Texture.cpp.obj) : warning LNK4210: ёхъЎш  .CRT ёє∙хёЄтєхЄ; ьюуєЄ ёє∙хёЄтютрЄ№ эхюсЁрсюЄрээ√х ёЄрЄшўхёъшх шэшЎшрышчрЄюЁ√ шыш чэръш чртхЁ°хэш
+     1>sfml-graphics-s-d.lib(View.cpp.obj) : warning LNK4210: ёхъЎш  .CRT ёє∙хёЄтєхЄ; ьюуєЄ ёє∙хёЄтютрЄ№ эхюсЁрсюЄрээ√х ёЄрЄшўхёъшх шэшЎшрышчрЄюЁ√ шыш чэръш чртхЁ°хэш
+     1>sfml-graphics-s-d.lib(BlendMode.cpp.obj) : warning LNK4210: ёхъЎш  .CRT ёє∙хёЄтєхЄ; ьюуєЄ ёє∙хёЄтютрЄ№ эхюсЁрсюЄрээ√х ёЄрЄшўхёъшх шэшЎшрышчрЄюЁ√ шыш чэръш чртхЁ°хэш
+     1>sfml-graphics-s-d.lib(Shader.cpp.obj) : warning LNK4210: ёхъЎш  .CRT ёє∙хёЄтєхЄ; ьюуєЄ ёє∙хёЄтютрЄ№ эхюсЁрсюЄрээ√х ёЄрЄшўхёъшх шэшЎшрышчрЄюЁ√ шыш чэръш чртхЁ°хэш
+     1>sfml-graphics-s-d.lib(GLExtensions.cpp.obj) : warning LNK4210: ёхъЎш  .CRT ёє∙хёЄтєхЄ; ьюуєЄ ёє∙хёЄтютрЄ№ эхюсЁрсюЄрээ√х ёЄрЄшўхёъшх шэшЎшрышчрЄюЁ√ шыш чэръш чртхЁ°хэш
+     1>sfml-graphics-s-d.lib(GLCheck.cpp.obj) : warning LNK4210: ёхъЎш  .CRT ёє∙хёЄтєхЄ; ьюуєЄ ёє∙хёЄтютрЄ№ эхюсЁрсюЄрээ√х ёЄрЄшўхёъшх шэшЎшрышчрЄюЁ√ шыш чэръш чртхЁ°хэш
+     1>sfml-graphics-s-d.lib(Image.cpp.obj) : warning LNK4210: ёхъЎш  .CRT ёє∙хёЄтєхЄ; ьюуєЄ ёє∙хёЄтютрЄ№ эхюсЁрсюЄрээ√х ёЄрЄшўхёъшх шэшЎшрышчрЄюЁ√ шыш чэръш чртхЁ°хэш
+     1>sfml-graphics-s-d.lib(Glsl.cpp.obj) : warning LNK4210: ёхъЎш  .CRT ёє∙хёЄтєхЄ; ьюуєЄ ёє∙хёЄтютрЄ№ эхюсЁрсюЄрээ√х ёЄрЄшўхёъшх шэшЎшрышчрЄюЁ√ шыш чэръш чртхЁ°хэш
+     1>sfml-graphics-s-d.lib(ImageLoader.cpp.obj) : warning LNK4210: ёхъЎш  .CRT ёє∙хёЄтєхЄ; ьюуєЄ ёє∙хёЄтютрЄ№ эхюсЁрсюЄрээ√х ёЄрЄшўхёъшх шэшЎшрышчрЄюЁ√ шыш чэръш чртхЁ°хэш
+     1>sfml-window-s-d.lib(VideoMode.cpp.obj) : warning LNK4210: ёхъЎш  .CRT ёє∙хёЄтєхЄ; ьюуєЄ ёє∙хёЄтютрЄ№ эхюсЁрсюЄрээ√х ёЄрЄшўхёъшх шэшЎшрышчрЄюЁ√ шыш чэръш чртхЁ°хэш
+     1>sfml-window-s-d.lib(Window.cpp.obj) : warning LNK4210: ёхъЎш  .CRT ёє∙хёЄтєхЄ; ьюуєЄ ёє∙хёЄтютрЄ№ эхюсЁрсюЄрээ√х ёЄрЄшўхёъшх шэшЎшрышчрЄюЁ√ шыш чэръш чртхЁ°хэш
+     1>sfml-window-s-d.lib(Context.cpp.obj) : warning LNK4210: ёхъЎш  .CRT ёє∙хёЄтєхЄ; ьюуєЄ ёє∙хёЄтютрЄ№ эхюсЁрсюЄрээ√х ёЄрЄшўхёъшх шэшЎшрышчрЄюЁ√ шыш чэръш чртхЁ°хэш
+     1>sfml-window-s-d.lib(VideoModeImpl.cpp.obj) : warning LNK4210: ёхъЎш  .CRT ёє∙хёЄтєхЄ; ьюуєЄ ёє∙хёЄтютрЄ№ эхюсЁрсюЄрээ√х ёЄрЄшўхёъшх шэшЎшрышчрЄюЁ√ шыш чэръш чртхЁ°хэш
+     1>sfml-window-s-d.lib(GlContext.cpp.obj) : warning LNK4210: ёхъЎш  .CRT ёє∙хёЄтєхЄ; ьюуєЄ ёє∙хёЄтютрЄ№ эхюсЁрсюЄрээ√х ёЄрЄшўхёъшх шэшЎшрышчрЄюЁ√ шыш чэръш чртхЁ°хэш
+     1>sfml-window-s-d.lib(WindowImpl.cpp.obj) : warning LNK4210: ёхъЎш  .CRT ёє∙хёЄтєхЄ; ьюуєЄ ёє∙хёЄтютрЄ№ эхюсЁрсюЄрээ√х ёЄрЄшўхёъшх шэшЎшрышчрЄюЁ√ шыш чэръш чртхЁ°хэш
+     1>sfml-window-s-d.lib(WglContext.cpp.obj) : warning LNK4210: ёхъЎш  .CRT ёє∙хёЄтєхЄ; ьюуєЄ ёє∙хёЄтютрЄ№ эхюсЁрсюЄрээ√х ёЄрЄшўхёъшх шэшЎшрышчрЄюЁ√ шыш чэръш чртхЁ°хэш
+     1>sfml-window-s-d.lib(JoystickManager.cpp.obj) : warning LNK4210: ёхъЎш  .CRT ёє∙хёЄтєхЄ; ьюуєЄ ёє∙хёЄтютрЄ№ эхюсЁрсюЄрээ√х ёЄрЄшўхёъшх шэшЎшрышчрЄюЁ√ шыш чэръш чртхЁ°хэш
+     1>sfml-window-s-d.lib(SensorManager.cpp.obj) : warning LNK4210: ёхъЎш  .CRT ёє∙хёЄтєхЄ; ьюуєЄ ёє∙хёЄтютрЄ№ эхюсЁрсюЄрээ√х ёЄрЄшўхёъшх шэшЎшрышчрЄюЁ√ шыш чэръш чртхЁ°хэш
+     1>sfml-window-s-d.lib(WindowImplWin32.cpp.obj) : warning LNK4210: ёхъЎш  .CRT ёє∙хёЄтєхЄ; ьюуєЄ ёє∙хёЄтютрЄ№ эхюсЁрсюЄрээ√х ёЄрЄшўхёъшх шэшЎшрышчрЄюЁ√ шыш чэръш чртхЁ°хэш
+     1>sfml-window-s-d.lib(WglExtensions.cpp.obj) : warning LNK4210: ёхъЎш  .CRT ёє∙хёЄтєхЄ; ьюуєЄ ёє∙хёЄтютрЄ№ эхюсЁрсюЄрээ√х ёЄрЄшўхёъшх шэшЎшрышчрЄюЁ√ шыш чэръш чртхЁ°хэш
+     1>sfml-window-s-d.lib(Joystick.cpp.obj) : warning LNK4210: ёхъЎш  .CRT ёє∙хёЄтєхЄ; ьюуєЄ ёє∙хёЄтютрЄ№ эхюсЁрсюЄрээ√х ёЄрЄшўхёъшх шэшЎшрышчрЄюЁ√ шыш чэръш чртхЁ°хэш
+     1>sfml-window-s-d.lib(JoystickImpl.cpp.obj) : warning LNK4210: ёхъЎш  .CRT ёє∙хёЄтєхЄ; ьюуєЄ ёє∙хёЄтютрЄ№ эхюсЁрсюЄрээ√х ёЄрЄшўхёъшх шэшЎшрышчрЄюЁ√ шыш чэръш чртхЁ°хэш
+     1>sfml-system-s-d.lib(String.cpp.obj) : warning LNK4210: ёхъЎш  .CRT ёє∙хёЄтєхЄ; ьюуєЄ ёє∙хёЄтютрЄ№ эхюсЁрсюЄрээ√х ёЄрЄшўхёъшх шэшЎшрышчрЄюЁ√ шыш чэръш чртхЁ°хэш
+     1>sfml-system-s-d.lib(Err.cpp.obj) : warning LNK4210: ёхъЎш  .CRT ёє∙хёЄтєхЄ; ьюуєЄ ёє∙хёЄтютрЄ№ эхюсЁрсюЄрээ√х ёЄрЄшўхёъшх шэшЎшрышчрЄюЁ√ шыш чэръш чртхЁ°хэш
+     1>sfml-system-s-d.lib(Time.cpp.obj) : warning LNK4210: ёхъЎш  .CRT ёє∙хёЄтєхЄ; ьюуєЄ ёє∙хёЄтютрЄ№ эхюсЁрсюЄрээ√х ёЄрЄшўхёъшх шэшЎшрышчрЄюЁ√ шыш чэръш чртхЁ°хэш
+     1>sfml-system-s-d.lib(ClockImpl.cpp.obj) : warning LNK4210: ёхъЎш  .CRT ёє∙хёЄтєхЄ; ьюуєЄ ёє∙хёЄтютрЄ№ эхюсЁрсюЄрээ√х ёЄрЄшўхёъшх шэшЎшрышчрЄюЁ√ шыш чэръш чртхЁ°хэш
+     1>msvcprtd.lib(locale0_implib.obj) : warning LNK4210: ёхъЎш  .CRT ёє∙хёЄтєхЄ; ьюуєЄ ёє∙хёЄтютрЄ№ эхюсЁрсюЄрээ√х ёЄрЄшўхёъшх шэшЎшрышчрЄюЁ√ шыш чэръш чртхЁ°хэш
+     1>MSVCRTD.lib(atonexit.obj) : warning LNK4210: ёхъЎш  .CRT ёє∙хёЄтєхЄ; ьюуєЄ ёє∙хёЄтютрЄ№ эхюсЁрсюЄрээ√х ёЄрЄшўхёъшх шэшЎшрышчрЄюЁ√ шыш чэръш чртхЁ°хэш
+     1>MSVCRTD.lib(cpu_disp.obj) : warning LNK4210: ёхъЎш  .CRT ёє∙хёЄтєхЄ; ьюуєЄ ёє∙хёЄтютрЄ№ эхюсЁрсюЄрээ√х ёЄрЄшўхёъшх шэшЎшрышчрЄюЁ√ шыш чэръш чртхЁ°хэш
+         PR_FLY.vcxproj -> G:\PR_FLY\Static_Debug\PR_FLY.exe
+     1>Сборка проекта "G:\PR_FLY\PR_FLY\PR_FLY.vcxproj" завершена (целевые объекты Build).
+
+Сборка успешно завершена.
+
+Затраченное время: 00:00:01.31

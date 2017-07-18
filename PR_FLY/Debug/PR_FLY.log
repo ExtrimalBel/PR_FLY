@@ -1,0 +1,28 @@
+﻿Сборка начата 18.07.2017 23:59:51.
+     1>Проект "I:\PR_FLY\PR_FLY\PR_FLY.vcxproj" в узле 2 (целевые объекты Build).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I..\Logic /I".\SFML-2.4.2\include" /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D SFML_DYNAMIC /D WIN32 /D _DEBUG /D _WINDOWS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt main.cpp
+         main.cpp
+     1>i:\pr_fly\logic\mainmenu.h(2): warning C4005: LOGIC_API: изменение макроопределения
+                 i:\pr_fly\logic\logic.h(10): см. предыдущее определение "LOGIC_API"
+     1>i:\pr_fly\logic\baseitem.h(5): warning C4005: LOGIC_API: изменение макроопределения
+                 i:\pr_fly\logic\mainmenu.h(2): см. предыдущее определение "LOGIC_API"
+     1>i:\pr_fly\logic\shipsclasses.h(57): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+     1>i:\pr_fly\logic\shipsclasses.h(60): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+     1>i:\pr_fly\logic\shipsclasses.h(63): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+     1>i:\pr_fly\logic\shipsclasses.h(66): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+     1>i:\pr_fly\logic\shipsclasses.h(69): warning C4244: +=: преобразование "float" в "int", возможна потеря данных
+     1>i:\pr_fly\logic\shipsclasses.h(70): warning C4244: +=: преобразование "float" в "int", возможна потеря данных
+     1>i:\pr_fly\logic\shipsclasses.h(75): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+     1>i:\pr_fly\pr_fly\main.cpp(20): warning C4244: инициализация: преобразование "sf::Int64" в "float", возможна потеря данных
+     1>i:\pr_fly\logic\mainmenu.h(67): warning C4715: MainMenu::IsSelected: значение возвращается не при всех путях выполнения
+     1>i:\pr_fly\logic\settings.h(149): warning C4715: GameSettings::IfExitSet: значение возвращается не при всех путях выполнения
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"I:\PR_FLY\Debug\PR_FLY.exe" /INCREMENTAL /NOLOGO /LIBPATH:".\SFML-2.4.2\lib" "sfml-graphics-d.lib" "sfml-window-d.lib" "sfml-system-d.lib" "sfml-main-d.lib" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"I:\PR_FLY\Debug\PR_FLY.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /ENTRY:"main" /DYNAMICBASE /NXCOMPAT /IMPLIB:"I:\PR_FLY\Debug\PR_FLY.lib" /MACHINE:X86 Debug\main.obj
+         I:\PR_FLY\Debug\Logic.lib
+         PR_FLY.vcxproj -> I:\PR_FLY\Debug\PR_FLY.exe
+     1>Сборка проекта "I:\PR_FLY\PR_FLY\PR_FLY.vcxproj" завершена (целевые объекты Build).
+
+Сборка успешно завершена.
+
+Затраченное время: 00:00:19.71
