@@ -5,6 +5,7 @@
 #else
 #define LOGIC_API __declspec(dllimport)
 #endif
+// This class is the game Field class
 class GameField{
 	sf::Texture BackText;
 	sf::Sprite SprBack;
