@@ -81,4 +81,7 @@ public:
 	{
 		window.draw(spr);
 	}
+	int getx(){return x;}
+	int gety(){return y;}
+
 };

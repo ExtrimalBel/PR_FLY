@@ -4,6 +4,8 @@
 #else
 #define LOGIC_API __declspec(dllimport)
 #endif
+#ifndef BASE_I
+#define BASE_I
 class LOGIC_API Item
 {
 protected:
@@ -28,5 +30,7 @@ protected:
 	{
 		x = x1;
 		y = y1;
+		spr.setPosition(x, y);
 	}
 };
+#endif
