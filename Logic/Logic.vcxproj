@@ -50,11 +50,11 @@
       <PrecompiledHeader>Use</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>SFML_DYNAMIC;WIN32;_DEBUG;_WINDOWS;_USRDLL;LOGIC_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>NOMINMAX;SFML_DYNAMIC;WIN32;_DEBUG;_WINDOWS;_USRDLL;LOGIC_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>..\PR_FLY\SFML-2.4.2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <SubSystem>Windows</SubSystem>
+      <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>..\PR_FLY\SFML-2.4.2\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>sfml-graphics-d.lib;sfml-window-d.lib;sfml-system-d.lib;sfml-main-d.lib;%(AdditionalDependencies)</AdditionalDependencies>
@@ -100,7 +100,9 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
       </PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="Game.cpp" />
     <ClCompile Include="Logic.cpp" />
+    <ClCompile Include="Settings.cpp" />
     <ClCompile Include="ShipsClasses.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>

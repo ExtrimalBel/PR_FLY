@@ -7,14 +7,14 @@
 int main()
 {
 	sf::Clock clock;
-	sf::RenderWindow window(sf::VideoMode(1280, 720), "SFML works!",sf::Style::Fullscreen);
+	sf::RenderWindow window(sf::VideoMode(1280, 720), "SFML works!");
 	window.setFramerateLimit(30);
 	MainMenu *Menu = new MainMenu;
 	GameField *Field = NULL;
 	GameSettings *Set = NULL;
 
-	enum State {Game,Settings,MMenu,Records};
-	State Statements = MMenu;
+	enum State {Game,Settings,MMenu,Records}; // Перечесление отображающее состояние работы программы
+	State Statements = MMenu; // Объект данного перечесления
 	while (window.isOpen())
 	{
 		float time = clock.getElapsedTime().asMicroseconds();
@@ -27,7 +27,7 @@ int main()
 				window.close();
 		}
 		window.clear();
-		switch (Statements)
+		switch (Statements) // В зависимости от состояния игры делаем нужные действия
 		{
 		case MMenu:
 			Menu->DrawMenu(window);

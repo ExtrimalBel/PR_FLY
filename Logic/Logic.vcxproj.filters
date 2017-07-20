@@ -62,5 +62,11 @@
     <ClCompile Include="Bullets.cpp">
       <Filter>Файлы исходного кода</Filter>
     </ClCompile>
+    <ClCompile Include="Game.cpp">
+      <Filter>Файлы исходного кода</Filter>
+    </ClCompile>
+    <ClCompile Include="Settings.cpp">
+      <Filter>Файлы исходного кода</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

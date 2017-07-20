@@ -7,7 +7,8 @@ Bullet::Bullet(int direction,int x1,int y1) : Item("./img/bullets/bullet.png",0,
 	dir = direction;
 }
 
-void Bullet::Move(float time, sf::RenderWindow &window){
+void Bullet::Move(float time, sf::RenderWindow &window)
+{
 	/*int dx = 0;
 	dir = 2;
 	if (dir == 1) dx = -0.1;
@@ -20,3 +21,4 @@ void Bullet::Draw(sf::RenderWindow &window)
 {
 	window.draw(spr);
 }
+

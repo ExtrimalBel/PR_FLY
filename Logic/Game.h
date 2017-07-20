@@ -11,61 +11,25 @@
 
 #include "Bullets.h"
 // This class is the game Field class
-class __declspec(dllexport) GameField{
+class LOGIC_API GameField
+{
 	std::vector<Bullet> Bullets;
+	std::vector<Enemy_Ship> Enemys;
 	sf::Texture BackText;
 	sf::Sprite SprBack;
 	sf::Texture DHudText;
 	sf::Texture UHudText;
 	sf::Sprite UHudSpr;
+	sf::Clock Enemy_Clock;
 public:
 	Player p1;
-	GameField()
-	{
-		UHudText.loadFromFile("./img/game/uhud.png");
-		UHudSpr.setTexture(UHudText);
-		UHudSpr.setPosition(0, 0);
-	}
-	void updatePlayer(float time,sf::RenderWindow &window)
-	{
-		window.draw(UHudSpr);
-		p1.Move(time);
-		p1.Draw(window);
-		AddBullet();
-		IFDELETEBULLET();
-		for (std::vector<Bullet>::iterator it = Bullets.begin(); it != Bullets.end(); it++)
-		{
-			it->Move(time, window);
-			it->Draw(window);
-		}
-	}
-	int IfExit()
-	{
-		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
-			return 1;
-		else
-			return 0;
-	}
-	void AddBullet()
-	{
-		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space))
-		{
-			Bullet B(2,p1.getx() + 70,p1.gety() + 35);
-			Bullets.push_back(B);
-		}
-	}
-	void IFDELETEBULLET()
-	{
-		for (std::vector<Bullet>::iterator it = Bullets.begin(); it != Bullets.end(); it++)
-		{
-			if (Bullets.size() == 0) return;
-			if (it->Getx() > 1280)
-			{
-				Bullets.erase(it);
-				IFDELETEBULLET();
-				break;
-			}
-		}
-	}
+	GameField();
+	void updatePlayer(float time, sf::RenderWindow &window);
+	int IfExit();
+	void AddBullet(); // Добавление выпущенного снаряда
+	void IFDELETEBULLET(); // Вышел ли снаряд за пределы поля
+	void Addenemy();
+	void IfEnemyKill();
+	void MoveEnemys(float time);
 };
 #endif

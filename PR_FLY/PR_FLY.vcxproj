@@ -72,7 +72,7 @@
       <AdditionalIncludeDirectories>..\Logic;.\SFML-2.4.2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <SubSystem>Windows</SubSystem>
+      <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>sfml-graphics-d.lib;sfml-window-d.lib;sfml-system-d.lib;sfml-main-d.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>.\SFML-2.4.2\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
