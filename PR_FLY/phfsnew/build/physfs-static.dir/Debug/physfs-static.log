@@ -1,0 +1,102 @@
+﻿Сборка начата 09.08.2017 18:09:29.
+     1>Проект "C:\Users\FAMILY\Desktop\phfsnew\build\physfs-static.vcxproj" в узле 3 (целевые объекты Build).
+     1>CustomBuild:
+         Building Custom Rule C:/Users/FAMILY/Desktop/phfsnew/CMakeLists.txt
+         CMake does not need to re-run because C:/Users/FAMILY/Desktop/phfsnew/build/CMakeFiles/generate.stamp is up-to-date.
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /IC:\Users\FAMILY\Desktop\phfsnew\. /IC:\Users\FAMILY\Desktop\phfsnew\zlib123 /Zi /nologo /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _CRT_SECURE_NO_WARNINGS=1 /D _REENTRANT /D _THREAD_SAFE /D HAVE_ASSERT_H=1 /D PHYSFS_SUPPORTS_ZIP=1 /D PHYSFS_SUPPORTS_7Z=1 /D PHYSFS_SUPPORTS_GRP=1 /D PHYSFS_SUPPORTS_WAD=1 /D PHYSFS_SUPPORTS_HOG=1 /D PHYSFS_SUPPORTS_MVL=1 /D PHYSFS_SUPPORTS_QPAK=1 /D Z_PREFIX=1 /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"physfs-static.dir\Debug\\" /Fd"physfs-static.dir\Debug\vc120.pdb" /Gd /TC /analyze- /errorReport:prompt C:\Users\FAMILY\Desktop\phfsnew\physfs.c C:\Users\FAMILY\Desktop\phfsnew\physfs_byteorder.c C:\Users\FAMILY\Desktop\phfsnew\physfs_unicode.c C:\Users\FAMILY\Desktop\phfsnew\platform\os2.c C:\Users\FAMILY\Desktop\phfsnew\platform\pocketpc.c C:\Users\FAMILY\Desktop\phfsnew\platform\posix.c C:\Users\FAMILY\Desktop\phfsnew\platform\unix.c C:\Users\FAMILY\Desktop\phfsnew\platform\macosx.c C:\Users\FAMILY\Desktop\phfsnew\platform\windows.c C:\Users\FAMILY\Desktop\phfsnew\archivers\dir.c C:\Users\FAMILY\Desktop\phfsnew\archivers\grp.c C:\Users\FAMILY\Desktop\phfsnew\archivers\hog.c C:\Users\FAMILY\Desktop\phfsnew\archivers\lzma.c C:\Users\FAMILY\Desktop\phfsnew\archivers\mvl.c C:\Users\FAMILY\Desktop\phfsnew\archivers\qpak.c C:\Users\FAMILY\Desktop\phfsnew\archivers\wad.c C:\Users\FAMILY\Desktop\phfsnew\archivers\zip.c C:\Users\FAMILY\Desktop\phfsnew\lzma\C\7zCrc.c C:\Users\FAMILY\Desktop\phfsnew\lzma\C\Archive\7z\7zBuffer.c C:\Users\FAMILY\Desktop\phfsnew\lzma\C\Archive\7z\7zDecode.c C:\Users\FAMILY\Desktop\phfsnew\lzma\C\Archive\7z\7zExtract.c C:\Users\FAMILY\Desktop\phfsnew\lzma\C\Archive\7z\7zHeader.c C:\Users\FAMILY\Desktop\phfsnew\lzma\C\Archive\7z\7zIn.c C:\Users\FAMILY\Desktop\phfsnew\lzma\C\Archive\7z\7zItem.c C:\Users\FAMILY\Desktop\phfsnew\lzma\C\Archive\7z\7zMethodID.c C:\Users\FAMILY\Desktop\phfsnew\lzma\C\Compress\Branch\BranchX86.c C:\Users\FAMILY\Desktop\phfsnew\lzma\C\Compress\Branch\BranchX86_2.c C:\Users\FAMILY\Desktop\phfsnew\lzma\C\Compress\Lzma\LzmaDecode.c C:\Users\FAMILY\Desktop\phfsnew\zlib123\adler32.c C:\Users\FAMILY\Desktop\phfsnew\zlib123\compress.c C:\Users\FAMILY\Desktop\phfsnew\zlib123\crc32.c C:\Users\FAMILY\Desktop\phfsnew\zlib123\deflate.c C:\Users\FAMILY\Desktop\phfsnew\zlib123\gzio.c C:\Users\FAMILY\Desktop\phfsnew\zlib123\infback.c C:\Users\FAMILY\Desktop\phfsnew\zlib123\inffast.c C:\Users\FAMILY\Desktop\phfsnew\zlib123\inflate.c C:\Users\FAMILY\Desktop\phfsnew\zlib123\inftrees.c C:\Users\FAMILY\Desktop\phfsnew\zlib123\trees.c C:\Users\FAMILY\Desktop\phfsnew\zlib123\uncompr.c C:\Users\FAMILY\Desktop\phfsnew\zlib123\zutil.c
+         physfs.c
+         physfs_byteorder.c
+         physfs_unicode.c
+         os2.c
+         pocketpc.c
+         posix.c
+         unix.c
+         macosx.c
+         windows.c
+     1>C:\Users\FAMILY\Desktop\phfsnew\platform\windows.c(949): warning C4996: 'GetVersionExA': объявлен deprecate
+                 C:\Program Files (x86)\Windows Kits\8.1\Include\um\sysinfoapi.h(433): см. объявление "GetVersionExA"
+         dir.c
+         grp.c
+         hog.c
+         lzma.c
+     1>C:\Users\FAMILY\Desktop\phfsnew\archivers\lzma.c(134): warning C4244: инициализация: преобразование "PHYSFS_sint64" в "size_t", возможна потеря данных
+     1>C:\Users\FAMILY\Desktop\phfsnew\archivers\lzma.c(331): warning C4244: инициализация: преобразование "CFileSize" в "size_t", возможна потеря данных
+     1>C:\Users\FAMILY\Desktop\phfsnew\archivers\lzma.c(407): warning C4244: =: преобразование "PHYSFS_uint64" в "size_t", возможна потеря данных
+         mvl.c
+         qpak.c
+         wad.c
+         zip.c
+         7zCrc.c
+         7zBuffer.c
+         7zDecode.c
+         Создание кода...
+         Компиляция...
+         7zExtract.c
+         7zHeader.c
+         7zIn.c
+         7zItem.c
+         7zMethodID.c
+         BranchX86.c
+         BranchX86_2.c
+         LzmaDecode.c
+         adler32.c
+         compress.c
+         crc32.c
+         deflate.c
+         gzio.c
+         infback.c
+         inffast.c
+         inflate.c
+         inftrees.c
+         trees.c
+         uncompr.c
+         zutil.c
+         Создание кода...
+       Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"C:\Users\FAMILY\Desktop\phfsnew\build\Debug\physfs.lib" /NOLOGO  /machine:X86 "physfs-static.dir\Debug\physfs.obj"
+         "physfs-static.dir\Debug\physfs_byteorder.obj"
+         "physfs-static.dir\Debug\physfs_unicode.obj"
+         "physfs-static.dir\Debug\os2.obj"
+         "physfs-static.dir\Debug\pocketpc.obj"
+         "physfs-static.dir\Debug\posix.obj"
+         "physfs-static.dir\Debug\unix.obj"
+         "physfs-static.dir\Debug\macosx.obj"
+         "physfs-static.dir\Debug\windows.obj"
+         "physfs-static.dir\Debug\dir.obj"
+         "physfs-static.dir\Debug\grp.obj"
+         "physfs-static.dir\Debug\hog.obj"
+         "physfs-static.dir\Debug\lzma.obj"
+         "physfs-static.dir\Debug\mvl.obj"
+         "physfs-static.dir\Debug\qpak.obj"
+         "physfs-static.dir\Debug\wad.obj"
+         "physfs-static.dir\Debug\zip.obj"
+         "physfs-static.dir\Debug\7zCrc.obj"
+         "physfs-static.dir\Debug\7zBuffer.obj"
+         "physfs-static.dir\Debug\7zDecode.obj"
+         "physfs-static.dir\Debug\7zExtract.obj"
+         "physfs-static.dir\Debug\7zHeader.obj"
+         "physfs-static.dir\Debug\7zIn.obj"
+         "physfs-static.dir\Debug\7zItem.obj"
+         "physfs-static.dir\Debug\7zMethodID.obj"
+         "physfs-static.dir\Debug\BranchX86.obj"
+         "physfs-static.dir\Debug\BranchX86_2.obj"
+         "physfs-static.dir\Debug\LzmaDecode.obj"
+         "physfs-static.dir\Debug\adler32.obj"
+         "physfs-static.dir\Debug\compress.obj"
+         "physfs-static.dir\Debug\crc32.obj"
+         "physfs-static.dir\Debug\deflate.obj"
+         "physfs-static.dir\Debug\gzio.obj"
+         "physfs-static.dir\Debug\infback.obj"
+         "physfs-static.dir\Debug\inffast.obj"
+         "physfs-static.dir\Debug\inflate.obj"
+         "physfs-static.dir\Debug\inftrees.obj"
+         "physfs-static.dir\Debug\trees.obj"
+         "physfs-static.dir\Debug\uncompr.obj"
+         "physfs-static.dir\Debug\zutil.obj"
+         physfs-static.vcxproj -> C:\Users\FAMILY\Desktop\phfsnew\build\Debug\physfs.lib
+     1>Сборка проекта "C:\Users\FAMILY\Desktop\phfsnew\build\physfs-static.vcxproj" завершена (целевые объекты Build).
+
+Сборка успешно завершена.
+
+Затраченное время: 00:00:04.98

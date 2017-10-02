@@ -1,4 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <PropertyGroup />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <RemoteDebuggerCommand>C:\remotetmp\PR_FLY.exe</RemoteDebuggerCommand>
+    <RemoteDebuggerServerName>PRIMARY</RemoteDebuggerServerName>
+    <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+    <RemoteDebuggerWorkingDirectory>C:\remotetmp</RemoteDebuggerWorkingDirectory>
+    <AdditionalFiles>D:\Vitalik_For_Dev\For_Uploads\PR_FLY\Debug\PR_FLY.exe; D:\Vitalik_For_Dev\For_Uploads\PR_FLY\Debug\SoundSystem.dll;D:\Vitalik_For_Dev\For_Uploads\PR_FLY\Debug\Logic.dll;D:\Vitalik_For_Dev\For_Uploads\PR_FLY\Debug\SoundSystem.dll</AdditionalFiles>
+    <DeploymentDirectory>C:\remotetmp</DeploymentDirectory>
+  </PropertyGroup>
 </Project>

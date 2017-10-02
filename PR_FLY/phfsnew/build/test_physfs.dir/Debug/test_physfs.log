@@ -1,0 +1,16 @@
+﻿Сборка начата 09.08.2017 18:09:34.
+     1>Проект "C:\Users\FAMILY\Desktop\phfsnew\build\test_physfs.vcxproj" в узле 3 (целевые объекты Build).
+     1>CustomBuild:
+         Building Custom Rule C:/Users/FAMILY/Desktop/phfsnew/CMakeLists.txt
+         CMake does not need to re-run because C:/Users/FAMILY/Desktop/phfsnew/build/CMakeFiles/generate.stamp is up-to-date.
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /IC:\Users\FAMILY\Desktop\phfsnew\. /IC:\Users\FAMILY\Desktop\phfsnew\zlib123 /Zi /nologo /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _CRT_SECURE_NO_WARNINGS=1 /D _REENTRANT /D _THREAD_SAFE /D HAVE_ASSERT_H=1 /D PHYSFS_SUPPORTS_ZIP=1 /D PHYSFS_SUPPORTS_7Z=1 /D PHYSFS_SUPPORTS_GRP=1 /D PHYSFS_SUPPORTS_WAD=1 /D PHYSFS_SUPPORTS_HOG=1 /D PHYSFS_SUPPORTS_MVL=1 /D PHYSFS_SUPPORTS_QPAK=1 /D Z_PREFIX=1 /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"test_physfs.dir\Debug\\" /Fd"test_physfs.dir\Debug\vc120.pdb" /Gd /TC /analyze- /errorReport:prompt C:\Users\FAMILY\Desktop\phfsnew\test\test_physfs.c
+         test_physfs.c
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\FAMILY\Desktop\phfsnew\build\Debug\test_physfs.exe" /INCREMENTAL /NOLOGO Debug\physfs.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/FAMILY/Desktop/phfsnew/build/Debug/test_physfs.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/FAMILY/Desktop/phfsnew/build/Debug/test_physfs.lib" /MACHINE:X86 /SAFESEH  /machine:X86 test_physfs.dir\Debug\test_physfs.obj
+         test_physfs.vcxproj -> C:\Users\FAMILY\Desktop\phfsnew\build\Debug\test_physfs.exe
+     1>Сборка проекта "C:\Users\FAMILY\Desktop\phfsnew\build\test_physfs.vcxproj" завершена (целевые объекты Build).
+
+Сборка успешно завершена.
+
+Затраченное время: 00:00:01.01

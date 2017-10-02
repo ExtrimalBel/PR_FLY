@@ -1,0 +1,672 @@
+The system is: Windows - 6.1.7601 - AMD64
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler:  
+Build flags: 
+Id flags:  
+
+The output was:
+0
+Microsoft (R) Build Engine ���ᨨ 12.0.21005.1
+[Microsoft .NET Framework ���ᨨ 4.0.30319.42000]
+(C) ��௮��� �������� (Microsoft Corporation). �� �ࠢ� ���饭�.
+
+���ઠ ���� 09.08.2017 18:08:40.
+�஥�� "C:\Users\FAMILY\Desktop\phfsnew\build\CMakeFiles\3.9.0\CompilerIdC\CompilerIdC.vcxproj" � 㧫� 1 (楫��� ��ꥪ�� �� 㬮�砭��).
+PrepareForBuild:
+  �������� ��⠫��� "Debug\".
+  �������� ��⠫��� "Debug\CompilerIdC.tlog\".
+InitializeBuildStatus:
+  �������� "Debug\CompilerIdC.tlog\unsuccessfulbuild", ⠪ ��� �뫮 ������ "AlwaysCreate".
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /nologo /W0 /WX- /Od /Oy- /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TC /analyze- /errorReport:queue CMakeCCompilerId.c
+  CMakeCCompilerId.c
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:".\CompilerIdC.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\CompilerIdC.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\CompilerIdC.lib" /MACHINE:X86 /SAFESEH Debug\CMakeCCompilerId.obj
+  CompilerIdC.vcxproj -> C:\Users\FAMILY\Desktop\phfsnew\build\CMakeFiles\3.9.0\CompilerIdC\.\CompilerIdC.exe
+PostBuildEvent:
+  for %%i in (cl.exe) do @echo CMAKE_C_COMPILER=%%~$PATH:i
+  :VCEnd
+  CMAKE_C_COMPILER=C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\cl.exe
+FinalizeBuildStatus:
+  ���� "Debug\CompilerIdC.tlog\unsuccessfulbuild" 㤠�����.
+  ���饭�� � "Debug\CompilerIdC.tlog\CompilerIdC.lastbuildstate".
+���ઠ �஥�� "C:\Users\FAMILY\Desktop\phfsnew\build\CMakeFiles\3.9.0\CompilerIdC\CompilerIdC.vcxproj" �����襭� (楫��� ��ꥪ�� �� 㬮�砭��).
+
+���ઠ �ᯥ譮 �����襭�.
+    �।�०�����: 0
+    �訡��: 0
+
+����祭��� �६�: 00:00:01.03
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.exe"
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.vcxproj"
+
+The C compiler identification is MSVC, found in "C:/Users/FAMILY/Desktop/phfsnew/build/CMakeFiles/3.9.0/CompilerIdC/CompilerIdC.exe"
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+Compiler:  
+Build flags: 
+Id flags:  
+
+The output was:
+0
+Microsoft (R) Build Engine ���ᨨ 12.0.21005.1
+[Microsoft .NET Framework ���ᨨ 4.0.30319.42000]
+(C) ��௮��� �������� (Microsoft Corporation). �� �ࠢ� ���饭�.
+
+���ઠ ���� 09.08.2017 18:08:41.
+�஥�� "C:\Users\FAMILY\Desktop\phfsnew\build\CMakeFiles\3.9.0\CompilerIdCXX\CompilerIdCXX.vcxproj" � 㧫� 1 (楫��� ��ꥪ�� �� 㬮�砭��).
+PrepareForBuild:
+  �������� ��⠫��� "Debug\".
+  �������� ��⠫��� "Debug\CompilerIdCXX.tlog\".
+InitializeBuildStatus:
+  �������� "Debug\CompilerIdCXX.tlog\unsuccessfulbuild", ⠪ ��� �뫮 ������ "AlwaysCreate".
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /nologo /W0 /WX- /Od /Oy- /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:queue CMakeCXXCompilerId.cpp
+  CMakeCXXCompilerId.cpp
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:".\CompilerIdCXX.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\CompilerIdCXX.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\CompilerIdCXX.lib" /MACHINE:X86 /SAFESEH Debug\CMakeCXXCompilerId.obj
+  CompilerIdCXX.vcxproj -> C:\Users\FAMILY\Desktop\phfsnew\build\CMakeFiles\3.9.0\CompilerIdCXX\.\CompilerIdCXX.exe
+PostBuildEvent:
+  for %%i in (cl.exe) do @echo CMAKE_CXX_COMPILER=%%~$PATH:i
+  :VCEnd
+  CMAKE_CXX_COMPILER=C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\cl.exe
+FinalizeBuildStatus:
+  ���� "Debug\CompilerIdCXX.tlog\unsuccessfulbuild" 㤠�����.
+  ���饭�� � "Debug\CompilerIdCXX.tlog\CompilerIdCXX.lastbuildstate".
+���ઠ �஥�� "C:\Users\FAMILY\Desktop\phfsnew\build\CMakeFiles\3.9.0\CompilerIdCXX\CompilerIdCXX.vcxproj" �����襭� (楫��� ��ꥪ�� �� 㬮�砭��).
+
+���ઠ �ᯥ譮 �����襭�.
+    �।�०�����: 0
+    �訡��: 0
+
+����祭��� �६�: 00:00:00.61
+
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.vcxproj"
+
+The CXX compiler identification is MSVC, found in "C:/Users/FAMILY/Desktop/phfsnew/build/CMakeFiles/3.9.0/CompilerIdCXX/CompilerIdCXX.exe"
+
+Determining if the C compiler works passed with the following output:
+Change Dir: C:/Users/FAMILY/Desktop/phfsnew/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:/Program Files (x86)/MSBuild/12.0/bin/MSBuild.exe" "cmTC_70674.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=12.0"
+Microsoft (R) Build Engine ўҐабЁЁ 12.0.21005.1
+[Microsoft .NET Framework ўҐабЁЁ 4.0.30319.42000]
+(C) Љ®аЇ®а жЁп Њ ©Єа®б®дв (Microsoft Corporation). ‚бҐ Їа ў  § йЁйҐ­л.
+
+‘Ў®аЄ  ­ з в  09.08.2017 18:08:42.
+Џа®ҐЄв "C:\Users\FAMILY\Desktop\phfsnew\build\CMakeFiles\CMakeTmp\cmTC_70674.vcxproj" ў г§«Ґ 1 (жҐ«ҐўлҐ ®ЎкҐЄвл Ї® г¬®«з ­Ёо).
+PrepareForBuild:
+  ‘®§¤ ­ЁҐ Є в «®Ј  "cmTC_70674.dir\Debug\".
+  ‘®§¤ ­ЁҐ Є в «®Ј  "C:\Users\FAMILY\Desktop\phfsnew\build\CMakeFiles\CMakeTmp\Debug\".
+  ‘®§¤ ­ЁҐ Є в «®Ј  "cmTC_70674.dir\Debug\cmTC_70674.tlog\".
+InitializeBuildStatus:
+  ‘®§¤ ­ЁҐ "cmTC_70674.dir\Debug\cmTC_70674.tlog\unsuccessfulbuild", в Є Є Є Ўл«® § ¤ ­® "AlwaysCreate".
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTC_70674.dir\Debug\\" /Fd"cmTC_70674.dir\Debug\vc120.pdb" /Gd /TC /analyze- /errorReport:queue C:\Users\FAMILY\Desktop\phfsnew\build\CMakeFiles\CMakeTmp\testCCompiler.c
+  ЋЇвЁ¬Ё§ЁагойЁ© Є®¬ЇЁ«пв®а Microsoft (R) C/C++ ўҐабЁЁ 18.00.21005.1 ¤«п x86
+  (C) Љ®аЇ®а жЁп Њ ©Єа®б®дв (Microsoft Corporation).  ‚бҐ Їа ў  § йЁйҐ­л.
+  
+  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTC_70674.dir\Debug\\" /Fd"cmTC_70674.dir\Debug\vc120.pdb" /Gd /TC /analyze- /errorReport:queue C:\Users\FAMILY\Desktop\phfsnew\build\CMakeFiles\CMakeTmp\testCCompiler.c
+  
+  testCCompiler.c
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\FAMILY\Desktop\phfsnew\build\CMakeFiles\CMakeTmp\Debug\cmTC_70674.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/FAMILY/Desktop/phfsnew/build/CMakeFiles/CMakeTmp/Debug/cmTC_70674.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/FAMILY/Desktop/phfsnew/build/CMakeFiles/CMakeTmp/Debug/cmTC_70674.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_70674.dir\Debug\testCCompiler.obj
+  cmTC_70674.vcxproj -> C:\Users\FAMILY\Desktop\phfsnew\build\CMakeFiles\CMakeTmp\Debug\cmTC_70674.exe
+FinalizeBuildStatus:
+  ” ©« "cmTC_70674.dir\Debug\cmTC_70674.tlog\unsuccessfulbuild" г¤ «пҐвбп.
+  ЋЎа йҐ­ЁҐ Є "cmTC_70674.dir\Debug\cmTC_70674.tlog\cmTC_70674.lastbuildstate".
+‘Ў®аЄ  Їа®ҐЄв  "C:\Users\FAMILY\Desktop\phfsnew\build\CMakeFiles\CMakeTmp\cmTC_70674.vcxproj" § ўҐаиҐ­  (жҐ«ҐўлҐ ®ЎкҐЄвл Ї® г¬®«з ­Ёо).
+
+‘Ў®аЄ  гбЇҐи­® § ўҐаиҐ­ .
+    ЏаҐ¤гЇаҐ¦¤Ґ­Ё©: 0
+    ЋиЁЎ®Є: 0
+
+‡ ва зҐ­­®Ґ ўаҐ¬п: 00:00:00.64
+
+
+Detecting C compiler ABI info compiled with the following output:
+Change Dir: C:/Users/FAMILY/Desktop/phfsnew/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:/Program Files (x86)/MSBuild/12.0/bin/MSBuild.exe" "cmTC_cac43.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=12.0"
+Microsoft (R) Build Engine ўҐабЁЁ 12.0.21005.1
+[Microsoft .NET Framework ўҐабЁЁ 4.0.30319.42000]
+(C) Љ®аЇ®а жЁп Њ ©Єа®б®дв (Microsoft Corporation). ‚бҐ Їа ў  § йЁйҐ­л.
+
+‘Ў®аЄ  ­ з в  09.08.2017 18:08:43.
+Џа®ҐЄв "C:\Users\FAMILY\Desktop\phfsnew\build\CMakeFiles\CMakeTmp\cmTC_cac43.vcxproj" ў г§«Ґ 1 (жҐ«ҐўлҐ ®ЎкҐЄвл Ї® г¬®«з ­Ёо).
+PrepareForBuild:
+  ‘®§¤ ­ЁҐ Є в «®Ј  "cmTC_cac43.dir\Debug\".
+  ‘®§¤ ­ЁҐ Є в «®Ј  "C:\Users\FAMILY\Desktop\phfsnew\build\CMakeFiles\CMakeTmp\Debug\".
+  ‘®§¤ ­ЁҐ Є в «®Ј  "cmTC_cac43.dir\Debug\cmTC_cac43.tlog\".
+InitializeBuildStatus:
+  ‘®§¤ ­ЁҐ "cmTC_cac43.dir\Debug\cmTC_cac43.tlog\unsuccessfulbuild", в Є Є Є Ўл«® § ¤ ­® "AlwaysCreate".
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTC_cac43.dir\Debug\\" /Fd"cmTC_cac43.dir\Debug\vc120.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeCCompilerABI.c"
+  ЋЇвЁ¬Ё§ЁагойЁ© Є®¬ЇЁ«пв®а Microsoft (R) C/C++ ўҐабЁЁ 18.00.21005.1 ¤«п x86
+  (C) Љ®аЇ®а жЁп Њ ©Єа®б®дв (Microsoft Corporation).  ‚бҐ Їа ў  § йЁйҐ­л.
+  
+  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTC_cac43.dir\Debug\\" /Fd"cmTC_cac43.dir\Debug\vc120.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeCCompilerABI.c"
+  
+  CMakeCCompilerABI.c
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\FAMILY\Desktop\phfsnew\build\CMakeFiles\CMakeTmp\Debug\cmTC_cac43.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/FAMILY/Desktop/phfsnew/build/CMakeFiles/CMakeTmp/Debug/cmTC_cac43.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/FAMILY/Desktop/phfsnew/build/CMakeFiles/CMakeTmp/Debug/cmTC_cac43.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_cac43.dir\Debug\CMakeCCompilerABI.obj
+  cmTC_cac43.vcxproj -> C:\Users\FAMILY\Desktop\phfsnew\build\CMakeFiles\CMakeTmp\Debug\cmTC_cac43.exe
+FinalizeBuildStatus:
+  ” ©« "cmTC_cac43.dir\Debug\cmTC_cac43.tlog\unsuccessfulbuild" г¤ «пҐвбп.
+  ЋЎа йҐ­ЁҐ Є "cmTC_cac43.dir\Debug\cmTC_cac43.tlog\cmTC_cac43.lastbuildstate".
+‘Ў®аЄ  Їа®ҐЄв  "C:\Users\FAMILY\Desktop\phfsnew\build\CMakeFiles\CMakeTmp\cmTC_cac43.vcxproj" § ўҐаиҐ­  (жҐ«ҐўлҐ ®ЎкҐЄвл Ї® г¬®«з ­Ёо).
+
+‘Ў®аЄ  гбЇҐи­® § ўҐаиҐ­ .
+    ЏаҐ¤гЇаҐ¦¤Ґ­Ё©: 0
+    ЋиЁЎ®Є: 0
+
+‡ ва зҐ­­®Ґ ўаҐ¬п: 00:00:00.67
+
+
+Determining if the CXX compiler works passed with the following output:
+Change Dir: C:/Users/FAMILY/Desktop/phfsnew/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:/Program Files (x86)/MSBuild/12.0/bin/MSBuild.exe" "cmTC_eaec0.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=12.0"
+Microsoft (R) Build Engine ўҐабЁЁ 12.0.21005.1
+[Microsoft .NET Framework ўҐабЁЁ 4.0.30319.42000]
+(C) Љ®аЇ®а жЁп Њ ©Єа®б®дв (Microsoft Corporation). ‚бҐ Їа ў  § йЁйҐ­л.
+
+‘Ў®аЄ  ­ з в  09.08.2017 18:08:44.
+Џа®ҐЄв "C:\Users\FAMILY\Desktop\phfsnew\build\CMakeFiles\CMakeTmp\cmTC_eaec0.vcxproj" ў г§«Ґ 1 (жҐ«ҐўлҐ ®ЎкҐЄвл Ї® г¬®«з ­Ёо).
+PrepareForBuild:
+  ‘®§¤ ­ЁҐ Є в «®Ј  "cmTC_eaec0.dir\Debug\".
+  ‘®§¤ ­ЁҐ Є в «®Ј  "C:\Users\FAMILY\Desktop\phfsnew\build\CMakeFiles\CMakeTmp\Debug\".
+  ‘®§¤ ­ЁҐ Є в «®Ј  "cmTC_eaec0.dir\Debug\cmTC_eaec0.tlog\".
+InitializeBuildStatus:
+  ‘®§¤ ­ЁҐ "cmTC_eaec0.dir\Debug\cmTC_eaec0.tlog\unsuccessfulbuild", в Є Є Є Ўл«® § ¤ ­® "AlwaysCreate".
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"cmTC_eaec0.dir\Debug\\" /Fd"cmTC_eaec0.dir\Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:queue C:\Users\FAMILY\Desktop\phfsnew\build\CMakeFiles\CMakeTmp\testCXXCompiler.cxx
+  ЋЇвЁ¬Ё§ЁагойЁ© Є®¬ЇЁ«пв®а Microsoft (R) C/C++ ўҐабЁЁ 18.00.21005.1 ¤«п x86
+  (C) Љ®аЇ®а жЁп Њ ©Єа®б®дв (Microsoft Corporation).  ‚бҐ Їа ў  § йЁйҐ­л.
+  
+  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"cmTC_eaec0.dir\Debug\\" /Fd"cmTC_eaec0.dir\Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:queue C:\Users\FAMILY\Desktop\phfsnew\build\CMakeFiles\CMakeTmp\testCXXCompiler.cxx
+  
+  testCXXCompiler.cxx
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\FAMILY\Desktop\phfsnew\build\CMakeFiles\CMakeTmp\Debug\cmTC_eaec0.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/FAMILY/Desktop/phfsnew/build/CMakeFiles/CMakeTmp/Debug/cmTC_eaec0.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/FAMILY/Desktop/phfsnew/build/CMakeFiles/CMakeTmp/Debug/cmTC_eaec0.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_eaec0.dir\Debug\testCXXCompiler.obj
+  cmTC_eaec0.vcxproj -> C:\Users\FAMILY\Desktop\phfsnew\build\CMakeFiles\CMakeTmp\Debug\cmTC_eaec0.exe
+FinalizeBuildStatus:
+  ” ©« "cmTC_eaec0.dir\Debug\cmTC_eaec0.tlog\unsuccessfulbuild" г¤ «пҐвбп.
+  ЋЎа йҐ­ЁҐ Є "cmTC_eaec0.dir\Debug\cmTC_eaec0.tlog\cmTC_eaec0.lastbuildstate".
+‘Ў®аЄ  Їа®ҐЄв  "C:\Users\FAMILY\Desktop\phfsnew\build\CMakeFiles\CMakeTmp\cmTC_eaec0.vcxproj" § ўҐаиҐ­  (жҐ«ҐўлҐ ®ЎкҐЄвл Ї® г¬®«з ­Ёо).
+
+‘Ў®аЄ  гбЇҐи­® § ўҐаиҐ­ .
+    ЏаҐ¤гЇаҐ¦¤Ґ­Ё©: 0
+    ЋиЁЎ®Є: 0
+
+‡ ва зҐ­­®Ґ ўаҐ¬п: 00:00:00.65
+
+
+Detecting CXX compiler ABI info compiled with the following output:
+Change Dir: C:/Users/FAMILY/Desktop/phfsnew/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:/Program Files (x86)/MSBuild/12.0/bin/MSBuild.exe" "cmTC_1a9ad.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=12.0"
+Microsoft (R) Build Engine ўҐабЁЁ 12.0.21005.1
+[Microsoft .NET Framework ўҐабЁЁ 4.0.30319.42000]
+(C) Љ®аЇ®а жЁп Њ ©Єа®б®дв (Microsoft Corporation). ‚бҐ Їа ў  § йЁйҐ­л.
+
+‘Ў®аЄ  ­ з в  09.08.2017 18:08:45.
+Џа®ҐЄв "C:\Users\FAMILY\Desktop\phfsnew\build\CMakeFiles\CMakeTmp\cmTC_1a9ad.vcxproj" ў г§«Ґ 1 (жҐ«ҐўлҐ ®ЎкҐЄвл Ї® г¬®«з ­Ёо).
+PrepareForBuild:
+  ‘®§¤ ­ЁҐ Є в «®Ј  "cmTC_1a9ad.dir\Debug\".
+  ‘®§¤ ­ЁҐ Є в «®Ј  "C:\Users\FAMILY\Desktop\phfsnew\build\CMakeFiles\CMakeTmp\Debug\".
+  ‘®§¤ ­ЁҐ Є в «®Ј  "cmTC_1a9ad.dir\Debug\cmTC_1a9ad.tlog\".
+InitializeBuildStatus:
+  ‘®§¤ ­ЁҐ "cmTC_1a9ad.dir\Debug\cmTC_1a9ad.tlog\unsuccessfulbuild", в Є Є Є Ўл«® § ¤ ­® "AlwaysCreate".
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"cmTC_1a9ad.dir\Debug\\" /Fd"cmTC_1a9ad.dir\Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:queue "C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeCXXCompilerABI.cpp"
+  ЋЇвЁ¬Ё§ЁагойЁ© Є®¬ЇЁ«пв®а Microsoft (R) C/C++ ўҐабЁЁ 18.00.21005.1 ¤«п x86
+  (C) Љ®аЇ®а жЁп Њ ©Єа®б®дв (Microsoft Corporation).  ‚бҐ Їа ў  § йЁйҐ­л.
+  
+  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"cmTC_1a9ad.dir\Debug\\" /Fd"cmTC_1a9ad.dir\Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:queue "C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeCXXCompilerABI.cpp"
+  
+  CMakeCXXCompilerABI.cpp
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\FAMILY\Desktop\phfsnew\build\CMakeFiles\CMakeTmp\Debug\cmTC_1a9ad.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/FAMILY/Desktop/phfsnew/build/CMakeFiles/CMakeTmp/Debug/cmTC_1a9ad.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/FAMILY/Desktop/phfsnew/build/CMakeFiles/CMakeTmp/Debug/cmTC_1a9ad.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_1a9ad.dir\Debug\CMakeCXXCompilerABI.obj
+  cmTC_1a9ad.vcxproj -> C:\Users\FAMILY\Desktop\phfsnew\build\CMakeFiles\CMakeTmp\Debug\cmTC_1a9ad.exe
+FinalizeBuildStatus:
+  ” ©« "cmTC_1a9ad.dir\Debug\cmTC_1a9ad.tlog\unsuccessfulbuild" г¤ «пҐвбп.
+  ЋЎа йҐ­ЁҐ Є "cmTC_1a9ad.dir\Debug\cmTC_1a9ad.tlog\cmTC_1a9ad.lastbuildstate".
+‘Ў®аЄ  Їа®ҐЄв  "C:\Users\FAMILY\Desktop\phfsnew\build\CMakeFiles\CMakeTmp\cmTC_1a9ad.vcxproj" § ўҐаиҐ­  (жҐ«ҐўлҐ ®ЎкҐЄвл Ї® г¬®«з ­Ёо).
+
+‘Ў®аЄ  гбЇҐи­® § ўҐаиҐ­ .
+    ЏаҐ¤гЇаҐ¦¤Ґ­Ё©: 0
+    ЋиЁЎ®Є: 0
+
+‡ ва зҐ­­®Ґ ўаҐ¬п: 00:00:00.64
+
+
+
+
+Detecting CXX [] compiler features compiled with the following output:
+Change Dir: C:/Users/FAMILY/Desktop/phfsnew/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:/Program Files (x86)/MSBuild/12.0/bin/MSBuild.exe" "cmTC_6f9cd.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=12.0"
+Microsoft (R) Build Engine ўҐабЁЁ 12.0.21005.1
+[Microsoft .NET Framework ўҐабЁЁ 4.0.30319.42000]
+(C) Љ®аЇ®а жЁп Њ ©Єа®б®дв (Microsoft Corporation). ‚бҐ Їа ў  § йЁйҐ­л.
+
+‘Ў®аЄ  ­ з в  09.08.2017 18:08:46.
+Џа®ҐЄв "C:\Users\FAMILY\Desktop\phfsnew\build\CMakeFiles\CMakeTmp\cmTC_6f9cd.vcxproj" ў г§«Ґ 1 (жҐ«ҐўлҐ ®ЎкҐЄвл Ї® г¬®«з ­Ёо).
+PrepareForBuild:
+  ‘®§¤ ­ЁҐ Є в «®Ј  "cmTC_6f9cd.dir\Debug\".
+  ‘®§¤ ­ЁҐ Є в «®Ј  "C:\Users\FAMILY\Desktop\phfsnew\build\CMakeFiles\CMakeTmp\Debug\".
+  ‘®§¤ ­ЁҐ Є в «®Ј  "cmTC_6f9cd.dir\Debug\cmTC_6f9cd.tlog\".
+InitializeBuildStatus:
+  ‘®§¤ ­ЁҐ "cmTC_6f9cd.dir\Debug\cmTC_6f9cd.tlog\unsuccessfulbuild", в Є Є Є Ўл«® § ¤ ­® "AlwaysCreate".
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"cmTC_6f9cd.dir\Debug\\" /Fd"cmTC_6f9cd.dir\Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:queue C:\Users\FAMILY\Desktop\phfsnew\build\CMakeFiles\feature_tests.cxx
+  ЋЇвЁ¬Ё§ЁагойЁ© Є®¬ЇЁ«пв®а Microsoft (R) C/C++ ўҐабЁЁ 18.00.21005.1 ¤«п x86
+  (C) Љ®аЇ®а жЁп Њ ©Єа®б®дв (Microsoft Corporation).  ‚бҐ Їа ў  § йЁйҐ­л.
+  
+  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"cmTC_6f9cd.dir\Debug\\" /Fd"cmTC_6f9cd.dir\Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:queue C:\Users\FAMILY\Desktop\phfsnew\build\CMakeFiles\feature_tests.cxx
+  
+  feature_tests.cxx
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\FAMILY\Desktop\phfsnew\build\CMakeFiles\CMakeTmp\Debug\cmTC_6f9cd.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/FAMILY/Desktop/phfsnew/build/CMakeFiles/CMakeTmp/Debug/cmTC_6f9cd.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/FAMILY/Desktop/phfsnew/build/CMakeFiles/CMakeTmp/Debug/cmTC_6f9cd.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_6f9cd.dir\Debug\feature_tests.obj
+  cmTC_6f9cd.vcxproj -> C:\Users\FAMILY\Desktop\phfsnew\build\CMakeFiles\CMakeTmp\Debug\cmTC_6f9cd.exe
+FinalizeBuildStatus:
+  ” ©« "cmTC_6f9cd.dir\Debug\cmTC_6f9cd.tlog\unsuccessfulbuild" г¤ «пҐвбп.
+  ЋЎа йҐ­ЁҐ Є "cmTC_6f9cd.dir\Debug\cmTC_6f9cd.tlog\cmTC_6f9cd.lastbuildstate".
+‘Ў®аЄ  Їа®ҐЄв  "C:\Users\FAMILY\Desktop\phfsnew\build\CMakeFiles\CMakeTmp\cmTC_6f9cd.vcxproj" § ўҐаиҐ­  (жҐ«ҐўлҐ ®ЎкҐЄвл Ї® г¬®«з ­Ёо).
+
+‘Ў®аЄ  гбЇҐи­® § ўҐаиҐ­ .
+    ЏаҐ¤гЇаҐ¦¤Ґ­Ё©: 0
+    ЋиЁЎ®Є: 0
+
+‡ ва зҐ­­®Ґ ўаҐ¬п: 00:00:00.76
+
+
+    Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
+    Feature record: CXX_FEATURE:1cxx_alias_templates
+    Feature record: CXX_FEATURE:0cxx_alignas
+    Feature record: CXX_FEATURE:0cxx_alignof
+    Feature record: CXX_FEATURE:0cxx_attributes
+    Feature record: CXX_FEATURE:0cxx_attribute_deprecated
+    Feature record: CXX_FEATURE:1cxx_auto_type
+    Feature record: CXX_FEATURE:0cxx_binary_literals
+    Feature record: CXX_FEATURE:0cxx_constexpr
+    Feature record: CXX_FEATURE:1cxx_contextual_conversions
+    Feature record: CXX_FEATURE:1cxx_decltype
+    Feature record: CXX_FEATURE:0cxx_decltype_auto
+    Feature record: CXX_FEATURE:1cxx_default_function_template_args
+    Feature record: CXX_FEATURE:1cxx_defaulted_functions
+    Feature record: CXX_FEATURE:0cxx_defaulted_move_initializers
+    Feature record: CXX_FEATURE:1cxx_delegating_constructors
+    Feature record: CXX_FEATURE:0cxx_deleted_functions
+    Feature record: CXX_FEATURE:0cxx_digit_separators
+    Feature record: CXX_FEATURE:1cxx_enum_forward_declarations
+    Feature record: CXX_FEATURE:1cxx_explicit_conversions
+    Feature record: CXX_FEATURE:1cxx_extended_friend_declarations
+    Feature record: CXX_FEATURE:1cxx_extern_templates
+    Feature record: CXX_FEATURE:1cxx_final
+    Feature record: CXX_FEATURE:0cxx_func_identifier
+    Feature record: CXX_FEATURE:0cxx_generalized_initializers
+    Feature record: CXX_FEATURE:0cxx_generic_lambdas
+    Feature record: CXX_FEATURE:0cxx_inheriting_constructors
+    Feature record: CXX_FEATURE:0cxx_inline_namespaces
+    Feature record: CXX_FEATURE:1cxx_lambdas
+    Feature record: CXX_FEATURE:0cxx_lambda_init_captures
+    Feature record: CXX_FEATURE:1cxx_local_type_template_args
+    Feature record: CXX_FEATURE:1cxx_long_long_type
+    Feature record: CXX_FEATURE:0cxx_noexcept
+    Feature record: CXX_FEATURE:0cxx_nonstatic_member_init
+    Feature record: CXX_FEATURE:1cxx_nullptr
+    Feature record: CXX_FEATURE:1cxx_override
+    Feature record: CXX_FEATURE:1cxx_range_for
+    Feature record: CXX_FEATURE:1cxx_raw_string_literals
+    Feature record: CXX_FEATURE:0cxx_reference_qualified_functions
+    Feature record: CXX_FEATURE:0cxx_return_type_deduction
+    Feature record: CXX_FEATURE:1cxx_right_angle_brackets
+    Feature record: CXX_FEATURE:1cxx_rvalue_references
+    Feature record: CXX_FEATURE:0cxx_sizeof_member
+    Feature record: CXX_FEATURE:1cxx_static_assert
+    Feature record: CXX_FEATURE:1cxx_strong_enums
+    Feature record: CXX_FEATURE:1cxx_template_template_parameters
+    Feature record: CXX_FEATURE:0cxx_thread_local
+    Feature record: CXX_FEATURE:1cxx_trailing_return_types
+    Feature record: CXX_FEATURE:0cxx_unicode_literals
+    Feature record: CXX_FEATURE:1cxx_uniform_initialization
+    Feature record: CXX_FEATURE:0cxx_unrestricted_unions
+    Feature record: CXX_FEATURE:0cxx_user_literals
+    Feature record: CXX_FEATURE:0cxx_variable_templates
+    Feature record: CXX_FEATURE:1cxx_variadic_macros
+    Feature record: CXX_FEATURE:1cxx_variadic_templates
+
+
+Detecting CXX [] compiler features compiled with the following output:
+Change Dir: C:/Users/FAMILY/Desktop/phfsnew/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:/Program Files (x86)/MSBuild/12.0/bin/MSBuild.exe" "cmTC_496b8.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=12.0"
+Microsoft (R) Build Engine ўҐабЁЁ 12.0.21005.1
+[Microsoft .NET Framework ўҐабЁЁ 4.0.30319.42000]
+(C) Љ®аЇ®а жЁп Њ ©Єа®б®дв (Microsoft Corporation). ‚бҐ Їа ў  § йЁйҐ­л.
+
+‘Ў®аЄ  ­ з в  09.08.2017 18:08:47.
+Џа®ҐЄв "C:\Users\FAMILY\Desktop\phfsnew\build\CMakeFiles\CMakeTmp\cmTC_496b8.vcxproj" ў г§«Ґ 1 (жҐ«ҐўлҐ ®ЎкҐЄвл Ї® г¬®«з ­Ёо).
+PrepareForBuild:
+  ‘®§¤ ­ЁҐ Є в «®Ј  "cmTC_496b8.dir\Debug\".
+  ‘®§¤ ­ЁҐ Є в «®Ј  "C:\Users\FAMILY\Desktop\phfsnew\build\CMakeFiles\CMakeTmp\Debug\".
+  ‘®§¤ ­ЁҐ Є в «®Ј  "cmTC_496b8.dir\Debug\cmTC_496b8.tlog\".
+InitializeBuildStatus:
+  ‘®§¤ ­ЁҐ "cmTC_496b8.dir\Debug\cmTC_496b8.tlog\unsuccessfulbuild", в Є Є Є Ўл«® § ¤ ­® "AlwaysCreate".
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"cmTC_496b8.dir\Debug\\" /Fd"cmTC_496b8.dir\Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:queue C:\Users\FAMILY\Desktop\phfsnew\build\CMakeFiles\feature_tests.cxx
+  ЋЇвЁ¬Ё§ЁагойЁ© Є®¬ЇЁ«пв®а Microsoft (R) C/C++ ўҐабЁЁ 18.00.21005.1 ¤«п x86
+  (C) Љ®аЇ®а жЁп Њ ©Єа®б®дв (Microsoft Corporation).  ‚бҐ Їа ў  § йЁйҐ­л.
+  
+  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"cmTC_496b8.dir\Debug\\" /Fd"cmTC_496b8.dir\Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:queue C:\Users\FAMILY\Desktop\phfsnew\build\CMakeFiles\feature_tests.cxx
+  
+  feature_tests.cxx
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\FAMILY\Desktop\phfsnew\build\CMakeFiles\CMakeTmp\Debug\cmTC_496b8.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/FAMILY/Desktop/phfsnew/build/CMakeFiles/CMakeTmp/Debug/cmTC_496b8.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/FAMILY/Desktop/phfsnew/build/CMakeFiles/CMakeTmp/Debug/cmTC_496b8.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_496b8.dir\Debug\feature_tests.obj
+  cmTC_496b8.vcxproj -> C:\Users\FAMILY\Desktop\phfsnew\build\CMakeFiles\CMakeTmp\Debug\cmTC_496b8.exe
+FinalizeBuildStatus:
+  ” ©« "cmTC_496b8.dir\Debug\cmTC_496b8.tlog\unsuccessfulbuild" г¤ «пҐвбп.
+  ЋЎа йҐ­ЁҐ Є "cmTC_496b8.dir\Debug\cmTC_496b8.tlog\cmTC_496b8.lastbuildstate".
+‘Ў®аЄ  Їа®ҐЄв  "C:\Users\FAMILY\Desktop\phfsnew\build\CMakeFiles\CMakeTmp\cmTC_496b8.vcxproj" § ўҐаиҐ­  (жҐ«ҐўлҐ ®ЎкҐЄвл Ї® г¬®«з ­Ёо).
+
+‘Ў®аЄ  гбЇҐи­® § ўҐаиҐ­ .
+    ЏаҐ¤гЇаҐ¦¤Ґ­Ё©: 0
+    ЋиЁЎ®Є: 0
+
+‡ ва зҐ­­®Ґ ўаҐ¬п: 00:00:00.68
+
+
+    Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
+    Feature record: CXX_FEATURE:1cxx_alias_templates
+    Feature record: CXX_FEATURE:0cxx_alignas
+    Feature record: CXX_FEATURE:0cxx_alignof
+    Feature record: CXX_FEATURE:0cxx_attributes
+    Feature record: CXX_FEATURE:0cxx_attribute_deprecated
+    Feature record: CXX_FEATURE:1cxx_auto_type
+    Feature record: CXX_FEATURE:0cxx_binary_literals
+    Feature record: CXX_FEATURE:0cxx_constexpr
+    Feature record: CXX_FEATURE:1cxx_contextual_conversions
+    Feature record: CXX_FEATURE:1cxx_decltype
+    Feature record: CXX_FEATURE:0cxx_decltype_auto
+    Feature record: CXX_FEATURE:1cxx_default_function_template_args
+    Feature record: CXX_FEATURE:1cxx_defaulted_functions
+    Feature record: CXX_FEATURE:0cxx_defaulted_move_initializers
+    Feature record: CXX_FEATURE:1cxx_delegating_constructors
+    Feature record: CXX_FEATURE:0cxx_deleted_functions
+    Feature record: CXX_FEATURE:0cxx_digit_separators
+    Feature record: CXX_FEATURE:1cxx_enum_forward_declarations
+    Feature record: CXX_FEATURE:1cxx_explicit_conversions
+    Feature record: CXX_FEATURE:1cxx_extended_friend_declarations
+    Feature record: CXX_FEATURE:1cxx_extern_templates
+    Feature record: CXX_FEATURE:1cxx_final
+    Feature record: CXX_FEATURE:0cxx_func_identifier
+    Feature record: CXX_FEATURE:0cxx_generalized_initializers
+    Feature record: CXX_FEATURE:0cxx_generic_lambdas
+    Feature record: CXX_FEATURE:0cxx_inheriting_constructors
+    Feature record: CXX_FEATURE:0cxx_inline_namespaces
+    Feature record: CXX_FEATURE:1cxx_lambdas
+    Feature record: CXX_FEATURE:0cxx_lambda_init_captures
+    Feature record: CXX_FEATURE:1cxx_local_type_template_args
+    Feature record: CXX_FEATURE:1cxx_long_long_type
+    Feature record: CXX_FEATURE:0cxx_noexcept
+    Feature record: CXX_FEATURE:0cxx_nonstatic_member_init
+    Feature record: CXX_FEATURE:1cxx_nullptr
+    Feature record: CXX_FEATURE:1cxx_override
+    Feature record: CXX_FEATURE:1cxx_range_for
+    Feature record: CXX_FEATURE:1cxx_raw_string_literals
+    Feature record: CXX_FEATURE:0cxx_reference_qualified_functions
+    Feature record: CXX_FEATURE:0cxx_return_type_deduction
+    Feature record: CXX_FEATURE:1cxx_right_angle_brackets
+    Feature record: CXX_FEATURE:1cxx_rvalue_references
+    Feature record: CXX_FEATURE:0cxx_sizeof_member
+    Feature record: CXX_FEATURE:1cxx_static_assert
+    Feature record: CXX_FEATURE:1cxx_strong_enums
+    Feature record: CXX_FEATURE:1cxx_template_template_parameters
+    Feature record: CXX_FEATURE:0cxx_thread_local
+    Feature record: CXX_FEATURE:1cxx_trailing_return_types
+    Feature record: CXX_FEATURE:0cxx_unicode_literals
+    Feature record: CXX_FEATURE:1cxx_uniform_initialization
+    Feature record: CXX_FEATURE:0cxx_unrestricted_unions
+    Feature record: CXX_FEATURE:0cxx_user_literals
+    Feature record: CXX_FEATURE:0cxx_variable_templates
+    Feature record: CXX_FEATURE:1cxx_variadic_macros
+    Feature record: CXX_FEATURE:1cxx_variadic_templates
+
+
+Detecting CXX [] compiler features compiled with the following output:
+Change Dir: C:/Users/FAMILY/Desktop/phfsnew/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:/Program Files (x86)/MSBuild/12.0/bin/MSBuild.exe" "cmTC_a04fd.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=12.0"
+Microsoft (R) Build Engine ўҐабЁЁ 12.0.21005.1
+[Microsoft .NET Framework ўҐабЁЁ 4.0.30319.42000]
+(C) Љ®аЇ®а жЁп Њ ©Єа®б®дв (Microsoft Corporation). ‚бҐ Їа ў  § йЁйҐ­л.
+
+‘Ў®аЄ  ­ з в  09.08.2017 18:08:48.
+Џа®ҐЄв "C:\Users\FAMILY\Desktop\phfsnew\build\CMakeFiles\CMakeTmp\cmTC_a04fd.vcxproj" ў г§«Ґ 1 (жҐ«ҐўлҐ ®ЎкҐЄвл Ї® г¬®«з ­Ёо).
+PrepareForBuild:
+  ‘®§¤ ­ЁҐ Є в «®Ј  "cmTC_a04fd.dir\Debug\".
+  ‘®§¤ ­ЁҐ Є в «®Ј  "C:\Users\FAMILY\Desktop\phfsnew\build\CMakeFiles\CMakeTmp\Debug\".
+  ‘®§¤ ­ЁҐ Є в «®Ј  "cmTC_a04fd.dir\Debug\cmTC_a04fd.tlog\".
+InitializeBuildStatus:
+  ‘®§¤ ­ЁҐ "cmTC_a04fd.dir\Debug\cmTC_a04fd.tlog\unsuccessfulbuild", в Є Є Є Ўл«® § ¤ ­® "AlwaysCreate".
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"cmTC_a04fd.dir\Debug\\" /Fd"cmTC_a04fd.dir\Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:queue C:\Users\FAMILY\Desktop\phfsnew\build\CMakeFiles\feature_tests.cxx
+  ЋЇвЁ¬Ё§ЁагойЁ© Є®¬ЇЁ«пв®а Microsoft (R) C/C++ ўҐабЁЁ 18.00.21005.1 ¤«п x86
+  (C) Љ®аЇ®а жЁп Њ ©Єа®б®дв (Microsoft Corporation).  ‚бҐ Їа ў  § йЁйҐ­л.
+  
+  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"cmTC_a04fd.dir\Debug\\" /Fd"cmTC_a04fd.dir\Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:queue C:\Users\FAMILY\Desktop\phfsnew\build\CMakeFiles\feature_tests.cxx
+  
+  feature_tests.cxx
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\FAMILY\Desktop\phfsnew\build\CMakeFiles\CMakeTmp\Debug\cmTC_a04fd.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/FAMILY/Desktop/phfsnew/build/CMakeFiles/CMakeTmp/Debug/cmTC_a04fd.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/FAMILY/Desktop/phfsnew/build/CMakeFiles/CMakeTmp/Debug/cmTC_a04fd.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_a04fd.dir\Debug\feature_tests.obj
+  cmTC_a04fd.vcxproj -> C:\Users\FAMILY\Desktop\phfsnew\build\CMakeFiles\CMakeTmp\Debug\cmTC_a04fd.exe
+FinalizeBuildStatus:
+  ” ©« "cmTC_a04fd.dir\Debug\cmTC_a04fd.tlog\unsuccessfulbuild" г¤ «пҐвбп.
+  ЋЎа йҐ­ЁҐ Є "cmTC_a04fd.dir\Debug\cmTC_a04fd.tlog\cmTC_a04fd.lastbuildstate".
+‘Ў®аЄ  Їа®ҐЄв  "C:\Users\FAMILY\Desktop\phfsnew\build\CMakeFiles\CMakeTmp\cmTC_a04fd.vcxproj" § ўҐаиҐ­  (жҐ«ҐўлҐ ®ЎкҐЄвл Ї® г¬®«з ­Ёо).
+
+‘Ў®аЄ  гбЇҐи­® § ўҐаиҐ­ .
+    ЏаҐ¤гЇаҐ¦¤Ґ­Ё©: 0
+    ЋиЁЎ®Є: 0
+
+‡ ва зҐ­­®Ґ ўаҐ¬п: 00:00:00.71
+
+
+    Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
+    Feature record: CXX_FEATURE:1cxx_alias_templates
+    Feature record: CXX_FEATURE:0cxx_alignas
+    Feature record: CXX_FEATURE:0cxx_alignof
+    Feature record: CXX_FEATURE:0cxx_attributes
+    Feature record: CXX_FEATURE:0cxx_attribute_deprecated
+    Feature record: CXX_FEATURE:1cxx_auto_type
+    Feature record: CXX_FEATURE:0cxx_binary_literals
+    Feature record: CXX_FEATURE:0cxx_constexpr
+    Feature record: CXX_FEATURE:1cxx_contextual_conversions
+    Feature record: CXX_FEATURE:1cxx_decltype
+    Feature record: CXX_FEATURE:0cxx_decltype_auto
+    Feature record: CXX_FEATURE:1cxx_default_function_template_args
+    Feature record: CXX_FEATURE:1cxx_defaulted_functions
+    Feature record: CXX_FEATURE:0cxx_defaulted_move_initializers
+    Feature record: CXX_FEATURE:1cxx_delegating_constructors
+    Feature record: CXX_FEATURE:0cxx_deleted_functions
+    Feature record: CXX_FEATURE:0cxx_digit_separators
+    Feature record: CXX_FEATURE:1cxx_enum_forward_declarations
+    Feature record: CXX_FEATURE:1cxx_explicit_conversions
+    Feature record: CXX_FEATURE:1cxx_extended_friend_declarations
+    Feature record: CXX_FEATURE:1cxx_extern_templates
+    Feature record: CXX_FEATURE:1cxx_final
+    Feature record: CXX_FEATURE:0cxx_func_identifier
+    Feature record: CXX_FEATURE:0cxx_generalized_initializers
+    Feature record: CXX_FEATURE:0cxx_generic_lambdas
+    Feature record: CXX_FEATURE:0cxx_inheriting_constructors
+    Feature record: CXX_FEATURE:0cxx_inline_namespaces
+    Feature record: CXX_FEATURE:1cxx_lambdas
+    Feature record: CXX_FEATURE:0cxx_lambda_init_captures
+    Feature record: CXX_FEATURE:1cxx_local_type_template_args
+    Feature record: CXX_FEATURE:1cxx_long_long_type
+    Feature record: CXX_FEATURE:0cxx_noexcept
+    Feature record: CXX_FEATURE:0cxx_nonstatic_member_init
+    Feature record: CXX_FEATURE:1cxx_nullptr
+    Feature record: CXX_FEATURE:1cxx_override
+    Feature record: CXX_FEATURE:1cxx_range_for
+    Feature record: CXX_FEATURE:1cxx_raw_string_literals
+    Feature record: CXX_FEATURE:0cxx_reference_qualified_functions
+    Feature record: CXX_FEATURE:0cxx_return_type_deduction
+    Feature record: CXX_FEATURE:1cxx_right_angle_brackets
+    Feature record: CXX_FEATURE:1cxx_rvalue_references
+    Feature record: CXX_FEATURE:0cxx_sizeof_member
+    Feature record: CXX_FEATURE:1cxx_static_assert
+    Feature record: CXX_FEATURE:1cxx_strong_enums
+    Feature record: CXX_FEATURE:1cxx_template_template_parameters
+    Feature record: CXX_FEATURE:0cxx_thread_local
+    Feature record: CXX_FEATURE:1cxx_trailing_return_types
+    Feature record: CXX_FEATURE:0cxx_unicode_literals
+    Feature record: CXX_FEATURE:1cxx_uniform_initialization
+    Feature record: CXX_FEATURE:0cxx_unrestricted_unions
+    Feature record: CXX_FEATURE:0cxx_user_literals
+    Feature record: CXX_FEATURE:0cxx_variable_templates
+    Feature record: CXX_FEATURE:1cxx_variadic_macros
+    Feature record: CXX_FEATURE:1cxx_variadic_templates
+
+
+Detecting CXX [] compiler features compiled with the following output:
+Change Dir: C:/Users/FAMILY/Desktop/phfsnew/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:/Program Files (x86)/MSBuild/12.0/bin/MSBuild.exe" "cmTC_8afd6.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=12.0"
+Microsoft (R) Build Engine ўҐабЁЁ 12.0.21005.1
+[Microsoft .NET Framework ўҐабЁЁ 4.0.30319.42000]
+(C) Љ®аЇ®а жЁп Њ ©Єа®б®дв (Microsoft Corporation). ‚бҐ Їа ў  § йЁйҐ­л.
+
+‘Ў®аЄ  ­ з в  09.08.2017 18:08:49.
+Џа®ҐЄв "C:\Users\FAMILY\Desktop\phfsnew\build\CMakeFiles\CMakeTmp\cmTC_8afd6.vcxproj" ў г§«Ґ 1 (жҐ«ҐўлҐ ®ЎкҐЄвл Ї® г¬®«з ­Ёо).
+PrepareForBuild:
+  ‘®§¤ ­ЁҐ Є в «®Ј  "cmTC_8afd6.dir\Debug\".
+  ‘®§¤ ­ЁҐ Є в «®Ј  "C:\Users\FAMILY\Desktop\phfsnew\build\CMakeFiles\CMakeTmp\Debug\".
+  ‘®§¤ ­ЁҐ Є в «®Ј  "cmTC_8afd6.dir\Debug\cmTC_8afd6.tlog\".
+InitializeBuildStatus:
+  ‘®§¤ ­ЁҐ "cmTC_8afd6.dir\Debug\cmTC_8afd6.tlog\unsuccessfulbuild", в Є Є Є Ўл«® § ¤ ­® "AlwaysCreate".
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"cmTC_8afd6.dir\Debug\\" /Fd"cmTC_8afd6.dir\Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:queue C:\Users\FAMILY\Desktop\phfsnew\build\CMakeFiles\feature_tests.cxx
+  ЋЇвЁ¬Ё§ЁагойЁ© Є®¬ЇЁ«пв®а Microsoft (R) C/C++ ўҐабЁЁ 18.00.21005.1 ¤«п x86
+  (C) Љ®аЇ®а жЁп Њ ©Єа®б®дв (Microsoft Corporation).  ‚бҐ Їа ў  § йЁйҐ­л.
+  
+  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"cmTC_8afd6.dir\Debug\\" /Fd"cmTC_8afd6.dir\Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:queue C:\Users\FAMILY\Desktop\phfsnew\build\CMakeFiles\feature_tests.cxx
+  
+  feature_tests.cxx
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\FAMILY\Desktop\phfsnew\build\CMakeFiles\CMakeTmp\Debug\cmTC_8afd6.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/FAMILY/Desktop/phfsnew/build/CMakeFiles/CMakeTmp/Debug/cmTC_8afd6.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/FAMILY/Desktop/phfsnew/build/CMakeFiles/CMakeTmp/Debug/cmTC_8afd6.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_8afd6.dir\Debug\feature_tests.obj
+  cmTC_8afd6.vcxproj -> C:\Users\FAMILY\Desktop\phfsnew\build\CMakeFiles\CMakeTmp\Debug\cmTC_8afd6.exe
+FinalizeBuildStatus:
+  ” ©« "cmTC_8afd6.dir\Debug\cmTC_8afd6.tlog\unsuccessfulbuild" г¤ «пҐвбп.
+  ЋЎа йҐ­ЁҐ Є "cmTC_8afd6.dir\Debug\cmTC_8afd6.tlog\cmTC_8afd6.lastbuildstate".
+‘Ў®аЄ  Їа®ҐЄв  "C:\Users\FAMILY\Desktop\phfsnew\build\CMakeFiles\CMakeTmp\cmTC_8afd6.vcxproj" § ўҐаиҐ­  (жҐ«ҐўлҐ ®ЎкҐЄвл Ї® г¬®«з ­Ёо).
+
+‘Ў®аЄ  гбЇҐи­® § ўҐаиҐ­ .
+    ЏаҐ¤гЇаҐ¦¤Ґ­Ё©: 0
+    ЋиЁЎ®Є: 0
+
+‡ ва зҐ­­®Ґ ўаҐ¬п: 00:00:00.66
+
+
+    Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
+    Feature record: CXX_FEATURE:1cxx_alias_templates
+    Feature record: CXX_FEATURE:0cxx_alignas
+    Feature record: CXX_FEATURE:0cxx_alignof
+    Feature record: CXX_FEATURE:0cxx_attributes
+    Feature record: CXX_FEATURE:0cxx_attribute_deprecated
+    Feature record: CXX_FEATURE:1cxx_auto_type
+    Feature record: CXX_FEATURE:0cxx_binary_literals
+    Feature record: CXX_FEATURE:0cxx_constexpr
+    Feature record: CXX_FEATURE:1cxx_contextual_conversions
+    Feature record: CXX_FEATURE:1cxx_decltype
+    Feature record: CXX_FEATURE:0cxx_decltype_auto
+    Feature record: CXX_FEATURE:1cxx_default_function_template_args
+    Feature record: CXX_FEATURE:1cxx_defaulted_functions
+    Feature record: CXX_FEATURE:0cxx_defaulted_move_initializers
+    Feature record: CXX_FEATURE:1cxx_delegating_constructors
+    Feature record: CXX_FEATURE:0cxx_deleted_functions
+    Feature record: CXX_FEATURE:0cxx_digit_separators
+    Feature record: CXX_FEATURE:1cxx_enum_forward_declarations
+    Feature record: CXX_FEATURE:1cxx_explicit_conversions
+    Feature record: CXX_FEATURE:1cxx_extended_friend_declarations
+    Feature record: CXX_FEATURE:1cxx_extern_templates
+    Feature record: CXX_FEATURE:1cxx_final
+    Feature record: CXX_FEATURE:0cxx_func_identifier
+    Feature record: CXX_FEATURE:0cxx_generalized_initializers
+    Feature record: CXX_FEATURE:0cxx_generic_lambdas
+    Feature record: CXX_FEATURE:0cxx_inheriting_constructors
+    Feature record: CXX_FEATURE:0cxx_inline_namespaces
+    Feature record: CXX_FEATURE:1cxx_lambdas
+    Feature record: CXX_FEATURE:0cxx_lambda_init_captures
+    Feature record: CXX_FEATURE:1cxx_local_type_template_args
+    Feature record: CXX_FEATURE:1cxx_long_long_type
+    Feature record: CXX_FEATURE:0cxx_noexcept
+    Feature record: CXX_FEATURE:0cxx_nonstatic_member_init
+    Feature record: CXX_FEATURE:1cxx_nullptr
+    Feature record: CXX_FEATURE:1cxx_override
+    Feature record: CXX_FEATURE:1cxx_range_for
+    Feature record: CXX_FEATURE:1cxx_raw_string_literals
+    Feature record: CXX_FEATURE:0cxx_reference_qualified_functions
+    Feature record: CXX_FEATURE:0cxx_return_type_deduction
+    Feature record: CXX_FEATURE:1cxx_right_angle_brackets
+    Feature record: CXX_FEATURE:1cxx_rvalue_references
+    Feature record: CXX_FEATURE:0cxx_sizeof_member
+    Feature record: CXX_FEATURE:1cxx_static_assert
+    Feature record: CXX_FEATURE:1cxx_strong_enums
+    Feature record: CXX_FEATURE:1cxx_template_template_parameters
+    Feature record: CXX_FEATURE:0cxx_thread_local
+    Feature record: CXX_FEATURE:1cxx_trailing_return_types
+    Feature record: CXX_FEATURE:0cxx_unicode_literals
+    Feature record: CXX_FEATURE:1cxx_uniform_initialization
+    Feature record: CXX_FEATURE:0cxx_unrestricted_unions
+    Feature record: CXX_FEATURE:0cxx_user_literals
+    Feature record: CXX_FEATURE:0cxx_variable_templates
+    Feature record: CXX_FEATURE:1cxx_variadic_macros
+    Feature record: CXX_FEATURE:1cxx_variadic_templates
+Determining if the include file assert.h exists passed with the following output:
+Change Dir: C:/Users/FAMILY/Desktop/phfsnew/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:/Program Files (x86)/MSBuild/12.0/bin/MSBuild.exe" "cmTC_ce19d.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=12.0"
+Microsoft (R) Build Engine ўҐабЁЁ 12.0.21005.1
+[Microsoft .NET Framework ўҐабЁЁ 4.0.30319.42000]
+(C) Љ®аЇ®а жЁп Њ ©Єа®б®дв (Microsoft Corporation). ‚бҐ Їа ў  § йЁйҐ­л.
+
+‘Ў®аЄ  ­ з в  09.08.2017 18:08:50.
+Џа®ҐЄв "C:\Users\FAMILY\Desktop\phfsnew\build\CMakeFiles\CMakeTmp\cmTC_ce19d.vcxproj" ў г§«Ґ 1 (жҐ«ҐўлҐ ®ЎкҐЄвл Ї® г¬®«з ­Ёо).
+PrepareForBuild:
+  ‘®§¤ ­ЁҐ Є в «®Ј  "cmTC_ce19d.dir\Debug\".
+  ‘®§¤ ­ЁҐ Є в «®Ј  "C:\Users\FAMILY\Desktop\phfsnew\build\CMakeFiles\CMakeTmp\Debug\".
+  ‘®§¤ ­ЁҐ Є в «®Ј  "cmTC_ce19d.dir\Debug\cmTC_ce19d.tlog\".
+InitializeBuildStatus:
+  ‘®§¤ ­ЁҐ "cmTC_ce19d.dir\Debug\cmTC_ce19d.tlog\unsuccessfulbuild", в Є Є Є Ўл«® § ¤ ­® "AlwaysCreate".
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTC_ce19d.dir\Debug\\" /Fd"cmTC_ce19d.dir\Debug\vc120.pdb" /Gd /TC /analyze- /errorReport:queue C:\Users\FAMILY\Desktop\phfsnew\build\CMakeFiles\CMakeTmp\CheckIncludeFile.c
+  ЋЇвЁ¬Ё§ЁагойЁ© Є®¬ЇЁ«пв®а Microsoft (R) C/C++ ўҐабЁЁ 18.00.21005.1 ¤«п x86
+  (C) Љ®аЇ®а жЁп Њ ©Єа®б®дв (Microsoft Corporation).  ‚бҐ Їа ў  § йЁйҐ­л.
+  
+  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTC_ce19d.dir\Debug\\" /Fd"cmTC_ce19d.dir\Debug\vc120.pdb" /Gd /TC /analyze- /errorReport:queue C:\Users\FAMILY\Desktop\phfsnew\build\CMakeFiles\CMakeTmp\CheckIncludeFile.c
+  
+  CheckIncludeFile.c
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\FAMILY\Desktop\phfsnew\build\CMakeFiles\CMakeTmp\Debug\cmTC_ce19d.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/FAMILY/Desktop/phfsnew/build/CMakeFiles/CMakeTmp/Debug/cmTC_ce19d.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/FAMILY/Desktop/phfsnew/build/CMakeFiles/CMakeTmp/Debug/cmTC_ce19d.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_ce19d.dir\Debug\CheckIncludeFile.obj
+  cmTC_ce19d.vcxproj -> C:\Users\FAMILY\Desktop\phfsnew\build\CMakeFiles\CMakeTmp\Debug\cmTC_ce19d.exe
+FinalizeBuildStatus:
+  ” ©« "cmTC_ce19d.dir\Debug\cmTC_ce19d.tlog\unsuccessfulbuild" г¤ «пҐвбп.
+  ЋЎа йҐ­ЁҐ Є "cmTC_ce19d.dir\Debug\cmTC_ce19d.tlog\cmTC_ce19d.lastbuildstate".
+‘Ў®аЄ  Їа®ҐЄв  "C:\Users\FAMILY\Desktop\phfsnew\build\CMakeFiles\CMakeTmp\cmTC_ce19d.vcxproj" § ўҐаиҐ­  (жҐ«ҐўлҐ ®ЎкҐЄвл Ї® г¬®«з ­Ёо).
+
+‘Ў®аЄ  гбЇҐи­® § ўҐаиҐ­ .
+    ЏаҐ¤гЇаҐ¦¤Ґ­Ё©: 0
+    ЋиЁЎ®Є: 0
+
+‡ ва зҐ­­®Ґ ўаҐ¬п: 00:00:00.68
+
+

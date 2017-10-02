@@ -1,11 +1,10 @@
 #include "stdafx.h"
 #include "Settings.h"
-
-GameSettings::GameSettings()
+#include <iostream>
+GameSettings::GameSettings(sf::RenderWindow &window)
 {
+	BMenu = new Back_Menu(0.7, 0.7);
 	// Подгрузим тестуры и укажем их поизцию в окне
-	BackText.loadFromFile("./img/settings/background.png");
-	Backspr.setTexture(BackText);
 	level1.loadFromFile("./img/settings/level1.png");
 	levels1.setTexture(level1);
 	level2.loadFromFile("./img/settings/level2.png");
@@ -26,21 +25,79 @@ GameSettings::GameSettings()
 	FullScreenspr.setTexture(FullScreenText);
 	FullScreenspr.setPosition(490, 340);
 	FullScreenspr.setTextureRect(sf::IntRect(0, 0, 300, 50));
+	currentmode = sf::VideoMode::getDesktopMode();
+	xco = currentmode.height;
+	yco = currentmode.width;
+	Vid_Modes = sf::VideoMode::getFullscreenModes();
+	videomodefont.loadFromFile("./CyrilicOld.TTF");
+	videomodetext.setFont(videomodefont);
+
+
+	videomodetext.setPosition(20, 20);
+	for (std::size_t i = 0; i < Vid_Modes.size(); ++i)
+	{
+		sf::VideoMode mode = Vid_Modes[i];
+		std::cout << "Mode #" << i << ": " << mode.width << "x" << mode.height << " - "
+			<< mode.bitsPerPixel << " bpp" << std::endl;
+	}
+	for (std::vector<sf::VideoMode>::iterator it = Vid_Modes.begin(); it != Vid_Modes.end(); it++)
+	{
+		if (it->width == 1280 && it->height == 720)
+		{
+			currentmode = *it;
+			break;
+		}
+	}
+	char buf1[10];
+	char buf2[10];
+	itoa(currentmode.height, buf1, 10);
+	itoa(currentmode.width, buf2, 10);
+	sf::String str = buf2;
+	str += " x ";
+	str += buf1;
+	modeit = Vid_Modes.begin();
+	videomodetext.setString(str);
+	cl.restart();
 }
 
 
+void GameSettings::ChangeModes()
+{
+	
+	if ((sf::Keyboard::isKeyPressed(sf::Keyboard::Down)) && (cl.getElapsedTime().asSeconds() > 1))
+	{
+		modeit++;
+		if (modeit == Vid_Modes.end()) modeit == Vid_Modes.begin();
+		char buf1[10];
+		char buf2[10];
+		itoa(modeit->height, buf1, 10);
+		itoa(modeit->width, buf2, 10);
+		sf::String str = buf2;
+		str += " x ";
+		str += buf1;
+		videomodetext.setString(str);
+		videomodetext.setPosition(20, 20);
+		std::cout << modeit->height << std::endl << modeit->width << std::endl;
+		std::cout << Vid_Modes.size();
+	}
+	
+}
+
 void GameSettings::DrawSettings(sf::RenderWindow &Window)
 {
-	Window.draw(Backspr);
+	
 	Window.draw(levels1);
 	Window.draw(levels2);
 	Window.draw(levels3);
 	Window.draw(ExitSpr);
 	Window.draw(FullScreenspr);
+	Window.draw(videomodetext);
 }
 
-void GameSettings::update(sf::RenderWindow &Window)
+void GameSettings::update(float time,sf::RenderWindow &Window, sf::Clock &mainclock)
 {
+	
+	BMenu->Update(time, Window);
 	if (sf::IntRect(490, 100, 300, 50).contains(sf::Mouse::getPosition(Window)))
 	{
 		levels1.setTextureRect(sf::IntRect(300, 0, 300, 50));
@@ -69,7 +126,7 @@ void GameSettings::update(sf::RenderWindow &Window)
 	else if (sf::IntRect(490, 340, 300, 50).contains(sf::Mouse::getPosition(Window)))
 	{
 		FullScreenspr.setTextureRect(sf::IntRect(300, 0, 300, 50));
-		if (sf::Mouse::isButtonPressed(sf::Mouse::Left)) IFScreenChanged(Window);
+		if (sf::Mouse::isButtonPressed(sf::Mouse::Left)) IFScreenChanged(Window,mainclock);
 	}
 	else
 	{
@@ -79,7 +136,9 @@ void GameSettings::update(sf::RenderWindow &Window)
 		levels3.setTextureRect(sf::IntRect(0, 0, 300, 50));
 		ExitSpr.setTextureRect(sf::IntRect(0, 0, 300, 50));
 		FullScreenspr.setTextureRect(sf::IntRect(0, 0, 300, 50));
+		ChangeModes();
 	}
+	
 }
 
 void GameSettings::SetLevelGlobal(sf::RenderWindow &window) // Установка уровня сложности глобально
@@ -106,18 +165,22 @@ void GameSettings::SetLevelGlobal(sf::RenderWindow &window) // Установка уровня 
 }
 
 
-void GameSettings::IFScreenChanged(sf::RenderWindow &window)
+void GameSettings::IFScreenChanged(sf::RenderWindow &window, sf::Clock &mainclock)
 {
 	fullscreen = !fullscreen;
 	if (fullscreen)
 	{
 		window.close();
-		window.create(sf::VideoMode(1280, 720), "Work", sf::Style::Fullscreen);
+		window.create(sf::VideoMode(1920, 1080), "Work", sf::Style::Fullscreen);
+		window.setFramerateLimit(60);
+		mainclock.restart();
 	}
 	else
 	{
 		window.close();
 		window.create(sf::VideoMode(1280, 720), "Work");
+		window.setFramerateLimit(60);
+		mainclock.restart();
 	}
 }
 int GameSettings::IfExitSet(sf::RenderWindow &Window)

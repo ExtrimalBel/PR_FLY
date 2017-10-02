@@ -3,7 +3,7 @@
 
 #include "baseitem.h"
 #include <iostream>
-#include "Bullets.h"
+#include "Old_Bullets.h"
 #ifdef LOGIC_EXPORTS
 #define LOGIC_API __declspec(dllexport)
 #else
@@ -15,7 +15,7 @@ class LOGIC_API Ship : public Item
 protected:
 	int speedbost; // Модификатор ускорения скорости
 	int health;
-	Ship(char *imagename,int x, int y) : Item(imagename,x,y)
+	Ship(sf::Texture tmpText,int x, int y) : Item(tmpText,x,y)
 	{
 		health = 100;
 		speedbost = 0;
@@ -25,15 +25,23 @@ protected:
 
 class LOGIC_API Player : public Ship
 {
+	bool death = false;
 	int level = 1;
 	int life;
 public:
 	double speed;
-	Player();
+	Player(sf::Texture &tmptext);
 	void Move(float time); // Передвежение с привязкой ко времени
 	void Draw(sf::RenderWindow &window);
-	int getx(){return x;} // Это для предоставления координат из приват области класса
-	int gety(){return y;}
+	int getx() { return x; } // Это для предоставления координат из приват области класса
+	int gety() { return y; }
+	void AddHealth(int value);
+	void DelHealth(int value);
+	bool IfDeath() {return death ? false : true; }
+	bool InterSects(int bulx, int buly);
+	int GetHealth() { return health; }
+	void Setx(int x1) { x = x1; }
+	void SetY(int y1) { y = y1; }
 
 };
 
@@ -42,7 +50,7 @@ class LOGIC_API Enemy_Ship : public Ship
 	
 public:
 	double speed;
-	Enemy_Ship();
+	Enemy_Ship(sf::Texture &tmptext);
 	void Move(float time);
 	bool InterSects(int bulx, int buly);
 	int getx() { return x; }

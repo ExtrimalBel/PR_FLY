@@ -1,14 +1,17 @@
-﻿Сборка начата 20.07.2017 14:01:00.
-     1>Проект "C:\Users\FAMILY\Source\Repos\PR_FLY\PR_FLY\PR_FLY.vcxproj" в узле 2 (целевые объекты Build).
+﻿Сборка начата 02.10.2017 13:20:04.
+     1>Проект "D:\College_Game_Level3\PR_FLY\PR_FLY\PR_FLY.vcxproj" в узле 2 (целевые объекты Build).
      1>Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\FAMILY\Source\Repos\PR_FLY\Debug\PR_FLY.exe" /INCREMENTAL /NOLOGO /LIBPATH:".\SFML-2.4.2\lib" "sfml-graphics-d.lib" "sfml-window-d.lib" "sfml-system-d.lib" "sfml-main-d.lib" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\FAMILY\Source\Repos\PR_FLY\Debug\PR_FLY.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /ENTRY:"main" /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\FAMILY\Source\Repos\PR_FLY\Debug\PR_FLY.lib" /MACHINE:X86 Debug\main.obj
-         C:\Users\FAMILY\Source\Repos\PR_FLY\Debug\Logic.lib
-            ╤ючфрхЄё  сшсышюЄхър C:\Users\FAMILY\Source\Repos\PR_FLY\Debug\PR_FLY.lib ш юс·хъЄ C:\Users\FAMILY\Source\Repos\PR_FLY\Debug\PR_FLY.exp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\College_Game_Level3\PR_FLY\Debug\PR_FLY.exe" /INCREMENTAL /NOLOGO /LIBPATH:".\SFML-2.4.2\lib" "sfml-audio-d.lib" openal32.lib flac.lib vorbisenc.lib vorbisfile.lib vorbis.lib ogg.lib "sfml-graphics-d.lib" "sfml-window-d.lib" "sfml-system-d.lib" "sfml-main-d.lib" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\College_Game_Level3\PR_FLY\Debug\PR_FLY.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /ENTRY:"main" /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\College_Game_Level3\PR_FLY\Debug\PR_FLY.lib" /MACHINE:X86 Debug\main.obj
+         D:\College_Game_Level3\PR_FLY\Debug\Logic.lib
+         D:\College_Game_Level3\PR_FLY\Debug\SoundSystem.lib
+            ╤ючфрхЄё  сшсышюЄхър D:\College_Game_Level3\PR_FLY\Debug\PR_FLY.lib ш юс·хъЄ D:\College_Game_Level3\PR_FLY\Debug\PR_FLY.exp
+     1>msvcprtd.lib(locale0_implib.obj) : warning LNK4210: ёхъЎш  .CRT ёє∙хёЄтєхЄ; ьюуєЄ ёє∙хёЄтютрЄ№ эхюсЁрсюЄрээ√х ёЄрЄшўхёъшх шэшЎшрышчрЄюЁ√ шыш чэръш чртхЁ°хэш
      1>main.obj : warning LNK4210: ёхъЎш  .CRT ёє∙хёЄтєхЄ; ьюуєЄ ёє∙хёЄтютрЄ№ эхюсЁрсюЄрээ√х ёЄрЄшўхёъшх шэшЎшрышчрЄюЁ√ шыш чэръш чртхЁ°хэш
+     1>msvcprtd.lib(locale0_implib.obj) : warning LNK4210: ёхъЎш  .CRT ёє∙хёЄтєхЄ; ьюуєЄ ёє∙хёЄтютрЄ№ эхюсЁрсюЄрээ√х ёЄрЄшўхёъшх шэшЎшрышчрЄюЁ√ шыш чэръш чртхЁ°хэш
      1>MSVCRTD.lib(atonexit.obj) : warning LNK4210: ёхъЎш  .CRT ёє∙хёЄтєхЄ; ьюуєЄ ёє∙хёЄтютрЄ№ эхюсЁрсюЄрээ√х ёЄрЄшўхёъшх шэшЎшрышчрЄюЁ√ шыш чэръш чртхЁ°хэш
-         PR_FLY.vcxproj -> C:\Users\FAMILY\Source\Repos\PR_FLY\Debug\PR_FLY.exe
-     1>Сборка проекта "C:\Users\FAMILY\Source\Repos\PR_FLY\PR_FLY\PR_FLY.vcxproj" завершена (целевые объекты Build).
+         PR_FLY.vcxproj -> D:\College_Game_Level3\PR_FLY\Debug\PR_FLY.exe
+     1>Сборка проекта "D:\College_Game_Level3\PR_FLY\PR_FLY\PR_FLY.vcxproj" завершена (целевые объекты Build).
 
 Сборка успешно завершена.
 
-Затраченное время: 00:00:00.48
+Затраченное время: 00:00:00.51

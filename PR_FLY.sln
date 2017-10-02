@@ -7,6 +7,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PR_FLY", "PR_FLY\PR_FLY.vcx
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Logic", "Logic\Logic.vcxproj", "{0F4BD9C3-D68A-4C35-81E7-1AB7FDD46664}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SoundSystem", "SoundSystem\SoundSystem.vcxproj", "{398A1489-CFF8-476C-9210-ADA0CDF1685B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -16,16 +18,24 @@ Global
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{82C5E023-B94E-474C-B909-4679B34B9826}.Debug|Win32.ActiveCfg = Debug|Win32
 		{82C5E023-B94E-474C-B909-4679B34B9826}.Debug|Win32.Build.0 = Debug|Win32
+		{82C5E023-B94E-474C-B909-4679B34B9826}.Debug|Win32.Deploy.0 = Debug|Win32
 		{82C5E023-B94E-474C-B909-4679B34B9826}.Release|Win32.ActiveCfg = Release|Win32
 		{82C5E023-B94E-474C-B909-4679B34B9826}.Release|Win32.Build.0 = Release|Win32
 		{82C5E023-B94E-474C-B909-4679B34B9826}.Static_Debug|Win32.ActiveCfg = Static_Debug|Win32
 		{82C5E023-B94E-474C-B909-4679B34B9826}.Static_Debug|Win32.Build.0 = Static_Debug|Win32
 		{0F4BD9C3-D68A-4C35-81E7-1AB7FDD46664}.Debug|Win32.ActiveCfg = Debug|Win32
 		{0F4BD9C3-D68A-4C35-81E7-1AB7FDD46664}.Debug|Win32.Build.0 = Debug|Win32
+		{0F4BD9C3-D68A-4C35-81E7-1AB7FDD46664}.Debug|Win32.Deploy.0 = Debug|Win32
 		{0F4BD9C3-D68A-4C35-81E7-1AB7FDD46664}.Release|Win32.ActiveCfg = Release|Win32
 		{0F4BD9C3-D68A-4C35-81E7-1AB7FDD46664}.Release|Win32.Build.0 = Release|Win32
 		{0F4BD9C3-D68A-4C35-81E7-1AB7FDD46664}.Static_Debug|Win32.ActiveCfg = Debug|Win32
 		{0F4BD9C3-D68A-4C35-81E7-1AB7FDD46664}.Static_Debug|Win32.Build.0 = Debug|Win32
+		{398A1489-CFF8-476C-9210-ADA0CDF1685B}.Debug|Win32.ActiveCfg = Debug|Win32
+		{398A1489-CFF8-476C-9210-ADA0CDF1685B}.Debug|Win32.Build.0 = Debug|Win32
+		{398A1489-CFF8-476C-9210-ADA0CDF1685B}.Release|Win32.ActiveCfg = Release|Win32
+		{398A1489-CFF8-476C-9210-ADA0CDF1685B}.Release|Win32.Build.0 = Release|Win32
+		{398A1489-CFF8-476C-9210-ADA0CDF1685B}.Static_Debug|Win32.ActiveCfg = Debug|Win32
+		{398A1489-CFF8-476C-9210-ADA0CDF1685B}.Static_Debug|Win32.Build.0 = Debug|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
