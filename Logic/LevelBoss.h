@@ -9,8 +9,7 @@
 
 class Level_Boss
 {
-	friend class SetOfBullets;
-	friend class player_object;
+	friend class PlayerO;
 	bool for_delete;
 	// Data
 	sf::Texture bllettext;
@@ -65,7 +64,7 @@ class Level_Boss
 	int SecondGunShot();
 	void MoveBullets(float time);
 	void DrawBullets(sf::RenderWindow &window);
-	friend void CountDemageBetweenPlayerAndBoss(SetOfBullets &SetOfB, Level_Boss &BOSS, player_object &P1);  // ѕровер€ет попадание пль игрока в босса и наоброт и если попадание есть отнимает здоровье
+	friend void CountDemageBetweenPlayerAndBoss(Level_Boss &BOSS, PlayerO &P1);  // ѕровер€ет попадание пль игрока в босса и наоброт и если попадание есть отнимает здоровье
 	void DeleteBullets();
 public:
 	bool IsForDelete() { return for_delete; }

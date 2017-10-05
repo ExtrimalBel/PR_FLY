@@ -14,7 +14,7 @@ class Level
 {
 	SetOfBullets *SOB;
 	SetOfEnemy *ENM;
-	player_object *p1;
+	PlayerO *p1;
 	double cox, coy;
 	bool LevelEnd;
 	bool Boss_fight;
@@ -25,12 +25,10 @@ public:
 	Level(const char *Enemyfile, double cox, double coy,bool Is_new,char *SaveFile);
 	void UpdateLevel(float time, sf::RenderWindow &window);
 	void UpdateBoss(float time, sf::RenderWindow &window);
-	void RemoveDemageFromPlayer();
 	double GetPlayerHealth();
-	void CountDemageFromEnemy();
-	void CountDemageBeetweenEnemsAndPlayer();
 	void ResetClocks();
 	bool ReturnLevelEnd() { return LevelEnd; }
+	~Level();
 };
 
 #endif

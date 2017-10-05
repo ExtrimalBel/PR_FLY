@@ -27,14 +27,14 @@ class LOGIC_API Enemy
 	bool for_delete;
 public:
 	Enemy(double cx, double cy, int health, double gunspeed,coord *beginofcoord, double speed, double demage);
-	void Update(float time, sf::RenderWindow &window);
-	void Move(float time);
-	void Draw(sf::RenderWindow &window);
+	virtual void Update(float time, sf::RenderWindow &window);
+	virtual void Move(float time);
+	virtual void Draw(sf::RenderWindow &window);
 	bool IsForDelete();
 	float GetTimeFromLastShot();
 	bool IsShot();
 	void ResetClock();
-	void RemoveHealth(int health);
+	virtual void RemoveHealth(int health);
 	sf::Vector2f GetPostion();
 	sf::IntRect GetEnemyRect();
 	double GetDemage() { return demage; }
@@ -42,6 +42,11 @@ public:
 	sf::Sprite& GetSprite() { return enemy; }
 };
 
+
+class StationarEnemy
+{
+
+};
 
 
 #endif

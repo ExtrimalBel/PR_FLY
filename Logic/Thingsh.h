@@ -8,16 +8,17 @@
 #endif
 class LOGIC_API  SetOfBullets;
 class LOGIC_API SetOFEnemy;
-class LOGIC_API  player_object;
+class LOGIC_API  PlayerO;
 class Level_Boss;
 #include "Player_Class.h"
 #include "SetOfBullets.h"
 #include "setofenemy.h"
 #include "Intersectsmenager.h"
 #include "LevelBoss.h"
-void RemoveDemageFromPlayers(player_object &Player, SetOfBullets &SetOFB, SetOfEnemy &ENM);
 
-void AddEnemyBullets(SetOfEnemy &SOE, SetOfBullets &SOB);
+
+void CountDemageBeetwinPlayerAndEnemys(PlayerO &Player, SetOfEnemy &SetOFEnemys);
+
 
 
 #endif

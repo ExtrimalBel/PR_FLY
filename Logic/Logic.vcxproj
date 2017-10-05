@@ -81,9 +81,11 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Background_Class.h" />
+    <ClInclude Include="BaseForEnemys.h" />
     <ClInclude Include="baseitem.h" />
     <ClInclude Include="BaseMenu.h" />
     <ClInclude Include="Bullet.h" />
+    <ClInclude Include="ConfigReader.h" />
     <ClInclude Include="ExceptionsDefenitions.h" />
     <ClInclude Include="Intersectsmenager.h" />
     <ClInclude Include="Level.h" />
@@ -112,8 +114,10 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Background_Class.cpp" />
+    <ClCompile Include="BaseEnemy.cpp" />
     <ClCompile Include="BaseMenu.cpp" />
     <ClCompile Include="Bullet.cpp" />
+    <ClCompile Include="ConfigReader.cpp" />
     <ClCompile Include="Intersectsmenager.cpp" />
     <ClCompile Include="Level.cpp" />
     <ClCompile Include="LevelBoss.cpp" />
@@ -132,11 +136,13 @@
     <ClCompile Include="Hud.cpp" />
     <ClCompile Include="loadgameclass.cpp" />
     <ClCompile Include="Logic.cpp" />
+    <ClCompile Include="MovingEnemy.cpp" />
     <ClCompile Include="PixelPerfect.cpp" />
     <ClCompile Include="Player_Class.cpp" />
     <ClCompile Include="SetOfBullets.cpp" />
     <ClCompile Include="setofenemy.cpp" />
     <ClCompile Include="Settings.cpp" />
+    <ClCompile Include="StationarEnemy.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>

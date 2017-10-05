@@ -14,7 +14,7 @@
 class LOGIC_API  SetOfBullets
 {
 	friend class SetOfEnemy;
-	friend class player_object;
+	friend class PlayerO;
 	friend class Level_Boss;
 	std::vector<Bullet> SOB;
 	std::vector<Bullet> PSOB;
@@ -28,10 +28,10 @@ public:
 	void AddBullet(sf::Vector2f position, double cx, double cy, int dir, float speed,double demage);
 	void AddPlayerBullet(sf::Vector2f position, double cx, double cy, int dir, float speed, double demage);
 	void CountDemageToPlayer(double &demage,sf::IntRect playerrect);
-	friend void RemoveDemageFromPlayers(player_object &Player, SetOfBullets &SetOFB,SetOfEnemy &ENM);
+	friend void RemoveDemageFromPlayers(PlayerO &Player, SetOfBullets &SetOFB,SetOfEnemy &ENM);
 	void RemoveDemageFromBoss(double &demage, const sf::Sprite& bosssprite, sf::Image& bossimg);
 	friend void AddEnemyBullets(SetOfEnemy &SOE, SetOfBullets &SOB);
-	friend void CountDemageBetweenPlayerAndBoss(SetOfBullets &SetOfB, Level_Boss &BOSS,player_object &P1); // ѕровер€ет попадание пль игрока в босса и наоброт и если попадание есть отнимает здоровье
+	friend void CountDemageBetweenPlayerAndBoss(SetOfBullets &SetOfB, Level_Boss &BOSS,PlayerO &P1); // ѕровер€ет попадание пль игрока в босса и наоброт и если попадание есть отнимает здоровье
 	
 };
 

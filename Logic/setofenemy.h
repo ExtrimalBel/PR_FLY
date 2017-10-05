@@ -11,9 +11,10 @@
 #else
 #define LOGIC_API __declspec(dllimport)
 #endif
-#include "Enemy.h"
+#include "BaseForEnemys.h"
 #include "coords.h"
 #include "stdafx.h"
+#include "Bullet.h"
 /*
 Данный класс реализует "множество врагов на уровне"
 Его основа это связный список который содержит время появления врага
@@ -22,14 +23,15 @@
 Ключевые слова этого файла:
 -1000 - обязательно. Обозначает начало файла
 -1001 - Заканчивает описание данного врага.
-
+TODO вынести код который чиатет иформацию о врагах в отдельный класс
+Поместить вражеские пули в данный класс 
+Переписать код в соответствии с новыми классами врагов
 */
 
 
 class LOGIC_API SetOfEnemy
 {
-	friend class SetOfBullets;
-	friend class player_object;
+	friend class PlayerO;
 	double cox, coy;
 	int EnemyCount;
 	int EnemyLeft;
@@ -37,18 +39,27 @@ class LOGIC_API SetOfEnemy
 	EnemyI *BeginofEnemy;
 	EnemyI *CurrentEnemy;
 	sf::IntRect GetIntersectRect(sf::IntRect first, sf::IntRect second);
+	// Векторы хранят информацию о врагах и о пулях выпущенных данными врагами
+	std::vector<Enemys::MovingEnemy> SetOfMovingEnemys;
+	std::vector<Bullet> SetOFMovingEnemysBullets;
+	std::vector<Bullet> SetOFStationarEnemysBullet;
+	std::vector<Enemys::StationarEnemy> SetOfStationarEnemys;
+	void DeleteEnemy(); // Удалет врагов помеченных на удаление
+	void UpdateBullets(float time, sf::RenderWindow &window); // Обновляет пули выпущенные врагами
+	void DeleteBullets(); // Удаляет пули помеченные на удаление
+	void addSetOfEnemy(std::ifstream &inputfile); // Формирует список врагов если обнаружено множесто врагов
+	void SortEnemyList();
+	void SwapEnemyInList(EnemyI *First, EnemyI *Second, EnemyI *tmpEn);
 public:
-	std::vector<Enemy> SOE;
+
 	SetOfEnemy(const char *enemyfilename,double cx,double cy);
 	void Update(float time, sf::RenderWindow &window);
-	void DeleteEnemy();
-	void addSetOfEnemy(std::ifstream &inputfile);
-	void SortEnemyList();
-	void SwapEnemyInList(EnemyI *First, EnemyI *Second,EnemyI *tmpEn);
+
+
+
 	int ReturnEnemyLeftCount() { return EnemyLeft; }
 	void ResetClock() { timer.restart(); }
-	std::vector<Enemy> * ReturnEnemysVector();
-	friend void RemoveDemageFromPlayers(player_object &Player, SetOfBullets &SetOFB, SetOfEnemy &ENM);
-	friend void AddEnemyBullets(SetOfEnemy &SOE, SetOfBullets &SOB);
+	friend void CountDemageBeetwinPlayerAndEnemys(PlayerO &Player, SetOfEnemy &SetOFEnemys); // Считает урон для игрока и для врагов и отнимает его
+	void AddBullets();
 };
 #endif

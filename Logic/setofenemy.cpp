@@ -82,28 +82,54 @@ void SetOfEnemy::Update(float time,sf::RenderWindow &window) // ќбщий метод дл€ 
 		if (CurrentEnemy->time != 3000)
 		{
 			//timer.restart();
-			Enemy *TMPEN = new Enemy(cox, coy,CurrentEnemy->health,CurrentEnemy->gunspeed, CurrentEnemy->enemy,CurrentEnemy->speed,CurrentEnemy->demage);
+			Enemys::MovingEnemy *TMpEn = new Enemys::MovingEnemy(cox, coy, CurrentEnemy->health, CurrentEnemy->gunspeed, CurrentEnemy->enemy, CurrentEnemy->speed, CurrentEnemy->demage);
+			SetOfMovingEnemys.push_back(*TMpEn);
+		
 			CurrentEnemy = CurrentEnemy->next;
-			SOE.push_back(*TMPEN);
 			
 		}
 	}
-	for (std::vector<Enemy>::iterator it = SOE.begin(); it != SOE.end(); it++) // ѕересчитываем координаты врагов и отрисовываем их
+	for (std::vector<Enemys::MovingEnemy>::iterator it = SetOfMovingEnemys.begin(); it != SetOfMovingEnemys.end(); it++) // ѕересчитываем координаты врагов и отрисовываем их
 	{
-		it->Move(time);
-		it->Draw(window);
+		it->Update(time, window);
 	}
 	DeleteEnemy();
+	UpdateBullets(time, window);
+	DeleteBullets();
 }
 
+
+void SetOfEnemy::UpdateBullets(float time,sf::RenderWindow &window)		    // ќбновл€ем состо€ние пуль выпущенных врагами
+{
+	std::vector<Bullet>::iterator Bulletit;
+	for (Bulletit = SetOFMovingEnemysBullets.begin(); Bulletit != SetOFMovingEnemysBullets.end(); Bulletit++)
+	{
+		Bulletit->Move(time);
+		Bulletit->Draw(window);
+	}
+}
+
+
+void SetOfEnemy::DeleteBullets()
+{
+	int i = 0;
+	for (; i < SetOFMovingEnemysBullets.size(); i++)
+	{
+		if (SetOFMovingEnemysBullets[i].IsForDelete())
+		{
+			SetOFMovingEnemysBullets.erase(SetOFMovingEnemysBullets.begin() + i);
+			i--;
+		}
+	}
+}
 void SetOfEnemy::DeleteEnemy() // ≈сли врага надо удалить то удал€ем
 {
-	for (std::vector<Enemy>::iterator it = SOE.begin(); it != SOE.end(); it++)
+	for (std::vector<Enemys::MovingEnemy>::iterator it = SetOfMovingEnemys.begin(); it != SetOfMovingEnemys.end(); it++)
 	{
 		if (it->IsForDelete())
 		{
 			EnemyLeft--;
-			SOE.erase(it);
+			SetOfMovingEnemys.erase(it);
 			return;
 		}
 	}
@@ -208,44 +234,17 @@ void SetOfEnemy::SwapEnemyInList(EnemyI *First, EnemyI *Second, EnemyI *tmpEn) /
 }
 
 
-sf::IntRect GetIntersectRect(sf::IntRect first, sf::IntRect second)
+
+void SetOfEnemy::AddBullets()
 {
-	sf::IntRect interrect;
-	int count = 0;
-	bool tl = false, tr = false, bl = false, br = false;
-	if (first.contains(sf::Vector2i(second.left, second.top)))
+	std::vector<Enemys::MovingEnemy>::iterator it = SetOfMovingEnemys.begin();
+	for (; it != SetOfMovingEnemys.end(); it++)
 	{
-		count++;
-		tl = true;
-	}
-	if (first.contains(sf::Vector2i(second.left + second.width, second.top)))
-	{
-		count++;
-		tr = true;
-	}
-	if (first.contains(sf::Vector2i(second.left, second.top + second.height)))
-	{
-		count++;
-		br = true;
-	}
-	if (first.contains(sf::Vector2i(second.left + second.width, second.top + second.height)))
-	{
-		count++;
-		tl = true;
-	}
-	if (count == 1)
-	{
-		if (br && !(tl || tr || bl))
+		if (it->IsShot())
 		{
-			interrect.top = first.top;
-			interrect.left = first.left;
+			Bullet *B = new Bullet(it->GetPostion(), cox, coy, "./img/bullets/bullet.png", 2, 0.1, it->GetDemage());
+			SetOFMovingEnemysBullets.push_back(*B);
 		}
+
 	}
-	return interrect;
-}
-
-
-std::vector<Enemy> * SetOfEnemy::ReturnEnemysVector()
-{
-	return &SOE;
 }

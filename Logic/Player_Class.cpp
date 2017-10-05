@@ -1,7 +1,7 @@
 #include "stdafx.h"
 #include "Player_Class.h"
 #include <iostream>
-player_object::player_object(int x, int y, double shapecox,double shapecoy,bool Isnew)
+PlayerO::PlayerO(int x, int y, double shapecox,double shapecoy,bool Isnew)
 {
 	fireclock.restart();
 	this->x = x * shapecox;
@@ -39,19 +39,19 @@ player_object::player_object(int x, int y, double shapecox,double shapecoy,bool 
 	timerclock.restart();
 }
 
-bool player_object::LoadFile(bool Isnew, char *filename)
+bool PlayerO::LoadFile(bool Isnew, char *filename)	// Нужен для загрузки параметров игрока из бинарного файла
 {
 	if (Isnew == true) return false;
 	else
 	{
 		std::ifstream loadfile;
-		loadfile.open("save.txt", std::ios::binary | std::ios::in);
+		loadfile.open(filename, std::ios::binary | std::ios::in);
 			loadfile.read((char *)&State, sizeof(PStatements));
 			return true;
 	}
 }
 
-void player_object::Move(sf::RenderWindow &window)
+void PlayerO::Move(sf::RenderWindow &window)
 {
 	sf::Vector2i pos = sf::Mouse::getPosition(window);
 	int xt, yt;
@@ -65,7 +65,7 @@ void player_object::Move(sf::RenderWindow &window)
 	SetCoord(xt, yt);
 }
 
-void player_object::SetCoord(int x,int y)
+void PlayerO::SetCoord(int x,int y)
 {
 	// Сдесь устанавливаю координа для "составных частей корабля"
 	Body.setPosition(x, y);
@@ -77,20 +77,12 @@ void player_object::SetCoord(int x,int y)
 }
 
 
-void player_object::Draw(sf::RenderWindow &window)
+void PlayerO::Draw(sf::RenderWindow &window)
 {
 	window.draw(Body);
 }
 
-void player_object::IfShot(int inter, int remh)
-{
-	if (!ShieldActive)
-	{
-		if (inter == 1) RemoveHealth(remh); // Если в корабль попали то уменьшаем жизни
-	}
-}
-
-void player_object::RemoveHealth(int remh)
+void PlayerO::RemoveHealth(int remh)
 {
 	if (!ShieldActive) // Уменьшать сзоровье только если щит не активен
 	{
@@ -99,29 +91,12 @@ void player_object::RemoveHealth(int remh)
 
 }
 
-void player_object::AddHealth(int addh)
+void PlayerO::AddHealth(int addh)
 {
 	State.health += addh;
 }
-
-int player_object::Fire()
-{// Проверяем если прошло время больше чем в gunspeed и нажата клавиша мыши то возвращаем 1, что означает выстрел и обнуляем счётчик иначе возвращаем 0
-	if (sf::Mouse::isButtonPressed(sf::Mouse::Left))
-	{
-		if (fireclock.getElapsedTime().asSeconds() > 0.5)
-		{
-			fireclock.restart();
-			return 1;
-		}
-		
-		else
-			return 0;
-	}
-	else
-		return 0;
-}
-
-void player_object::SetEnergy()
+					
+void PlayerO::SetEnergy()
 {
 	if (energytime.getElapsedTime().asSeconds() > 0.2)
 	{
@@ -131,7 +106,7 @@ void player_object::SetEnergy()
 	}
 }
 
-void player_object::ActiveDeactiveS()
+void PlayerO::ActiveDeactiveS()	// Для активации и деактивации щита
 {
 	if (State.energy = 0) ShieldActive = false;
 	if (State.energy = 100)
@@ -143,12 +118,12 @@ void player_object::ActiveDeactiveS()
 	}
 }
 
-PStatements player_object::GetPlayerStatements()
+PStatements PlayerO::GetPlayerStatements()	 // Метод возвращает структуру в которой храняться параметры игрока Нужен для сохрнанения игры
 {
 	return State;
 }
 
-void player_object::SaveState(char *filename)
+void PlayerO::SaveState(char *filename)
 {
 	std::ofstream savefile;
 	savefile.open(filename, std::ios::ate);
@@ -157,22 +132,14 @@ void player_object::SaveState(char *filename)
 	
 }
 
-
-sf::IntRect player_object::ReturnRect()
-{
-	sf::IntRect Bodyrect(Body.getPosition().x, Body.getPosition().y, Body.getGlobalBounds().width, Body.getGlobalBounds().height);
-	return Bodyrect;
-
-}
-
-int player_object::GetHealth()
+int PlayerO::GetHealth()	// Возвращае здоровье игрока
 {
 	return State.health;
 }
 
-bool player_object::ifShot()
+bool PlayerO::ifShot()
 {
-	if (sf::Mouse::isButtonPressed(sf::Mouse::Left))
+	if (sf::Mouse::isButtonPressed(sf::Mouse::Left))	  // Если нажата левая кнопка мыши и прошло больше времени чем указано в ограничении скорсти оружия то возвражаем истину
 	{
 		if (fireclock.getElapsedTime().asSeconds() > State.gunspeed)
 		{
@@ -191,7 +158,7 @@ bool player_object::ifShot()
 }
 
 
-sf::Vector2f player_object::GetBulletPosition(int &y)
+sf::Vector2f PlayerO::GetBulletPosition(int &y) // Раньше рассчітывал позіцію пулі скорее всего удалю
 {
 	y = bodyimg.getSize().y;
 	y *= shapecoy;
@@ -201,13 +168,43 @@ sf::Vector2f player_object::GetBulletPosition(int &y)
 }
 
 
-player_object& player_object::operator-(int value)
+PlayerO& PlayerO::operator-(int value)	// Для уменьшения здоровья игрока
 {
 	State.health -= value;
 	return *this;
 }
 
-player_object& player_object::operator+(int value)
+
+void PlayerO::RemovePBullets()
+{
+	int i = 0;
+	for (; i < SetOfPlayerBullets.size(); i++)	   // Удаляем те пули которые уже "отстреляли свое"
+	{
+		if (SetOfPlayerBullets[i].IsForDelete())
+		{
+			SetOfPlayerBullets.erase(SetOfPlayerBullets.begin() + i);
+			i--;
+		}
+	}
+}
+void PlayerO::Update(sf::RenderWindow &window,float time)
+{
+	Move(window);
+	Draw(window);
+	if (ifShot())	   // Если произошёл выстрел то добавим пулю в вектор
+	{
+		double Bulletx = Body.getPosition().x + Body.getLocalBounds().width;
+		double Bullety = Body.getPosition().y + (Body.getLocalBounds().height / 2);
+		Bullet *B = new Bullet(sf::Vector2f(Bulletx, Bullety), shapecox, shapecoy, "./img/bullets/bullet.png", 1, State.gunspeed, State.gun);
+		SetOfPlayerBullets.push_back(*B);
+	}
+	for (std::vector<Bullet>::iterator it = SetOfPlayerBullets.begin(); it != SetOfPlayerBullets.end(); it++)
+	{
+		it->Move(time);
+		it->Draw(window);
+	}
+}
+PlayerO& PlayerO::operator+(int value) // Для увеличения здоровья игрока
 {
 	State.health += value;
 	return *this;

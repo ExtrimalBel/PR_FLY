@@ -1,7 +1,7 @@
 #include "stdafx.h"
 #include "Thingsh.h"
-
-void RemoveDemageFromPlayers(player_object &Player, SetOfBullets &SetOFB, SetOfEnemy &ENM)
+/*
+void RemoveDemageFromPlayers(PlayerO &Player, SetOfBullets &SetOFB, SetOfEnemy &ENM)
 {
 	std::vector<Bullet>::iterator it = SetOFB.SOB.begin();
 	for (; it != SetOFB.SOB.end(); it++)
@@ -15,7 +15,7 @@ void RemoveDemageFromPlayers(player_object &Player, SetOfBullets &SetOFB, SetOfE
 	}
 	std::vector<Enemy>::iterator EnemyIt;// Сдесь объявляю итераторы на пули и врагов
 	std::vector<Bullet>::iterator BulletIt;
-	for (EnemyIt = ENM.SOE.begin(); EnemyIt != ENM.SOE.end(); EnemyIt++) // Проверяю каждого врага и пулю на пересечение и если оно произошло то отнимаю у врага жизни и устанавливаю пулю на удаление
+	for (EnemyIt = ENM.SetOfMovingEnemys.begin(); EnemyIt != ENM.SetOfMovingEnemys.end(); EnemyIt++) // Проверяю каждого врага и пулю на пересечение и если оно произошло то отнимаю у врага жизни и устанавливаю пулю на удаление
 	for (BulletIt = SetOFB.PSOB.begin(); BulletIt != SetOFB.PSOB.end(); BulletIt++)
 	{
 		if (InterSects::IfSpritesInterSects(EnemyIt->GetSprite(), EnemyIt->GetImage(), BulletIt->GetSprite(), BulletIt->GetImage()))
@@ -25,25 +25,13 @@ void RemoveDemageFromPlayers(player_object &Player, SetOfBullets &SetOFB, SetOfE
 		}
 	}
 	SetOFB.DeleteBullets();
-}
+}  */
 
-void AddEnemyBullets(SetOfEnemy &SOE, SetOfBullets &SOB)
+
+void CountDemageBetweenPlayerAndBoss(Level_Boss &BOSS, PlayerO &P1) // Проверяет попадание пль игрока в босса и наоброт и если попадание есть отнимает здоровь
 {
-	for (std::vector<Enemy>::iterator it = SOE.SOE.begin(); it != SOE.SOE.end(); it++)
-	{
-		if (it->IsShot())
-		{
-			it->ResetClock();
-			SOB.AddBullet(it->GetPostion(), SOE.cox, SOE.coy, 2, 0.1, it->GetDemage());
-		}
-	}
-}
-
-
-void CountDemageBetweenPlayerAndBoss(SetOfBullets &SetOfB, Level_Boss &BOSS, player_object &P1) // Проверяет попадание пль игрока в босса и наоброт и если попадание есть отнимает здоровь
-{
-	std::vector<Bullet>::iterator it = SetOfB.PSOB.begin();
-	for (; it != SetOfB.PSOB.end(); it++) // В этом цикле проверяем все пули выпущенные игроком на попадание в босса и если оно случилось то отнимаем у босса хп
+	std::vector<Bullet>::iterator it = P1.SetOfPlayerBullets.begin();
+	for (; it != P1.SetOfPlayerBullets.end(); it++) // В этом цикле проверяем все пули выпущенные игроком на попадание в босса и если оно случилось то отнимаем у босса хп
 	{
 		if (InterSects::IfSpritesInterSects(it->GetSprite(), it->GetImage(), BOSS.GetSprite(), BOSS.GetImage()))
 		{
@@ -68,6 +56,33 @@ void CountDemageBetweenPlayerAndBoss(SetOfBullets &SetOfB, Level_Boss &BOSS, pla
 			P1 - it->GetDemage();
 		}
 	}
+	P1.RemovePBullets();
 	BOSS.DeleteBullets();
-	SetOfB.DeleteBullets();
+}		  
+
+void CountDemageBeetwinPlayerAndEnemys(PlayerO &Player, SetOfEnemy &SetOFEnemys)
+{
+	std::vector<Bullet>::iterator EnemyBUlit; // Указывает на вражескую пулю
+	// Просматриваем вражеские пули на пересечение с игроком и если пересечение обнаружено то пулю помечаем на удаление и отнимаем здоровье у игрока
+	for (EnemyBUlit = SetOFEnemys.SetOFMovingEnemysBullets.begin(); EnemyBUlit != SetOFEnemys.SetOFMovingEnemysBullets.end(); EnemyBUlit++)
+	{
+		if (InterSects::IfSpritesInterSects(EnemyBUlit->GetSprite(), EnemyBUlit->GetImage(), Player.GetSprite(), Player.GetImage()))
+		{
+			Player - EnemyBUlit->GetDemage();
+			EnemyBUlit->SetDelete(true);
+		}
+	}
+	std::vector<Bullet>::iterator PBulletIt; // Указывает на пулю врага
+	std::vector<Enemys::MovingEnemy>::iterator En; // Указывает на врага
+	for (PBulletIt = Player.SetOfPlayerBullets.begin(); PBulletIt != Player.SetOfPlayerBullets.end(); PBulletIt++)
+	{
+		for (En = SetOFEnemys.SetOfMovingEnemys.begin(); En != SetOFEnemys.SetOfMovingEnemys.end(); En++)
+		{
+			if (InterSects::IfSpritesInterSects(PBulletIt->GetSprite(), PBulletIt->GetImage(), En->GetSprite(),En->GetImage()))
+			{
+				En - PBulletIt->GetDemage();
+				PBulletIt->SetDelete(true);
+			}
+		}
+	}
 }
