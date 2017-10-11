@@ -1,31 +1,5 @@
 #include "stdafx.h"
 #include "Thingsh.h"
-/*
-void RemoveDemageFromPlayers(PlayerO &Player, SetOfBullets &SetOFB, SetOfEnemy &ENM)
-{
-	std::vector<Bullet>::iterator it = SetOFB.SOB.begin();
-	for (; it != SetOFB.SOB.end(); it++)
-	{
-		if (InterSects::IfSpritesInterSects(Player.GetSprite(), Player.GetImage(), it->GetSprite(), it->GetImage()))
-		{
-			//Player.RemoveHealth(it->GetDemage());
-			Player - it->GetDemage();
-			it->SetDelete(true);
-		}
-	}
-	std::vector<Enemy>::iterator EnemyIt;// Сдесь объявляю итераторы на пули и врагов
-	std::vector<Bullet>::iterator BulletIt;
-	for (EnemyIt = ENM.SetOfMovingEnemys.begin(); EnemyIt != ENM.SetOfMovingEnemys.end(); EnemyIt++) // Проверяю каждого врага и пулю на пересечение и если оно произошло то отнимаю у врага жизни и устанавливаю пулю на удаление
-	for (BulletIt = SetOFB.PSOB.begin(); BulletIt != SetOFB.PSOB.end(); BulletIt++)
-	{
-		if (InterSects::IfSpritesInterSects(EnemyIt->GetSprite(), EnemyIt->GetImage(), BulletIt->GetSprite(), BulletIt->GetImage()))
-		{
-			EnemyIt->RemoveHealth(BulletIt->GetDemage());
-			BulletIt->SetDelete(true);
-		}
-	}
-	SetOFB.DeleteBullets();
-}  */
 
 
 void CountDemageBetweenPlayerAndBoss(Level_Boss &BOSS, PlayerO &P1) // Проверяет попадание пль игрока в босса и наоброт и если попадание есть отнимает здоровь
@@ -45,7 +19,7 @@ void CountDemageBetweenPlayerAndBoss(Level_Boss &BOSS, PlayerO &P1) // Проверяет
 		if (InterSects::IfSpritesInterSects(it->GetSprite(), it->GetImage(), P1.GetSprite(), P1.GetImage()))
 		{
 			it->SetDelete(true);
-			P1 - it->GetDemage();
+			P1.RemoveHealth(it->GetDemage());
 		}
 	}
 	for (it = BOSS.SetofSBullet.begin(); it != BOSS.SetofSBullet.end(); it++)
@@ -53,7 +27,7 @@ void CountDemageBetweenPlayerAndBoss(Level_Boss &BOSS, PlayerO &P1) // Проверяет
 		if (InterSects::IfSpritesInterSects(it->GetSprite(), it->GetImage(), P1.GetSprite(), P1.GetImage()))
 		{
 			it->SetDelete(true);
-			P1 - it->GetDemage();
+			P1.RemoveHealth(it->GetDemage());
 		}
 	}
 	P1.RemovePBullets();
@@ -80,7 +54,7 @@ void CountDemageBeetwinPlayerAndEnemys(PlayerO &Player, SetOfEnemy &SetOFEnemys)
 		{
 			if (InterSects::IfSpritesInterSects(PBulletIt->GetSprite(), PBulletIt->GetImage(), En->GetSprite(),En->GetImage()))
 			{
-				En - PBulletIt->GetDemage();
+				En->RemoveHealth(PBulletIt->GetDemage());
 				PBulletIt->SetDelete(true);
 			}
 		}

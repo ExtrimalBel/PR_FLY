@@ -30,9 +30,10 @@ namespace SoundSystem
 		int ChangeType(State type);
 		int ChangeSoundState();
 		int SetOnElement(bool val) { MainM->onelement = val; return 0; }
+		void SetVolume(float volume); // Установка переменной громкости
 	private:
 		int InicializeMainMenu();
-		void SetVolume(float volume); // Установка переменной громкости
+
 		int UpdateVolume(); // Обновление громкости для всех звуков]
 		int UpdateVolMainM();
 	

@@ -13,11 +13,12 @@
 class LOGIC_API Back_Menu
 {
 	int PosLines[12];
-	std::vector<sf::RectangleShape> Lines;
+	std::vector<sf::Sprite> Lines;
 	sf::RectangleShape lin;
 	sf::RectangleShape Back_Rec;
 	sf::Texture Backtex;
 	sf::Clock Up_Clock;
+	sf::Texture StarTexture;
 	double cox, coy;
 protected:
 	void Draw(float time, sf::RenderWindow &window);

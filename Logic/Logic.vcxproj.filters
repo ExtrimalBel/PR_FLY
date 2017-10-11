@@ -114,9 +114,6 @@
     <ClInclude Include="Player_Class.h">
       <Filter>Ships</Filter>
     </ClInclude>
-    <ClInclude Include="ExceptionsDefenitions.h">
-      <Filter>Заголовочные файлы</Filter>
-    </ClInclude>
     <ClInclude Include="Intersectsmenager.h">
       <Filter>Заголовочные файлы</Filter>
     </ClInclude>
@@ -127,6 +124,9 @@
       <Filter>Заголовочные файлы</Filter>
     </ClInclude>
     <ClInclude Include="BaseForEnemys.h">
+      <Filter>Заголовочные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="ExceptionsDefenitions.hpp">
       <Filter>Заголовочные файлы</Filter>
     </ClInclude>
   </ItemGroup>

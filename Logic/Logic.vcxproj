@@ -86,7 +86,7 @@
     <ClInclude Include="BaseMenu.h" />
     <ClInclude Include="Bullet.h" />
     <ClInclude Include="ConfigReader.h" />
-    <ClInclude Include="ExceptionsDefenitions.h" />
+    <ClInclude Include="ExceptionsDefenitions.hpp" />
     <ClInclude Include="Intersectsmenager.h" />
     <ClInclude Include="Level.h" />
     <ClInclude Include="LevelBoss.h" />

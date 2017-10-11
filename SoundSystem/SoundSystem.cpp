@@ -98,7 +98,7 @@ int SoundPlayer::UpdateVolume()
 	switch (type)
 	{
 	case State::MainMenu:
-		UpdateVolume();
+		UpdateVolMainM();
 		break;
 	default:
 		return -1;

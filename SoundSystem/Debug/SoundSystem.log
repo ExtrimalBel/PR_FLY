@@ -1,5 +1,16 @@
-﻿Сборка начата 05.10.2017 17:24:20.
+﻿Сборка начата 11.10.2017 16:57:04.
+     1>Проект "C:\Users\Vitalik\Source\Repos\PR_FLY\SoundSystem\SoundSystem.vcxproj" в узле 2 (целевые объекты Build).
+     1>ClCompile:
+         D:\Programs\VS_INSTALL\VC\bin\CL.exe /c /I"..\PR_FLY\SFML-2.4.2\include" /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D SFML_DYNAMIC /D WIN32 /D _DEBUG /D _WINDOWS /D _USRDLL /D SOUNDSYSTEM_EXPORTS /D _WINDLL /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\SoundSystem.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt SoundSystem.cpp
+         SoundSystem.cpp
+     1>c:\users\vitalik\source\repos\pr_fly\soundsystem\soundsystem.cpp(107): warning C4715: SoundSystem::SoundPlayer::UpdateVolume: значение возвращается не при всех путях выполнения
+       Link:
+         D:\Programs\VS_INSTALL\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Vitalik\Source\Repos\PR_FLY\Debug\SoundSystem.dll" /INCREMENTAL /NOLOGO /LIBPATH:"..\PR_FLY\SFML-2.4.2\lib" "sfml-audio-d.lib" openal32.lib flac.lib vorbisenc.lib vorbisfile.lib vorbis.lib ogg.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Vitalik\Source\Repos\PR_FLY\Debug\SoundSystem.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Vitalik\Source\Repos\PR_FLY\Debug\SoundSystem.lib" /MACHINE:X86 /DLL Debug\dllmain.obj
+         Debug\SoundSystem.obj
+         Debug\stdafx.obj
+         SoundSystem.vcxproj -> C:\Users\Vitalik\Source\Repos\PR_FLY\Debug\SoundSystem.dll
+     1>Сборка проекта "C:\Users\Vitalik\Source\Repos\PR_FLY\SoundSystem\SoundSystem.vcxproj" завершена (целевые объекты Build).
 
 Сборка успешно завершена.
 
-Затраченное время: 00:00:00.06
+Затраченное время: 00:00:00.63

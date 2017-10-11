@@ -44,6 +44,7 @@ int main()
 		int vidx;
 		int vidy;
 
+		SPlayer.SetVolume(0);
 		sf::Uint32 st;
 		LoadVideoMode(vidx, vidy, st);
 		double cox = vidx;
@@ -60,7 +61,6 @@ int main()
 		LoadM *LM = NULL;
 		enum State { Game, Settings, MMenu, LoadGame }; // Перечесление отображающее состояние работы программы
 		State Statements = MMenu; // Объект данного перечесления
-		//SoundPlayer.PlayMusic(1);
 		while (window.isOpen())
 		{
 			window.clear();
