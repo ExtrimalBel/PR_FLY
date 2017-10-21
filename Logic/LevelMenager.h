@@ -10,7 +10,7 @@
 #include "Level.h"
 #include "transitscreen.h"
 #include <thread>
-enum LevelState {InGame,TranScr,Pause};
+enum LevelState {InGame,TranScr,Pause,EndLevelSet};
 class LevelMenager
 {
 	char pathtoenemy[100];
@@ -33,6 +33,7 @@ public:
 	LevelMenager(char *path, double cox, double coy,bool Is_new,char *SaveFile);
 	void Update(float time, sf::RenderWindow &window);
 	void ReadLevelNames();
+	bool IsLevelSetIsEnd();
 	double GetHealth();
 };
 

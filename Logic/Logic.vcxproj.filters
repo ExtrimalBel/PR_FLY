@@ -72,9 +72,6 @@
     <ClInclude Include="playerbullet.h">
       <Filter>Заголовочные файлы\Old_Sources</Filter>
     </ClInclude>
-    <ClInclude Include="phfsint.hpp">
-      <Filter>Заголовочные файлы</Filter>
-    </ClInclude>
     <ClInclude Include="transitscreen.h">
       <Filter>Заголовочные файлы</Filter>
     </ClInclude>

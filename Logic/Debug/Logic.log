@@ -1,19 +1,14 @@
-﻿Сборка начата 11.10.2017 18:31:48.
-     1>Проект "C:\Users\Vitalik\Source\Repos\PR_FLY\Logic\Logic.vcxproj" в узле 2 (целевые объекты Build).
+﻿Сборка начата 21.10.2017 23:51:38.
+     1>Проект "I:\PR\PR_FLY\Logic\Logic.vcxproj" в узле 2 (целевые объекты Build).
      1>ClCompile:
-         D:\Programs\VS_INSTALL\VC\bin\CL.exe /c /I..\SoundSystem /I..\PR_FLY /I..\PR_FLY\phfsnew /I"..\PR_FLY\SFML-2.4.2\include" /ZI /nologo /W3 /WX- /Od /Oy- /D NOMINMAX /D SFML_DYNAMIC /D WIN32 /D _DEBUG /D _WINDOWS /D _USRDLL /D LOGIC_EXPORTS /D _WINDLL /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\Logic.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Background_Class.cpp
-         Background_Class.cpp
-     1>c:\users\vitalik\source\repos\pr_fly\logic\background_class.cpp(16): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
-     1>c:\users\vitalik\source\repos\pr_fly\logic\background_class.cpp(22): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
-     1>c:\users\vitalik\source\repos\pr_fly\logic\background_class.cpp(26): warning C4244: *=: преобразование "double" в "int", возможна потеря данных
-     1>c:\users\vitalik\source\repos\pr_fly\logic\background_class.cpp(63): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
-     1>c:\users\vitalik\source\repos\pr_fly\logic\background_class.cpp(63): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
-     1>c:\users\vitalik\source\repos\pr_fly\logic\background_class.cpp(64): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
-     1>c:\users\vitalik\source\repos\pr_fly\logic\background_class.cpp(75): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
-     1>c:\users\vitalik\source\repos\pr_fly\logic\background_class.cpp(92): warning C4018: <: несоответствие типов со знаком и без знака
-     1>c:\users\vitalik\source\repos\pr_fly\logic\background_class.cpp(95): warning C4146: применение унарного минуса к типу без знака; результат оставлен без знака
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I..\SoundSystem /I..\PR_FLY /I..\PR_FLY\phfsnew /I"..\PR_FLY\SFML-2.4.2\include" /ZI /nologo /W3 /WX- /Od /Oy- /D NOMINMAX /D SFML_DYNAMIC /D WIN32 /D _DEBUG /D _WINDOWS /D _USRDLL /D LOGIC_EXPORTS /D _WINDLL /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\Logic.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt GameField.cpp LevelMenager.cpp
+         GameField.cpp
+     1>i:\pr\pr_fly\logic\gamefield.cpp(27): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+         Создание кода...
+         Пропуск... (изменения не обнаружены)
+         LevelMenager.cpp
        Link:
-         D:\Programs\VS_INSTALL\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Vitalik\Source\Repos\PR_FLY\Debug\Logic.dll" /INCREMENTAL /NOLOGO /LIBPATH:..\Debug /LIBPATH:..\PR_FLY\phfsnew /LIBPATH:"..\PR_FLY\SFML-2.4.2\lib" "sfml-audio-d.lib" openal32.lib flac.lib vorbisenc.lib vorbisfile.lib vorbis.lib ogg.lib physfs.lib "sfml-graphics-d.lib" "sfml-window-d.lib" "sfml-system-d.lib" "sfml-main-d.lib" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Vitalik\Source\Repos\PR_FLY\Debug\Logic.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Vitalik\Source\Repos\PR_FLY\Debug\Logic.lib" /MACHINE:X86 /DLL Debug\Background_Class.obj
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"I:\PR\PR_FLY\Debug\Logic.dll" /INCREMENTAL /NOLOGO /LIBPATH:..\Debug /LIBPATH:..\PR_FLY\phfsnew /LIBPATH:"..\PR_FLY\SFML-2.4.2\lib" "sfml-audio-d.lib" openal32.lib flac.lib vorbisenc.lib vorbisfile.lib vorbis.lib ogg.lib physfs.lib "sfml-graphics-d.lib" "sfml-window-d.lib" "sfml-system-d.lib" "sfml-main-d.lib" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"I:\PR\PR_FLY\Debug\Logic.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"I:\PR\PR_FLY\Debug\Logic.lib" /MACHINE:X86 /DLL Debug\Background_Class.obj
          Debug\BaseEnemy.obj
          Debug\BaseMenu.obj
          Debug\Bullet.obj
@@ -39,10 +34,10 @@
          Debug\stdafx.obj
          Debug\Things.obj
          Debug\transitscreen.obj
-         C:\Users\Vitalik\Source\Repos\PR_FLY\Debug\SoundSystem.lib
-         Logic.vcxproj -> C:\Users\Vitalik\Source\Repos\PR_FLY\Debug\Logic.dll
-     1>Сборка проекта "C:\Users\Vitalik\Source\Repos\PR_FLY\Logic\Logic.vcxproj" завершена (целевые объекты Build).
+         I:\PR\PR_FLY\Debug\SoundSystem.lib
+         Logic.vcxproj -> I:\PR\PR_FLY\Debug\Logic.dll
+     1>Сборка проекта "I:\PR\PR_FLY\Logic\Logic.vcxproj" завершена (целевые объекты Build).
 
 Сборка успешно завершена.
 
-Затраченное время: 00:00:00.36
+Затраченное время: 00:00:01.81

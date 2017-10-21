@@ -98,7 +98,6 @@
     <ClInclude Include="Hud.h" />
     <ClInclude Include="loadgameclass.h" />
     <ClInclude Include="Logic.h" />
-    <ClInclude Include="phfsint.hpp" />
     <ClInclude Include="PixelPerfect.h" />
     <ClInclude Include="playerbullet.h" />
     <ClInclude Include="PlayerS.h" />

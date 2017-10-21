@@ -13,7 +13,6 @@
 #include "Hud.h"
 #include <vector>
 #include "LevelMenager.h"
-#include "phfsint.hpp"
 class LOGIC_API GameField
 {
 	// Player object
@@ -28,8 +27,6 @@ class LOGIC_API GameField
 	double fuel;
 	std::vector<sf::Vector2f> coordsxy;
 	LevelMenager *Men;
-	PhysControl Control;
-	PhysFsStream FileStream;
 	sf::Music Back_Theme;
 public:
 	GameField(double xsc, double ysc,int slot,sf::RenderWindow &window,bool Is_new,char *SaveFile);

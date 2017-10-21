@@ -44,7 +44,7 @@ int main()
 		int vidx;
 		int vidy;
 
-		SPlayer.SetVolume(0);
+		//SPlayer.SetVolume(0);
 		sf::Uint32 st;
 		LoadVideoMode(vidx, vidy, st);
 		double cox = vidx;

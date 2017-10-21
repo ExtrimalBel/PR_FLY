@@ -40,33 +40,6 @@ int LevelMenager::LoadLevel()
 
 void LevelMenager::Update(float time, sf::RenderWindow &window)
 {
-	/*
-	if (LevelsEnd)
-	{
-		return;
-	}
-	if (IsScreen)
-	{
-		TRSCR->Update(window);
-		if (TRSCR->IfExit()) IsScreen = false;
-		return;
-	}
-	if (CurrentLevel->ReturnLevelEnd())
-	{
-		if (CurLevel == count)
-		{
-			LevelsEnd = true;
-		}
-		TRSCR = new Screens::TransitScreen(cox, coy, LevelNames[CurLevel].c_str());
-		IsScreen = true;
-		LoadNextLevel();
-		return;
-	}
-	else
-	{
-		CurrentLevel->UpdateLevel(time, window);
-		return;
-	}*/
 	switch (State)
 	{
 	case LevelState::TranScr:
@@ -89,7 +62,7 @@ void LevelMenager::Update(float time, sf::RenderWindow &window)
 			CurLevel++;
 			if (CurLevel >= count)
 			{
-				State = LevelState::Pause;
+				State = LevelState::EndLevelSet;
 				break;
 			}
 			LevelLoaded = false;
@@ -142,4 +115,9 @@ void LevelMenager::ReadLevelNames()
 		levelnames >> tmpstr;
 		LevelNames[i] = tmpstr;
 	}
+}
+
+bool LevelMenager::IsLevelSetIsEnd()
+{
+	return State == LevelState::EndLevelSet ? true : false;
 }
