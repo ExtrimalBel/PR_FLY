@@ -1,7 +1,7 @@
 #include "stdafx.h"
 #include "BaseMenu.h"
 #include <SoundSystem.h>
-
+#include "Exceptions.h"
 BaseMenu::BaseMenu(double cox, double coy, SoundSystem::SoundPlayer &SPlayer)
 {
 	sf::Mouse::setPosition(sf::Vector2i(300, 300));
@@ -11,6 +11,7 @@ BaseMenu::BaseMenu(double cox, double coy, SoundSystem::SoundPlayer &SPlayer)
 	this->SPlayer = &SPlayer;
 	//SPlayer.Inicialize();
 	ButtonBack.loadFromFile("./img/menu/newgame.png");
+	ButtonBack.setSmooth(true);
 
 	logotex.loadFromFile("./img/menu/logo.png");
 	logo.setTexture(&logotex);
@@ -32,14 +33,14 @@ BaseMenu::BaseMenu(double cox, double coy, SoundSystem::SoundPlayer &SPlayer)
 	firstitem.setSize(sf::Vector2f(600, 100));
 	firstitem.setScale(sf::Vector2f(cox, coy));
 	firstitem.setPosition(660 * cox, 200 * coy);
-	firstitem.setTextureRect(sf::IntRect(0, 0, 300, 100));
+	firstitem.setTextureRect(sf::IntRect(0, 0, 600, 100));
 
 
 	seconditem.setTexture(&ButtonBack);
 	seconditem.setSize(sf::Vector2f(600, 100));
 	seconditem.setScale(sf::Vector2f(cox, coy));
 	seconditem.setPosition(660 * cox, 350 * coy);
-	seconditem.setTextureRect(sf::IntRect(0, 0, 300, 100));
+	seconditem.setTextureRect(sf::IntRect(0, 0, 600, 100));
 
 
 
@@ -47,13 +48,13 @@ BaseMenu::BaseMenu(double cox, double coy, SoundSystem::SoundPlayer &SPlayer)
 	thirditem.setSize(sf::Vector2f(600, 100));
 	thirditem.setScale(sf::Vector2f(cox, coy));
 	thirditem.setPosition(660 * cox, 500 * coy);
-	thirditem.setTextureRect(sf::IntRect(0, 0, 300, 100));
+	thirditem.setTextureRect(sf::IntRect(0, 0, 600, 100));
 
 	fourthitem.setTexture(&ButtonBack);
 	fourthitem.setSize(sf::Vector2f(600, 100));
 	fourthitem.setScale(sf::Vector2f(cox, coy));
 	fourthitem.setPosition(660 * cox, 650 * coy);
-	fourthitem.setTextureRect(sf::IntRect(0, 0, 300, 100));
+	fourthitem.setTextureRect(sf::IntRect(0, 0, 600, 100));
 
 
 
@@ -68,11 +69,14 @@ BaseMenu::BaseMenu(double cox, double coy, SoundSystem::SoundPlayer &SPlayer)
 void BaseMenu::Update(float time, sf::RenderWindow &window)
 {
 
-		if (menuitem < 0 || menuitem > 4)
-		{
-			char *str = "Экран загрузки: неправильный идентификатор кнопки\n Усанавливаю пункт меню = 1";
-			throw str;
-		}
+	try
+	{
+		if (menuitem < 0 || menuitem > 4) throw Exceptions::FileNotFoundException("Непраильный пункт меню, устанавливаю в 1");
+	}
+	catch (Exceptions::FileNotFoundException &Ex)
+	{
+		Ex.PrintMessage();
+	}
 	
 	sf::Vector2i  m = sf::Mouse::getPosition(window);
 	mousecursorspr.setPosition(sf::Vector2f(m.x,m.y));
@@ -107,46 +111,46 @@ void BaseMenu::IfMenuItemSelected(sf::RenderWindow &window)
 	{
 		SPlayer->PlaySound(1);
 		SPlayer->SetOnElement(true);
-		firstitemtext.setFillColor(sf::Color::Cyan);
+		//firstitemtext.setFillColor(sf::Color::Cyan);
 		std::cout << 660 * cox << std::endl << 200 * cox << std::endl;
-		firstitem.setTextureRect(sf::IntRect(300, 0, 300, 100));
+		firstitem.setTextureRect(sf::IntRect(600, 0, 600, 100));
 		menuitem = 1;
 	}
 	else if (LoadGameerect.contains(sf::Mouse::getPosition(window)))
 	{
 		SPlayer->PlaySound(1);
 		SPlayer->SetOnElement(true);
-		seconditemtext.setFillColor(sf::Color::Cyan);
-		seconditem.setTextureRect(sf::IntRect(300, 0, 300, 100));
+		//seconditemtext.setFillColor(sf::Color::Cyan);
+		seconditem.setTextureRect(sf::IntRect(600, 0, 600, 100));
 		menuitem = 2;
 	}
 	else if (setrect.contains(sf::Mouse::getPosition(window)))
 	{
 		SPlayer->PlaySound(1);
 		SPlayer->SetOnElement(true);
-		thirditemtext.setFillColor(sf::Color::Cyan);
-		thirditem.setTextureRect(sf::IntRect(300, 0, 300, 100));
+		//thirditemtext.setFillColor(sf::Color::Cyan);
+		thirditem.setTextureRect(sf::IntRect(600, 0, 600, 100));
 		menuitem = 3;
 	}
 	else if (exitrect.contains(sf::Mouse::getPosition(window)))
 	{
 		SPlayer->PlaySound(1);
 		SPlayer->SetOnElement(true);
-		fouritemtext.setFillColor(sf::Color::Cyan);
-		fourthitem.setTextureRect(sf::IntRect(300, 0, 300, 100));
+		//fouritemtext.setFillColor(sf::Color::Cyan);
+		fourthitem.setTextureRect(sf::IntRect(600, 0, 600, 100));
 		menuitem = 4;
 	}
 	else
 	{
 		SPlayer->SetOnElement(false);
-		firstitemtext.setFillColor(sf::Color(178, 34, 34));
-		seconditemtext.setFillColor(sf::Color(178, 34, 34));
-		thirditemtext.setFillColor(sf::Color(178, 34, 34));
-		fouritemtext.setFillColor(sf::Color(178, 34, 34));
+		//firstitemtext.setFillColor(sf::Color(178, 34, 34));
+		//seconditemtext.setFillColor(sf::Color(178, 34, 34));
+		//thirditemtext.setFillColor(sf::Color(178, 34, 34));
+		//fouritemtext.setFillColor(sf::Color(178, 34, 34));
 		menuitem = 0;
-		firstitem.setTextureRect(sf::IntRect(0, 0, 300, 100));
-		seconditem.setTextureRect(sf::IntRect(0, 0, 300, 100));
-		thirditem.setTextureRect(sf::IntRect(0, 0, 300, 100));
-		fourthitem.setTextureRect(sf::IntRect(0, 0, 300, 100));
+		firstitem.setTextureRect(sf::IntRect(0, 0, 600, 100));
+		seconditem.setTextureRect(sf::IntRect(0, 0, 600, 100));
+		thirditem.setTextureRect(sf::IntRect(0, 0, 600, 100));
+		fourthitem.setTextureRect(sf::IntRect(0, 0, 600, 100));
 	}
 }

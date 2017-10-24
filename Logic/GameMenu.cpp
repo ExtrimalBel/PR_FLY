@@ -47,7 +47,8 @@ void MainM::SetUpText()
 	firstitemtext.setFont(textfont);
 	firstitemtext.setCharacterSize(48);
 	firstitemtext.setScale(cox, coy);
-	firstitemtext.setFillColor(sf::Color(178,34,34));
+	//firstitemtext.setFillColor(sf::Color(178,34,34));
+	firstitemtext.setFillColor(sf::Color::Black);
 	sf::String str = "Новая игра";
 	firstitemtext.setString(str);
 	firstitemtext.setPosition(840 * cox, 220 * coy);
@@ -56,7 +57,8 @@ void MainM::SetUpText()
 	seconditemtext.setFont(textfont);
 	seconditemtext.setCharacterSize(48);
 	seconditemtext.setScale(cox, coy);
-	seconditemtext.setFillColor(sf::Color(178,34,34));
+	//seconditemtext.setFillColor(sf::Color(178,34,34));
+	firstitemtext.setFillColor(sf::Color::Black);
 	sf::String loadstr = "Загрузить игру";
 	seconditemtext.setString(loadstr);
 	seconditemtext.setPosition(810 * cox, 370 * coy);
@@ -64,7 +66,8 @@ void MainM::SetUpText()
 	thirditemtext.setFont(textfont);
 	thirditemtext.setCharacterSize(48);
 	thirditemtext.setScale(cox, coy);
-	thirditemtext.setFillColor(sf::Color(178,34,34));
+	//thirditemtext.setFillColor(sf::Color(178,34,34));
+	thirditemtext.setFillColor(sf::Color::Black);
 	sf::String settingstr = "Настройки";
 	thirditemtext.setString(settingstr);
 	thirditemtext.setPosition(830 * cox, 520 * coy);
@@ -72,7 +75,8 @@ void MainM::SetUpText()
 	fouritemtext.setFont(textfont);
 	fouritemtext.setCharacterSize(48);
 	fouritemtext.setScale(cox, coy);
-	fouritemtext.setFillColor(sf::Color(178,34,34));
+	//fouritemtext.setFillColor(sf::Color(178,34,34));
+	fouritemtext.setFillColor(sf::Color::Black);
 	sf::String exitstr = "Выход";
 	fouritemtext.setString(exitstr);
 	fouritemtext.setPosition(850 * cox, 670 * coy);

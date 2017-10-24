@@ -1,5 +1,5 @@
-﻿Сборка начата 21.10.2017 20:14:46.
-     1>Проект "I:\PR\PR_FLY\SoundSystem\SoundSystem.vcxproj" в узле 2 (целевые объекты Build).
+﻿Сборка начата 22.10.2017 11:51:27.
+     1>Проект "I:\PR\PR_FLY\SoundSystem\SoundSystem.vcxproj" в узле 2 (целевые объекты Rebuild).
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"..\PR_FLY\SFML-2.4.2\include" /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D SFML_DYNAMIC /D WIN32 /D _DEBUG /D _WINDOWS /D _USRDLL /D SOUNDSYSTEM_EXPORTS /D _WINDLL /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yc"stdafx.h" /Fp"Debug\SoundSystem.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt stdafx.cpp
          stdafx.cpp
@@ -14,8 +14,8 @@
          Debug\stdafx.obj
             Создается библиотека I:\PR\PR_FLY\Debug\SoundSystem.lib и объект I:\PR\PR_FLY\Debug\SoundSystem.exp
          SoundSystem.vcxproj -> I:\PR\PR_FLY\Debug\SoundSystem.dll
-     1>Сборка проекта "I:\PR\PR_FLY\SoundSystem\SoundSystem.vcxproj" завершена (целевые объекты Build).
+     1>Сборка проекта "I:\PR\PR_FLY\SoundSystem\SoundSystem.vcxproj" завершена (целевые объекты Rebuild).
 
 Сборка успешно завершена.
 
-Затраченное время: 00:00:07.28
+Затраченное время: 00:00:02.24

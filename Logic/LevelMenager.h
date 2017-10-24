@@ -10,7 +10,7 @@
 #include "Level.h"
 #include "transitscreen.h"
 #include <thread>
-enum LevelState {InGame,TranScr,Pause,EndLevelSet};
+enum LevelState {InGame,TranScr,Pause,EndLevelSet,UpgradeScreen};
 class LevelMenager
 {
 	char pathtoenemy[100];

@@ -21,6 +21,5 @@
 #include <algorithm>
 
 #include "PixelPerfect.h"
-#include "ExceptionsDefenitions.hpp"
 
 LOGIC_API void WriteLogFile(const char* szString);

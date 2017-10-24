@@ -1,4 +1,4 @@
-﻿Сборка начата 21.10.2017 23:51:40.
+﻿Сборка начата 24.10.2017 22:11:06.
      1>Проект "I:\PR\PR_FLY\PR_FLY\PR_FLY.vcxproj" в узле 2 (целевые объекты Build).
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I..\SoundSystem /I.\phfsnew /I..\Logic /I".\SFML-2.4.2\include" /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D SFML_DYNAMIC /D WIN32 /D _DEBUG /D _WINDOWS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt main.cpp
@@ -12,19 +12,12 @@
      1>i:\pr\pr_fly\pr_fly\main.cpp(28): warning C4244: =: преобразование "double" в "int", возможна потеря данных
      1>i:\pr\pr_fly\pr_fly\main.cpp(67): warning C4244: инициализация: преобразование "sf::Int64" в "float", возможна потеря данных
        Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"I:\PR\PR_FLY\Debug\PR_FLY.exe" /INCREMENTAL /NOLOGO /LIBPATH:".\SFML-2.4.2\lib" "sfml-audio-d.lib" openal32.lib flac.lib vorbisenc.lib vorbisfile.lib vorbis.lib ogg.lib "sfml-graphics-d.lib" "sfml-window-d.lib" "sfml-system-d.lib" "sfml-main-d.lib" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"I:\PR\PR_FLY\Debug\PR_FLY.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /ENTRY:"main" /DYNAMICBASE /NXCOMPAT /IMPLIB:"I:\PR\PR_FLY\Debug\PR_FLY.lib" /MACHINE:X86 Debug\Exceptions.obj
-         Debug\main.obj
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"I:\PR\PR_FLY\Debug\PR_FLY.exe" /INCREMENTAL /NOLOGO /LIBPATH:".\SFML-2.4.2\lib" "sfml-audio-d.lib" openal32.lib flac.lib vorbisenc.lib vorbisfile.lib vorbis.lib ogg.lib "sfml-graphics-d.lib" "sfml-window-d.lib" "sfml-system-d.lib" "sfml-main-d.lib" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"I:\PR\PR_FLY\Debug\PR_FLY.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /ENTRY:"main" /DYNAMICBASE /NXCOMPAT /IMPLIB:"I:\PR\PR_FLY\Debug\PR_FLY.lib" /MACHINE:X86 Debug\main.obj
          I:\PR\PR_FLY\Debug\Logic.lib
          I:\PR\PR_FLY\Debug\SoundSystem.lib
-            ╤ючфрхЄё  сшсышюЄхър I:\PR\PR_FLY\Debug\PR_FLY.lib ш юс·хъЄ I:\PR\PR_FLY\Debug\PR_FLY.exp
-     1>msvcprtd.lib(locale0_implib.obj) : warning LNK4210: ёхъЎш  .CRT ёє∙хёЄтєхЄ; ьюуєЄ ёє∙хёЄтютрЄ№ эхюсЁрсюЄрээ√х ёЄрЄшўхёъшх шэшЎшрышчрЄюЁ√ шыш чэръш чртхЁ°хэш
-     1>Exceptions.obj : warning LNK4210: ёхъЎш  .CRT ёє∙хёЄтєхЄ; ьюуєЄ ёє∙хёЄтютрЄ№ эхюсЁрсюЄрээ√х ёЄрЄшўхёъшх шэшЎшрышчрЄюЁ√ шыш чэръш чртхЁ°хэш
-     1>main.obj : warning LNK4210: ёхъЎш  .CRT ёє∙хёЄтєхЄ; ьюуєЄ ёє∙хёЄтютрЄ№ эхюсЁрсюЄрээ√х ёЄрЄшўхёъшх шэшЎшрышчрЄюЁ√ шыш чэръш чртхЁ°хэш
-     1>msvcprtd.lib(locale0_implib.obj) : warning LNK4210: ёхъЎш  .CRT ёє∙хёЄтєхЄ; ьюуєЄ ёє∙хёЄтютрЄ№ эхюсЁрсюЄрээ√х ёЄрЄшўхёъшх шэшЎшрышчрЄюЁ√ шыш чэръш чртхЁ°хэш
-     1>MSVCRTD.lib(atonexit.obj) : warning LNK4210: ёхъЎш  .CRT ёє∙хёЄтєхЄ; ьюуєЄ ёє∙хёЄтютрЄ№ эхюсЁрсюЄрээ√х ёЄрЄшўхёъшх шэшЎшрышчрЄюЁ√ шыш чэръш чртхЁ°хэш
          PR_FLY.vcxproj -> I:\PR\PR_FLY\Debug\PR_FLY.exe
      1>Сборка проекта "I:\PR\PR_FLY\PR_FLY\PR_FLY.vcxproj" завершена (целевые объекты Build).
 
 Сборка успешно завершена.
 
-Затраченное время: 00:00:02.84
+Затраченное время: 00:00:03.19

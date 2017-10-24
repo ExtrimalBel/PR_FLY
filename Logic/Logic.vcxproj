@@ -80,13 +80,13 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\PR_FLY\Exceptions.h" />
     <ClInclude Include="Background_Class.h" />
     <ClInclude Include="BaseForEnemys.h" />
     <ClInclude Include="baseitem.h" />
     <ClInclude Include="BaseMenu.h" />
     <ClInclude Include="Bullet.h" />
     <ClInclude Include="ConfigReader.h" />
-    <ClInclude Include="ExceptionsDefenitions.hpp" />
     <ClInclude Include="Intersectsmenager.h" />
     <ClInclude Include="Level.h" />
     <ClInclude Include="LevelBoss.h" />
@@ -110,8 +110,10 @@
     <ClInclude Include="targetver.h" />
     <ClInclude Include="Thingsh.h" />
     <ClInclude Include="transitscreen.h" />
+    <ClInclude Include="UpgradeScreen.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\PR_FLY\Exceptions.cpp" />
     <ClCompile Include="Background_Class.cpp" />
     <ClCompile Include="BaseEnemy.cpp" />
     <ClCompile Include="BaseMenu.cpp" />
@@ -148,6 +150,7 @@
     </ClCompile>
     <ClCompile Include="Things.cpp" />
     <ClCompile Include="transitscreen.cpp" />
+    <ClCompile Include="UpgradeScreen.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SoundSystem\SoundSystem.vcxproj">
