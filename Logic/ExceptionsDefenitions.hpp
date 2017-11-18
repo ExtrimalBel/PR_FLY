@@ -50,6 +50,12 @@ namespace Exceptions{
 	public:
 		SoundSystemError(std::string mes) : BaseForExceptions(mes) {}
 	};
+
+	class XMLDocumentReadError : public BaseForExceptions
+	{
+	public:
+		XMLDocumentReadError(std::string mes) : BaseForExceptions(mes) {}
+	};
 }
 
 #endif

@@ -51,3 +51,22 @@ void ConfigReader::ReadBossState(std::map<std::string, double> &Table, std::stri
 {
 
 }
+
+void ConfigReader::ReadRezolutions(std::string filename,std::list<std::string> &OutPutList)
+{
+	tinyxml2::XMLDocument doc;
+	doc.LoadFile(filename.c_str());
+	if (doc.ErrorID() != 0) throw Exceptions::XMLDocumentReadError("Не возможно прочитать документ xml");
+	tinyxml2::XMLNode *Root = doc.FirstChild();
+	if (Root == nullptr) throw Exceptions::XMLDocumentReadError("Неправильный синтаксис конфигурационного файла");
+	tinyxml2::XMLElement *FirstRez = Root->FirstChildElement("rez");
+	if (FirstRez == nullptr) throw Exceptions::XMLDocumentReadError("В конфигурационном файле не обнаружены разрешения");
+	do 
+	{
+		const char *s = FirstRez->GetText();
+		std::string tmpstr = s;
+		OutPutList.push_back(tmpstr);
+		FirstRez = FirstRez->NextSiblingElement("rez");
+	} while (FirstRez != nullptr);
+}
+

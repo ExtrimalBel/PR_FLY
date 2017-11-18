@@ -13,7 +13,7 @@ Level::Level(const char *Enemyfile, double cox, double coy, bool Is_new, char *S
 	this->cox = cox;
 	this->coy = coy;
 	ENM = new SetOfEnemy(Enemyfile, this->cox, this->coy);
-	SOB = new SetOfBullets(cox, coy);
+	
 	p1 = new PlayerO(200, 200, cox, coy, Is_new);
 	Boss = new Level_Boss("./data/vanilla/boss.txt", cox, coy);
 }
@@ -46,16 +46,13 @@ void Level::UpdateLevel(float time, sf::RenderWindow &window)
 	else if (Boss_fight)
 	{
 		UpdateBoss(time, window);
-		CountDemageBetweenPlayerAndBoss(*Boss, *p1);
+		InterMenager.CountDemageBetweenPlayerAndBoss(*Boss, *p1);
 
 	}
 	else
 	{
 		ENM->Update(time, window);
-		
-
-		//AddEnemyBullets(*ENM, *SOB);
-		CountDemageBeetwinPlayerAndEnemys(*p1, *ENM);
+		InterMenager.CountDemageBeetwinPlayerAndEnemys(*p1, *ENM);
 	}
 
 	//RemoveDemageFromPlayer();
@@ -98,10 +95,6 @@ Level::~Level()
 	if (ENM != NULL)
 	{
 		delete ENM;
-	}
-	if (SOB != NULL)
-	{
-		delete SOB;
 	}
 	if (Boss != NULL)
 	{

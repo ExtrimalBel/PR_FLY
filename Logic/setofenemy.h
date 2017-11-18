@@ -15,6 +15,8 @@
 #include "coords.h"
 #include "stdafx.h"
 #include "Bullet.h"
+#include "Intersectsmenager.h"
+#include "Player_Class.h"
 /*
 ƒанный класс реализует "множество врагов на уровне"
 ≈го основа это св€зный список который содержит врем€ по€влени€ врага
@@ -28,10 +30,15 @@ TODO вынести код который чиатет иформацию о врагах в отдельный класс
 ѕереписать код в соответствии с новыми классами врагов
 */
 
+namespace InterSects
+{
+	class IntersectsMenager;
+}
 
+class PlayerO;
 class LOGIC_API SetOfEnemy
 {
-	friend class PlayerO;
+	friend class InterSects::IntersectsMenager;
 	double cox, coy;
 	int EnemyCount;
 	int EnemyLeft;

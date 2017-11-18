@@ -9,10 +9,13 @@
 #include "PlayerS.h"
 #include "transitscreen.h"
 #include "stdafx.h"
-#include "Thingsh.h"
+#include "setofenemy.h"
+#include "LevelBoss.h"
+#include "Player_Class.h"
+#include "Intersectsmenager.h"
 class Level
 {
-	SetOfBullets *SOB;
+	InterSects::IntersectsMenager InterMenager;
 	SetOfEnemy *ENM;
 	PlayerO *p1;
 	double cox, coy;

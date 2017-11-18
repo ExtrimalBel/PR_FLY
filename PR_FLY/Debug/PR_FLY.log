@@ -1,28 +1,23 @@
-﻿Сборка начата 18.11.2017 14:28:54.
-     1>Проект "C:\Users\FAMILY\Desktop\!Проект_По_ТРПО\PR\PR_FLY\PR_FLY.vcxproj" в узле 2 (целевые объекты Build).
+﻿Сборка начата 18.11.2017 22:19:50.
+     1>Проект "C:\Users\Vitalik\Desktop\PR\PR_FLY\PR_FLY.vcxproj" в узле 2 (целевые объекты Build).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I..\SoundSystem /I.\phfsnew /I..\Logic /I".\SFML-2.4.2\include" /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D SFML_DYNAMIC /D WIN32 /D _DEBUG /D _WINDOWS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt main.cpp
+         D:\Programs\VS_INSTALL\VC\bin\CL.exe /c /I..\SoundSystem /I.\phfsnew /I..\Logic /I".\SFML-2.4.2\include" /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D SFML_DYNAMIC /D WIN32 /D _DEBUG /D _WINDOWS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt main.cpp
          main.cpp
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\settings.h(4): warning C4005: LOGIC_API: изменение макроопределения
-                 c:\users\family\desktop\!проект_по_трпо\pr\logic\logic.h(10): см. предыдущее определение "LOGIC_API"
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\gamefield.h(7): warning C4005: LOGIC_API: изменение макроопределения
-                 c:\users\family\desktop\!проект_по_трпо\pr\logic\settings.h(4): см. предыдущее определение "LOGIC_API"
-     1>c:\users\family\desktop\!проект_по_трпо\pr\pr_fly\main.cpp(23): warning C4244: =: преобразование "double" в "int", возможна потеря данных
-     1>c:\users\family\desktop\!проект_по_трпо\pr\pr_fly\main.cpp(26): warning C4244: =: преобразование "double" в "int", возможна потеря данных
-     1>c:\users\family\desktop\!проект_по_трпо\pr\pr_fly\main.cpp(28): warning C4244: =: преобразование "double" в "int", возможна потеря данных
-     1>c:\users\family\desktop\!проект_по_трпо\pr\pr_fly\main.cpp(67): warning C4244: инициализация: преобразование "sf::Int64" в "float", возможна потеря данных
+     1>c:\users\vitalik\desktop\pr\pr_fly\main.cpp(23): warning C4244: =: преобразование "double" в "int", возможна потеря данных
+     1>c:\users\vitalik\desktop\pr\pr_fly\main.cpp(26): warning C4244: =: преобразование "double" в "int", возможна потеря данных
+     1>c:\users\vitalik\desktop\pr\pr_fly\main.cpp(28): warning C4244: =: преобразование "double" в "int", возможна потеря данных
+     1>c:\users\vitalik\desktop\pr\pr_fly\main.cpp(66): warning C4244: инициализация: преобразование "sf::Int64" в "float", возможна потеря данных
        Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\FAMILY\Desktop\!Проект_По_ТРПО\PR\Debug\PR_FLY.exe" /INCREMENTAL /NOLOGO /LIBPATH:".\SFML-2.4.2\lib" "sfml-audio-d.lib" openal32.lib flac.lib vorbisenc.lib vorbisfile.lib vorbis.lib ogg.lib "sfml-graphics-d.lib" "sfml-window-d.lib" "sfml-system-d.lib" "sfml-main-d.lib" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\FAMILY\Desktop\!Проект_По_ТРПО\PR\Debug\PR_FLY.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /ENTRY:"main" /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\FAMILY\Desktop\!Проект_По_ТРПО\PR\Debug\PR_FLY.lib" /MACHINE:X86 Debug\main.obj
-         "C:\Users\FAMILY\Desktop\!Проект_По_ТРПО\PR\Debug\Logic.lib"
-         "C:\Users\FAMILY\Desktop\!Проект_По_ТРПО\PR\Debug\SoundSystem.lib"
-            ╤ючфрхЄё  сшсышюЄхър C:\Users\FAMILY\Desktop\!╧ЁюхъЄ_╧ю_╥╨╧╬\PR\Debug\PR_FLY.lib ш юс·хъЄ C:\Users\FAMILY\Desktop\!╧ЁюхъЄ_╧ю_╥╨╧╬\PR\Debug\PR_FLY.exp
+         D:\Programs\VS_INSTALL\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Vitalik\Desktop\PR\Debug\PR_FLY.exe" /INCREMENTAL /NOLOGO /LIBPATH:".\SFML-2.4.2\lib" "sfml-audio-d.lib" openal32.lib flac.lib vorbisenc.lib vorbisfile.lib vorbis.lib ogg.lib "sfml-graphics-d.lib" "sfml-window-d.lib" "sfml-system-d.lib" "sfml-main-d.lib" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Vitalik\Desktop\PR\Debug\PR_FLY.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /ENTRY:"main" /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Vitalik\Desktop\PR\Debug\PR_FLY.lib" /MACHINE:X86 Debug\main.obj
+         C:\Users\Vitalik\Desktop\PR\Debug\Logic.lib
+         C:\Users\Vitalik\Desktop\PR\Debug\SoundSystem.lib
      1>msvcprtd.lib(locale0_implib.obj) : warning LNK4210: ёхъЎш  .CRT ёє∙хёЄтєхЄ; ьюуєЄ ёє∙хёЄтютрЄ№ эхюсЁрсюЄрээ√х ёЄрЄшўхёъшх шэшЎшрышчрЄюЁ√ шыш чэръш чртхЁ°хэш
      1>main.obj : warning LNK4210: ёхъЎш  .CRT ёє∙хёЄтєхЄ; ьюуєЄ ёє∙хёЄтютрЄ№ эхюсЁрсюЄрээ√х ёЄрЄшўхёъшх шэшЎшрышчрЄюЁ√ шыш чэръш чртхЁ°хэш
      1>msvcprtd.lib(locale0_implib.obj) : warning LNK4210: ёхъЎш  .CRT ёє∙хёЄтєхЄ; ьюуєЄ ёє∙хёЄтютрЄ№ эхюсЁрсюЄрээ√х ёЄрЄшўхёъшх шэшЎшрышчрЄюЁ√ шыш чэръш чртхЁ°хэш
      1>MSVCRTD.lib(atonexit.obj) : warning LNK4210: ёхъЎш  .CRT ёє∙хёЄтєхЄ; ьюуєЄ ёє∙хёЄтютрЄ№ эхюсЁрсюЄрээ√х ёЄрЄшўхёъшх шэшЎшрышчрЄюЁ√ шыш чэръш чртхЁ°хэш
-         PR_FLY.vcxproj -> C:\Users\FAMILY\Desktop\!Проект_По_ТРПО\PR\Debug\PR_FLY.exe
-     1>Сборка проекта "C:\Users\FAMILY\Desktop\!Проект_По_ТРПО\PR\PR_FLY\PR_FLY.vcxproj" завершена (целевые объекты Build).
+         PR_FLY.vcxproj -> C:\Users\Vitalik\Desktop\PR\Debug\PR_FLY.exe
+     1>Сборка проекта "C:\Users\Vitalik\Desktop\PR\PR_FLY\PR_FLY.vcxproj" завершена (целевые объекты Build).
 
 Сборка успешно завершена.
 
-Затраченное время: 00:00:03.04
+Затраченное время: 00:00:01.15

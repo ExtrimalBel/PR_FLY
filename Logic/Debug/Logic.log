@@ -1,240 +1,25 @@
-﻿Сборка начата 18.11.2017 14:28:31.
-     1>Проект "C:\Users\FAMILY\Desktop\!Проект_По_ТРПО\PR\Logic\Logic.vcxproj" в узле 2 (целевые объекты Build).
+﻿Сборка начата 18.11.2017 22:19:49.
+     1>Проект "C:\Users\Vitalik\Desktop\PR\Logic\Logic.vcxproj" в узле 2 (целевые объекты Build).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I..\SoundSystem /I..\PR_FLY /I..\PR_FLY\phfsnew /I"..\PR_FLY\SFML-2.4.2\include" /ZI /nologo /W3 /WX- /Od /Oy- /D NOMINMAX /D SFML_DYNAMIC /D WIN32 /D _DEBUG /D _WINDOWS /D _USRDLL /D LOGIC_EXPORTS /D _WINDLL /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yc"stdafx.h" /Fp"Debug\Logic.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt stdafx.cpp
-         stdafx.cpp
-     1>c:\users\family\desktop\!проект_по_трпо\pr\pr_fly\sfml-2.4.2\include\sfml\graphics\rect.inl(25): warning C4005: NOMINMAX: изменение макроопределения
-                 аргументы командной строки:  см. предыдущее определение "NOMINMAX"
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\stdafx.cpp(13): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\stdio.h(211): см. объявление "fopen"
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I..\SoundSystem /I..\PR_FLY /I..\PR_FLY\phfsnew /I"..\PR_FLY\SFML-2.4.2\include" /ZI /nologo /W3 /WX- /Od /Oy- /D NOMINMAX /D SFML_DYNAMIC /D WIN32 /D _DEBUG /D _WINDOWS /D _USRDLL /D LOGIC_EXPORTS /D _WINDLL /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\Logic.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ..\PR_FLY\Exceptions.cpp Background_Class.cpp BaseEnemy.cpp BaseMenu.cpp Bullet.cpp ConfigReader.cpp Intersectsmenager.cpp Level.cpp LevelBoss.cpp LevelMenager.cpp Enemy.cpp GameField.cpp GameMenu.cpp Hud.cpp loadgameclass.cpp Logic.cpp MovingEnemy.cpp PixelPerfect.cpp Player_Class.cpp SetOfBullets.cpp setofenemy.cpp Settings.cpp StationarEnemy.cpp Things.cpp transitscreen.cpp UpgradeScreen.cpp
-         UpgradeScreen.cpp
-         transitscreen.cpp
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\transitscreen.cpp(13): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\transitscreen.cpp(17): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\transitscreen.cpp(18): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
-         Things.cpp
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\things.cpp(13): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\things.cpp(22): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\things.cpp(30): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\things.cpp(45): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\things.cpp(57): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
-         StationarEnemy.cpp
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\stationarenemy.cpp(12): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\stationarenemy.cpp(24): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
-         Settings.cpp
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\settings.cpp(53): warning C4996: 'itoa': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _itoa. See online help for details.
-                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\stdlib.h(937): см. объявление "itoa"
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\settings.cpp(54): warning C4996: 'itoa': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _itoa. See online help for details.
-                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\stdlib.h(937): см. объявление "itoa"
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\settings.cpp(73): warning C4996: 'itoa': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _itoa. See online help for details.
-                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\stdlib.h(937): см. объявление "itoa"
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\settings.cpp(74): warning C4996: 'itoa': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _itoa. See online help for details.
-                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\stdlib.h(937): см. объявление "itoa"
+         D:\Programs\VS_INSTALL\VC\bin\CL.exe /c /I..\SoundSystem /I..\PR_FLY /I..\PR_FLY\phfsnew /I"..\PR_FLY\SFML-2.4.2\include" /ZI /nologo /W3 /WX- /Od /Oy- /D NOMINMAX /D SFML_DYNAMIC /D WIN32 /D _DEBUG /D _WINDOWS /D _USRDLL /D LOGIC_EXPORTS /D _WINDLL /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\Logic.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt GameField.cpp Intersectsmenager.cpp Level.cpp LevelBoss.cpp LevelMenager.cpp Player_Class.cpp setofenemy.cpp
+         Level.cpp
+         Создание кода...
+         Компиляция...
+         Intersectsmenager.cpp
+     1>c:\users\vitalik\desktop\pr\logic\intersectsmenager.cpp(25): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+     1>c:\users\vitalik\desktop\pr\logic\intersectsmenager.cpp(37): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+     1>c:\users\vitalik\desktop\pr\logic\intersectsmenager.cpp(52): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+     1>c:\users\vitalik\desktop\pr\logic\intersectsmenager.cpp(61): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+     1>c:\users\vitalik\desktop\pr\logic\intersectsmenager.cpp(69): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+         Создание кода...
+         Пропуск... (изменения не обнаружены)
          setofenemy.cpp
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\setofenemy.cpp(39): warning C4244: =: преобразование "double" в "int", возможна потеря данных
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\setofenemy.cpp(116): warning C4018: <: несоответствие типов со знаком и без знака
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\setofenemy.cpp(156): warning C4244: +=: преобразование "double" в "int", возможна потеря данных
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\setofenemy.cpp(172): warning C4244: =: преобразование "double" в "int", возможна потеря данных
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\setofenemy.cpp(186): warning C4244: =: преобразование "double" в "int", возможна потеря данных
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\setofenemy.cpp(153): warning C4101: startx: неиспользованная локальная переменная
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\setofenemy.cpp(153): warning C4101: starty: неиспользованная локальная переменная
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\setofenemy.cpp(245): warning C4305: аргумент: усечение из "double" к "float"
-         SetOfBullets.cpp
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\setofbullets.cpp(35): warning C4305: аргумент: усечение из "double" к "float"
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\setofbullets.cpp(49): warning C4018: <: несоответствие типов со знаком и без знака
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\setofbullets.cpp(65): warning C4305: аргумент: усечение из "double" к "float"
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\setofbullets.cpp(72): warning C4018: <: несоответствие типов со знаком и без знака
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\setofbullets.cpp(92): warning C4018: <: несоответствие типов со знаком и без знака
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\setofbullets.cpp(101): warning C4018: <: несоответствие типов со знаком и без знака
          Player_Class.cpp
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\player_class.cpp(7): warning C4244: =: преобразование "double" в "int", возможна потеря данных
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\player_class.cpp(8): warning C4244: =: преобразование "double" в "int", возможна потеря данных
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\player_class.cpp(12): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\player_class.cpp(13): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\player_class.cpp(19): warning C4244: =: преобразование "double" в "int", возможна потеря данных
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\player_class.cpp(22): warning C4244: =: преобразование "double" в "int", возможна потеря данных
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\player_class.cpp(33): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\player_class.cpp(34): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\player_class.cpp(36): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\player_class.cpp(37): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\player_class.cpp(38): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\player_class.cpp(61): warning C4244: =: преобразование "double" в "int", возможна потеря данных
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\player_class.cpp(62): warning C4244: =: преобразование "double" в "int", возможна потеря данных
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\player_class.cpp(63): warning C4244: =: преобразование "double" в "int", возможна потеря данных
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\player_class.cpp(64): warning C4244: =: преобразование "double" в "int", возможна потеря данных
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\player_class.cpp(71): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\player_class.cpp(72): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\player_class.cpp(73): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\player_class.cpp(74): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\player_class.cpp(164): warning C4244: *=: преобразование "double" в "int", возможна потеря данных
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\player_class.cpp(181): warning C4018: <: несоответствие типов со знаком и без знака
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\player_class.cpp(198): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\player_class.cpp(198): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
-         PixelPerfect.cpp
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\pixelperfect.cpp(31): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\pixelperfect.cpp(32): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
-         MovingEnemy.cpp
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\movingenemy.cpp(10): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\movingenemy.cpp(12): warning C4244: =: преобразование "double" в "int", возможна потеря данных
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\movingenemy.cpp(13): warning C4244: =: преобразование "double" в "int", возможна потеря данных
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\movingenemy.cpp(27): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\movingenemy.cpp(51): warning C4244: инициализация: преобразование "const float" в "int", возможна потеря данных
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\movingenemy.cpp(52): warning C4244: инициализация: преобразование "const float" в "int", возможна потеря данных
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\movingenemy.cpp(53): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\movingenemy.cpp(57): warning C4244: *=: преобразование "double" в "float", возможна потеря данных
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\movingenemy.cpp(58): warning C4244: *=: преобразование "double" в "float", возможна потеря данных
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\movingenemy.cpp(65): warning C4244: =: преобразование "double" в "int", возможна потеря данных
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\movingenemy.cpp(66): warning C4244: =: преобразование "double" в "int", возможна потеря данных
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\movingenemy.cpp(50): warning C4101: yn: неиспользованная локальная переменная
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\movingenemy.cpp(50): warning C4101: xn: неиспользованная локальная переменная
-         Logic.cpp
-         loadgameclass.cpp
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\loadgameclass.cpp(61): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\loadgameclass.cpp(65): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\loadgameclass.cpp(70): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\loadgameclass.cpp(74): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\loadgameclass.cpp(78): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\loadgameclass.cpp(82): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\loadgameclass.cpp(86): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\loadgameclass.cpp(90): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
-         Hud.cpp
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\hud.cpp(15): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\hud.cpp(21): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\hud.cpp(24): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\hud.cpp(31): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\hud.cpp(32): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\hud.cpp(34): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\hud.cpp(41): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\hud.cpp(42): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\hud.cpp(47): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\hud.cpp(48): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\hud.cpp(53): warning C4996: 'itoa': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _itoa. See online help for details.
-                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\stdlib.h(937): см. объявление "itoa"
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\hud.cpp(59): warning C4996: 'itoa': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _itoa. See online help for details.
-                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\stdlib.h(937): см. объявление "itoa"
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\hud.cpp(71): warning C4244: *=: преобразование "double" в "int", возможна потеря данных
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\hud.cpp(72): warning C4244: *=: преобразование "double" в "int", возможна потеря данных
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\hud.cpp(73): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\hud.cpp(74): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\hud.cpp(74): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\hud.cpp(79): warning C4244: *=: преобразование "double" в "int", возможна потеря данных
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\hud.cpp(80): warning C4244: *=: преобразование "double" в "int", возможна потеря данных
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\hud.cpp(81): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\hud.cpp(81): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\hud.cpp(82): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\hud.cpp(82): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\hud.cpp(85): warning C4996: 'itoa': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _itoa. See online help for details.
-                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\stdlib.h(937): см. объявление "itoa"
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\hud.cpp(90): warning C4996: 'itoa': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _itoa. See online help for details.
-                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\stdlib.h(937): см. объявление "itoa"
-         GameMenu.cpp
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\gamemenu.cpp(49): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\gamemenu.cpp(54): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\gamemenu.cpp(59): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\gamemenu.cpp(64): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\gamemenu.cpp(68): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\gamemenu.cpp(73): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\gamemenu.cpp(77): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\gamemenu.cpp(82): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
-         GameField.cpp
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\gamefield.cpp(27): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
-         Enemy.cpp
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\enemy.cpp(22): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\enemy.cpp(25): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\enemy.cpp(27): warning C4244: =: преобразование "double" в "int", возможна потеря данных
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\enemy.cpp(28): warning C4244: =: преобразование "double" в "int", возможна потеря данных
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\enemy.cpp(57): warning C4244: инициализация: преобразование "const float" в "int", возможна потеря данных
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\enemy.cpp(58): warning C4244: инициализация: преобразование "const float" в "int", возможна потеря данных
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\enemy.cpp(59): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\enemy.cpp(63): warning C4244: *=: преобразование "double" в "float", возможна потеря данных
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\enemy.cpp(64): warning C4244: *=: преобразование "double" в "float", возможна потеря данных
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\enemy.cpp(71): warning C4244: =: преобразование "double" в "int", возможна потеря данных
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\enemy.cpp(72): warning C4244: =: преобразование "double" в "int", возможна потеря данных
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\enemy.cpp(56): warning C4101: yn: неиспользованная локальная переменная
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\enemy.cpp(56): warning C4101: xn: неиспользованная локальная переменная
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\enemy.cpp(125): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\enemy.cpp(125): warning C4244: аргумент: преобразование "const float" в "int", возможна потеря данных
          LevelMenager.cpp
          LevelBoss.cpp
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\levelboss.cpp(25): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\levelboss.cpp(29): warning C4244: =: преобразование "double" в "float", возможна потеря данных
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\levelboss.cpp(39): warning C4244: =: преобразование "double" в "int", возможна потеря данных
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\levelboss.cpp(51): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\levelboss.cpp(82): warning C4996: 'itoa': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _itoa. See online help for details.
-                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\stdlib.h(937): см. объявление "itoa"
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\levelboss.cpp(144): warning C4244: инициализация: преобразование "const float" в "int", возможна потеря данных
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\levelboss.cpp(145): warning C4244: инициализация: преобразование "const float" в "int", возможна потеря данных
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\levelboss.cpp(146): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\levelboss.cpp(143): warning C4101: yn: неиспользованная локальная переменная
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\levelboss.cpp(143): warning C4101: xn: неиспользованная локальная переменная
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\levelboss.cpp(203): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\levelboss.cpp(214): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\levelboss.cpp(249): warning C4018: <: несоответствие типов со знаком и без знака
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\levelboss.cpp(258): warning C4018: <: несоответствие типов со знаком и без знака
-         Level.cpp
-         Intersectsmenager.cpp
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\intersectsmenager.cpp(19): warning C4244: +=: преобразование "double" в "int", возможна потеря данных
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\intersectsmenager.cpp(36): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
-         Создание кода...
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\gamemenu.cpp(40): warning C4715: MainM::MenuSelect: значение возвращается не при всех путях выполнения
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\loadgameclass.cpp(52): warning C4715: LoadM::MenuSelect: значение возвращается не при всех путях выполнения
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\settings.cpp(197): warning C4715: GameSettings::IfExitSet: значение возвращается не при всех путях выполнения
-         Компиляция...
-         ConfigReader.cpp
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\configreader.cpp(39): warning C4018: >: несоответствие типов со знаком и без знака
-         Bullet.cpp
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\bullet.cpp(15): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\bullet.cpp(29): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\bullet.cpp(39): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\bullet.cpp(43): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\bullet.cpp(50): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\bullet.cpp(50): warning C4244: аргумент: преобразование "const float" в "int", возможна потеря данных
-         BaseMenu.cpp
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\basemenu.cpp(18): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\basemenu.cpp(19): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\basemenu.cpp(21): warning C4244: аргумент: преобразование "unsigned int" в "float", возможна потеря данных
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\basemenu.cpp(26): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\basemenu.cpp(27): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\basemenu.cpp(29): warning C4244: аргумент: преобразование "unsigned int" в "float", возможна потеря данных
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\basemenu.cpp(34): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\basemenu.cpp(35): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\basemenu.cpp(41): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\basemenu.cpp(42): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\basemenu.cpp(49): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\basemenu.cpp(50): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\basemenu.cpp(55): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\basemenu.cpp(56): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\basemenu.cpp(63): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\basemenu.cpp(82): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\basemenu.cpp(106): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\basemenu.cpp(106): warning C4244: аргумент: преобразование "const float" в "int", возможна потеря данных
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\basemenu.cpp(107): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\basemenu.cpp(107): warning C4244: аргумент: преобразование "const float" в "int", возможна потеря данных
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\basemenu.cpp(108): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\basemenu.cpp(108): warning C4244: аргумент: преобразование "const float" в "int", возможна потеря данных
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\basemenu.cpp(109): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\basemenu.cpp(109): warning C4244: аргумент: преобразование "const float" в "int", возможна потеря данных
-         BaseEnemy.cpp
-         Background_Class.cpp
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\background_class.cpp(16): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\background_class.cpp(22): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\background_class.cpp(26): warning C4244: *=: преобразование "double" в "int", возможна потеря данных
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\background_class.cpp(63): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\background_class.cpp(63): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\background_class.cpp(64): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\background_class.cpp(75): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\background_class.cpp(92): warning C4018: <: несоответствие типов со знаком и без знака
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\background_class.cpp(95): warning C4146: применение унарного минуса к типу без знака; результат оставлен без знака
-         Exceptions.cpp
-         Создание кода...
-     1>c:\users\family\desktop\!проект_по_трпо\pr\logic\configreader.cpp(47): warning C4700: использована неинициализированная локальная переменная "f"
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I..\SoundSystem /I..\PR_FLY /I..\PR_FLY\phfsnew /I"..\PR_FLY\SFML-2.4.2\include" /ZI /nologo /W3 /WX- /Od /Oy- /D NOMINMAX /D SFML_DYNAMIC /D WIN32 /D _DEBUG /D _WINDOWS /D _USRDLL /D LOGIC_EXPORTS /D _WINDLL /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt dllmain.cpp
-         dllmain.cpp
-     1>c:\users\family\desktop\!проект_по_трпо\pr\pr_fly\sfml-2.4.2\include\sfml\graphics\rect.inl(25): warning C4005: NOMINMAX: изменение макроопределения
-                 аргументы командной строки:  см. предыдущее определение "NOMINMAX"
+         GameField.cpp
        Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\FAMILY\Desktop\!Проект_По_ТРПО\PR\Debug\Logic.dll" /INCREMENTAL /NOLOGO /LIBPATH:..\Debug /LIBPATH:..\PR_FLY\phfsnew /LIBPATH:"..\PR_FLY\SFML-2.4.2\lib" "sfml-audio-d.lib" openal32.lib flac.lib vorbisenc.lib vorbisfile.lib vorbis.lib ogg.lib physfs.lib "sfml-graphics-d.lib" "sfml-window-d.lib" "sfml-system-d.lib" "sfml-main-d.lib" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\FAMILY\Desktop\!Проект_По_ТРПО\PR\Debug\Logic.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\FAMILY\Desktop\!Проект_По_ТРПО\PR\Debug\Logic.lib" /MACHINE:X86 /DLL Debug\Exceptions.obj
+         D:\Programs\VS_INSTALL\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Vitalik\Desktop\PR\Debug\Logic.dll" /INCREMENTAL /NOLOGO /LIBPATH:..\Debug /LIBPATH:..\PR_FLY\phfsnew /LIBPATH:"..\PR_FLY\SFML-2.4.2\lib" "sfml-audio-d.lib" openal32.lib flac.lib vorbisenc.lib vorbisfile.lib vorbis.lib ogg.lib physfs.lib "sfml-graphics-d.lib" "sfml-window-d.lib" "sfml-system-d.lib" "sfml-main-d.lib" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Vitalik\Desktop\PR\Debug\Logic.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Vitalik\Desktop\PR\Debug\Logic.lib" /MACHINE:X86 /DLL Debug\Exceptions.obj
          Debug\Background_Class.obj
          Debug\BaseEnemy.obj
          Debug\BaseMenu.obj
@@ -256,18 +41,16 @@
          Debug\Player_Class.obj
          Debug\SetOfBullets.obj
          Debug\setofenemy.obj
-         Debug\Settings.obj
          Debug\StationarEnemy.obj
          Debug\stdafx.obj
-         Debug\Things.obj
+         Debug\tinyxml2.obj
          Debug\transitscreen.obj
          Debug\UpgradeScreen.obj
-         "C:\Users\FAMILY\Desktop\!Проект_По_ТРПО\PR\Debug\SoundSystem.lib"
-         LINK : не найден или не выполнена сборка C:\Users\FAMILY\Desktop\!Проект_По_ТРПО\PR\Debug\Logic.dll при последней инкрементной компоновке; выполняется полная компоновка
-            Создается библиотека C:\Users\FAMILY\Desktop\!Проект_По_ТРПО\PR\Debug\Logic.lib и объект C:\Users\FAMILY\Desktop\!Проект_По_ТРПО\PR\Debug\Logic.exp
-         Logic.vcxproj -> C:\Users\FAMILY\Desktop\!Проект_По_ТРПО\PR\Debug\Logic.dll
-     1>Сборка проекта "C:\Users\FAMILY\Desktop\!Проект_По_ТРПО\PR\Logic\Logic.vcxproj" завершена (целевые объекты Build).
+         C:\Users\Vitalik\Desktop\PR\Debug\SoundSystem.lib
+            Создается библиотека C:\Users\Vitalik\Desktop\PR\Debug\Logic.lib и объект C:\Users\Vitalik\Desktop\PR\Debug\Logic.exp
+         Logic.vcxproj -> C:\Users\Vitalik\Desktop\PR\Debug\Logic.dll
+     1>Сборка проекта "C:\Users\Vitalik\Desktop\PR\Logic\Logic.vcxproj" завершена (целевые объекты Build).
 
 Сборка успешно завершена.
 
-Затраченное время: 00:00:22.12
+Затраченное время: 00:00:01.08

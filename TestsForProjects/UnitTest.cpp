@@ -1,4 +1,5 @@
 ﻿#include "stdafx.h"
+#include <ConfigReader.h>
 
 using namespace System;
 using namespace System::Text;
@@ -57,10 +58,10 @@ namespace TestsForProjects
 		{
 			
 		};
-
+		[TestMethod]
 		void TestGameSettings()
 		{
-
+			//ConfigReader::ReadRezolutions("rez.xml");
 		}
 	};
 }

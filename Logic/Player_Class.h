@@ -6,15 +6,22 @@
 #include <fstream>
 #include "stdafx.h"
 #include "Bullet.h"
-
+#include "Intersectsmenager.h"
+#include "setofenemy.h"
 #ifdef LOGIC_EXPORTS
 #define LOGIC_API __declspec(dllexport)
 #else
 #define LOGIC_API __declspec(dllimport)
 #endif
+class Level_Boss;
+class SetOfEnemy;
+namespace InterSects
+{
+	class IntersectsMenager;
+}
+
 class LOGIC_API PlayerO{
-	friend class SetOfEnemy;
-	friend class Level_Boss;
+	friend class InterSects::IntersectsMenager;
 	sf::Clock timerclock;
 	sf::Image bodyimg;
 		sf::Sprite Body;

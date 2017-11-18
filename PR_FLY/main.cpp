@@ -1,6 +1,6 @@
 #include <SFML/Graphics.hpp>
 #include <Logic.h>
-#include <Settings.h>
+
 #include <GameField.h>
 #include <GameMenu.h>
 #include <fstream>
@@ -57,7 +57,6 @@ int main()
 		window.setFramerateLimit(60);
 		MainM *Menu = new MainM(cox, coy, SPlayer);
 		GameField *Field = NULL;
-		GameSettings *Set = NULL;
 		LoadM *LM = NULL;
 		enum State { Game, Settings, MMenu, LoadGame }; // Перечесление отображающее состояние работы программы
 		State Statements = MMenu; // Объект данного перечесления
@@ -113,14 +112,7 @@ int main()
 				break;
 			case Settings:
 
-				Set->update(time, window, clock);
-				Set->DrawSettings(window);
-				if (Set->IfExitSet(window) == 2)
-				{
-					Statements = MMenu;
-					Menu = new MainM(cox, coy, SPlayer);
-					delete Set;
-				}
+				
 				break;
 			case LoadGame:
 				LM->Update(time, window);
