@@ -2,7 +2,6 @@
 #define LEVEL_H
 #include <SFML/Graphics.hpp>
 #include "Bullet.h"
-#include "Enemy.h"
 //#include "setofenemy.h"
 //#include "SetOfBullets.h"
 //#include "Player_Class.h"

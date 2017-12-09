@@ -3,7 +3,6 @@
 #include "SFML/Graphics.hpp"
 #include <vector>
 #include "Bullet.h"
-#include "Enemy.h"
 #include <fstream>
 #include <stack>
 #include <string>

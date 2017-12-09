@@ -902,3 +902,8 @@ GameField created
 ./data/vanilla/level/enemy.txt
 ./data/vanilla/level/enemy.txt
 2
+set of levels./data/vanilla/ opened
+./data/vanilla/level/enemy.txt
+./data/vanilla/level/enemy.txt
+GameField created
+2

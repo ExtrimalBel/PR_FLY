@@ -56,6 +56,12 @@ namespace Exceptions{
 	public:
 		XMLDocumentReadError(std::string mes) : BaseForExceptions(mes) {}
 	};
+
+	class ImageLoadError : public BaseForExceptions
+	{
+	public:
+		ImageLoadError(std::string mes) : BaseForExceptions(mes) {}
+	};
 }
 
 #endif

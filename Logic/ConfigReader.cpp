@@ -5,53 +5,6 @@ ConfigReader::ConfigReader()
 {
 }
 
-
-boss_coord* ConfigReader::ReadBossConfig(std::string filename, std::map<std::string, double> &BossStats)
-{
-	infile.open(filename);
-	if (!infile.is_open())
-	{
-		// Сдесь прописать исключение
-	}
-	std::stringstream configss; // Поток для чтения из файла
-	configss << infile.rdbuf(); // Читаем файл в поток
-	std::string configstring = configss.str(); // Читаем из потока в строку
-	std::string tmp = "";
-	int i = 0;
-	while (configstring[i] != '{')
-	{
-		tmp += configstring[i];
-		i++;
-	}
-	if (tmp != "BOSS")
-	{
-		// Дописать исключение
-	}
-	int starti = 0;
-	while (configstring[i] == ' ' || configstring[i] == '=\n')
-	{
-		i++;
-	}
-	starti = i;
-	while (configstring[i] != '}')
-	{
-		i++;
-		if (i > configstring.size())
-		{
-			// Обработать исключение
-		}
-	}
-	int endi = i - 1;
-	ReadBossState(BossStats, configstring.substr(starti,endi));
-	boss_coord *f;
-	return f;
-}
-
-void ConfigReader::ReadBossState(std::map<std::string, double> &Table, std::string str)
-{
-
-}
-
 void ConfigReader::ReadRezolutions(std::string filename,std::list<std::string> &OutPutList)
 {
 	tinyxml2::XMLDocument doc;
@@ -70,3 +23,26 @@ void ConfigReader::ReadRezolutions(std::string filename,std::list<std::string> &
 	} while (FirstRez != nullptr);
 }
 
+
+std::vector<int>* ConfigReader::ReadGameConfigFile(std::string Path)
+{
+	std::vector<int> *ReturnVec = new std::vector<int>;
+	tinyxml2::XMLDocument xmldoc;
+	xmldoc.LoadFile(Path.c_str());
+	if (xmldoc.ErrorID() != 0) throw Exceptions::XMLDocumentReadError("Ошибка при чтении настроек игры");
+	tinyxml2::XMLNode *Root = xmldoc.FirstChild();
+	if (Root == nullptr) throw Exceptions::XMLDocumentReadError("Неправильный синтаксис конфигурационного файла");
+	if (Root->Value != "GameSettings") throw Exceptions::XMLDocumentReadError("Ошибка при чтении файла настроек");
+	tinyxml2::XMLNode *VideoElement = Root->FirstChildElement("VideoMode");
+	if (VideoElement == nullptr) throw Exceptions::XMLDocumentReadError("Ошибка при чтении файла настроек");
+	int vidx = 0, vidy = 0,volume = 0,mode = 0;
+	tinyxml2::XMLElement *VideoModeElement = VideoElement->ToElement();
+	VideoModeElement->QueryAttribute("height", &vidx);
+	VideoModeElement->QueryAttribute("width", &vidx);
+	std::string Mode = VideoModeElement->GetText();
+	if (Mode == "Windowed") mode = 1;
+	else if (Mode == "Fullscreen") mode = 2;
+	else  throw Exceptions::XMLDocumentReadError("Ошибка при чтении файла настроек");
+		VidxElem->
+
+}

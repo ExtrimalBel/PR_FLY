@@ -1,25 +1,7 @@
-﻿Сборка начата 18.11.2017 22:19:49.
-     1>Проект "C:\Users\Vitalik\Desktop\PR\Logic\Logic.vcxproj" в узле 2 (целевые объекты Build).
-     1>ClCompile:
-         D:\Programs\VS_INSTALL\VC\bin\CL.exe /c /I..\SoundSystem /I..\PR_FLY /I..\PR_FLY\phfsnew /I"..\PR_FLY\SFML-2.4.2\include" /ZI /nologo /W3 /WX- /Od /Oy- /D NOMINMAX /D SFML_DYNAMIC /D WIN32 /D _DEBUG /D _WINDOWS /D _USRDLL /D LOGIC_EXPORTS /D _WINDLL /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\Logic.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt GameField.cpp Intersectsmenager.cpp Level.cpp LevelBoss.cpp LevelMenager.cpp Player_Class.cpp setofenemy.cpp
-         Level.cpp
-         Создание кода...
-         Компиляция...
-         Intersectsmenager.cpp
-     1>c:\users\vitalik\desktop\pr\logic\intersectsmenager.cpp(25): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
-     1>c:\users\vitalik\desktop\pr\logic\intersectsmenager.cpp(37): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
-     1>c:\users\vitalik\desktop\pr\logic\intersectsmenager.cpp(52): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
-     1>c:\users\vitalik\desktop\pr\logic\intersectsmenager.cpp(61): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
-     1>c:\users\vitalik\desktop\pr\logic\intersectsmenager.cpp(69): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
-         Создание кода...
-         Пропуск... (изменения не обнаружены)
-         setofenemy.cpp
-         Player_Class.cpp
-         LevelMenager.cpp
-         LevelBoss.cpp
-         GameField.cpp
-       Link:
-         D:\Programs\VS_INSTALL\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Vitalik\Desktop\PR\Debug\Logic.dll" /INCREMENTAL /NOLOGO /LIBPATH:..\Debug /LIBPATH:..\PR_FLY\phfsnew /LIBPATH:"..\PR_FLY\SFML-2.4.2\lib" "sfml-audio-d.lib" openal32.lib flac.lib vorbisenc.lib vorbisfile.lib vorbis.lib ogg.lib physfs.lib "sfml-graphics-d.lib" "sfml-window-d.lib" "sfml-system-d.lib" "sfml-main-d.lib" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Vitalik\Desktop\PR\Debug\Logic.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Vitalik\Desktop\PR\Debug\Logic.lib" /MACHINE:X86 /DLL Debug\Exceptions.obj
+﻿Сборка начата 05.12.2017 17:13:15.
+     1>Проект "C:\Users\Виталий\Desktop\TRPO\Logic\Logic.vcxproj" в узле 2 (целевые объекты Build).
+     1>Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Виталий\Desktop\TRPO\Debug\Logic.dll" /INCREMENTAL /NOLOGO /LIBPATH:..\Debug /LIBPATH:..\PR_FLY\phfsnew /LIBPATH:"..\PR_FLY\SFML-2.4.2\lib" "sfml-audio-d.lib" openal32.lib flac.lib vorbisenc.lib vorbisfile.lib vorbis.lib ogg.lib physfs.lib "sfml-graphics-d.lib" "sfml-window-d.lib" "sfml-system-d.lib" "sfml-main-d.lib" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Виталий\Desktop\TRPO\Debug\Logic.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Виталий\Desktop\TRPO\Debug\Logic.lib" /MACHINE:X86 /DLL Debug\Exceptions.obj
          Debug\Background_Class.obj
          Debug\BaseEnemy.obj
          Debug\BaseMenu.obj
@@ -30,7 +12,6 @@
          Debug\LevelBoss.obj
          Debug\LevelMenager.obj
          Debug\dllmain.obj
-         Debug\Enemy.obj
          Debug\GameField.obj
          Debug\GameMenu.obj
          Debug\Hud.obj
@@ -46,11 +27,11 @@
          Debug\tinyxml2.obj
          Debug\transitscreen.obj
          Debug\UpgradeScreen.obj
-         C:\Users\Vitalik\Desktop\PR\Debug\SoundSystem.lib
-            Создается библиотека C:\Users\Vitalik\Desktop\PR\Debug\Logic.lib и объект C:\Users\Vitalik\Desktop\PR\Debug\Logic.exp
-         Logic.vcxproj -> C:\Users\Vitalik\Desktop\PR\Debug\Logic.dll
-     1>Сборка проекта "C:\Users\Vitalik\Desktop\PR\Logic\Logic.vcxproj" завершена (целевые объекты Build).
+         "C:\Users\Виталий\Desktop\TRPO\Debug\SoundSystem.lib"
+            Создается библиотека C:\Users\Виталий\Desktop\TRPO\Debug\Logic.lib и объект C:\Users\Виталий\Desktop\TRPO\Debug\Logic.exp
+         Logic.vcxproj -> C:\Users\Виталий\Desktop\TRPO\Debug\Logic.dll
+     1>Сборка проекта "C:\Users\Виталий\Desktop\TRPO\Logic\Logic.vcxproj" завершена (целевые объекты Build).
 
 Сборка успешно завершена.
 
-Затраченное время: 00:00:01.08
+Затраченное время: 00:00:01.76

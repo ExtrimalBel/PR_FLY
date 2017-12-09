@@ -45,9 +45,6 @@
     <ClInclude Include="Logic.h">
       <Filter>Заголовочные файлы</Filter>
     </ClInclude>
-    <ClInclude Include="ShipsClasses.h">
-      <Filter>Заголовочные файлы</Filter>
-    </ClInclude>
     <ClInclude Include="PlayerS.h">
       <Filter>Заголовочные файлы</Filter>
     </ClInclude>
@@ -102,9 +99,6 @@
     <ClInclude Include="LevelBoss.h">
       <Filter>Ships</Filter>
     </ClInclude>
-    <ClInclude Include="Enemy.h">
-      <Filter>Ships</Filter>
-    </ClInclude>
     <ClInclude Include="Player_Class.h">
       <Filter>Ships</Filter>
     </ClInclude>
@@ -127,6 +121,9 @@
       <Filter>Заголовочные файлы</Filter>
     </ClInclude>
     <ClInclude Include="ExceptionsDefenitions.hpp">
+      <Filter>Заголовочные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="LevelEventDefenition.h">
       <Filter>Заголовочные файлы</Filter>
     </ClInclude>
   </ItemGroup>
@@ -183,9 +180,6 @@
       <Filter>Ships</Filter>
     </ClCompile>
     <ClCompile Include="LevelBoss.cpp">
-      <Filter>Ships</Filter>
-    </ClCompile>
-    <ClCompile Include="Enemy.cpp">
       <Filter>Ships</Filter>
     </ClCompile>
     <ClCompile Include="Intersectsmenager.cpp">

@@ -4,28 +4,9 @@
 
 namespace Enemys
 {
-	MovingEnemy::MovingEnemy(double cx, double cy, int health, double gunspeed, coord *beginofcoord, double speed, double demage) : BaseEnemy(cx, cy, health, gunspeed, speed, demage)
+	MovingEnemy::MovingEnemy(double cx, double cy, EnemyEventDef::EnemyData &DataStruct) : BaseEnemy(cx, cy,DataStruct)
 	{
-		coordinates = beginofcoord;
-		enemy.setPosition(coordinates->x, coordinates->y);
-		coordinates = coordinates->next;
-		x2 = coordinates->x;
-		y2 = coordinates->y;
-		coord *currentcoord = coordinates;
-		while (currentcoord->x != -2000)
-		{
-			std::cout << "x" << currentcoord->x << " y " << currentcoord->y << std::endl;
-			currentcoord = currentcoord->next;
-		}
-		enemyimg.loadFromFile("./img/game/sprite.png");
-		enemytex.loadFromImage(enemyimg);
-		enemytex.setSmooth(true);
 
-
-		enemy.setTexture(enemytex);
-		//enemy.setSize(sf::Vector2f(enemyimg.getSize().x, enemyimg.getSize().y));
-		enemy.setScale(cox, coy);
-		//enemy.setFillColor(sf::Color::Red);
 	}
 
 	void MovingEnemy::Update(float time, sf::RenderWindow &window)
@@ -37,19 +18,33 @@ namespace Enemys
 
 	void MovingEnemy::Draw(sf::RenderWindow &window)
 	{
-		window.draw(enemy);
+		window.draw(Enemy);
 	}
 
 
 	void MovingEnemy::Move(float time)
+	{
+		switch (MovingType)
+		{
+		case 1:
+			MoveLine(time);
+			break;
+		case 2:
+			MoveCircle(time);
+			break;
+		}
+	}
+
+	void MovingEnemy::MoveLine(float time)
 	{
 		if (x2 == -2000)
 		{
 			return;
 		}
 		int xn, yn;
-		int x1 = enemy.getPosition().x;
-		int y1 = enemy.getPosition().y;
+		//x1 = enemy.getPosition().x;
+		//y1 = enemy.getPosition().y;
+		//x1 = Coordinates.
 		sf::Vector2f direction = sf::Vector2f(x2, y2) - enemy.getPosition();
 		float magnitude = std::sqrt((direction.x * direction.x) + (direction.y * direction.y));
 		sf::Vector2f unitVector(direction.x / magnitude, direction.y / magnitude);
@@ -70,5 +65,10 @@ namespace Enemys
 				return;
 			}
 		}
+	}
+
+	void MovingEnemy::MoveCircle(float time)
+	{
+
 	}
 }

@@ -13,6 +13,7 @@
 #include "tinyxml2.h"
 #include <iostream>
 #include <list>
+#include <vector>
 #ifdef LOGIC_EXPORTS
 #define LOGIC_API __declspec(dllexport)
 #else
@@ -20,11 +21,13 @@
 #endif
 class LOGIC_API ConfigReader
 {
+private:
+	static std::vector<int>* ReadGameConfigArch(std::string Path);
+	static std::vector<int>* ReadGameConfigFile(std::string Path);
 public:
 	ConfigReader();
 	std::ifstream infile;
-	boss_coord* ReadBossConfig(std::string filename,std::map<std::string, double> &);
-	void ReadBossState(std::map<std::string, double> &Table, std::string str);
 	static void ReadRezolutions(std::string filename, std::list<std::string> &OutPutList); // Читает разрешения экрана из файла
+	static std::vector<int>* ReadGameConfig(std::string Path);
 };
 #endif

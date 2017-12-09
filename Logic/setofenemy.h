@@ -49,8 +49,6 @@ class LOGIC_API SetOfEnemy
 	// ¬екторы хран€т информацию о врагах и о пул€х выпущенных данными врагами
 	std::vector<Enemys::MovingEnemy> SetOfMovingEnemys;
 	std::vector<Bullet> SetOFMovingEnemysBullets;
-	std::vector<Bullet> SetOFStationarEnemysBullet;
-	std::vector<Enemys::StationarEnemy> SetOfStationarEnemys;
 	void DeleteEnemy(); // ”далет врагов помеченных на удаление
 	void UpdateBullets(float time, sf::RenderWindow &window); // ќбновл€ет пули выпущенные врагами
 	void DeleteBullets(); // ”дал€ет пули помеченные на удаление

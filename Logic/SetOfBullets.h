@@ -3,7 +3,6 @@
 #include <vector>
 #include "Bullet.h"
 #include <SFML/Graphics.hpp>
-#include "Enemy.h"
 #include "stdafx.h"
 #ifdef LOGIC_EXPORTS
 #define LOGIC_API __declspec(dllexport)
