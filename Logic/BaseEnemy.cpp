@@ -30,16 +30,6 @@ namespace Enemys
 	
 	}
 
-	float BaseEnemy::GetTimeFromLastFirstGunShot()
-	{
-		return FirstGunLastShot.getElapsedTime().asSeconds();
-	}
-
-	float BaseEnemy::GetTimeFromLastSecondGunShot()
-	{
-		return SecondGunLastShot.getElapsedTime().asSeconds();
-	}
-
 	void BaseEnemy::ResetClock()
 	{
 		FirstGunLastShot.restart();
@@ -67,7 +57,7 @@ namespace Enemys
 		return for_delete;
 	}
 
-	void BaseEnemy::DeathAnimUpdate(float time, sf::RenderWindow &window)
+	void BaseEnemy::DeathAnimUpdate()
 	{
 		float CurrentAnimTime = AnimSpeed.getElapsedTime().asSeconds();
 		if (DeathType == EnemyEventDef::Static)
@@ -98,7 +88,7 @@ namespace Enemys
 		}
 	}
 
-	void BaseEnemy::EnemyAnimUpdate(float time, sf::RenderWindow &window)
+	void BaseEnemy::EnemyAnimUpdate()
 	{
 		
 		if (AnimFrame > AnimFrames)

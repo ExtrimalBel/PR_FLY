@@ -13,7 +13,7 @@ class LOGIC_API MainM : public BaseMenu
 {
 	
 public:
-	MainM(double cox,double coy,SoundSystem::SoundPlayer &SPlayer);
+	MainM(double cox,double coy,SoundSystem::SoundPlayer &SPlayer,std::string BasePath);
 	void Update(float time,sf::RenderWindow &window);
 	void Draw(sf::RenderWindow &window);
 	void IfMenuItemSelected(sf::RenderWindow &window);

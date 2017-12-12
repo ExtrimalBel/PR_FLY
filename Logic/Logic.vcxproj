@@ -116,6 +116,7 @@
     <ClCompile Include="Background_Class.cpp" />
     <ClCompile Include="BaseEnemy.cpp" />
     <ClCompile Include="BaseMenu.cpp" />
+    <ClCompile Include="BossFile.cpp" />
     <ClCompile Include="Bullet.cpp" />
     <ClCompile Include="ConfigReader.cpp" />
     <ClCompile Include="Intersectsmenager.cpp" />

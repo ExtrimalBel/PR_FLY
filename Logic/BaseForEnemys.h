@@ -6,6 +6,8 @@
 #include <list>
 #include "LevelEventDefenition.h"
 #include "ExceptionsDefenitions.hpp"
+#include <vector>
+#include <ctime>
 namespace Enemys
 {
 	class BaseEnemy
@@ -14,7 +16,6 @@ namespace Enemys
 		double FirstGunDemage;
 		double SecondGunDemage;
 		double life;
-		double speed;
 		int Heigth, Width; // Ширина и высота текстуры
 		//Таймеры анимации и скорости стрельбы
 		sf::Clock FirstGunLastShot;
@@ -28,7 +29,7 @@ namespace Enemys
 		double cox, coy;							    //
 		double FirstGunSpeed; // Скорость первичного оружия
 		double SecondGunSpeed; // Скорость вторичного оружия
-		bool ref = false;
+		bool EnemyDeath = false;
 		EnemyEventDef::AnimationType AnimType; // Тип анимации врага
 		EnemyEventDef::DeathAnimType DeathType; // Тип анимации смерти врага
 		int x2, y2;
@@ -41,22 +42,23 @@ namespace Enemys
 		// Пути к текстурам
 		std::string EnemyImgPath;
 		std::string EnemyDeathPath;
-	protected:
-		void DeathAnimUpdate(float time, sf::RenderWindow &window);
-		void EnemyAnimUpdate(float time, sf::RenderWindow &window);
+		void DeathAnimUpdate();
+		void EnemyAnimUpdate();
 		void LoadEnemyImage();
 		void LoadEnemyDeathImage();
+		virtual void Move(float time) = 0;
+		virtual void Draw(sf::RenderWindow &window) = 0;
+		void DoEnemyDeath();
 	public:
 
 		BaseEnemy(double cx, double cy,EnemyEventDef::EnemyData &DataStruct);
 		virtual void Update(float time, sf::RenderWindow &window) = 0;
-		virtual void Move(float time) = 0;
-		virtual void Draw(sf::RenderWindow &window) = 0;
+		
 		bool IsForDelete();
-		float GetTimeFromLastFirstGunShot();
-		float GetTimeFromLastSecondGunShot();
-		virtual bool IFFirstGunShot() = 0;
-		virtual bool IFSecondGunShot() = 0;
+		float GetTimeFromLastFirstGunShot() { return FirstGunLastShot.getElapsedTime().asSeconds(); }
+		float GetTimeFromLastSecondGunShot() { return SecondGunLastShot.getElapsedTime().asSeconds(); }
+		bool IFFirstGunShot();
+		bool IFSecondGunShot();
 		void ResetClock();
 		virtual void RemoveHealth(int health);
 		sf::Vector2f GetPostion();
@@ -88,10 +90,8 @@ namespace Enemys
 	class MovingEnemy : public BaseEnemy
 	{
 	private: 
-		int MovingType; // Тип перемещения 1 - Линия 2 - Окружность
-		std::list<EnemyEventDef::CoordDef> *Coordinates;
+		std::list<EnemyEventDef::CoordDef> Coordinates;	 // Хранит инфомацию о координатах перемещения врагов
 		//coord *coordinates;
-		std::list<EnemyEventDef::CoordDef> ListOfCoord; // Хранит информацию о координатах перемещения
 		void MoveLine(float time);
 		void MoveCircle(float time);
 		void Move(float time);
@@ -104,7 +104,20 @@ namespace Enemys
 
 	class LevelBoss : public BaseEnemy
 	{
-
+	private:
+		int CurItemIndex;
+		int NumberOfCurrentCoord; // Номер ноды с текущими координатами по которым перемещаяется объект
+		std::vector<EnemyEventDef::CoordDef> Coordinates;
+		void MoveRandom(float time);
+		void MoveCircle(float time);
+		bool IfPointReached();
+		int FindNewPoint(int PrevNumber);
+		void Move(float time);
+		sf::Vector2f CountNextPoint(int CurItemIndex,float time);
+		void Draw(sf::RenderWindow &window);
+	public:
+		LevelBoss(double cx, double cy, EnemyEventDef::EnemyData &DataStruct);
+		void Update(float time, sf::RenderWindow &window);
 	};
 
 }

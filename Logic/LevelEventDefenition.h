@@ -3,8 +3,16 @@
 #include <list>
 namespace EnemyEventDef
 {
+	struct GameOptions
+	{
+		int vidx;
+		int vidy;
+		int Volume;
+		std::string GameModePath;
+		std::string Fullscreen;
+	};
 	typedef enum{ BossSpawn, MovingEnemySpawn, MessageShow, StationarEnemySpawn } EventType;
-	typedef enum{ LineMove, CircleMove } MoveType;
+	typedef enum{ LineMove, CircleMove, MoveCircle,MoveRandom } MoveType;
 	typedef enum{ Yes,No } AnimationType;
 	typedef enum{Static,Dynamic,None} DeathAnimType;
 	struct LevelEvent

@@ -3,15 +3,15 @@
 
 namespace Screens
 {
-	BaseScreen::BaseScreen(double cox, double coy)
+	BaseScreen::BaseScreen(double cox, double coy,std::string BasePath)
 	{
-	
-		BackgroundText.loadFromFile("./img/trscreen.png");
+		this->BasePath = BasePath;
+		BackgroundText.loadFromFile(BasePath + "/img/trscreen.png");
 		Background.setTexture(BackgroundText);
 		BackgroundText.setSmooth(true);
 		Background.setPosition(0, 0);
 		Background.setScale(cox, coy);
-		TextFont.loadFromFile("./CyrilicOld.TTF");
+		TextFont.loadFromFile(BasePath + "/fonts/CyrilicOld.TTF");
 		Message.setFont(TextFont);
 		Message.setFillColor(sf::Color::Red);
 		Message.setPosition(300 * cox, 300 * coy);
@@ -43,16 +43,16 @@ namespace Screens
 		}
 	}
 
-	TransitScreen::TransitScreen(double cox, double coy, const char *levelname) : BaseScreen(cox, coy)
+	TransitScreen::TransitScreen(double cox, double coy, const char *levelname,std::string BasePath) : BaseScreen(cox, coy, BasePath)
 	{
-		
+
 		loaded = false;
 		sf::String str = "level ";
 		str += levelname;
 		str += " loading...";
 		//Message.setString(str); // deprecated
 		BaseScreen::SetTextString(str);
-		
+
 		this->levelname = levelname;
 		this->ToExit = false;
 	}
@@ -63,7 +63,7 @@ namespace Screens
 	}
 	int TransitScreen::IfExit()
 	{
-		if (this->ToExit ) return 1;
+		if (this->ToExit) return 1;
 		else return 0;
 	}
 	void TransitScreen::SetStateOfScreen(int state)
@@ -84,7 +84,7 @@ namespace Screens
 
 	// Методы класса bosecomming
 
-	BossComingScreen::BossComingScreen(double cox, double coy, double time) : BaseScreen(cox,coy)
+	BossComingScreen::BossComingScreen(double cox, double coy, double time, std::string BasePath) : BaseScreen(cox, coy,BasePath)
 	{
 		Tick.restart();
 		this->time = time;
@@ -96,5 +96,25 @@ namespace Screens
 	{
 		if (Tick.getElapsedTime().asSeconds() > time) return 1;
 		else return 0;
+	}
+
+	ErrorScreen::ErrorScreen(double cox, double coy, std::string BasePath, std::string Message) : BaseScreen(cox, coy, BasePath)
+	{
+		SetTextString(Message);
+	}
+
+	int ErrorScreen::IfExit()
+	{
+		if (ToExit) return 1;
+		else return 0;
+	}
+
+	void ErrorScreen::Update(sf::RenderWindow &window)
+	{
+		BaseScreen::Update(window);
+		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Return))
+		{
+			ToExit = true;
+		}
 	}
 }

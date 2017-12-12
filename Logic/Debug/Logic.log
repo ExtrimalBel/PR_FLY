@@ -1,37 +1,62 @@
-﻿Сборка начата 05.12.2017 17:13:15.
-     1>Проект "C:\Users\Виталий\Desktop\TRPO\Logic\Logic.vcxproj" в узле 2 (целевые объекты Build).
-     1>Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Виталий\Desktop\TRPO\Debug\Logic.dll" /INCREMENTAL /NOLOGO /LIBPATH:..\Debug /LIBPATH:..\PR_FLY\phfsnew /LIBPATH:"..\PR_FLY\SFML-2.4.2\lib" "sfml-audio-d.lib" openal32.lib flac.lib vorbisenc.lib vorbisfile.lib vorbis.lib ogg.lib physfs.lib "sfml-graphics-d.lib" "sfml-window-d.lib" "sfml-system-d.lib" "sfml-main-d.lib" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Виталий\Desktop\TRPO\Debug\Logic.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Виталий\Desktop\TRPO\Debug\Logic.lib" /MACHINE:X86 /DLL Debug\Exceptions.obj
-         Debug\Background_Class.obj
-         Debug\BaseEnemy.obj
-         Debug\BaseMenu.obj
-         Debug\Bullet.obj
-         Debug\ConfigReader.obj
-         Debug\Intersectsmenager.obj
-         Debug\Level.obj
-         Debug\LevelBoss.obj
-         Debug\LevelMenager.obj
-         Debug\dllmain.obj
-         Debug\GameField.obj
-         Debug\GameMenu.obj
-         Debug\Hud.obj
-         Debug\loadgameclass.obj
-         Debug\Logic.obj
-         Debug\MovingEnemy.obj
-         Debug\PixelPerfect.obj
-         Debug\Player_Class.obj
-         Debug\SetOfBullets.obj
-         Debug\setofenemy.obj
-         Debug\StationarEnemy.obj
-         Debug\stdafx.obj
-         Debug\tinyxml2.obj
-         Debug\transitscreen.obj
-         Debug\UpgradeScreen.obj
-         "C:\Users\Виталий\Desktop\TRPO\Debug\SoundSystem.lib"
-            Создается библиотека C:\Users\Виталий\Desktop\TRPO\Debug\Logic.lib и объект C:\Users\Виталий\Desktop\TRPO\Debug\Logic.exp
-         Logic.vcxproj -> C:\Users\Виталий\Desktop\TRPO\Debug\Logic.dll
-     1>Сборка проекта "C:\Users\Виталий\Desktop\TRPO\Logic\Logic.vcxproj" завершена (целевые объекты Build).
+﻿Сборка начата 12.12.2017 9:45:18.
+     1>Проект "C:\Users\Vitalik\Desktop\TRPO\Logic\Logic.vcxproj" в узле 2 (целевые объекты Build).
+     1>ClCompile:
+         D:\VS_INSTALL\VC\bin\CL.exe /c /I..\SoundSystem /I..\PR_FLY /I..\PR_FLY\phfsnew /I"..\PR_FLY\SFML-2.4.2\include" /ZI /nologo /W3 /WX- /Od /Oy- /D NOMINMAX /D SFML_DYNAMIC /D WIN32 /D _DEBUG /D _WINDOWS /D _USRDLL /D LOGIC_EXPORTS /D _WINDLL /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\Logic.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt BaseEnemy.cpp ConfigReader.cpp GameField.cpp Level.cpp LevelMenager.cpp StationarEnemy.cpp setofenemy.cpp
+         setofenemy.cpp
+     1>c:\users\vitalik\desktop\trpo\logic\setofenemy.cpp(39): warning C4244: =: преобразование "double" в "int", возможна потеря данных
+     1>c:\users\vitalik\desktop\trpo\logic\setofenemy.cpp(85): error C2661: Enemys::MovingEnemy::MovingEnemy: нет перегруженной функции, принимающей 7 аргументов
+     1>c:\users\vitalik\desktop\trpo\logic\setofenemy.cpp(116): warning C4018: <: несоответствие типов со знаком и без знака
+     1>c:\users\vitalik\desktop\trpo\logic\setofenemy.cpp(156): warning C4244: +=: преобразование "double" в "int", возможна потеря данных
+     1>c:\users\vitalik\desktop\trpo\logic\setofenemy.cpp(172): warning C4244: =: преобразование "double" в "int", возможна потеря данных
+     1>c:\users\vitalik\desktop\trpo\logic\setofenemy.cpp(186): warning C4244: =: преобразование "double" в "int", возможна потеря данных
+     1>c:\users\vitalik\desktop\trpo\logic\setofenemy.cpp(243): error C2039: IsShot: не является членом "Enemys::MovingEnemy"
+                 c:\users\vitalik\desktop\trpo\logic\baseforenemys.h(90): см. объявление "Enemys::MovingEnemy"
+     1>c:\users\vitalik\desktop\trpo\logic\setofenemy.cpp(245): error C2039: GetDemage: не является членом "Enemys::MovingEnemy"
+                 c:\users\vitalik\desktop\trpo\logic\baseforenemys.h(90): см. объявление "Enemys::MovingEnemy"
+     1>c:\users\vitalik\desktop\trpo\logic\setofenemy.cpp(245): error C2661: Bullet::Bullet: нет перегруженной функции, принимающей 6 аргументов
+         StationarEnemy.cpp
+     1>c:\users\vitalik\desktop\trpo\logic\stationarenemy.cpp(9): error C2661: Enemys::BaseEnemy::BaseEnemy: нет перегруженной функции, принимающей 6 аргументов
+     1>c:\users\vitalik\desktop\trpo\logic\stationarenemy.cpp(12): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+     1>c:\users\vitalik\desktop\trpo\logic\stationarenemy.cpp(24): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
+         LevelMenager.cpp
+     1>c:\users\vitalik\desktop\trpo\logic\transitscreen.h(56): warning C4275: class "Screens::BaseScreen", не являющийся dll-интерфейсом, использован в качестве базового для dll-интерфейса class "Screens::ErrorScreen"
+                 c:\users\vitalik\desktop\trpo\logic\transitscreen.h(17): см. объявление "Screens::BaseScreen"
+                 c:\users\vitalik\desktop\trpo\logic\transitscreen.h(55): см. объявление "Screens::ErrorScreen"
+     1>c:\users\vitalik\desktop\trpo\logic\levelmenager.cpp(26): error C2661: Screens::TransitScreen::TransitScreen: нет перегруженной функции, принимающей 3 аргументов
+     1>c:\users\vitalik\desktop\trpo\logic\levelmenager.cpp(70): error C2661: Screens::TransitScreen::TransitScreen: нет перегруженной функции, принимающей 3 аргументов
+         Level.cpp
+     1>c:\users\vitalik\desktop\trpo\logic\transitscreen.h(56): warning C4275: class "Screens::BaseScreen", не являющийся dll-интерфейсом, использован в качестве базового для dll-интерфейса class "Screens::ErrorScreen"
+                 c:\users\vitalik\desktop\trpo\logic\transitscreen.h(17): см. объявление "Screens::BaseScreen"
+                 c:\users\vitalik\desktop\trpo\logic\transitscreen.h(55): см. объявление "Screens::ErrorScreen"
+     1>c:\users\vitalik\desktop\trpo\logic\level.cpp(62): error C2661: Screens::BossComingScreen::BossComingScreen: нет перегруженной функции, принимающей 3 аргументов
+         GameField.cpp
+     1>c:\users\vitalik\desktop\trpo\logic\transitscreen.h(56): warning C4275: class "Screens::BaseScreen", не являющийся dll-интерфейсом, использован в качестве базового для dll-интерфейса class "Screens::ErrorScreen"
+                 c:\users\vitalik\desktop\trpo\logic\transitscreen.h(17): см. объявление "Screens::BaseScreen"
+                 c:\users\vitalik\desktop\trpo\logic\transitscreen.h(55): см. объявление "Screens::ErrorScreen"
+     1>c:\users\vitalik\desktop\trpo\logic\gamefield.cpp(16): error C2664: "LevelMenager::LevelMenager(const LevelMenager &)": невозможно преобразовать аргумент 1 из "std::string" в "char *"
+                 Для выполнения данного преобразования нет доступного оператора преобразования, определенного пользователем, или вызов оператора невозможен
+     1>c:\users\vitalik\desktop\trpo\logic\gamefield.cpp(27): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+         ConfigReader.cpp
+     1>c:\users\vitalik\desktop\trpo\logic\configreader.cpp(28): error C2511: std::vector<int,std::allocator<_Ty>> *ConfigReader::ReadGameConfigFile(std::string,EnemyEventDef::GameOptions &): перегруженная функция-член не найдена в "ConfigReader"
+                 with
+                 [
+                     _Ty=int
+                 ]
+                 c:\users\vitalik\desktop\trpo\logic\configreader.h(24): см. объявление "ConfigReader"
+     1>c:\users\vitalik\desktop\trpo\logic\configreader.cpp(35): error C3867: tinyxml2::XMLNode::Value: в вызове функции отсутствует список аргументов; используйте "&tinyxml2::XMLNode::Value" для создания указателя на член
+     1>c:\users\vitalik\desktop\trpo\logic\configreader.cpp(35): error C2446: !=: нет преобразования "const char *" в "const char *(__thiscall tinyxml2::XMLNode::* )(void) const"
+                 Не существует контекста, в котором такое преобразование возможно
+     1>c:\users\vitalik\desktop\trpo\logic\configreader.cpp(35): error C2040: !=: "const char *(__thiscall tinyxml2::XMLNode::* )(void) const" отличается по уровням косвенного обращения от "const char [13]"
+     1>c:\users\vitalik\desktop\trpo\logic\configreader.cpp(46): error C2065: VidxElem: необъявленный идентификатор
+     1>c:\users\vitalik\desktop\trpo\logic\configreader.cpp(48): error C2059: синтаксическая ошибка: }
+         BaseEnemy.cpp
+     1>c:\users\vitalik\desktop\trpo\logic\baseenemy.cpp(113): warning C4244: инициализация: преобразование "float" в "int", возможна потеря данных
+     1>c:\users\vitalik\desktop\trpo\logic\baseenemy.cpp(114): warning C4244: инициализация: преобразование "float" в "int", возможна потеря данных
+     1>c:\users\vitalik\desktop\trpo\logic\baseenemy.cpp(125): warning C4244: инициализация: преобразование "float" в "int", возможна потеря данных
+     1>c:\users\vitalik\desktop\trpo\logic\baseenemy.cpp(126): warning C4244: инициализация: преобразование "float" в "int", возможна потеря данных
+         Создание кода...
+     1>Сборка проекта "C:\Users\Vitalik\Desktop\TRPO\Logic\Logic.vcxproj" завершена (целевые объекты Build) с ошибкой.
 
-Сборка успешно завершена.
+Ошибка сборки.
 
-Затраченное время: 00:00:01.76
+Затраченное время: 00:00:02.52

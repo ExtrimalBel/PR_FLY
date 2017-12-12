@@ -1,7 +1,7 @@
 #include "stdafx.h"
 #include "GameField.h"
 #include <iostream>
-GameField::GameField(double xsc, double ysc, int slot, sf::RenderWindow &window,bool Is_new, char *SaveFile)
+GameField::GameField(double xsc, double ysc, int slot, sf::RenderWindow &window, bool Is_new, char *SaveFile, std::string BaseGamePath)
 {
 #define DEBUG
 	BackM = new Back_Menu(xsc, ysc);
@@ -13,7 +13,7 @@ GameField::GameField(double xsc, double ysc, int slot, sf::RenderWindow &window,
 	sf::Mouse::setPosition(sf::Vector2i(window.getPosition().x + 200, window.getPosition().y + 200));
 
 	// Debug
-	Men = new LevelMenager("vanilla/", xscale, yscale,Is_new,SaveFile);
+	Men = new LevelMenager(BaseGamePath, xscale, yscale,Is_new,SaveFile);
 	WriteLogFile("GameField created");
 
 }

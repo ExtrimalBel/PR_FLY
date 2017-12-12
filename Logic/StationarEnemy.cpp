@@ -9,7 +9,7 @@ namespace Enemys
 	{
 		X = x;
 		Y = y;
-		enemy.setPosition(x, y);
+		Enemy.setPosition(x, y);
 	}
 
 	void StationarEnemy::Update(float time, sf::RenderWindow &window)
@@ -21,11 +21,11 @@ namespace Enemys
 
 	void StationarEnemy::Move(float time)
 	{
-		enemy.move(-0.1 * time,0);
+		Enemy.move(-0.1 * time,0);
 	}
 
 	void StationarEnemy::Draw(sf::RenderWindow &window)
 	{
-		window.draw(enemy);
+		window.draw(Enemy);
 	}
 }

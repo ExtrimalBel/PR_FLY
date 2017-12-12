@@ -62,6 +62,12 @@ namespace Exceptions{
 	public:
 		ImageLoadError(std::string mes) : BaseForExceptions(mes) {}
 	};
+
+	class UnknownMoveType : public BaseForExceptions
+	{
+	public:
+		UnknownMoveType(std::string mes) : BaseForExceptions(mes) {}
+	};
 }
 
 #endif

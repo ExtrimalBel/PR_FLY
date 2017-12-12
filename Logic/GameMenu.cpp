@@ -2,7 +2,7 @@
 #include "GameMenu.h"
 #include <iostream>
 
-MainM::MainM(double cox, double coy, SoundSystem::SoundPlayer &SPlayer) : BaseMenu(cox,coy,SPlayer)
+MainM::MainM(double cox, double coy, SoundSystem::SoundPlayer &SPlayer, std::string BasePath) : BaseMenu(cox, coy, SPlayer,BasePath)
 {
 
 	SetUpText();

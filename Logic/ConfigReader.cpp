@@ -24,7 +24,7 @@ void ConfigReader::ReadRezolutions(std::string filename,std::list<std::string> &
 }
 
 
-std::vector<int>* ConfigReader::ReadGameConfigFile(std::string Path)
+std::vector<int>* ConfigReader::ReadGameConfigFile(std::string Path,EnemyEventDef::GameOptions &Options)
 {
 	std::vector<int> *ReturnVec = new std::vector<int>;
 	tinyxml2::XMLDocument xmldoc;

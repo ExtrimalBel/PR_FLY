@@ -14,13 +14,13 @@ class LOGIC_API LoadM : public BaseMenu
 
 public:
 	class OverFlow {};
-	LoadM(double cox, double coy, SoundSystem::SoundPlayer &SPlayer);
+	LoadM(double cox, double coy, SoundSystem::SoundPlayer &SPlayer, std::string BasePath);
 	void Update(float time, sf::RenderWindow &window);
 	void Draw(sf::RenderWindow &window);
 	void IfMenuItemSelected(sf::RenderWindow &window);
-	sf::Event GetEvent() { return ev; }
-	int MenuSelect();
-	void SetUpText();
+	sf::Event GetEvent() { return ev; } 
+	int MenuSelect(); // Метод отвечает за выбор пункта меню
+	void SetUpText(); // Устанавливает текст
 	char *ReturnSaveFile();
 };
 #endif

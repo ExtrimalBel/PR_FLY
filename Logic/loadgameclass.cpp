@@ -1,7 +1,7 @@
 #include "stdafx.h"
 #include "loadgameclass.h"
 #include "BaseMenu.h"
-LoadM::LoadM(double cox, double coy, SoundSystem::SoundPlayer &SPlayer) : BaseMenu(cox, coy, SPlayer)
+LoadM::LoadM(double cox, double coy, SoundSystem::SoundPlayer &SPlayer, std::string BasePath) : BaseMenu(cox, coy, SPlayer,BasePath)
 {
 	SetUpText();
 }

@@ -14,6 +14,7 @@
 #include <iostream>
 #include <list>
 #include <vector>
+#include "LevelEventDefenition.h"
 #ifdef LOGIC_EXPORTS
 #define LOGIC_API __declspec(dllexport)
 #else
@@ -28,6 +29,6 @@ public:
 	ConfigReader();
 	std::ifstream infile;
 	static void ReadRezolutions(std::string filename, std::list<std::string> &OutPutList); // Читает разрешения экрана из файла
-	static std::vector<int>* ReadGameConfig(std::string Path);
+	static std::vector<int>* ReadGameConfig(std::string Path, EnemyEventDef::GameOptions &Options);
 };
 #endif

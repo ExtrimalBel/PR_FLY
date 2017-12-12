@@ -2,18 +2,19 @@
 #include "BaseMenu.h"
 #include <SoundSystem.h>
 #include "Exceptions.h"
-BaseMenu::BaseMenu(double cox, double coy, SoundSystem::SoundPlayer &SPlayer)
+BaseMenu::BaseMenu(double cox, double coy, SoundSystem::SoundPlayer &SPlayer,std::string BaseGamePath)
 {
+	this->BasePath = BaseGamePath;
 	sf::Mouse::setPosition(sf::Vector2i(300, 300));
 	BMenu = new Back_Menu(cox, coy);
 	this->cox = cox;
 	this->coy = coy;
 	this->SPlayer = &SPlayer;
 	//SPlayer.Inicialize();
-	ButtonBack.loadFromFile("./img/menu/newgame.png");
+	ButtonBack.loadFromFile(BasePath + "/img/menu/newgame.png");
 	ButtonBack.setSmooth(true);
 
-	logotex.loadFromFile("./img/menu/logo.png");
+	logotex.loadFromFile(BasePath + "/img/menu/logo.png");
 	logo.setTexture(&logotex);
 	logo.setScale(cox, coy);
 	logo.setPosition(sf::Vector2f(1200 * cox, 200 * coy));
@@ -21,7 +22,7 @@ BaseMenu::BaseMenu(double cox, double coy, SoundSystem::SoundPlayer &SPlayer)
 	logo.setSize(sf::Vector2f(logosize.x, logosize.y));
 
 
-	menulogotex.loadFromFile("./img/menu/menulogo.png");
+	menulogotex.loadFromFile(BaseGamePath + "/img/menu/menulogo.png");
 	menulogo.setTexture(&menulogotex);
 	menulogo.setScale(cox, coy);
 	menulogo.setPosition(sf::Vector2f(50 * cox, 50 * coy));
@@ -58,12 +59,12 @@ BaseMenu::BaseMenu(double cox, double coy, SoundSystem::SoundPlayer &SPlayer)
 
 
 
-	mousecurtex.loadFromFile("./img/cursor.png");
+	mousecurtex.loadFromFile(BasePath + "/img/cursor.png");
 	mousecursorspr.setTexture(mousecurtex);
 	mousecursorspr.setScale(cox, cox);
 	mousecursorspr.setPosition(0, 0);
 
-	this->SPlayer->PlaySound(3);
+	//this->SPlayer->PlaySound(3);
 }
 
 void BaseMenu::Update(float time, sf::RenderWindow &window)

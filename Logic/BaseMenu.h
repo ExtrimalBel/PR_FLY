@@ -12,6 +12,9 @@
 class LOGIC_API BaseMenu
 {
 protected:
+	//Base Mode Path
+	std::string BasePath;
+	//SoundPayerPointer
 	SoundSystem::SoundPlayer *SPlayer;
 	// Menu logo
 	sf::Texture menulogotex;
@@ -49,7 +52,7 @@ protected:
 
 
 	int MenuNum = 0;
-	BaseMenu(double cox, double coy, SoundSystem::SoundPlayer &SPlayer);
+	BaseMenu(double cox, double coy, SoundSystem::SoundPlayer &SPlayer,std::string BaseGamePath);
 	virtual void Update(float time, sf::RenderWindow &window);
 	virtual void Draw(sf::RenderWindow &window);
 	virtual void IfMenuItemSelected(sf::RenderWindow &window);

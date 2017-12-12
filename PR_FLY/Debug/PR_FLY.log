@@ -1,18 +1,25 @@
-﻿Сборка начата 05.12.2017 17:13:17.
-     1>Проект "C:\Users\Виталий\Desktop\TRPO\PR_FLY\PR_FLY.vcxproj" в узле 2 (целевые объекты Build).
-     1>Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Виталий\Desktop\TRPO\Debug\PR_FLY.exe" /INCREMENTAL /NOLOGO /LIBPATH:".\SFML-2.4.2\lib" "sfml-audio-d.lib" openal32.lib flac.lib vorbisenc.lib vorbisfile.lib vorbis.lib ogg.lib "sfml-graphics-d.lib" "sfml-window-d.lib" "sfml-system-d.lib" "sfml-main-d.lib" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Виталий\Desktop\TRPO\Debug\PR_FLY.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /ENTRY:"main" /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Виталий\Desktop\TRPO\Debug\PR_FLY.lib" /MACHINE:X86 Debug\Game.obj
-         Debug\main.obj
-         "C:\Users\Виталий\Desktop\TRPO\Debug\Logic.lib"
-         "C:\Users\Виталий\Desktop\TRPO\Debug\SoundSystem.lib"
-     1>msvcprtd.lib(locale0_implib.obj) : warning LNK4210: ёхъЎш  .CRT ёє∙хёЄтєхЄ; ьюуєЄ ёє∙хёЄтютрЄ№ эхюсЁрсюЄрээ√х ёЄрЄшўхёъшх шэшЎшрышчрЄюЁ√ шыш чэръш чртхЁ°хэш
-     1>Game.obj : warning LNK4210: ёхъЎш  .CRT ёє∙хёЄтєхЄ; ьюуєЄ ёє∙хёЄтютрЄ№ эхюсЁрсюЄрээ√х ёЄрЄшўхёъшх шэшЎшрышчрЄюЁ√ шыш чэръш чртхЁ°хэш
-     1>main.obj : warning LNK4210: ёхъЎш  .CRT ёє∙хёЄтєхЄ; ьюуєЄ ёє∙хёЄтютрЄ№ эхюсЁрсюЄрээ√х ёЄрЄшўхёъшх шэшЎшрышчрЄюЁ√ шыш чэръш чртхЁ°хэш
-     1>msvcprtd.lib(locale0_implib.obj) : warning LNK4210: ёхъЎш  .CRT ёє∙хёЄтєхЄ; ьюуєЄ ёє∙хёЄтютрЄ№ эхюсЁрсюЄрээ√х ёЄрЄшўхёъшх шэшЎшрышчрЄюЁ√ шыш чэръш чртхЁ°хэш
-     1>MSVCRTD.lib(atonexit.obj) : warning LNK4210: ёхъЎш  .CRT ёє∙хёЄтєхЄ; ьюуєЄ ёє∙хёЄтютрЄ№ эхюсЁрсюЄрээ√х ёЄрЄшўхёъшх шэшЎшрышчрЄюЁ√ шыш чэръш чртхЁ°хэш
-         PR_FLY.vcxproj -> C:\Users\Виталий\Desktop\TRPO\Debug\PR_FLY.exe
-     1>Сборка проекта "C:\Users\Виталий\Desktop\TRPO\PR_FLY\PR_FLY.vcxproj" завершена (целевые объекты Build).
+﻿Сборка начата 12.12.2017 9:45:21.
+     1>Проект "C:\Users\Vitalik\Desktop\TRPO\PR_FLY\PR_FLY.vcxproj" в узле 2 (целевые объекты Build).
+     1>ClCompile:
+         D:\VS_INSTALL\VC\bin\CL.exe /c /I..\SoundSystem /I.\phfsnew /I..\Logic /I".\SFML-2.4.2\include" /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D SFML_DYNAMIC /D WIN32 /D _DEBUG /D _WINDOWS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Game.cpp main.cpp
+         main.cpp
+     1>c:\users\vitalik\desktop\trpo\logic\transitscreen.h(56): warning C4275: class "Screens::BaseScreen", не являющийся dll-интерфейсом, использован в качестве базового для dll-интерфейса class "Screens::ErrorScreen"
+                 c:\users\vitalik\desktop\trpo\logic\transitscreen.h(17): см. объявление "Screens::BaseScreen"
+                 c:\users\vitalik\desktop\trpo\logic\transitscreen.h(55): см. объявление "Screens::ErrorScreen"
+     1>c:\users\vitalik\desktop\trpo\pr_fly\main.cpp(24): warning C4244: =: преобразование "double" в "int", возможна потеря данных
+     1>c:\users\vitalik\desktop\trpo\pr_fly\main.cpp(27): warning C4244: =: преобразование "double" в "int", возможна потеря данных
+     1>c:\users\vitalik\desktop\trpo\pr_fly\main.cpp(29): warning C4244: =: преобразование "double" в "int", возможна потеря данных
+         Game.cpp
+     1>c:\users\vitalik\desktop\trpo\logic\transitscreen.h(56): warning C4275: class "Screens::BaseScreen", не являющийся dll-интерфейсом, использован в качестве базового для dll-интерфейса class "Screens::ErrorScreen"
+                 c:\users\vitalik\desktop\trpo\logic\transitscreen.h(17): см. объявление "Screens::BaseScreen"
+                 c:\users\vitalik\desktop\trpo\logic\transitscreen.h(55): см. объявление "Screens::ErrorScreen"
+     1>c:\users\vitalik\desktop\trpo\pr_fly\game.cpp(9): warning C4101: Ex: неиспользованная локальная переменная
+     1>c:\users\vitalik\desktop\trpo\pr_fly\game.cpp(85): warning C4244: инициализация: преобразование "sf::Int64" в "float", возможна потеря данных
+         Создание кода...
+     1>c:\users\vitalik\desktop\trpo\pr_fly\game.cpp(70): error C4716: Game::CreateSettingsScreen: должна возвращать значение
+     1>c:\users\vitalik\desktop\trpo\pr_fly\game.cpp(152): error C4716: Game::CreateErrorMessage: должна возвращать значение
+     1>Сборка проекта "C:\Users\Vitalik\Desktop\TRPO\PR_FLY\PR_FLY.vcxproj" завершена (целевые объекты Build) с ошибкой.
 
-Сборка успешно завершена.
+Ошибка сборки.
 
-Затраченное время: 00:00:01.26
+Затраченное время: 00:00:03.21

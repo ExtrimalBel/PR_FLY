@@ -29,7 +29,7 @@ class LOGIC_API GameField
 	LevelMenager *Men;
 	sf::Music Back_Theme;
 public:
-	GameField(double xsc, double ysc,int slot,sf::RenderWindow &window,bool Is_new,char *SaveFile);
+	GameField(double xsc, double ysc,int slot,sf::RenderWindow &window,bool Is_new,char *SaveFile,std::string BaseGamePath);
 	void UpdateAll(float time, sf::RenderWindow &window);
 	void Draw(sf::RenderWindow &window);
 	int IfExit();
