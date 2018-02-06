@@ -11,32 +11,62 @@
 #else
 #define SOUNDSYSTEM_API __declspec(dllimport)
 #endif
+#include "SoundExceptions.h"
 #include <SFML/Audio.hpp>
-#include "SoundStruct.hpp"
+#include <fstream>
+#include <vector>
+#include <string>
+#include "tinyxml2.h"
 // Этот класс экспортирован из SoundSystem.dll
+using namespace std;
+using namespace sf;
+
 namespace SoundSystem
 {
-	enum State { MainMenu, Game, Settings, Pause };
-	class SOUNDSYSTEM_API SoundPlayer
+	struct SoundData
 	{
-		float volume;
-		State type;
-		MainMSound *MainM;
-	public:
-		~SoundPlayer();
-		SoundPlayer();
-		int Inicialize();
-		int PlaySound(int id);
-		int ChangeType(State type);
-		int ChangeSoundState();
-		int SetOnElement(bool val) { MainM->onelement = val; return 0; }
-		void SetVolume(float volume); // Установка переменной громкости
-	private:
-		int InicializeMainMenu();
+		string Name;
+		int id;
+	};
 
-		int UpdateVolume(); // Обновление громкости для всех звуков]
-		int UpdateVolMainM();
-	
+	struct SoundItem
+	{
+		Music *snd;
+		int id;
+		void InitSound(int id, void *SoundData, int MusicSize, bool LoopState)
+		{
+			this->id = id;
+			snd = new sf::Music();
+			snd->openFromMemory(SoundData, MusicSize);
+			snd->setLoop(LoopState);
+			snd->play();
+		}
+	};
+
+	class SOUNDSYSTEM_API SoundSystem
+	{
+		int SoundCount;
+		string BasePath;
+		string PathToSoundConfig;
+		vector <pair<void*, int>> SoundSources; //  Музыка
+		vector<SoundItem> Musics; // массив хранящий записи о проигрываемых звуках
+		void CreateMusicData(string PathToSoundConfig); // создает массив SoundSources
+		void ReadDataMusicDataFromFile(string PathToSoundConfig, vector<SoundData> &Data);
+		float CurrentVolume;
+		bool MuteState;
+	public:
+		SoundSystem(string BasePath, string PathToSoundConfig);
+		void StopMusic(int id); // Останавливает все звуки по данному id. и удаляет
+		void PlayMusic(int id, bool LoopState); // Создает новую запись в Musics и начинает проигрывать звук
+		void PauseMusic(int id);
+		void ResumeSound(int id);
+		void Update();
+		int GetNumberOfMusic();
+		void Mute();
+		void UnMute();
+		void SetVolume(float value);
+		float ReturnCurrentVolume();
+
 	};
 }
 #endif

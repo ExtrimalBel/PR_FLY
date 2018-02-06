@@ -1,6 +1,6 @@
 #include "stdafx.h"
 #include "Intersectsmenager.h"
-
+/*
 namespace InterSects
 {
 	bool IfSpritesInterSects(const sf::Sprite &spr1, const sf::Image &img1, const sf::Sprite &spr2, const sf::Image &img2)
@@ -41,4 +41,4 @@ namespace InterSects
 	}
 
 
-}
+}*/

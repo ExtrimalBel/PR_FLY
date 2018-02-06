@@ -1,5 +1,4 @@
-#ifndef EX_H
-#define EX_H
+#pragma once
 #include <string>
 #include <iostream>
 /*
@@ -10,11 +9,12 @@
 using namespace std;
 namespace Exceptions{
 	
-	class BaseForExceptions{
-		std::string Message;
+	class BaseException{
+		
 		int ErrorCode;
 	public:
-		BaseForExceptions(std::string mes)
+		std::string Message;
+		BaseException(std::string mes)
 		{
 			Message = mes;
 		}
@@ -28,28 +28,33 @@ namespace Exceptions{
 		}
 	};
 
-	class LevelReadError : public BaseForExceptions
+	class LevelReadError : public BaseException
 	{
 	public:
-		LevelReadError(std::string mes) : BaseForExceptions(mes) {}
+		LevelReadError(std::string mes) : BaseException(mes) {}
 	};
 
-	class WrongMenuType : public BaseForExceptions	// Генерируется при установлении в меню menuitem не в диапазоне о 1 до 4. При перехвате устанавлівается menuitem в 1
+	class WrongMenuType : public BaseException	// Генерируется при установлении в меню menuitem не в диапазоне о 1 до 4. При перехвате устанавлівается menuitem в 1
 	{
 	public:
-		WrongMenuType(std::string mes) : BaseForExceptions(mes) {}
+		WrongMenuType(std::string mes) : BaseException(mes) {}
 	};
 
-	class BossConfigReadError : public BaseForExceptions // Генерируется когда возникает ошибка при считывании конфига босса
+	class BossConfigReadError : public BaseException // Генерируется когда возникает ошибка при считывании конфига босса
 	{
 	public:
-		BossConfigReadError(std::string mes) : BaseForExceptions(mes) {}
+		BossConfigReadError(std::string mes) : BaseException(mes) {}
 	};
-	class SoundSystemError : public BaseForExceptions  // Будет генерироваться в классах звуковой подсистемы. Скорее всего при генерации программа буде завершатсья
+
+	class LOGIC_API SettingsCloseWithoutSave : public BaseException
 	{
 	public:
-		SoundSystemError(std::string mes) : BaseForExceptions(mes) {}
+		int x;
+		int y;
+		SettingsCloseWithoutSave(string mes, int x, int y) : BaseException(mes)
+		{
+			this->x = x;
+			this->y = y;
+		}
 	};
 }
-
-#endif

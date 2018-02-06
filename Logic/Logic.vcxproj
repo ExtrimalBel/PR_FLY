@@ -80,48 +80,31 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Background_Class.h" />
-    <ClInclude Include="BaseForEnemys.h" />
     <ClInclude Include="baseitem.h" />
     <ClInclude Include="BaseMenu.h" />
-    <ClInclude Include="Bullet.h" />
-    <ClInclude Include="ConfigReader.h" />
     <ClInclude Include="ExceptionsDefenitions.hpp" />
-    <ClInclude Include="Intersectsmenager.h" />
-    <ClInclude Include="Level.h" />
-    <ClInclude Include="LevelBoss.h" />
-    <ClInclude Include="LevelMenager.h" />
-    <ClInclude Include="coords.h" />
-    <ClInclude Include="Enemy.h" />
+    <ClInclude Include="GameDifficulty.h" />
     <ClInclude Include="GameField.h" />
-    <ClInclude Include="GameMenu.h" />
-    <ClInclude Include="Hud.h" />
-    <ClInclude Include="loadgameclass.h" />
+    <ClInclude Include="Intersectsmenager.h" />
+    <ClInclude Include="LoadGame.h" />
     <ClInclude Include="Logic.h" />
+    <ClInclude Include="MainMenu.h" />
     <ClInclude Include="phfsint.hpp" />
     <ClInclude Include="PixelPerfect.h" />
     <ClInclude Include="playerbullet.h" />
-    <ClInclude Include="PlayerS.h" />
-    <ClInclude Include="Player_Class.h" />
-    <ClInclude Include="SetOfBullets.h" />
+    <ClInclude Include="PlayerClass.h" />
     <ClInclude Include="setofenemy.h" />
     <ClInclude Include="Settings.h" />
     <ClInclude Include="ShipsClasses.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
     <ClInclude Include="Thingsh.h" />
-    <ClInclude Include="transitscreen.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Background_Class.cpp" />
-    <ClCompile Include="BaseEnemy.cpp" />
     <ClCompile Include="BaseMenu.cpp" />
-    <ClCompile Include="Bullet.cpp" />
-    <ClCompile Include="ConfigReader.cpp" />
+    <ClCompile Include="GameDifficulty.cpp" />
+    <ClCompile Include="GameField.cpp" />
     <ClCompile Include="Intersectsmenager.cpp" />
-    <ClCompile Include="Level.cpp" />
-    <ClCompile Include="LevelBoss.cpp" />
-    <ClCompile Include="LevelMenager.cpp" />
     <ClCompile Include="dllmain.cpp">
       <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsManaged>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -130,25 +113,15 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
       </PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="Enemy.cpp" />
-    <ClCompile Include="GameField.cpp" />
-    <ClCompile Include="GameMenu.cpp" />
-    <ClCompile Include="Hud.cpp" />
-    <ClCompile Include="loadgameclass.cpp" />
+    <ClCompile Include="LoadGame.cpp" />
     <ClCompile Include="Logic.cpp" />
-    <ClCompile Include="MovingEnemy.cpp" />
+    <ClCompile Include="MainMenu.cpp" />
     <ClCompile Include="PixelPerfect.cpp" />
-    <ClCompile Include="Player_Class.cpp" />
-    <ClCompile Include="SetOfBullets.cpp" />
-    <ClCompile Include="setofenemy.cpp" />
     <ClCompile Include="Settings.cpp" />
-    <ClCompile Include="StationarEnemy.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="Things.cpp" />
-    <ClCompile Include="transitscreen.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SoundSystem\SoundSystem.vcxproj">

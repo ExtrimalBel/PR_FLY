@@ -1,3 +1,4 @@
+#pragma  once
 #include "stdafx.h"
 #include "PixelPerfect.h"
 
@@ -5,7 +6,7 @@ inline sf::IntRect FToIRect(const sf::FloatRect& f) {
 	return sf::IntRect((int)f.left, (int)f.top, (int)f.width, (int)f.height);
 }
 
-#pragma  once
+
 bool PixelPerfectCollision(const sf::Sprite& a, const sf::Sprite& b,
 	const sf::Image& imgA, const sf::Image& imgB) {
 	sf::IntRect boundsA(FToIRect(a.getGlobalBounds()));

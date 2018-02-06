@@ -1,59 +1,56 @@
-#ifndef BASEMENU_I
-#define BASEMENU_I
+#pragma once
+
 #include <SFML/Graphics.hpp>
-#include <SoundSystem.h>
-#include "Background_Class.h"
+#include <SoundControl.h>
 #include <iostream>
 #ifdef LOGIC_EXPORTS
 #define LOGIC_API __declspec(dllexport)
 #else
 #define LOGIC_API __declspec(dllimport)
 #endif
-class LOGIC_API BaseMenu
+
+using namespace std;
+using namespace sf;
+
+
+namespace Menus
 {
-protected:
-	SoundSystem::SoundPlayer *SPlayer;
-	// Menu logo
-	sf::Texture menulogotex;
-	sf::RectangleShape menulogo;
-	// Logo
-	sf::Image logoimg;
-	sf::Texture logotex;
-	sf::RectangleShape logo;
-	// Фон
-	Back_Menu *BMenu;
-	// Фон для кнопок
-	sf::Texture ButtonBack;
-	// Кнопка новая игра
-	sf::RectangleShape firstitem;
-	// Кнопка загрузить игру
-	sf::RectangleShape seconditem;
-	// Кнопка настроек
-	sf::RectangleShape thirditem;
-	// Кнопка выход
-	sf::RectangleShape fourthitem;
-	// переменная для выбора пункта меню
-	sf::Event ev; // Событие для закрытия окна
-	int menuitem = 0;
-	double cox, coy;
-	// Текст для кнопок
-	sf::Font textfont;
-	sf::Text firstitemtext;
-	sf::Text seconditemtext;
-	sf::Text thirditemtext;
-	sf::Text fouritemtext;
-	// Курсор мыши
-	sf::Texture mousecurtex;
-	sf::Sprite mousecursorspr;
-	void SetUpText();
 
+	struct LOGIC_API IdOfSounds
+	{
+		int SelectId;
+		int ClickId;
+	};
+	class LOGIC_API BaseMenu
+	{
+	protected:
+		// Элементы меню
+		Texture MenuTex; // текстура элемента меню
+		Sprite FirstMenuSpr;
+		Sprite SecondMenuSpr;
+		Sprite ThirdMenuSpr;
+		Sprite FourMenuSpr;
+		//Фон меню
+		Texture BackGroundTex;
+		Sprite BackGroundSpr;
+		//Текст меню
+		Font MenuFont;
+		Text FirstMenuItemText;
+		Text SecondMenuItemText;
+		Text ThirdMenuItemText;
+		Text FourMenuItemText;
+		virtual void SetUpText() = 0; // Инициализирует текст должна переопределяться в каждом производном классе
+		void Draw(RenderWindow &window);
+		
+		double cox, coy;
+		string BaseGamePath;
+		SoundControl::SoundControlStruct SndControl;
+		IdOfSounds SndId;
+		int SelectedMenuItem;
+	public:
+		BaseMenu(string BaseGamePath, double cox, double coy, SoundControl::SoundControlStruct SndControl, IdOfSounds SndId);
+		void Update(RenderWindow &window); // Вызываеться при каждой итерации цикла обновляет меню
+		int ReturnSelectedCode(); // Возвращает код выбранного элемнта меню, 0 если элемент не выбран
 
-	int MenuNum = 0;
-	BaseMenu(double cox, double coy, SoundSystem::SoundPlayer &SPlayer);
-	virtual void Update(float time, sf::RenderWindow &window);
-	virtual void Draw(sf::RenderWindow &window);
-	virtual void IfMenuItemSelected(sf::RenderWindow &window);
-};
-
-
-#endif
+	};
+}

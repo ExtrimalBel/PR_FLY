@@ -22,12 +22,6 @@
     <Filter Include="Файлы исходного кода\Menus">
       <UniqueIdentifier>{aca56297-df01-4e70-9bfc-2b37e63b3e2d}</UniqueIdentifier>
     </Filter>
-    <Filter Include="back&amp;hud">
-      <UniqueIdentifier>{a74baea2-187a-4453-9a43-f16fd0e97ae5}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Fields&amp;Menagers">
-      <UniqueIdentifier>{87d06c5f-2b07-4dfd-b5bb-0c5272d1dfb0}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Ships">
       <UniqueIdentifier>{57394150-ff78-4123-8999-ab69c7f950eb}</UniqueIdentifier>
     </Filter>
@@ -51,23 +45,11 @@
     <ClInclude Include="Settings.h">
       <Filter>Заголовочные файлы</Filter>
     </ClInclude>
-    <ClInclude Include="PlayerS.h">
-      <Filter>Заголовочные файлы</Filter>
-    </ClInclude>
     <ClInclude Include="setofenemy.h">
-      <Filter>Заголовочные файлы</Filter>
-    </ClInclude>
-    <ClInclude Include="coords.h">
-      <Filter>Заголовочные файлы</Filter>
-    </ClInclude>
-    <ClInclude Include="Bullet.h">
       <Filter>Заголовочные файлы</Filter>
     </ClInclude>
     <ClInclude Include="baseitem.h">
       <Filter>Заголовочные файлы\Old_Sources</Filter>
-    </ClInclude>
-    <ClInclude Include="SetOfBullets.h">
-      <Filter>Заголовочные файлы</Filter>
     </ClInclude>
     <ClInclude Include="playerbullet.h">
       <Filter>Заголовочные файлы\Old_Sources</Filter>
@@ -75,44 +57,11 @@
     <ClInclude Include="phfsint.hpp">
       <Filter>Заголовочные файлы</Filter>
     </ClInclude>
-    <ClInclude Include="transitscreen.h">
-      <Filter>Заголовочные файлы</Filter>
-    </ClInclude>
     <ClInclude Include="PixelPerfect.h">
       <Filter>Заголовочные файлы</Filter>
     </ClInclude>
-    <ClInclude Include="GameMenu.h">
-      <Filter>Menus</Filter>
-    </ClInclude>
     <ClInclude Include="BaseMenu.h">
       <Filter>Menus</Filter>
-    </ClInclude>
-    <ClInclude Include="Background_Class.h">
-      <Filter>back&amp;hud</Filter>
-    </ClInclude>
-    <ClInclude Include="Hud.h">
-      <Filter>back&amp;hud</Filter>
-    </ClInclude>
-    <ClInclude Include="LevelMenager.h">
-      <Filter>Fields&amp;Menagers</Filter>
-    </ClInclude>
-    <ClInclude Include="GameField.h">
-      <Filter>Fields&amp;Menagers</Filter>
-    </ClInclude>
-    <ClInclude Include="Level.h">
-      <Filter>Fields&amp;Menagers</Filter>
-    </ClInclude>
-    <ClInclude Include="loadgameclass.h">
-      <Filter>Menus</Filter>
-    </ClInclude>
-    <ClInclude Include="LevelBoss.h">
-      <Filter>Ships</Filter>
-    </ClInclude>
-    <ClInclude Include="Enemy.h">
-      <Filter>Ships</Filter>
-    </ClInclude>
-    <ClInclude Include="Player_Class.h">
-      <Filter>Ships</Filter>
     </ClInclude>
     <ClInclude Include="Intersectsmenager.h">
       <Filter>Заголовочные файлы</Filter>
@@ -120,13 +69,22 @@
     <ClInclude Include="Thingsh.h">
       <Filter>Заголовочные файлы</Filter>
     </ClInclude>
-    <ClInclude Include="ConfigReader.h">
-      <Filter>Заголовочные файлы</Filter>
-    </ClInclude>
-    <ClInclude Include="BaseForEnemys.h">
-      <Filter>Заголовочные файлы</Filter>
-    </ClInclude>
     <ClInclude Include="ExceptionsDefenitions.hpp">
+      <Filter>Заголовочные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="MainMenu.h">
+      <Filter>Заголовочные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="GameField.h">
+      <Filter>Заголовочные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerClass.h">
+      <Filter>Заголовочные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="LoadGame.h">
+      <Filter>Заголовочные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="GameDifficulty.h">
       <Filter>Заголовочные файлы</Filter>
     </ClInclude>
   </ItemGroup>
@@ -140,73 +98,28 @@
     <ClCompile Include="dllmain.cpp">
       <Filter>Файлы исходного кода</Filter>
     </ClCompile>
-    <ClCompile Include="Settings.cpp">
-      <Filter>Файлы исходного кода</Filter>
-    </ClCompile>
-    <ClCompile Include="setofenemy.cpp">
-      <Filter>Файлы исходного кода</Filter>
-    </ClCompile>
-    <ClCompile Include="Bullet.cpp">
-      <Filter>Файлы исходного кода</Filter>
-    </ClCompile>
-    <ClCompile Include="SetOfBullets.cpp">
-      <Filter>Файлы исходного кода</Filter>
-    </ClCompile>
-    <ClCompile Include="transitscreen.cpp">
-      <Filter>Файлы исходного кода</Filter>
-    </ClCompile>
     <ClCompile Include="PixelPerfect.cpp">
       <Filter>Файлы исходного кода</Filter>
     </ClCompile>
     <ClCompile Include="BaseMenu.cpp">
       <Filter>Menus</Filter>
     </ClCompile>
-    <ClCompile Include="GameMenu.cpp">
-      <Filter>Menus</Filter>
-    </ClCompile>
-    <ClCompile Include="Hud.cpp">
-      <Filter>back&amp;hud</Filter>
-    </ClCompile>
-    <ClCompile Include="Background_Class.cpp">
-      <Filter>back&amp;hud</Filter>
-    </ClCompile>
-    <ClCompile Include="Level.cpp">
-      <Filter>Fields&amp;Menagers</Filter>
-    </ClCompile>
-    <ClCompile Include="GameField.cpp">
-      <Filter>Fields&amp;Menagers</Filter>
-    </ClCompile>
-    <ClCompile Include="LevelMenager.cpp">
-      <Filter>Fields&amp;Menagers</Filter>
-    </ClCompile>
-    <ClCompile Include="loadgameclass.cpp">
-      <Filter>Menus</Filter>
-    </ClCompile>
-    <ClCompile Include="Player_Class.cpp">
-      <Filter>Ships</Filter>
-    </ClCompile>
-    <ClCompile Include="LevelBoss.cpp">
-      <Filter>Ships</Filter>
-    </ClCompile>
-    <ClCompile Include="Enemy.cpp">
-      <Filter>Ships</Filter>
-    </ClCompile>
     <ClCompile Include="Intersectsmenager.cpp">
       <Filter>Файлы исходного кода</Filter>
     </ClCompile>
-    <ClCompile Include="Things.cpp">
+    <ClCompile Include="MainMenu.cpp">
       <Filter>Файлы исходного кода</Filter>
     </ClCompile>
-    <ClCompile Include="ConfigReader.cpp">
+    <ClCompile Include="GameField.cpp">
       <Filter>Файлы исходного кода</Filter>
     </ClCompile>
-    <ClCompile Include="BaseEnemy.cpp">
+    <ClCompile Include="LoadGame.cpp">
       <Filter>Файлы исходного кода</Filter>
     </ClCompile>
-    <ClCompile Include="MovingEnemy.cpp">
+    <ClCompile Include="GameDifficulty.cpp">
       <Filter>Файлы исходного кода</Filter>
     </ClCompile>
-    <ClCompile Include="StationarEnemy.cpp">
+    <ClCompile Include="Settings.cpp">
       <Filter>Файлы исходного кода</Filter>
     </ClCompile>
   </ItemGroup>
