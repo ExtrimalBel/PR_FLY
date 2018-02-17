@@ -1,6 +1,0 @@
-C:/Users/FAMILY/Desktop/phfsnew/build/CMakeFiles/test_physfs.dir
-C:/Users/FAMILY/Desktop/phfsnew/build/CMakeFiles/physfs-static.dir
-C:/Users/FAMILY/Desktop/phfsnew/build/CMakeFiles/physfs.dir
-C:/Users/FAMILY/Desktop/phfsnew/build/CMakeFiles/INSTALL.dir
-C:/Users/FAMILY/Desktop/phfsnew/build/CMakeFiles/ALL_BUILD.dir
-C:/Users/FAMILY/Desktop/phfsnew/build/CMakeFiles/ZERO_CHECK.dir

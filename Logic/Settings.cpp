@@ -154,16 +154,16 @@ else
 		ResolutionText.setString("Разрешение экрана");
 		ResolutionText.setFillColor(Color::Green);
 		MuteText.setString("Без звука");
-		SoundVolumeText.setPosition(cox * 250, coy *  250);
+		SoundVolumeText.setPosition(cox * 270, coy *  250);
 		SoundVolumeText.setString("Громкость звуков");
-		MuteText.setPosition(cox * 250, coy * 350);
-		ResolutionText.setPosition(cox * 250, coy * 450);
+		MuteText.setPosition(cox * 270, coy * 350);
+		ResolutionText.setPosition(cox * 270, coy * 450);
 		SoundVolumeText.setScale(cox, coy);
 		ResolutionText.setScale(cox, coy);
 		MuteText.setScale(cox, coy);
 		FullScreenText.setFont(GameFont);
 		FullScreenText.setScale(cox, coy);
-		FullScreenText.setPosition(cox * 250, coy * 400);
+		FullScreenText.setPosition(cox * 270, coy * 400);
 		FullScreenText.setString("Полноэкранный режим");
 		SoundVolumeText.setFillColor(sf::Color::Green);
 		SoundVolumeText.setStyle(Text::Bold);
@@ -192,7 +192,7 @@ else
 			{1600,900},
 			{1920,1080}
 		};
-		int Startx = 250, Starty = 500;
+		int Startx = 270, Starty = 500;
 		while (i < 6)
 		{
 			Rezolutions.push_back(ResolutionItem());
@@ -216,7 +216,7 @@ else
 			Startx += 300;
 			if (i == 2)
 			{
-				Startx = 250;
+				Startx = 270;
 				Starty = 600;
 			}
 			i++;

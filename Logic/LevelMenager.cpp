@@ -23,11 +23,16 @@ namespace LevelLogic
 		tinyxml2::XMLNode *Root = xmldoc.FirstChildElement("levels");
 		if (Root = NULL) throw Exceptions::LevelMenagerReadError("Невозможно прочитать конфигурацию уровней");
 		tinyxml2::XMLNode *LevelNode = Root->FirstChildElement("level");
+		int LevelNumber = 1;
 		if (LevelNode == NULL) throw Exceptions::LevelMenagerReadError("Невозможно прочитать конфигурацию уровней");
 		do
 		{
-			LevelConfigStruct tmpstr;// десь
-			
+			LevelConfigStruct tmpstr;// cдесь
+			VectorOfLevelConfig.push_back(tmpstr);
+			auto LevelIt = VectorOfLevelConfig.end() - 1;
+			tinyxml2::XMLElement *tmpElement = LevelNode->FirstChildElement("BackMusic");
+
+			LevelIt->BackGroundSoundId = atoi(tmpElement->GetText());
 		} while (LevelNode != NULL);
 	}
 

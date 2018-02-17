@@ -18,6 +18,7 @@ namespace LevelLogic
 		int LevelNumber;
 		string BackGroundPath;
 		vector<pair<Ships::BaseEnemyState,int>> EnemySVector;
+		int BackGroundSoundId;
 		//ToDO Write Boss Data
 	};
 

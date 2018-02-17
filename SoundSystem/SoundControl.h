@@ -13,7 +13,7 @@ using namespace std;
 namespace SoundControl
 {
 	static SoundSystem::SoundSystem *SndControl; // Класс работающи со звуками
-
+	static bool SoundSystemCreated = false;
 	void PlaySound(int id, bool LoopState = false);
 	void StopSound(int id);
 	void PauseSound(int id);

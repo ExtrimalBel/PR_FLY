@@ -27,7 +27,7 @@ namespace SoundSystem
 		for (int i = 0; i < SoundCount; i++)
 		{
 			pair<void*, int> temppair;
-			ifstream tempfile(MassOfSound[i].Name, ios::binary | ios::ate);
+			ifstream tempfile(BasePath + "/" + MassOfSound[i].Name, ios::binary | ios::ate);
 			if (!(tempfile.is_open())) throw Exceptions::SoundSystemError("Ошибка при инициализации звуковой системы");
 			temppair.second = tempfile.tellg(); // Считываем размер файла
 			temppair.first = (void*)new char[temppair.second];
@@ -43,7 +43,7 @@ namespace SoundSystem
 	{
 		tinyxml2::XMLDocument xmldoc;
 		string FilePath = BasePath;
-		FilePath += "\\";
+		FilePath += "/";
 		FilePath += PathToSoundConfig;
 		xmldoc.LoadFile(FilePath.c_str());
 		if (xmldoc.ErrorID() != tinyxml2::XML_SUCCESS) throw Exceptions::SoundSystemError("невозможно открыть файл или файл поврежден");
@@ -79,8 +79,10 @@ namespace SoundSystem
 	}
 	void SoundSystem::PlayMusic(int id, bool LoopState)
 	{
+		if (id < 0 || id >= SoundCount) throw Exceptions::SoundSystemError("Ид звукового файла неправильный");
 		SoundItem tempsnditem;
 		Musics.push_back(tempsnditem);
+
 		Musics[Musics.size() - 1].InitSound(id, SoundSources[id].first, SoundSources[id].second, LoopState);
 		if (!MuteState)
 		Musics[Musics.size() - 1].snd->setVolume(CurrentVolume);

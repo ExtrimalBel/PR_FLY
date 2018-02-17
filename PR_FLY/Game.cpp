@@ -6,7 +6,7 @@ namespace MainGameClass
 	Game::Game(string BasePath)
 	{
 		this->BasePath = BasePath;
-		SndControl = SoundControl::InitSoundSystemStruct(BasePath, "sound.xml");
+		SndControl = SoundControl::InitSoundSystemStruct(BasePath, "/sound/sound.xml");
 	}
 
 
@@ -20,7 +20,7 @@ namespace MainGameClass
 		GamePointers.MMenu = new Menus::MainMenu(BasePath, cox, coy, SndControl, SndMenuId);
 		State = Menu;
 		SndControl.Playsnd(2, true);
-		MainLoop();
+		MainLoop(); // Вход в главный цикл
 	}
 
 	void Game::UpdateMainMenu(RenderWindow &window)
@@ -33,8 +33,6 @@ namespace MainGameClass
 		switch (ReturnMenuItem)
 		{
 		case 4:
-			//SndControl.StopSound(2);
-			SoundControl::DeleteSoundSystem(); // перед выбросом исключения удаляем звуковую подсистему
 			throw Exceptions::GameWantToExit("Exit Game");
 			break;
 		case 2:
@@ -62,6 +60,7 @@ namespace MainGameClass
 		while (window.isOpen())
 		{
 			window.clear();
+			// time задает время между каждой итерацией цикла. На эту величину корректируются все величины
 			float time = clock.getElapsedTime().asMicroseconds();
 			clock.restart();
 			time /= 800;
@@ -111,6 +110,7 @@ namespace MainGameClass
 					SaveGameSettings(Ex);
 					delete Ex;
 					delete GamePointers.Set;
+					GamePointers.Set = 0; // Зануляю указатель что-бы в деструкторе можно было проверить существование объекта сравнением с 0
 					GamePointers.MMenu = new Menus::MainMenu(BasePath,cox,coy,SndControl,SndMenuId);
 					State = Menu;
 				}
@@ -201,6 +201,7 @@ namespace MainGameClass
 			break;
 		case 4:
 			delete GamePointers.LoadM;
+			GamePointers.LoadM = 0;
 			GamePointers.MMenu = new Menus::MainMenu(BasePath, cox, coy, SndControl,SndMenuId);
 			State = Menu;
 		}
@@ -222,9 +223,19 @@ namespace MainGameClass
 			break;
 		case 4:
 			delete GamePointers.DifClass;
+			GamePointers.DifClass = 0;
 			GamePointers.MMenu = new Menus::MainMenu(BasePath, cox, coy, SndControl, SndMenuId);
 			State = Menu;
 			break;
 		}
+	}
+
+	Game::~Game()
+	{
+		SoundControl::DeleteSoundSystem();
+		if (GamePointers.DifClass != 0) delete GamePointers.DifClass;
+		if (GamePointers.LoadM != 0) delete  GamePointers.LoadM;
+		if (GamePointers.MMenu != 0) delete GamePointers.MMenu;
+		if (GamePointers.Set != 0) delete GamePointers.Set;
 	}
 }

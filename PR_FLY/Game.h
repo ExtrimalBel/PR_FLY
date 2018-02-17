@@ -51,6 +51,7 @@ namespace MainGameClass
 		void UpdateGameDifficultyClass(RenderWindow &window);
 	public:
 		Game(string BasePath);
+		~Game();
 		void StartDemnedGame(); // Запускает игру
 	};
 }

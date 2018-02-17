@@ -20,6 +20,6 @@ namespace Fields
 		int Money; // Δενόγθ
 	public:
 		GameField();
-		void Upgrade()
+		void Upgrade();
 	};
 }
