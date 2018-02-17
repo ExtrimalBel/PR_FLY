@@ -49,11 +49,6 @@ namespace SoundControl
 		return SndControl->GetNumberOfMusic();
 	}
 
-	void DeleteSoundSystem()
-	{
-		delete SndControl;
-	}
-
 	void Mute()
 	{
 		SndControl->Mute();
@@ -71,4 +66,10 @@ namespace SoundControl
 	{
 		return SndControl->ReturnCurrentVolume();
 	}
-}
+
+	void DeleteSoundSystem()
+	{
+		delete SndControl;
+		cout << "Sound System Was deleted" << endl;
+	}
+};

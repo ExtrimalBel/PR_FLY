@@ -6,6 +6,7 @@
 #endif
 #include "SoundSystem.h"
 #include <string>
+#include <iostream>
 
 using namespace std;
 
@@ -40,5 +41,5 @@ namespace SoundControl
 
 	SoundControlStruct SOUNDSYSTEM_API InitSoundSystemStruct(string BasePath, string PathToSoundConfig); // Функция инициализирует данную структуру
 
-	void DeleteSoundSystem();
+	void SOUNDSYSTEM_API DeleteSoundSystem();
 }

@@ -8,6 +8,7 @@
 #include <MainMenu.h>
 #include <SoundControl.h>
 #include "ExceptionsDefenitions.h"
+#include <ExceptionsDefenitions.hpp>
 #include "LoadGame.h"
 #include "GameDifficulty.h"
 #include <Settings.h>
@@ -21,6 +22,13 @@ namespace MainGameClass
 	typedef enum{GameS,Settings,Menu,Load,SelectDifficulty}GameState;
 	class Game
 	{
+		struct GameSettings
+		{
+			pair<int, int>Resolution;
+			int Volume;
+			bool MuteState;
+			bool Fullscreen;
+		}Settings;
 		struct mainItemPointers
 		{
 			Menus::SettingsClass *Set;
@@ -36,7 +44,8 @@ namespace MainGameClass
 		SoundControl::SoundControlStruct SndControl;
 		RenderWindow *Window; // Окно в котором отрисовываеться игра
 		void MainLoop(); // Главная функция игры
-		void LoadVideoMode(sf::Uint32 &st);
+		void LoadGameSettings(sf::Uint32 &st);
+		void SaveGameSettings(Exceptions::SettingsClose *Ex);
 		void UpdateMainMenu(RenderWindow &window);
 		void UpdateLoadMenu(RenderWindow &window);
 		void UpdateGameDifficultyClass(RenderWindow &window);

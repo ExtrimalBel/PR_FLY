@@ -157,4 +157,20 @@ namespace SoundSystem
 	{
 		return CurrentVolume;
 	}
+
+	SoundSystem::~SoundSystem()
+	{
+		auto MusicIt = Musics.begin();
+		// Удаляем все звуковые ноды
+		for (; MusicIt < Musics.end(); MusicIt++)
+		{
+			MusicIt->snd->stop();
+			delete MusicIt->snd;
+		}
+		auto DataIt = SoundSources.begin();
+		for (; DataIt < SoundSources.end(); DataIt++)
+		{
+			delete DataIt->first;
+		}
+	}
  }

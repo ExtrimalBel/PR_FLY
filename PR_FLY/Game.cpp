@@ -13,7 +13,7 @@ namespace MainGameClass
 	void Game::StartDemnedGame()
 	{
 		//SndControl.Mute();
-		LoadVideoMode(st);
+		LoadGameSettings(st);
 		Menus::IdOfSounds SndMenuId;
 		SndMenuId.ClickId = 0;
 		SndMenuId.SelectId = 1;
@@ -33,7 +33,8 @@ namespace MainGameClass
 		switch (ReturnMenuItem)
 		{
 		case 4:
-			SndControl.StopSound(2);
+			//SndControl.StopSound(2);
+			SoundControl::DeleteSoundSystem(); // перед выбросом исключения удаляем звуковую подсистему
 			throw Exceptions::GameWantToExit("Exit Game");
 			break;
 		case 2:
@@ -49,7 +50,7 @@ namespace MainGameClass
 		case 3:
 			delete GamePointers.MMenu;
 			GamePointers.Set = new Menus::SettingsClass(BasePath, cox, coy, SndControl);
-			State = Settings;
+			State = GameState::Settings;
 		}
 	}
 
@@ -70,6 +71,9 @@ namespace MainGameClass
 				if (event.type == sf::Event::Closed)
 					window.close();
 			}
+			Menus::IdOfSounds SndMenuId;
+			SndMenuId.ClickId = 0;
+			SndMenuId.SelectId = 1;
 			switch (State)
 			{
 			case Menu:
@@ -97,8 +101,19 @@ namespace MainGameClass
 					Ex.ShowMessage();
 				}
 				break;
-			case Settings:
-				GamePointers.Set->Update(window);
+			case GameState::Settings:
+				try
+				{
+					GamePointers.Set->Update(window);
+				}
+				catch (Exceptions::SettingsClose *Ex)
+				{
+					SaveGameSettings(Ex);
+					delete Ex;
+					delete GamePointers.Set;
+					GamePointers.MMenu = new Menus::MainMenu(BasePath,cox,coy,SndControl,SndMenuId);
+					State = Menu;
+				}
 				break;
 			default:
 				break;
@@ -108,28 +123,64 @@ namespace MainGameClass
 			window.display();
 		}
 	}
-	void Game::LoadVideoMode(sf::Uint32 &st)
+	void Game::LoadGameSettings(sf::Uint32 &st)
 	{
+		// Формат 
 		double x = 0, y = 0;
-		if (_access("videomode.txt", 0) == -1)
+		if (_access((BasePath + "/settings.txt").c_str(), 0) == -1)
 		{
 			x = 1280;
 			y = 720;
 			return;
 		}
 		std::ifstream vidstream;
-		vidstream.open("videomode.txt");
+		vidstream.open(BasePath + "/settings.txt");
 		int mode = 0;
 		vidstream >> mode;
-		if (mode == 2) st = sf::Style::Fullscreen;
-		else  st = sf::Style::Default;
+		if (mode == 2)
+		{
+			st = sf::Style::Fullscreen;
+			this->Settings.Fullscreen = true;
+		}
+		else
+		{
+			st = sf::Style::Default;
+			this->Settings.Fullscreen = false;
+		}
 		vidstream >> x;
 		vidstream >> y;
+		vidstream >> this->Settings.Volume;
+		vidstream >> this->Settings.MuteState;
 		vidstream.close();
 		this->cox = x / 1920;
 		this->coy = y / 1080;
 		this->vidx = x;
 		this->vidy = y;
+		this->Settings.Resolution.first = x;
+		this->Settings.Resolution.second = y;
+		this->Settings.MuteState ? SndControl.Mute() : SndControl.UnMute();
+	}
+
+	void Game::SaveGameSettings(Exceptions::SettingsClose *Ex)
+	{
+		this->Settings.Fullscreen = Ex->Fullsreen;
+		this->Settings.MuteState = Ex->Mute;
+		this->Settings.Volume = Ex->Volume;
+		this->Settings.Resolution = Ex->Resolution;
+		ofstream outfile;
+		outfile.open(BasePath + "/settings.txt", std::ostream::out | std::ostream::trunc);
+		this->Settings.Fullscreen ? outfile << 2 : outfile << 1;
+		outfile << " ";
+		outfile << this->Settings.Resolution.first;
+		outfile << " ";
+		outfile << this->Settings.Resolution.second;
+		outfile << " ";
+		outfile << this->Settings.Volume;
+		outfile << " ";
+		outfile << this->Settings.MuteState;
+		outfile.close();
+		this->cox = (double)Ex->Resolution.first / 1920;
+		this->coy = (double)Ex->Resolution.second / 1080;
 	}
 
 	void Game::UpdateLoadMenu(RenderWindow &window)
@@ -150,7 +201,7 @@ namespace MainGameClass
 			break;
 		case 4:
 			delete GamePointers.LoadM;
-			GamePointers.MMenu = new Menus::MainMenu(BasePath, cox, coy, SndControl, SndMenuId);
+			GamePointers.MMenu = new Menus::MainMenu(BasePath, cox, coy, SndControl,SndMenuId);
 			State = Menu;
 		}
 	}

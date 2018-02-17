@@ -14,7 +14,8 @@ namespace Menus
 		FirstMenuItemText.setFont(MenuFont);
 		FirstMenuItemText.setCharacterSize(48);
 		FirstMenuItemText.setScale(cox, coy);
-		FirstMenuItemText.setFillColor(sf::Color(178, 34, 34));
+		//FirstMenuItemText.setFillColor(sf::Color::Yellow);
+		FirstMenuItemText.setFillColor(sf::Color::Yellow);
 		sf::String str = "Новая игра";
 		FirstMenuItemText.setString(str);
 		FirstMenuItemText.setPosition(840 * cox, 220 * coy);
@@ -23,7 +24,7 @@ namespace Menus
 		SecondMenuItemText.setFont(MenuFont);
 		SecondMenuItemText.setCharacterSize(48);
 		SecondMenuItemText.setScale(cox, coy);
-		SecondMenuItemText.setFillColor(sf::Color(178, 34, 34));
+		SecondMenuItemText.setFillColor(sf::Color::Yellow);
 		sf::String loadstr = "Загрузить игру";
 		SecondMenuItemText.setString(loadstr);
 		SecondMenuItemText.setPosition(810 * cox, 370 * coy);
@@ -31,7 +32,7 @@ namespace Menus
 		ThirdMenuItemText.setFont(MenuFont);
 		ThirdMenuItemText.setCharacterSize(48);
 		ThirdMenuItemText.setScale(cox, coy);
-		ThirdMenuItemText.setFillColor(sf::Color(178, 34, 34));
+		ThirdMenuItemText.setFillColor(sf::Color::Yellow);
 		sf::String settingstr = "Настройки";
 		ThirdMenuItemText.setString(settingstr);
 		ThirdMenuItemText.setPosition(830 * cox, 520 * coy);
@@ -39,7 +40,7 @@ namespace Menus
 		FourMenuItemText.setFont(MenuFont);
 		FourMenuItemText.setCharacterSize(48);
 		FourMenuItemText.setScale(cox, coy);
-		FourMenuItemText.setFillColor(sf::Color(178, 34, 34));
+		FourMenuItemText.setFillColor(sf::Color::Yellow);
 		sf::String exitstr = "Выход";
 		FourMenuItemText.setString(exitstr);
 		FourMenuItemText.setPosition(850 * cox, 670 * coy);

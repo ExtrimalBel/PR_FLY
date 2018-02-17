@@ -12,17 +12,15 @@ namespace Menus
 		SetUpSprites();
 		SetUpText();
 		SetUpResSprites();
+		SetUpResolution();
 		this->SndControl = SndControl;
 		FullScreen = false;
 		GameFont.loadFromFile(BasePath + "/menu/font.ttf");
-		SetUpSprites();
-		SetUpText();
-		SetUpResSprites();
 	}
 
 	void SettingsClass::SetUpSprites()
 	{
-		BackGroundTex.loadFromFile(BasePath + "/menu/background.png");
+		BackGroundTex.loadFromFile(BasePath + "/menu/settingsback.png");
 		BackGroundSpr.setTexture(BackGroundTex);
 		BackGroundSpr.setScale(cox, coy);
 		SoundVolumeBackImg.loadFromFile(BasePath + "/menu/volumeback.png");
@@ -47,14 +45,22 @@ namespace Menus
 		
 		SoundMuteSprite.setScale(cox, coy);
 		SoundMuteSprite.setPosition(400 * cox, 350 * coy);
+		LeaveSettingsTex.loadFromFile(BasePath + "/menu/item.png");
+		LeaveSettingsSpr.setTexture(LeaveSettingsTex);
+		LeaveSettingsSpr.setTextureRect(sf::IntRect(0,0,600,100));
+		LeaveSettingsSpr.setPosition(1300 * cox, 810 * coy);
+		LeaveSettingsSpr.setScale(cox / 2, coy / 2);
 		double newvolumex = 600 * Volume;
 		newvolumex /= 100;
 		newvolumex += 300;
 		SoundVolumeCursorSpr.setPosition( cox * newvolumex, coy * 325);
 		FullScreenSprite.setTexture(SoundMuteTexture);
-		FullScreenSprite.setPosition(cox * 500, coy * 400);
+		FullScreenSprite.setPosition(cox * 550, coy * 400);
 		FullScreenSprite.setTextureRect(sf::IntRect(0, 0, 50, 50));
 		FullScreenSprite.setScale(cox, coy);
+		SoundVolumeBackTex.setSmooth(true);
+		SoundVolumeCursorTex.setSmooth(true);
+		SoundMuteTexture.setSmooth(true);
 	}
 
 	void SettingsClass::ChangeMuteState(RenderWindow &window)
@@ -74,7 +80,7 @@ else
 	SndControl.UnMute();
 	SoundMuteSprite.setTextureRect(sf::IntRect(0,0,50,50));
 }
-		}
+}
 
 	}
 
@@ -124,6 +130,14 @@ else
 		window.draw(ResolutionText);
 		window.draw(SoundMuteSprite);
 		window.draw(FullScreenSprite);
+		window.draw(FullScreenText);
+		window.draw(LeaveSettingsSpr);
+		window.draw(LeaveSettingsText);
+		for (int i = 0; i < Rezolutions.size(); i++)
+		{
+			window.draw(Rezolutions[i].ResolutionBackSpr);
+			window.draw(Rezolutions[i].ResolutionText);
+		}
 	}
 
 	void SettingsClass::SetUpResSprites()
@@ -148,14 +162,114 @@ else
 		ResolutionText.setScale(cox, coy);
 		MuteText.setScale(cox, coy);
 		FullScreenText.setFont(GameFont);
+		FullScreenText.setScale(cox, coy);
+		FullScreenText.setPosition(cox * 250, coy * 400);
 		FullScreenText.setString("Полноэкранный режим");
+		SoundVolumeText.setFillColor(sf::Color::Green);
+		SoundVolumeText.setStyle(Text::Bold);
+		MuteText.setFillColor(Color::Green);
+		ResolutionText.setFillColor(Color::Green);
+		FullScreenText.setFillColor(Color::Green);
+		LeaveSettingsText.setFont(GameFont);
+		LeaveSettingsText.setScale(cox, coy);
+		LeaveSettingsText.setFillColor(sf::Color::Yellow);
+		LeaveSettingsText.setPosition(1400 * cox, 815 * coy);
+		LeaveSettingsText.setCharacterSize(28);
+		LeaveSettingsText.setString("Выход");
+	}
+
+	void SettingsClass::SetUpResolution()
+	{
+		ResolutionBackTex.loadFromFile(BasePath + "/menu/resolution.png");
+		//Create Resolution
+		int i = 0;
+		int ResolutionCollection[6][6] = 
+		{
+			{1024,768},
+			{1280,1024},
+			{1280,720},
+			{1366,768},
+			{1600,900},
+			{1920,1080}
+		};
+		int Startx = 250, Starty = 500;
+		while (i < 6)
+		{
+			Rezolutions.push_back(ResolutionItem());
+			auto CurResIt = Rezolutions.end() - 1;
+			string ResStr = "";
+			char *tmpstr = new char[5];
+			itoa(ResolutionCollection[i][0],tmpstr,10);
+			ResStr += strcat(tmpstr, "x");
+			itoa(ResolutionCollection[i][1], tmpstr, 10);
+			ResStr += tmpstr;
+			//cout << ResStr << endl;
+			CurResIt->ResolutionText.setString(ResStr);
+			CurResIt->ResolutionText.setFont(GameFont);
+			CurResIt->ResolutionText.setPosition((Startx + 60) * cox,(Starty + 5) * coy);
+			CurResIt->ResolutionText.setScale(cox, coy);
+			CurResIt->ResolutionBackSpr.setTexture(ResolutionBackTex);
+			CurResIt->ResolutionBackSpr.setPosition(Startx * cox, Starty * coy);
+			CurResIt->ResolutionBackSpr.setScale(cox, coy);
+			CurResIt->x = ResolutionCollection[i][0];
+			CurResIt->y = ResolutionCollection[i][1];
+			Startx += 300;
+			if (i == 2)
+			{
+				Startx = 250;
+				Starty = 600;
+			}
+			i++;
+		}
+
+	}
+
+	void SettingsClass::ProcessResolution(RenderWindow &window)
+	{
+		sf::Vector2f Mpos(Mouse::getPosition(window));
+		for (int i = 0; i < Rezolutions.size(); i++)
+		{
+			if (Rezolutions[i].ResolutionBackSpr.getGlobalBounds().contains(Mpos) && Mouse::isButtonPressed(Mouse::Left))
+			{
+				Sleep(200);
+				window.clear();
+				
+				window.create(sf::VideoMode(Rezolutions[i].x, Rezolutions[i].y), "PR_FLY", FullScreen ? Style::Fullscreen : Style::Close);
+				
+				cox = (double) Rezolutions[i].x / 1920;
+				coy = (double)Rezolutions[i].y / 1080;
+				Rezolutions.clear();
+				SetUpSprites();
+				SetUpText();
+				SetUpResolution();
+
+			}
+		}
 	}
 
 	void SettingsClass::Update(RenderWindow &window)
 	{
+		CheckIfExit(window);
 		UpdateVolume(window);
 		ChangeMuteState(window);
 		ChangeFullScreenState(window);
+		ProcessResolution(window);
 		DrawAll(window);
+	}
+	
+	void SettingsClass::CheckIfExit(RenderWindow &window)
+	{
+		sf::Vector2f Mpos(Mouse::getPosition(window));
+		if (LeaveSettingsSpr.getGlobalBounds().contains(Mpos))
+		{
+			LeaveSettingsSpr.setTextureRect(sf::IntRect(600, 0, 600, 100));
+			if (Mouse::isButtonPressed(Mouse::Left))
+			{
+				int vidx = window.getSize().x;
+				int vidy = window.getSize().y;
+				throw new Exceptions::SettingsClose("Setitngs Close",vidx,vidy,Volume,MuteState,FullScreen);
+			}
+		}
+		else LeaveSettingsSpr.setTextureRect(sf::IntRect(0, 0, 600, 100));
 	}
 }

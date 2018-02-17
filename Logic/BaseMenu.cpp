@@ -31,6 +31,8 @@ namespace Menus
 		SecondMenuSpr.setTextureRect(IntRect(0, 0, 600, 100));
 		ThirdMenuSpr.setTextureRect(IntRect(0, 0, 600, 100));
 		FourMenuSpr.setTextureRect(IntRect(0, 0, 600, 100));
+		BackGroundTex.setSmooth(true);
+		MenuTex.setSmooth(true);
 	}
 
 	void BaseMenu::Update(RenderWindow &window)

@@ -80,27 +80,35 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="BaseEnemy.h" />
     <ClInclude Include="baseitem.h" />
     <ClInclude Include="BaseMenu.h" />
     <ClInclude Include="ExceptionsDefenitions.hpp" />
     <ClInclude Include="GameDifficulty.h" />
     <ClInclude Include="GameField.h" />
     <ClInclude Include="Intersectsmenager.h" />
+    <ClInclude Include="LevelMenager.h" />
     <ClInclude Include="LoadGame.h" />
     <ClInclude Include="Logic.h" />
     <ClInclude Include="MainMenu.h" />
+    <ClInclude Include="MovingEnemy.h" />
     <ClInclude Include="phfsint.hpp" />
     <ClInclude Include="PixelPerfect.h" />
+    <ClInclude Include="Player.h" />
     <ClInclude Include="playerbullet.h" />
     <ClInclude Include="PlayerClass.h" />
-    <ClInclude Include="setofenemy.h" />
+    <ClInclude Include="SetOfEnemy.h" />
     <ClInclude Include="Settings.h" />
     <ClInclude Include="ShipsClasses.h" />
+    <ClInclude Include="StayEnemy.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
     <ClInclude Include="Thingsh.h" />
+    <ClInclude Include="tinyxml2.h" />
+    <ClInclude Include="UpgradeClass.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="BaseEnemy.cpp" />
     <ClCompile Include="BaseMenu.cpp" />
     <ClCompile Include="GameDifficulty.cpp" />
     <ClCompile Include="GameField.cpp" />
@@ -113,20 +121,30 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
       </PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="LevelMenager.cpp" />
     <ClCompile Include="LoadGame.cpp" />
     <ClCompile Include="Logic.cpp" />
     <ClCompile Include="MainMenu.cpp" />
+    <ClCompile Include="MovingEnemy.cpp" />
     <ClCompile Include="PixelPerfect.cpp" />
+    <ClCompile Include="Player.cpp" />
     <ClCompile Include="Settings.cpp" />
+    <ClCompile Include="StayEnemy.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="tinyxml2.cpp" />
+    <ClCompile Include="UpgradeClass.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SoundSystem\SoundSystem.vcxproj">
       <Project>{398a1489-cff8-476c-9210-ada0cdf1685b}</Project>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
+    <None Include="ClassDiagram1.cd" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
