@@ -18,6 +18,7 @@ namespace SoundControl
 		sndcontrolstr.UnMute = UnMute;
 		sndcontrolstr.SetVolume = SetVolume;
 		sndcontrolstr.ReturnCurrentVolume = ReturnCurrentVolume;
+		sndcontrolstr.GetMuteState = GetMuteState;
 		SoundSystemCreated = true; // Помечаем звуковыу подсистему как созданную
 		return sndcontrolstr;
 	}
@@ -74,5 +75,10 @@ namespace SoundControl
 		delete SndControl;
 		SoundSystemCreated = false;
 		cout << "Sound System Was deleted" << endl;
+	}
+
+	bool GetMuteState()
+	{
+		return SndControl->ReturnMuteState();
 	}
 };

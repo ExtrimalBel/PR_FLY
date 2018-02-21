@@ -51,6 +51,12 @@ namespace Exceptions{
 		BossConfigReadError(std::string mes) : BaseException(mes) {}
 	};
 	
+
+	class XmlReadError : public BaseException
+	{
+	public:
+		XmlReadError(string Message) : BaseException(Message) {}
+	};
 	class LOGIC_API SettingsClose : public BaseException
 	{
 	public:
@@ -67,6 +73,12 @@ namespace Exceptions{
 			this->Mute = Mute;
 			this->Fullsreen = Fullscreen;
 		}
+	};
+
+	class LOGIC_API ProcessingEnemyCriticalError : public BaseException
+	{
+	public:
+		ProcessingEnemyCriticalError(string Message) : BaseException(Message) {}
 	};
 
 	class ThisIsALastLevel : public BaseException
@@ -87,16 +99,64 @@ namespace Exceptions{
 		LevelMenagerReadError(string Message) : BaseException(Message) { }
 	};
 
-	class UpgradeFinished : public BaseException
-	{
-	public:
-		UpgradeFinished(string Message) : BaseException(Message) { }
-	};
-
 	class GameWantToSave : public BaseException
 	{
 	public:
 		GameWantToSave(string Message) : BaseException(Message) {}
 	};
+
+	class GameLoadError : public BaseException
+	{
+	public:
+		GameLoadError(string Message) : BaseException(Message) {}
+	};
+
+	class GameSaveError : public BaseException
+	{
+	public:
+		GameSaveError(string Message) : BaseException(Message) {}
+	};
+
+	class NextLevelRequested : public BaseException // Выбрасываеться при выходе из экрана апгрейда
+	{
+	public:
+		NextLevelRequested(string Message) : BaseException(Message) {}
+	};
+
+	class LevelEndEx : public BaseException // Выбрасываеться при завершении уровня
+	{
+	public:
+		bool Pass;
+		LevelEndEx(string Message, bool Pass) : BaseException(Message) { this->Pass = Pass; }
+	};
+
+	class LevelFailEx : public BaseException // Выбрасываеться если игрок умер
+	{
+	public:
+		LevelFailEx(string Message) : BaseException(Message) {}
+	};
+
+	class GameSavedCorrect : public BaseException
+	{
+	public:
+		GameSavedCorrect(string Message) : BaseException(Message) {}
+	};
+
+	class SaveCompleteCorrect : public BaseException
+	{
+	public:
+		SaveCompleteCorrect(string Message) : BaseException(Message) {}
+	};
+
+	class LOGIC_API GameWantToSwitchToMenu : public BaseException
+	{
+	public:
+		GameWantToSwitchToMenu(string Message) : BaseException(Message) {}
+	};
+
+	class GameSaved : public BaseException
+	{
+	public:
+		GameSaved(string Message) : BaseException(Message) {}
+	};
 }
- 

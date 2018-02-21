@@ -29,7 +29,7 @@ namespace SoundSystem
 			pair<void*, int> temppair;
 			ifstream tempfile(BasePath + "/" + MassOfSound[i].Name, ios::binary | ios::ate);
 			if (!(tempfile.is_open())) throw Exceptions::SoundSystemError("Ошибка при инициализации звуковой системы");
-			temppair.second = tempfile.tellg(); // Считываем размер файла
+			temppair.second = static_cast<int>(tempfile.tellg()); // Считываем размер файла
 			temppair.first = (void*)new char[temppair.second];
 			tempfile.seekg(0, ios::beg);
 			tempfile.read((char*)temppair.first, temppair.second);
@@ -91,7 +91,7 @@ namespace SoundSystem
 
 	void SoundSystem::PauseMusic(int id)
 	{
-		for (int i = 0; i < Musics.size(); i++)
+		for (unsigned int i = 0; i < Musics.size(); i++)
 		{
 			if (Musics[i].id == id)
 			{
@@ -107,7 +107,7 @@ namespace SoundSystem
 
 	void SoundSystem::ResumeSound(int id)
 	{
-		for (int i = 0; i < Musics.size(); i++)
+		for (unsigned int i = 0; i < Musics.size(); i++)
 		{
 			if (Musics[i].id == id)
 			{
@@ -120,7 +120,7 @@ namespace SoundSystem
 	{
 		// Простой сборщик мусора
 		// Удаляет объекты если звуковой файл остановлен и он не должен проигрыаться циклически
-		for (int i = 0; i < Musics.size(); i++)
+		for (unsigned int i = 0; i < Musics.size(); i++)
 		{
 			if (Musics[i].snd->getStatus() == sf::Music::Stopped && !Musics[i].snd->getLoop())
 			{
@@ -133,7 +133,7 @@ namespace SoundSystem
 	void SoundSystem::Mute()
 	{
 		MuteState = true;
-		for (int i = 0; i < Musics.size(); i++)
+		for (unsigned int i = 0; i < Musics.size(); i++)
 		{
 			Musics[i].snd->setVolume(0);
 		}
@@ -142,7 +142,7 @@ namespace SoundSystem
 	void SoundSystem::UnMute()
 	{
 		MuteState = false;
-		for (int i = 0; i < Musics.size(); i++)
+		for (unsigned int i = 0; i < Musics.size(); i++)
 		{
 			Musics[i].snd->setVolume(CurrentVolume);
 		}

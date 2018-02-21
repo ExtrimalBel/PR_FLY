@@ -8,7 +8,7 @@ namespace Menus
 	{
 		void SetUpText();
 	public:
-		MainMenu(string BaseGamePath, double cox, double coy, SoundControl::SoundControlStruct SndControl, IdOfSounds SndId);
+		MainMenu(string BaseGamePath, double cox, double coy, SoundControl::SoundControlStruct &SndControl, IdOfSounds SndId);
 		void Update(RenderWindow &window);
 	};
 }

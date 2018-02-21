@@ -13,5 +13,6 @@ namespace Ships
 	public:
 		MovingEnemy(string BasePath, double cox, double coy, BaseEnemyState &EnemyState, SoundControl::SoundControlStruct &SndControl);
 		void Update(float time, RenderWindow &window);
+
 	};
 }

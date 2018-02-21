@@ -3,17 +3,19 @@
 
 namespace Menus
 {
-	SettingsClass::SettingsClass(string BasePath, double &cox, double &coy, SoundControl::SoundControlStruct &SndControl)
+	SettingsClass::SettingsClass(string BasePath, double &cox, double &coy, SoundControl::SoundControlStruct &SndControl, int SoundVolume, bool FullScreen)
 	{
+		this->FullScreen = FullScreen;
 		this->BasePath = BasePath;
+		this->SndControl = SndControl;
 		this->cox = cox;
 		this->coy = coy;
-		Volume = 50;
+		Volume = SoundVolume;
 		SetUpSprites();
 		SetUpText();
 		SetUpResSprites();
 		SetUpResolution();
-		this->SndControl = SndControl;
+		
 		FullScreen = false;
 		GameFont.loadFromFile(BasePath + "/menu/font.ttf");
 	}
@@ -21,31 +23,41 @@ namespace Menus
 	void SettingsClass::SetUpSprites()
 	{
 		BackGroundTex.loadFromFile(BasePath + "/menu/settingsback.png");
+		BackGroundTex.setSmooth(true);
 		BackGroundSpr.setTexture(BackGroundTex);
 		BackGroundSpr.setScale(cox, coy);
 		SoundVolumeBackImg.loadFromFile(BasePath + "/menu/volumeback.png");
 		SoundVolumeBackImg.createMaskFromColor(sf::Color::White);
 		SoundVolumeBackTex.loadFromImage(SoundVolumeBackImg);
+		SoundVolumeBackTex.setSmooth(true);
 		SoundVolumeBackSpr.setTexture(SoundVolumeBackTex);
 		SoundVolumeBackSpr.setScale(cox, coy);
 
-		SoundVolumeBackSpr.setPosition(cox * 300,coy * 300);
+		SoundVolumeBackSpr.setPosition(cox * 320,coy * 300);
 		SoundVolumeCursorImg.loadFromFile(BasePath + "/menu/volcur.png");
 		SoundVolumeCursorImg.createMaskFromColor(Color::White);
 		SoundVolumeCursorTex.loadFromImage(SoundVolumeCursorImg);
+		SoundVolumeCursorTex.setSmooth(true);
 		SoundVolumeCursorSpr.setTexture(SoundVolumeCursorTex);
 		SoundVolumeCursorSpr.setOrigin(sf::Vector2f(25, 25));
 		SoundVolumeCursorSpr.setScale(cox, coy);
 		SoundMuteImage.loadFromFile(BasePath + "/menu/mute.png");
 		SoundMuteImage.createMaskFromColor(sf::Color::White);
+		
 		SoundMuteTexture.loadFromImage(SoundMuteImage);
 		SoundMuteTexture.setSmooth(true);
 		SoundMuteSprite.setTexture(SoundMuteTexture);
 		SoundMuteSprite.setTextureRect(sf::IntRect(0,0,50,50));
-		
+		if (SndControl.GetMuteState())
+		{
+			MuteState = true;
+			SoundMuteSprite.setTextureRect(sf::IntRect(50, 0, 50, 50));
+		}
+		else MuteState = false;
 		SoundMuteSprite.setScale(cox, coy);
-		SoundMuteSprite.setPosition(400 * cox, 350 * coy);
+		SoundMuteSprite.setPosition(410 * cox, 350 * coy);
 		LeaveSettingsTex.loadFromFile(BasePath + "/menu/item.png");
+		LeaveSettingsTex.setSmooth(true);
 		LeaveSettingsSpr.setTexture(LeaveSettingsTex);
 		LeaveSettingsSpr.setTextureRect(sf::IntRect(0,0,600,100));
 		LeaveSettingsSpr.setPosition(1300 * cox, 810 * coy);
@@ -55,8 +67,14 @@ namespace Menus
 		newvolumex += 300;
 		SoundVolumeCursorSpr.setPosition( cox * newvolumex, coy * 325);
 		FullScreenSprite.setTexture(SoundMuteTexture);
-		FullScreenSprite.setPosition(cox * 550, coy * 400);
-		FullScreenSprite.setTextureRect(sf::IntRect(0, 0, 50, 50));
+		FullScreenSprite.setPosition(cox * 560, coy * 400);
+		if (!FullScreen)
+		{
+			FullScreenSprite.setTextureRect(sf::IntRect(0, 0, 50, 50));
+		}
+		else FullScreenSprite.setTextureRect(IntRect(50,0,50,50));
+		
+		
 		FullScreenSprite.setScale(cox, coy);
 		SoundVolumeBackTex.setSmooth(true);
 		SoundVolumeCursorTex.setSmooth(true);
@@ -68,7 +86,7 @@ namespace Menus
 		sf::Vector2f Mpos(sf::Mouse::getPosition(window));
 		if (SoundMuteSprite.getGlobalBounds().contains(Mpos) && Mouse::isButtonPressed(Mouse::Left))
 		{
-			Sleep(200);
+			Sleep(300);
 			MuteState = !MuteState;
 			if (MuteState)
 			{
@@ -99,10 +117,12 @@ else
 			{
 				FullScreenSprite.setTextureRect(sf::IntRect(50,0, 50, 50));
 				window.create(sf::VideoMode(vidx, vidy),"PR_FLY", sf::Style::Fullscreen);
+				window.setMouseCursorVisible(false);
 			}
 			else
 			{
 				window.create(sf::VideoMode(vidx, vidy), "PR_FLY", sf::Style::Close);
+				window.setMouseCursorVisible(false);
 				FullScreenSprite.setTextureRect(sf::IntRect(0, 0, 50, 50));
 			}
 			SetUpSprites();
@@ -133,7 +153,7 @@ else
 		window.draw(FullScreenText);
 		window.draw(LeaveSettingsSpr);
 		window.draw(LeaveSettingsText);
-		for (int i = 0; i < Rezolutions.size(); i++)
+		for (unsigned int i = 0; i < Rezolutions.size(); i++)
 		{
 			window.draw(Rezolutions[i].ResolutionBackSpr);
 			window.draw(Rezolutions[i].ResolutionText);
@@ -183,17 +203,19 @@ else
 		ResolutionBackTex.loadFromFile(BasePath + "/menu/resolution.png");
 		//Create Resolution
 		int i = 0;
-		int ResolutionCollection[6][6] = 
+		int ResolutionCollection[8][8] = 
 		{
+			{800,600},
 			{1024,768},
 			{1280,1024},
 			{1280,720},
 			{1366,768},
+			{1440,900},
 			{1600,900},
 			{1920,1080}
 		};
 		int Startx = 270, Starty = 500;
-		while (i < 6)
+		while (i < 8)
 		{
 			Rezolutions.push_back(ResolutionItem());
 			auto CurResIt = Rezolutions.end() - 1;
@@ -214,7 +236,7 @@ else
 			CurResIt->x = ResolutionCollection[i][0];
 			CurResIt->y = ResolutionCollection[i][1];
 			Startx += 300;
-			if (i == 2)
+			if (i == 3)
 			{
 				Startx = 270;
 				Starty = 600;
@@ -227,7 +249,7 @@ else
 	void SettingsClass::ProcessResolution(RenderWindow &window)
 	{
 		sf::Vector2f Mpos(Mouse::getPosition(window));
-		for (int i = 0; i < Rezolutions.size(); i++)
+		for (unsigned int i = 0; i < Rezolutions.size(); i++)
 		{
 			if (Rezolutions[i].ResolutionBackSpr.getGlobalBounds().contains(Mpos) && Mouse::isButtonPressed(Mouse::Left))
 			{
@@ -235,7 +257,7 @@ else
 				window.clear();
 				
 				window.create(sf::VideoMode(Rezolutions[i].x, Rezolutions[i].y), "PR_FLY", FullScreen ? Style::Fullscreen : Style::Close);
-				
+				window.setMouseCursorVisible(false);
 				cox = (double) Rezolutions[i].x / 1920;
 				coy = (double)Rezolutions[i].y / 1080;
 				Rezolutions.clear();

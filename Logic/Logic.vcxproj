@@ -41,6 +41,7 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
+    <LibraryPath>./lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
@@ -52,11 +53,12 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>NOMINMAX;SFML_DYNAMIC;WIN32;_DEBUG;_WINDOWS;_USRDLL;LOGIC_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>..\SoundSystem;..\PR_FLY;..\PR_FLY\phfsnew;..\PR_FLY\SFML-2.4.2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4018;4244;4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>..\Debug;..\PR_FLY\phfsnew;..\PR_FLY\SFML-2.4.2\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>..\Debug;..\PR_FLY\SFML-2.4.2\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>sfml-audio-d.lib;openal32.lib;flac.lib;vorbisenc.lib;vorbisfile.lib;vorbis.lib;ogg.lib;sfml-graphics-d.lib;sfml-window-d.lib;sfml-system-d.lib;sfml-main-d.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
@@ -71,13 +73,16 @@
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;LOGIC_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;LOGIC_EXPORTS;SFML_DYNAMIC;NOMINMAX;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\SoundSystem;..\PR_FLY\SFML-2.4.2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>sfml-audio.lib;openal32.lib;flac.lib;vorbisenc.lib;vorbisfile.lib;vorbis.lib;ogg.lib;sfml-graphics.lib;sfml-window.lib;sfml-system.lib;sfml-main.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\PR_FLY\SFML-2.4.2\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -87,37 +92,43 @@
     <ClInclude Include="BaseEnemy.h" />
     <ClInclude Include="baseitem.h" />
     <ClInclude Include="BaseMenu.h" />
+    <ClInclude Include="Bullet.h" />
+    <ClInclude Include="Chronometer.hpp" />
     <ClInclude Include="ExceptionsDefenitions.hpp" />
     <ClInclude Include="GameDifficulty.h" />
     <ClInclude Include="GameField.h" />
-    <ClInclude Include="Intersectsmenager.h" />
+    <ClInclude Include="Hud.h" />
+    <ClInclude Include="InterSects.h" />
+    <ClInclude Include="Level.h" />
     <ClInclude Include="LevelMenager.h" />
     <ClInclude Include="LoadGame.h" />
     <ClInclude Include="Logic.h" />
     <ClInclude Include="MainMenu.h" />
     <ClInclude Include="MovingEnemy.h" />
+    <ClInclude Include="PauseMenu.h" />
     <ClInclude Include="phfsint.hpp" />
     <ClInclude Include="PixelPerfect.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="playerbullet.h" />
     <ClInclude Include="PlayerClass.h" />
     <ClInclude Include="PlayerSaveSlotDef.h" />
+    <ClInclude Include="RandomMovingEnemy.h" />
+    <ClInclude Include="SaveGame.h" />
     <ClInclude Include="SetOfEnemy.h" />
     <ClInclude Include="Settings.h" />
-    <ClInclude Include="ShipsClasses.h" />
     <ClInclude Include="StayEnemy.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
-    <ClInclude Include="Thingsh.h" />
     <ClInclude Include="tinyxml2.h" />
     <ClInclude Include="UpgradeClass.h" />
+    <ClInclude Include="UpgradesMenager.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BaseEnemy.cpp" />
     <ClCompile Include="BaseMenu.cpp" />
+    <ClCompile Include="Bullet.cpp" />
     <ClCompile Include="GameDifficulty.cpp" />
     <ClCompile Include="GameField.cpp" />
-    <ClCompile Include="Intersectsmenager.cpp" />
     <ClCompile Include="dllmain.cpp">
       <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsManaged>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -126,13 +137,21 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
       </PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="Hud.cpp" />
+    <ClCompile Include="InterSects.cpp" />
+    <ClCompile Include="Level.cpp" />
     <ClCompile Include="LevelMenager.cpp" />
     <ClCompile Include="LoadGame.cpp" />
     <ClCompile Include="Logic.cpp" />
     <ClCompile Include="MainMenu.cpp" />
     <ClCompile Include="MovingEnemy.cpp" />
+    <ClCompile Include="PauseMenu.cpp" />
     <ClCompile Include="PixelPerfect.cpp" />
     <ClCompile Include="Player.cpp" />
+    <ClCompile Include="PlayerSaveSlotDef.cpp" />
+    <ClCompile Include="RandomMovingEnemy.cpp" />
+    <ClCompile Include="SaveGame.cpp" />
+    <ClCompile Include="SetOfEnemy.cpp" />
     <ClCompile Include="Settings.cpp" />
     <ClCompile Include="StayEnemy.cpp" />
     <ClCompile Include="stdafx.cpp">
@@ -141,6 +160,7 @@
     </ClCompile>
     <ClCompile Include="tinyxml2.cpp" />
     <ClCompile Include="UpgradeClass.cpp" />
+    <ClCompile Include="UpgradeMenager.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SoundSystem\SoundSystem.vcxproj">
@@ -150,6 +170,7 @@
   <ItemGroup>
     <None Include="ClassDiagram.cd" />
     <None Include="ClassDiagram1.cd" />
+    <None Include="ClassDiagram2.cd" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

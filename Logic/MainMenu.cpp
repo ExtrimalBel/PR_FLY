@@ -3,7 +3,7 @@
 
 namespace Menus
 {
-	MainMenu::MainMenu(string BaseGamePath, double cox, double coy, SoundControl::SoundControlStruct SndControl, IdOfSounds SndId) : BaseMenu(BaseGamePath, cox, coy, SndControl, SndId)
+	MainMenu::MainMenu(string BaseGamePath, double cox, double coy, SoundControl::SoundControlStruct &SndControl, IdOfSounds SndId) : BaseMenu(BaseGamePath, cox, coy, SndControl, SndId)
 	{
 		SetUpText();
 	}

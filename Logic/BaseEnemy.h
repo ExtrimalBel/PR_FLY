@@ -11,18 +11,26 @@ namespace Ships
 	struct EnemyNode
 	{
 		int Type;
-		void Enemy();
+		void *EnemyClass;
 	};
 
 	struct BaseEnemyState
 	{
+		int SpawnTime;
 		double GunSpeed;
+		double BulletSpeed;
 		double GunDemage;
 		double Speed;
 		int Health; 
 		vector<pair<int, int>> MovingCoordinates; // Сдесь коориднаты перемещения врага
 		string EnemyImgPath; // Путь к текстуре врага
-		void InitStats(int Health,double GunSpeed,double GunDemage,double Speed,vector<pair<int,int>> &VectorWithCoord,string EnemyImgPath);
+		string EnemyBulletPath;
+		string DeathSprPath;
+		int DeathSprCount;
+		void InitStats(int Health, double GunSpeed, double GunDemage, double Speed, vector<pair<int, int>> &VectorWithCoord, string EnemyImgPath);
+		int FrameCount; // Число кадров в анимации
+		double FrameTime; // Время между сменой кадров
+		int Reward; // Кол-во денег начисляемых за уничтожение корабля
 	};
 	class BaseEnemy
 	{
@@ -31,23 +39,32 @@ namespace Ships
 		Image EnemyImg;
 		Texture EnemyText;
 		Sprite EnemySprite;
-		Sprite* GetSprite() { return &EnemySprite; }
-		Image* GetImage() { return &EnemyImg; }
+	
 		double cox, coy;
 		string BasePath;
 		BaseEnemyState EnemyState;
-		BaseEnemyState RetrurnEnemyState(){ return EnemyState; }
+		
 		virtual void Move(float time) = 0;
 		void Draw(RenderWindow &window);
 		SoundControl::SoundControlStruct SndControl;
-		bool IfEnemyDead() { Health < 0 ? true : false; }
-		bool ForDelete;
+		void ProcessEnemyAnim();
+		bool ForDelete = false;
+		int CurrentFrame;
+		Clock AnimClock;
+		bool DeathAnim;
 	public:
+		bool IfEnemyDead() { return Health <= 0 ? true : false; }
+		void SetForDelete() { ForDelete = true; }
+		BaseEnemyState RetrurnEnemyState(){ return EnemyState; }
+		Sprite& GetSprite() { return EnemySprite; }
+		Image& GetImage() { return EnemyImg; }
 		bool IfEnemyShot();
 		void LoadEnemyImg();
-		int &Health;
+		
+		int Health;
 		bool ReturnDeleteState() { return ForDelete; }
 		BaseEnemy(string BasePath, double cox, double coy, BaseEnemyState &EnemyState, SoundControl::SoundControlStruct &SndControl);
-		virtual void Update(float time, RenderWindow &window) = 0;
+		virtual void Update(float time, RenderWindow &window);
+		bool ReturnDeathAnim() { return DeathAnim; }
 	};
 }

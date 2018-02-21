@@ -1,0 +1,44 @@
+<Upgrades>
+	<Sounds>
+		<UpId>5</UpId>
+		<BadUpId>4</BadUpId>
+		<ClickId>1</ClickId>
+		<BackId>8</BackId>
+		<SelectId>2</SelectId>
+	</Sounds>
+	<ArmorUpgrade>
+	<Upgrade id="1" cash="100">5</Upgrade>
+	<Upgrade id="2" cash="200">10</Upgrade>
+	<Upgrade id="3" cash="300">15</Upgrade>
+	<Upgrade id="4" cash="400">20</Upgrade>
+	<Upgrade id="5" cash="500">25</Upgrade>
+	</ArmorUpgrade>
+	<FirstGunSpeed>
+	<Upgrade id="1" cash="100">0.60</Upgrade>
+	<Upgrade id="2" cash="200">0.70</Upgrade>
+	<Upgrade id="3" cash="300">0.80</Upgrade>
+	<Upgrade id="4" cash="400">0.90</Upgrade>
+	<Upgrade id="5" cash="500">0.1</Upgrade>
+	</FirstGunSpeed>
+	<SecondGunSpeed>
+	<Upgrade id="1" cash="100">0.45</Upgrade>
+	<Upgrade id="2" cash="200">0.4</Upgrade>
+	<Upgrade id="3" cash="300">0.35</Upgrade>
+	<Upgrade id="4" cash="400">0.3</Upgrade>
+	<Upgrade id="5" cash="500">0.25</Upgrade>
+	</SecondGunSpeed>
+	<FirstGunDemage>
+	<Upgrade id="1" cash="100">4</Upgrade>
+	<Upgrade id="2" cash="200">6</Upgrade>
+	<Upgrade id="3" cash="300">8</Upgrade>
+	<Upgrade id="4" cash="400">10</Upgrade>
+	<Upgrade id="5" cash="500">12</Upgrade>
+	</FirstGunDemage>
+	<SecondGunDemage>
+	<Upgrade id="1" cash="100">8</Upgrade>
+	<Upgrade id="2" cash="200">12</Upgrade>
+	<Upgrade id="3" cash="300">16</Upgrade>
+	<Upgrade id="4" cash="400">20</Upgrade>
+	<Upgrade id="5" cash="500">24</Upgrade>
+	</SecondGunDemage>
+</Upgrades>

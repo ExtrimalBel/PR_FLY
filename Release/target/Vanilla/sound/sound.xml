@@ -1,0 +1,15 @@
+<sounds>
+<snd id="0">sound/click.wav</snd>
+<snd id="1">sound/select.wav</snd>
+<snd id="2">sound/backmenu.ogg</snd>
+<snd id="3">sound/click.wav</snd>
+<snd id="4">sound/badup.wav</snd>
+<snd id="5">sound/SUp.wav</snd>
+<snd id="6">sound/levelbackmusic/sound1.ogg</snd>
+<snd id="7">sound/levelbackmusic/sound2.ogg</snd>
+<snd id="8">sound/levelbackmusic/sound3.ogg</snd>
+<snd id="9">sound/levelbackmusic/sound4.ogg</snd>
+<snd id="10">sound/levelbackmusic/sound5.ogg</snd>
+<snd id="11">sound/levelbackmusic/sound6.ogg</snd>
+<snd id="12">sound/levelbackmusic/sound7.ogg</snd>
+</sounds>

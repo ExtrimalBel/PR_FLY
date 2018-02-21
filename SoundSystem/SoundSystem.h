@@ -66,6 +66,7 @@ namespace SoundSystem
 		void UnMute();
 		void SetVolume(float value);
 		float ReturnCurrentVolume();
+		bool ReturnMuteState() { return MuteState; }
 		~SoundSystem();
 	};
 }

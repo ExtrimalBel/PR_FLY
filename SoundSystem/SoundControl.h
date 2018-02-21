@@ -23,14 +23,17 @@ namespace SoundControl
 	void Mute();
 	void UnMute();
 	void SetVolume(float value);
+	bool GetMuteState();
 	float ReturnCurrentVolume();
 	struct SOUNDSYSTEM_API SoundControlStruct // данная стурктура передается всем классам которые взаимодействуют со звуковой подсистемой и содержит адреса функций работы со звуком
 	{
+		// Название методов в комметариях не нуждаються сукаааа)))
 		void(*Playsnd)(int, bool);
 		void(*StopSound)(int);
 		void(*PauseSound)(int);
 		void(*ResumeSound)(int);
 		int(*GetNumberOfSound)();
+		bool(*GetMuteState)();
 		void(*Update)();
 		void(*Mute)();
 		void(*UnMute)();

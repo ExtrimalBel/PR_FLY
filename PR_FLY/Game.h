@@ -12,6 +12,9 @@
 #include "LoadGame.h"
 #include "GameDifficulty.h"
 #include <Settings.h>
+#include "PlayerSaveSlotDef.h"
+#include "GameField.h"
+#include "UpgradesMenager.h"
 using namespace std;
 using namespace sf;
 
@@ -35,6 +38,7 @@ namespace MainGameClass
 			Menus::LoadGameMenu *LoadM;
 			Menus::MainMenu *MMenu;
 			Menus::GameDifficulty *DifClass;
+			Fields::GameField *Gf;
 		} GamePointers;
 		sf::Uint32 st;
 		GameState State;
@@ -49,6 +53,9 @@ namespace MainGameClass
 		void UpdateMainMenu(RenderWindow &window);
 		void UpdateLoadMenu(RenderWindow &window);
 		void UpdateGameDifficultyClass(RenderWindow &window);
+		void UpdateMenuCursor(RenderWindow &window);
+		Texture CursorTex;
+		Sprite CursorSpr;
 	public:
 		Game(string BasePath);
 		~Game();

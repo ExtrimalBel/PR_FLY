@@ -7,6 +7,9 @@ namespace MainGameClass
 	{
 		this->BasePath = BasePath;
 		SndControl = SoundControl::InitSoundSystemStruct(BasePath, "/sound/sound.xml");
+		CursorTex.loadFromFile(BasePath + "/Images/cur.png");
+		CursorSpr.setTexture(CursorTex);
+
 	}
 
 
@@ -20,7 +23,11 @@ namespace MainGameClass
 		GamePointers.MMenu = new Menus::MainMenu(BasePath, cox, coy, SndControl, SndMenuId);
 		State = Menu;
 		SndControl.Playsnd(2, true);
+		//Settings Up MenuCursor;
+		CursorSpr.setScale(cox, coy);
+		CursorSpr.setOrigin(CursorSpr.getLocalBounds().width, 0);
 		MainLoop(); // Вход в главный цикл
+
 	}
 
 	void Game::UpdateMainMenu(RenderWindow &window)
@@ -37,19 +44,28 @@ namespace MainGameClass
 			break;
 		case 2:
 			delete GamePointers.MMenu;
+			GamePointers.MMenu = NULL;
 			GamePointers.LoadM = new Menus::LoadGameMenu(BasePath, cox, coy, SndControl, SndMenuId);
 			State = Load;
 			break;
 		case 1:
 			delete GamePointers.MMenu;
+			GamePointers.MMenu = NULL;
 			GamePointers.DifClass = new Menus::GameDifficulty(BasePath, cox, coy, SndControl, SndMenuId);
 			State = SelectDifficulty;
 			break;
 		case 3:
 			delete GamePointers.MMenu;
-			GamePointers.Set = new Menus::SettingsClass(BasePath, cox, coy, SndControl);
+			GamePointers.Set = new Menus::SettingsClass(BasePath, cox, coy, SndControl,this->Settings.Volume,this->Settings.Fullscreen);
 			State = GameState::Settings;
 		}
+	}
+
+	void Game::UpdateMenuCursor(RenderWindow &window)
+	{
+		Vector2f Mpos(Mouse::getPosition(window));
+		CursorSpr.setPosition(Mpos);
+		window.draw(CursorSpr);
 	}
 
 	void Game::MainLoop()
@@ -57,6 +73,7 @@ namespace MainGameClass
 		sf::Clock clock;
 		sf::RenderWindow window(sf::VideoMode(vidx, vidy), "PR_FLY", this->st);
 		window.setFramerateLimit(60);
+		window.setMouseCursorVisible(false);
 		while (window.isOpen())
 		{
 			window.clear();
@@ -68,15 +85,33 @@ namespace MainGameClass
 			while (window.pollEvent(event))
 			{
 				if (event.type == sf::Event::Closed)
+				{
 					window.close();
+					throw Exceptions::GameWantToExit("Выход из игр");
+				}
 			}
+			window.setMouseCursorGrabbed(true);
 			Menus::IdOfSounds SndMenuId;
 			SndMenuId.ClickId = 0;
 			SndMenuId.SelectId = 1;
 			switch (State)
 			{
+			case GameS:
+				try
+				{
+					GamePointers.Gf->Upgrade(time, window);
+				}
+				catch (Exceptions::GameWantToSwitchToMenu &Ex) // Обрабатывем выход в главное меню из игры
+				{
+					delete GamePointers.Gf;
+					GamePointers.MMenu = new Menus::MainMenu(BasePath, cox, coy, SndControl, SndMenuId);
+					SndControl.Playsnd(2, true);
+					State = Menu;
+				}
+				break;
 			case Menu:
 				UpdateMainMenu(window);
+				UpdateMenuCursor(window);
 				break;
 			case Load:
 				try
@@ -85,9 +120,21 @@ namespace MainGameClass
 				}
 				catch (Exceptions::GameWantToLoad &Ex)
 				{
-					SndControl.StopSound(2); // останавливаем фоновую музыку меню
-					Ex.ShowMessage();
+					try
+					{
+						LoadAndSave::SaveSlot *tmpslot = &LoadAndSave::LoadFromFile(BasePath, Ex.slot);
+						GamePointers.Gf = new Fields::GameField(BasePath, cox, coy, *tmpslot, SndControl);
+						SndControl.StopSound(2); // останавливаем фоновую музыку меню
+						Ex.ShowMessage();
+						State = GameS;
+					}
+					catch (Exceptions::GameLoadError &Ex)
+					{
+						SndControl.Playsnd(8, false);
+					}
+					
 				}
+				UpdateMenuCursor(window);
 				break;
 			case SelectDifficulty:
 				try
@@ -96,9 +143,36 @@ namespace MainGameClass
 				}
 				catch (Exceptions::GameWantToStartNew &Ex)
 				{
+					delete GamePointers.DifClass;
+					GamePointers.DifClass = NULL;
+					LoadAndSave::SaveSlot *SS = new LoadAndSave::SaveSlot();
+					SS->Cash = 10;
+					SS->PStates.LevelCoo = Ex.diflevel;
+					SS->LevelCoefficient = Ex.diflevel;
+					SS->NextLevel = 1;
+					SS->PStates.Armor = 60;
+					SS->PStates.FirstGunDemage = 5;
+					SS->PStates.FirstGunSpeed = 0.5;
+					SS->PStates.SecondGunDemage = 10;
+					SS->PStates.SecondGunSpeed = 1;
+					/*LevelLogic::CurrentPlayerUpgrades *up = LevelLogic::UpgradesMenager::MakeClearPlayerUpgrades();
+					SS->PlayerUpInfo.Armorid = up->Armorid;
+					SS->PlayerUpInfo.FirstGunDemageId = up->FirstGunDemageId;
+					SS->PlayerUpInfo.FirstGunSpeedId = up->FirstGunSpeedId;
+					SS->PlayerUpInfo.SecondGunDemageId = up->SecondGunDemageId;
+					SS->PlayerUpInfo.SecondGunSpeedId = up->SecondGunSpeedId;*/
+					SS->PlayerUpInfo.Armorid = 0;
+					SS->PlayerUpInfo.FirstGunDemageId = 0;
+					SS->PlayerUpInfo.SecondGunSpeedId = 0;
+					SS->PlayerUpInfo.FirstGunSpeedId = 0;
+					SS->PlayerUpInfo.SecondGunDemageId = 0;
+					SS->Cash = 0;
+					GamePointers.Gf = new Fields::GameField(BasePath, cox, coy, *SS, SndControl);
 					SndControl.StopSound(2); // останавливаем фоновую музыку меню
 					Ex.ShowMessage();
+					State = GameS;
 				}
+				UpdateMenuCursor(window);
 				break;
 			case GameState::Settings:
 				try
@@ -114,6 +188,7 @@ namespace MainGameClass
 					GamePointers.MMenu = new Menus::MainMenu(BasePath,cox,coy,SndControl,SndMenuId);
 					State = Menu;
 				}
+				UpdateMenuCursor(window);
 				break;
 			default:
 				break;
@@ -129,8 +204,8 @@ namespace MainGameClass
 		double x = 0, y = 0;
 		if (_access((BasePath + "/settings.txt").c_str(), 0) == -1)
 		{
-			x = 1280;
-			y = 720;
+			x = 1024;
+			y = 768;
 			return;
 		}
 		std::ifstream vidstream;
@@ -150,6 +225,7 @@ namespace MainGameClass
 		vidstream >> x;
 		vidstream >> y;
 		vidstream >> this->Settings.Volume;
+		SndControl.SetVolume(this->Settings.Volume);
 		vidstream >> this->Settings.MuteState;
 		vidstream.close();
 		this->cox = x / 1920;

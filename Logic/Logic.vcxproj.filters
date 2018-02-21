@@ -39,9 +39,6 @@
     <ClInclude Include="Logic.h">
       <Filter>Заголовочные файлы</Filter>
     </ClInclude>
-    <ClInclude Include="ShipsClasses.h">
-      <Filter>Заголовочные файлы</Filter>
-    </ClInclude>
     <ClInclude Include="Settings.h">
       <Filter>Заголовочные файлы</Filter>
     </ClInclude>
@@ -59,12 +56,6 @@
     </ClInclude>
     <ClInclude Include="BaseMenu.h">
       <Filter>Menus</Filter>
-    </ClInclude>
-    <ClInclude Include="Intersectsmenager.h">
-      <Filter>Заголовочные файлы</Filter>
-    </ClInclude>
-    <ClInclude Include="Thingsh.h">
-      <Filter>Заголовочные файлы</Filter>
     </ClInclude>
     <ClInclude Include="ExceptionsDefenitions.hpp">
       <Filter>Заголовочные файлы</Filter>
@@ -105,10 +96,37 @@
     <ClInclude Include="UpgradeClass.h">
       <Filter>Заголовочные файлы</Filter>
     </ClInclude>
+    <ClInclude Include="PlayerSaveSlotDef.h">
+      <Filter>Заголовочные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="Level.h">
+      <Filter>Заголовочные файлы</Filter>
+    </ClInclude>
     <ClInclude Include="SetOfEnemy.h">
       <Filter>Заголовочные файлы</Filter>
     </ClInclude>
-    <ClInclude Include="PlayerSaveSlotDef.h">
+    <ClInclude Include="Bullet.h">
+      <Filter>Заголовочные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="Hud.h">
+      <Filter>Заголовочные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="InterSects.h">
+      <Filter>Заголовочные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="SaveGame.h">
+      <Filter>Заголовочные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="UpgradesMenager.h">
+      <Filter>Заголовочные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="PauseMenu.h">
+      <Filter>Заголовочные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="RandomMovingEnemy.h">
+      <Filter>Заголовочные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="Chronometer.hpp">
       <Filter>Заголовочные файлы</Filter>
     </ClInclude>
   </ItemGroup>
@@ -127,9 +145,6 @@
     </ClCompile>
     <ClCompile Include="BaseMenu.cpp">
       <Filter>Menus</Filter>
-    </ClCompile>
-    <ClCompile Include="Intersectsmenager.cpp">
-      <Filter>Файлы исходного кода</Filter>
     </ClCompile>
     <ClCompile Include="MainMenu.cpp">
       <Filter>Файлы исходного кода</Filter>
@@ -167,9 +182,40 @@
     <ClCompile Include="UpgradeClass.cpp">
       <Filter>Файлы исходного кода</Filter>
     </ClCompile>
+    <ClCompile Include="PlayerSaveSlotDef.cpp">
+      <Filter>Файлы исходного кода</Filter>
+    </ClCompile>
+    <ClCompile Include="Level.cpp">
+      <Filter>Файлы исходного кода</Filter>
+    </ClCompile>
+    <ClCompile Include="Bullet.cpp">
+      <Filter>Файлы исходного кода</Filter>
+    </ClCompile>
+    <ClCompile Include="SetOfEnemy.cpp">
+      <Filter>Файлы исходного кода</Filter>
+    </ClCompile>
+    <ClCompile Include="Hud.cpp">
+      <Filter>Файлы исходного кода</Filter>
+    </ClCompile>
+    <ClCompile Include="InterSects.cpp">
+      <Filter>Файлы исходного кода</Filter>
+    </ClCompile>
+    <ClCompile Include="SaveGame.cpp">
+      <Filter>Файлы исходного кода</Filter>
+    </ClCompile>
+    <ClCompile Include="UpgradeMenager.cpp">
+      <Filter>Файлы исходного кода</Filter>
+    </ClCompile>
+    <ClCompile Include="PauseMenu.cpp">
+      <Filter>Файлы исходного кода</Filter>
+    </ClCompile>
+    <ClCompile Include="RandomMovingEnemy.cpp">
+      <Filter>Файлы исходного кода</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram.cd" />
     <None Include="ClassDiagram1.cd" />
+    <None Include="ClassDiagram2.cd" />
   </ItemGroup>
 </Project>

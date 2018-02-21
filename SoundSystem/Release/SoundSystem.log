@@ -1,0 +1,28 @@
+﻿Сборка начата 15.03.2018 20:48:39.
+     1>Проект "D:\College_Game_Level3\PR_FLY\SoundSystem\SoundSystem.vcxproj" в узле 2 (целевые объекты Rebuild).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"..\PR_FLY\SFML-2.4.2\include" /Zi /nologo /W3 /WX- /sdl /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _WINDOWS /D _USRDLL /D SOUNDSYSTEM_EXPORTS /D SFML_DYNAMIC /D _WINDLL /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Yc"stdafx.h" /Fp"Release\SoundSystem.pch" /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt stdafx.cpp
+         stdafx.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"..\PR_FLY\SFML-2.4.2\include" /Zi /nologo /W3 /WX- /sdl /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _WINDOWS /D _USRDLL /D SOUNDSYSTEM_EXPORTS /D SFML_DYNAMIC /D _WINDLL /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt dllmain.cpp
+         dllmain.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"..\PR_FLY\SFML-2.4.2\include" /Zi /nologo /W3 /WX- /sdl /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _WINDOWS /D _USRDLL /D SOUNDSYSTEM_EXPORTS /D SFML_DYNAMIC /D _WINDLL /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Release\SoundSystem.pch" /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt SoundControl.cpp SoundSystem.cpp tinyxml2.cpp
+         SoundControl.cpp
+     1>d:\college_game_level3\pr_fly\soundsystem\SoundExceptions.h(15): warning C4251: Exceptions::SoundSystemError::Message: class "std::basic_string<char,std::char_traits<char>,std::allocator<char>>" должен иметь dll-интерфейс для использования клиентами class "Exceptions::SoundSystemError"
+         SoundSystem.cpp
+     1>d:\college_game_level3\pr_fly\soundsystem\SoundExceptions.h(15): warning C4251: Exceptions::SoundSystemError::Message: class "std::basic_string<char,std::char_traits<char>,std::allocator<char>>" должен иметь dll-интерфейс для использования клиентами class "Exceptions::SoundSystemError"
+         tinyxml2.cpp
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\College_Game_Level3\PR_FLY\Release\SoundSystem.dll" /INCREMENTAL:NO /NOLOGO /LIBPATH:"..\PR_FLY\SFML-2.4.2\lib" "sfml-audio.lib" openal32.lib flac.lib vorbisenc.lib vorbisfile.lib vorbis.lib ogg.lib "sfml-graphics.lib" "sfml-window.lib" "sfml-system.lib" "sfml-main.lib" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\College_Game_Level3\PR_FLY\Release\SoundSystem.pdb" /SUBSYSTEM:WINDOWS /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\College_Game_Level3\PR_FLY\Release\SoundSystem.lib" /MACHINE:X86 /SAFESEH /DLL Release\dllmain.obj
+         Release\SoundControl.obj
+         Release\SoundSystem.obj
+         Release\stdafx.obj
+         Release\tinyxml2.obj
+            Создается библиотека D:\College_Game_Level3\PR_FLY\Release\SoundSystem.lib и объект D:\College_Game_Level3\PR_FLY\Release\SoundSystem.exp
+         Создание кода
+         Создание кода завершено
+         SoundSystem.vcxproj -> D:\College_Game_Level3\PR_FLY\Release\SoundSystem.dll
+     1>Сборка проекта "D:\College_Game_Level3\PR_FLY\SoundSystem\SoundSystem.vcxproj" завершена (целевые объекты Rebuild).
+
+Сборка успешно завершена.
+
+Затраченное время: 00:00:22.47

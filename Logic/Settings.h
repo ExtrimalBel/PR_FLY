@@ -69,10 +69,10 @@ namespace Menus
 		Sprite AcceptButtonSpr;
 		Texture CancelButtonSpr;
 		int Volume;
-		bool MuteState = false;
+		bool MuteState;
 		bool FullScreen;
 	public:
-		SettingsClass(string BasePath, double &cox, double &coy, SoundControl::SoundControlStruct &SndControl);
+		SettingsClass(string BasePath, double &cox, double &coy, SoundControl::SoundControlStruct &SndControl,int SoundVolume,bool FullScreen);
 		void Update(RenderWindow &window);
 	};
 }
