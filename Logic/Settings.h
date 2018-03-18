@@ -1,39 +1,78 @@
-#include <SFML/Graphics.hpp>
+#pragma once
+#include "ExceptionsDefenitions.hpp"
+#include <SFML\Graphics.hpp>
+#include <string>
 #include <iostream>
-#include "Background_Class.h"
+#include <SoundControl.h>
+#ifdef LOGIC_EXPORTS
 #define LOGIC_API __declspec(dllexport)
-class LOGIC_API GameSettings
+#else
+#define LOGIC_API __declspec(dllimport)
+#endif
+
+using namespace sf;
+using namespace std;
+
+namespace Menus
 {
-	int level = 0;
-	Back_Menu *BMenu;
-	sf::Texture level1;
-	sf::Texture level2;
-	sf::Texture level3;
-	sf::Sprite levels1;
-	sf::Sprite levels2;
-	sf::Sprite levels3;
-	sf::Texture ExitText;
-	sf::Sprite ExitSpr;
-	sf::Texture FullScreenText;
-	sf::Sprite FullScreenspr;
-	sf::Font videomodefont;
-	sf::RectangleShape videomoderect;
-	sf::Text videomodetext;
-	sf::VideoMode currentmode;
-	std::vector<sf::VideoMode> Vid_Modes;
-	std::vector<sf::VideoMode>::iterator modeit;
-	int xco;
-	int yco;
-	int selected_level = 0;
-	bool fullscreen = false;
-	sf::Clock cl;
-	int modei = 0;
-public:
-	GameSettings(sf::RenderWindow &window);
-	void ChangeModes();
-	void DrawSettings(sf::RenderWindow &Window); // Отрисовка элементов настроек
-	void update(float time,sf::RenderWindow &Window,sf::Clock &mainclock); // Изменяем элементы в соответствии с выбранным пунктом настроек а также анимируем пункты меню настроек
-	void SetLevelGlobal(sf::RenderWindow &window); // Установка уровня сложности глобально
-	void IFScreenChanged(sf::RenderWindow &window, sf::Clock &mainclock); // Изменяем режим экрана если выбран соответсвующий пукт в настройках
-	int IfExitSet(sf::RenderWindow &Window); // Если выбран пункт выхода в главное меню то выходим
-};
+
+	struct ResolutionItem
+	{
+		int x;
+		int y;
+		Text ResolutionText;
+		Sprite ResolutionBackSpr;
+	};
+	class LOGIC_API SettingsClass
+	{
+		// Определение текстур и спрайтов
+		Texture BackGroundTex;
+		Sprite BackGroundSpr;
+		Image SoundVolumeBackImg;
+		Texture SoundVolumeBackTex;
+		Sprite SoundVolumeBackSpr;
+		Image SoundVolumeCursorImg;
+		Texture SoundVolumeCursorTex;
+		Sprite SoundVolumeCursorSpr;
+		Image SoundMuteImage;
+		Texture SoundMuteTexture;
+		Sprite SoundMuteSprite;
+		Sprite FullScreenSprite;
+		Texture ResolutionBackTex;
+		Sprite LeaveSettingsSpr;
+		Texture LeaveSettingsTex;
+		// Определение текста
+		Font GameFont;
+		Text SoundVolumeText;
+		Text MuteText;
+		Text ResolutionText;
+		Text FullScreenText;
+		Text SettingsCaptionText;
+		Text LeaveSettingsText;
+		vector<ResolutionItem> Rezolutions;
+		SoundControl::SoundControlStruct SndControl;
+		string BasePath;
+		void SetUpResolution();
+		void SelectResolution();
+		void SelectSoundParams();
+		void SetUpText();
+		void ProcessResolution(sf::RenderWindow &window);
+		void SetUpSprites();
+		void SetUpResSprites();
+		void DrawAll(RenderWindow &window);
+		void UpdateVolume(RenderWindow &window);
+		void ChangeMuteState(RenderWindow &window);
+		void ChangeFullScreenState(RenderWindow &window);
+		void CheckIfExit(RenderWindow &window);
+		double cox, coy;
+		Texture ButtonTex;
+		Sprite AcceptButtonSpr;
+		Texture CancelButtonSpr;
+		int Volume;
+		bool MuteState;
+		bool FullScreen;
+	public:
+		SettingsClass(string BasePath, double &cox, double &coy, SoundControl::SoundControlStruct &SndControl,int SoundVolume,bool FullScreen);
+		void Update(RenderWindow &window);
+	};
+}

@@ -1,167 +1,69 @@
-#include <SFML/Graphics.hpp>
-#include <Logic.h>
-#include <Settings.h>
-#include <GameField.h>
-#include <GameMenu.h>
-#include <fstream>
-#include <windows.h>
-#include <SoundSystem.h>
-#include <loadgameclass.h>
-#include <../Logic/stdafx.h>
-//#include "SoundSystem.h"
+#include <SFML\Graphics.hpp>
 #include <io.h>
-//int level = 0;
-void LoadVideoMode(int &x, int &y,sf::Uint32 &st);
-sf::Event ev;
-// Only for debug
-void Save()
-{
-	std::ofstream out;
-	out.open("save.txt");
-	PStatements State;
-	State.energy = 1;
-	State.energyco = 1.1;
-	State.engine = 1;
-	State.fuel = 100;
-	State.fuelco = 0.9;
-	State.gun = 5;
-	State.gunspeed = 0.1;
-	State.health = 100;
-	State.life = 1;
-	out.write((char*)&State, sizeof(PStatements));
+#include "Game.h"
+#include "ExceptionsDefenitions.h"
+#include <SoundControl.h>
+#include <iostream>
+#include <Windows.h>
+#include <LevelMenager.h>
+#include <SaveGame.h>
+#include "UpgradesMenager.h"
 
-	out.close();
+void TestUpgradeConfig()
+{
+	LevelLogic::UpgradesConfig *P;
+	LevelLogic::UpgradesMenager UP("./Vanilla");
+	P = UP.ReturnConfig(); // Сдесь поставить точку останова и проверить через отладку корректность считывания данных
 }
-
-int main()
+int main(int argv,char*argc[])
 {
+	SetDllDirectoryA("./lib");
+	int speed;
+	SystemParametersInfo(SPI_GETMOUSESPEED, NULL, &speed, 0);
+	
+	SystemParametersInfo(SPI_SETMOUSESPEED, NULL, reinterpret_cast<void*>(10), SPIF_UPDATEINIFILE | SPIF_SENDWININICHANGE);
+	SetConsoleCP(1251);
+	SetConsoleOutputCP(1251);
 	try
 	{
-		setlocale(LC_ALL, "Russian");
-		Save();
-		SoundSystem::SoundPlayer SPlayer;
-		sf::Clock clock;
-		int vidx;
-		int vidy;
-
-		SPlayer.SetVolume(0);
-		sf::Uint32 st;
-		LoadVideoMode(vidx, vidy, st);
-		double cox = vidx;
-		double coy = vidy;
-		cox /= 1920;
-		coy /= 1080;
-		sf::RenderWindow window(sf::VideoMode(vidx, vidy), "SFML works!", st);
-		window.setMouseCursorGrabbed(true);
-
-		window.setFramerateLimit(60);
-		MainM *Menu = new MainM(cox, coy, SPlayer);
-		GameField *Field = NULL;
-		GameSettings *Set = NULL;
-		LoadM *LM = NULL;
-		enum State { Game, Settings, MMenu, LoadGame }; // Перечесление отображающее состояние работы программы
-		State Statements = MMenu; // Объект данного перечесления
-		while (window.isOpen())
-		{
-			window.clear();
-			float time = clock.getElapsedTime().asMicroseconds();
-			clock.restart();
-			time /= 800;
-			sf::Event event;
-			while (window.pollEvent(event))
-			{
-				if (event.type == sf::Event::Closed)
-					window.close();
-			}
-			switch (Statements) // В зависимости от состояния игры делаем нужные действия
-			{
-			case MMenu:
-				window.setMouseCursorVisible(false);
-				Menu->Update(time, window);
-				if (Menu->MenuSelect() == 3)
-				{
-					window.setMouseCursorVisible(false);
-					clock.restart();
-					Statements = Game;
-					Field = new GameField(cox, coy, 0, window,false,"");
-					delete Menu;
-				}
-				if (Menu->MenuSelect() == 22)
-				{
-					SPlayer.~SoundPlayer();
-					delete Menu;
-					window.close();
-				}
-				if (Menu->MenuSelect() == 2)
-				{
-					delete Menu;
-					LM = new LoadM(cox, coy, SPlayer);
-					Statements = LoadGame;
-
-				}
-				break;
-			case Game:
-				Field->UpdateAll(time, window);
-				if (Field->IfExit() == 1)
-				{
-					window.setMouseCursorVisible(true);
-					Menu = new MainM(cox, coy, SPlayer);
-					delete Field;
-					Statements = MMenu;
-				}
-
-				break;
-			case Settings:
-
-				Set->update(time, window, clock);
-				Set->DrawSettings(window);
-				if (Set->IfExitSet(window) == 2)
-				{
-					Statements = MMenu;
-					Menu = new MainM(cox, coy, SPlayer);
-					delete Set;
-				}
-				break;
-			case LoadGame:
-				LM->Update(time, window);
-				if (LM->MenuSelect() == 4)
-				{
-					delete LM;
-					Menu = new MainM(cox, coy, SPlayer);
-					Statements = MMenu;
-				}
-				break;
-			}
-
-			window.display();
-		}
-		ExitProcess(0);
-		PostQuitMessage(0);
+		string BasePath;
+		if (argv == 2) BasePath = argc[0];
+		else BasePath = "./vanilla";
+		MainGameClass::Game GameClass(BasePath); // Создаем основной класс игры
+		GameClass.StartDemnedGame(); // Запускает игру цикл обработки событий внутри игры
+		TestUpgradeConfig();
+		//LevelLogic::LevelMenager LM("./vanilla", 1);
+	}
+	catch (Exceptions::GameWantToExit &Ex) // Если требуеться выйти из игры то перехватываем исключение
+	{
+		SystemParametersInfo(SPI_SETMOUSESPEED, NULL, reinterpret_cast<void*>(speed), SPIF_UPDATEINIFILE | SPIF_SENDWININICHANGE);
+		Ex.ShowMessage();
+		ExitProcess(0); // Корректное завершение игры
 		return 0;
 	}
-	catch (char *str)
+	catch (Exceptions::SoundSystemError &Ex)
 	{
-		WriteLogFile(str);
-		std::cout << str << std::endl;
+		cout << "Ошибка при работе со звукми:" << Ex.Message << endl;
+		ExitProcess(0); // Корректное завершение игры
+		return 0;
 	}
-}
-
-
-void LoadVideoMode(int &x,int &y,sf::Uint32 &st)
-{
-	if (_access("videomode.txt", 0) == -1)
+	catch (Exceptions::ProcessingEnemyCriticalError &Ex)
 	{
-		x = 1280;
-		y = 720; 
-		return;
+		cout << Ex.Message << endl;
+		ExitProcess(0);
+		return 0;
 	}
-	std::ifstream vidstream;
-	vidstream.open("videomode.txt");
-	int mode = 0;
-	vidstream >> mode;
-	if (mode == 2) st = sf::Style::Fullscreen;
-	else  st = sf::Style::Default;
-	vidstream >> x;
-	vidstream >> y;
-	vidstream.close();
+	catch (Exceptions::LevelMenagerReadError &Ex)
+	{
+		cout << Ex.Message << endl;
+		ExitProcess(0);
+		return 0;
+	}
+	catch (Exceptions::LevelMenagerCreateError &Ex)
+	{
+		cout << Ex.Message << endl;
+		ExitProcess(0);
+		return 0;
+	}
+	return 0;
 }

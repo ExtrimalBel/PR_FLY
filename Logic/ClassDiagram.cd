@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Exceptions::BaseException" Collapsed="true">
+    <Position X="7.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAAAAAAAAAAAAAIAAAgQAAAAAAAAIAAAAAA=</HashCode>
+      <FileName>ExceptionsDefenitions.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Exceptions::LevelReadError" Collapsed="true">
+    <Position X="5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAA=</HashCode>
+      <FileName>ExceptionsDefenitions.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Exceptions::WrongMenuType" Collapsed="true">
+    <Position X="11.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ExceptionsDefenitions.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Exceptions::BossConfigReadError" Collapsed="true">
+    <Position X="0.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAA=</HashCode>
+      <FileName>ExceptionsDefenitions.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Exceptions::SettingsClose" Collapsed="true">
+    <Position X="7.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>ExceptionsDefenitions.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Exceptions::ThisIsALastLevel" Collapsed="true">
+    <Position X="14" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ExceptionsDefenitions.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Exceptions::LevelMenagerCreateError" Collapsed="true">
+    <Position X="2.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ExceptionsDefenitions.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Exceptions::LevelMenagerReadError" Collapsed="true">
+    <Position X="9.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAA=</HashCode>
+      <FileName>ExceptionsDefenitions.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

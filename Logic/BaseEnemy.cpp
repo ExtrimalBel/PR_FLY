@@ -1,64 +1,113 @@
-#include "stdafx.h"
-#include "BaseForEnemys.h"
-#include <iostream>
-namespace Enemys
+﻿#include "stdafx.h"
+#include "BaseEnemy.h"
+
+namespace Ships
 {
-	BaseEnemy::BaseEnemy(double cx, double cy, int health, double gunspeed, double speed, double demage)
+	BaseEnemy::BaseEnemy(string BasePath, double cox, double coy, BaseEnemyState &EnemyState, SoundControl::SoundControlStruct &SndControl) : Health(EnemyState.Health) // Â äîïîëíåíèå èíèöèàëèçèðóåì ññûëêó íà Health
 	{
-		this->demage = demage; // Just for debug
-		this->speed = speed;
-		this->life = health;
-		this->gunspeed = gunspeed;
-		lasshot.restart();
-		for_delete = false;
-		cox = cx;
-		coy = cy;
-		//copy(st.begin(), st.end() - 1, coordst.begin());
-	
+		this->EnemyState = EnemyState;
+		this->Health = EnemyState.Health;
+		this->cox = cox;
+		this->coy = coy;
+		this->BasePath = BasePath;
+		this->ForDelete = false;
+		this->GunClock.restart();
+		this->SndControl = SndControl;
+		this->AnimClock.restart();
+		this->CurrentFrame = 0;
+		CurrentFrame = 0;
+		LoadEnemyImg();
 	}
 
-	float BaseEnemy::GetTimeFromLastShot()
+	bool BaseEnemy::IfEnemyShot()
 	{
-		return lasshot.getElapsedTime().asSeconds();
-
-	}
-
-	void BaseEnemy::ResetClock()
-	{
-		lasshot.restart();
-	}
-
-	sf::Vector2f BaseEnemy::GetPostion()
-	{
-		sf::Vector2f pos = enemy.getPosition();
-		//	pos.y -= enemy.getSize().y / 2;
-		return pos;
-	}
-
-	void BaseEnemy::RemoveHealth(int health)
-	{
-		life -= health;
-	}
-	bool BaseEnemy::IsShot()
-	{
-		if (gunspeed == 0) return false;
-		if (lasshot.getElapsedTime().asSeconds() > gunspeed)
+		if (EnemyState.GunSpeed <= 0) return false;
+		if (DeathAnim) return false;
+		if (GunClock.getElapsedTime().asSeconds() > EnemyState.GunSpeed)
 		{
-			lasshot.restart();
+			//SndControl.Playsnd(0, false);
+			GunClock.restart();
 			return true;
+		}
+		else return false;
+	}
+
+	void BaseEnemy::LoadEnemyImg()
+	{
+		EnemyImg.loadFromFile(BasePath + "/" + EnemyState.EnemyImgPath);
+		EnemyText.loadFromImage(EnemyImg);
+		EnemyText.setSmooth(true);
+		EnemySprite.setTexture(EnemyText);
+		FloatRect SpriteParams = EnemySprite.getGlobalBounds();
+		EnemySprite.setScale(cox, coy);
+		sf::Vector2f CenterPos(EnemyText.getSize() );
+		CenterPos.x /= 2 * this->EnemyState.FrameCount;
+		CenterPos.y /= 2;
+		EnemySprite.setOrigin(CenterPos);
+		int W = SpriteParams.width / EnemyState.FrameCount;
+		EnemySprite.setTextureRect(IntRect(0,0,W,SpriteParams.height));
+		DeathAnim = false;
+		
+		
+	}
+
+	void BaseEnemy::Draw(RenderWindow &window)
+	{
+		window.draw(EnemySprite);
+	}
+
+
+	void BaseEnemyState::InitStats(int Health, double GunSpeed, double GunDemage, double Speed, vector<pair<int, int>> &VectorWithCoord, string EnemyImgPath)
+	{
+		this->GunDemage = GunDemage;
+		this->GunSpeed = GunSpeed;
+		this->Speed = Speed;
+		copy(VectorWithCoord.begin(), VectorWithCoord.end(), this->MovingCoordinates.begin());
+		this->EnemyImgPath = EnemyImgPath;
+		this->Health = Health;
+	}
+
+	void BaseEnemy::ProcessEnemyAnim()
+	{
+		int TotalFrameCount = 0;
+		double FrameTime = 0;
+		if (DeathAnim)
+		{
+			TotalFrameCount = EnemyState.DeathFrameCount;
+			FrameTime = EnemyState.DeathFrameTime;
 		}
 		else
 		{
-			return false;
+			TotalFrameCount = EnemyState.FrameCount;
+			FrameTime = EnemyState.DeathFrameTime;
+		}
+		FloatRect ShipParams = EnemySprite.getLocalBounds();
+		if (AnimClock.getElapsedTime().asSeconds() > FrameTime)
+		{
+			CurrentFrame++;
+			if (CurrentFrame >= TotalFrameCount && DeathAnim) ForDelete = true;
+			if (CurrentFrame >= TotalFrameCount) CurrentFrame = 0;
+			EnemySprite.setTextureRect(IntRect(ShipParams.width * CurrentFrame, 0, ShipParams.width, ShipParams.height));
+			AnimClock.restart();
 		}
 	}
-	
-	bool BaseEnemy::IsForDelete()
+
+	void BaseEnemy::Update(float time, RenderWindow &window)
 	{
-		if (life <= 0)
+		if (!DeathAnim && this->Health <= 0)
 		{
-			for_delete = true;
+			Vector2f PrevEnemyPosition = EnemySprite.getPosition();
+			EnemyText.loadFromFile(BasePath + "/" + EnemyState.DeathSprPath);
+			EnemySprite.setTexture(EnemyText);
+			EnemySprite.setScale(cox, coy);
+			EnemySprite.setTextureRect(IntRect(0,0,EnemyText.getSize().x / EnemyState.DeathFrameCount,EnemyText.getSize().y));
+			float NewCenterX = EnemyText.getSize().x / (EnemyState.DeathFrameCount * 2);
+			float NewCenterY = EnemyText.getSize().y / 2;
+			EnemySprite.setOrigin(NewCenterX, NewCenterY);
+			EnemySprite.setPosition(PrevEnemyPosition);
+			DeathAnim = true;
+			CurrentFrame = 0;
 		}
-		return for_delete;
+		ProcessEnemyAnim();
 	}
 }

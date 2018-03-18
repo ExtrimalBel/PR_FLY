@@ -1,0 +1,69 @@
+﻿Сборка начата 15.03.2018 21:41:20.
+     1>Проект "D:\College_Game_Level3\PR_FLY\Logic\Logic.vcxproj" в узле 2 (целевые объекты Build).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I..\SoundSystem /I"..\PR_FLY\SFML-2.4.2\include" /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _WINDOWS /D _USRDLL /D LOGIC_EXPORTS /D SFML_DYNAMIC /D NOMINMAX /D _WINDLL /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Release\Logic.pch" /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt GameField.cpp InterSects.cpp Level.cpp
+         GameField.cpp
+     1>d:\college_game_level3\pr_fly\logic\InterSects.h(60): warning C4244: -=: преобразование "double" в "int", возможна потеря данных
+     1>d:\college_game_level3\pr_fly\logic\InterSects.h(62): warning C4244: -=: преобразование "double" в "int", возможна потеря данных
+     1>d:\college_game_level3\pr_fly\logic\InterSects.h(74): warning C4244: -=: преобразование "double" в "int", возможна потеря данных
+     1>GameField.cpp(36): warning C4101: Ex: неиспользованная локальная переменная
+     1>GameField.cpp(53): warning C4101: Ex: неиспользованная локальная переменная
+     1>GameField.cpp(71): warning C4101: Ex: неиспользованная локальная переменная
+     1>GameField.cpp(85): warning C4101: Ex: неиспользованная локальная переменная
+     1>GameField.cpp(112): warning C4101: Ex: неиспользованная локальная переменная
+     1>GameField.cpp(134): warning C4101: ex: неиспользованная локальная переменная
+         InterSects.cpp
+     1>d:\college_game_level3\pr_fly\logic\InterSects.h(60): warning C4244: -=: преобразование "double" в "int", возможна потеря данных
+     1>d:\college_game_level3\pr_fly\logic\InterSects.h(62): warning C4244: -=: преобразование "double" в "int", возможна потеря данных
+     1>d:\college_game_level3\pr_fly\logic\InterSects.h(74): warning C4244: -=: преобразование "double" в "int", возможна потеря данных
+         Level.cpp
+     1>d:\college_game_level3\pr_fly\logic\InterSects.h(60): warning C4244: -=: преобразование "double" в "int", возможна потеря данных
+     1>d:\college_game_level3\pr_fly\logic\InterSects.h(62): warning C4244: -=: преобразование "double" в "int", возможна потеря данных
+     1>d:\college_game_level3\pr_fly\logic\InterSects.h(74): warning C4244: -=: преобразование "double" в "int", возможна потеря данных
+     1>Level.cpp(23): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
+     1>Level.cpp(27): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
+     1>Level.cpp(34): warning C4996: 'sf::Text::setColor': объявлен deprecate
+                 D:\College_Game_Level3\PR_FLY\PR_FLY\SFML-2.4.2\include\SFML/Graphics/Text.hpp(177): см. объявление "sf::Text::setColor"
+     1>Level.cpp(36): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
+     1>Level.cpp(38): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
+     1>Level.cpp(42): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
+     1>Level.cpp(43): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\College_Game_Level3\PR_FLY\Release\Logic.dll" /INCREMENTAL:NO /NOLOGO /LIBPATH:"..\PR_FLY\SFML-2.4.2\lib" "sfml-audio.lib" openal32.lib flac.lib vorbisenc.lib vorbisfile.lib vorbis.lib ogg.lib "sfml-graphics.lib" "sfml-window.lib" "sfml-system.lib" "sfml-main.lib" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\College_Game_Level3\PR_FLY\Release\Logic.pdb" /SUBSYSTEM:WINDOWS /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\College_Game_Level3\PR_FLY\Release\Logic.lib" /MACHINE:X86 /SAFESEH /DLL Release\BaseEnemy.obj
+         Release\BaseMenu.obj
+         Release\Bullet.obj
+         Release\GameDifficulty.obj
+         Release\GameField.obj
+         Release\dllmain.obj
+         Release\Hud.obj
+         Release\InterSects.obj
+         Release\Level.obj
+         Release\LevelMenager.obj
+         Release\LoadGame.obj
+         Release\Logic.obj
+         Release\MainMenu.obj
+         Release\MovingEnemy.obj
+         Release\PauseMenu.obj
+         Release\PixelPerfect.obj
+         Release\Player.obj
+         Release\PlayerSaveSlotDef.obj
+         Release\RandomMovingEnemy.obj
+         Release\SaveGame.obj
+         Release\SetOfEnemy.obj
+         Release\Settings.obj
+         Release\StayEnemy.obj
+         Release\stdafx.obj
+         Release\tinyxml2.obj
+         Release\UpgradeClass.obj
+         Release\UpgradeMenager.obj
+         D:\College_Game_Level3\PR_FLY\Release\SoundSystem.lib
+            Создается библиотека D:\College_Game_Level3\PR_FLY\Release\Logic.lib и объект D:\College_Game_Level3\PR_FLY\Release\Logic.exp
+         Создание кода
+     1>d:\college_game_level3\pr_fly\logic\chronometer.hpp(172): warning C4715: sftools::Chronometer::getElapsedTime: значение возвращается не при всех путях выполнения
+         Создание кода завершено
+         Logic.vcxproj -> D:\College_Game_Level3\PR_FLY\Release\Logic.dll
+     1>Сборка проекта "D:\College_Game_Level3\PR_FLY\Logic\Logic.vcxproj" завершена (целевые объекты Build).
+
+Сборка успешно завершена.
+
+Затраченное время: 00:00:04.32

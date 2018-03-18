@@ -1,105 +1,95 @@
 #include "stdafx.h"
 #include "Hud.h"
-#include <iostream>
-Hud::Hud(double xco,double yco)
-{
-	life = 100;
-	cox = xco;
-	coy = yco;
-	std::cout << cox << coy;
-	BackHudimg.loadFromFile("./img/game/uhud.png");
-	BackHudtex.loadFromImage(BackHudimg);
-	BackHud.setTexture(&BackHudtex);
-	//BackHud.setScale(sf::Vector2f(cox,coy));
-	BackHud.setPosition(sf::Vector2f(0, 0));
-	BackHud.setSize(sf::Vector2f(1920 * cox, 100 * coy));
-	// Инициализирую каринку жизней
-	lifeimg.loadFromFile("./img/game/lifeimg.png");
-	lifetex.loadFromImage(lifeimg);
-	lifer.setTexture(&lifetex);
-	lifer.setSize(sf::Vector2f(720, 30));
-	lifer.setScale(cox, coy);
-	lifer.setPosition(0, 0);
-	lifedel.setFillColor(sf::Color::Black);
-	lifedel.setPosition(720 * cox, 0);
-	lifedel.setSize(sf::Vector2f(0, 30));
-	// Инициализирую картинку топлива
-	fuelimg.loadFromFile("./img/game/fuelimg.png");
-	fueltex.loadFromImage(fuelimg);
-	fuelr.setTexture(&fueltex);
-	fuelr.setSize(sf::Vector2f(640, 30));
-	fuelr.setScale(cox, coy);
-	fuelr.setPosition(0, 32 * coy);
-	fuelddel.setFillColor(sf::Color::Black);
-	fuelddel.setPosition(640 * cox, 32 * coy);
-	fuelddel.setSize(sf::Vector2f(0, 30));
-	// Инициализирую текст
-	textfont.loadFromFile("./CyrilicOld.TTF");
-	// Инициализация текста результата
-	ScoreText.setFont(textfont);
-	ScoreText.setCharacterSize(48);
-	ScoreText.setScale(cox, coy);
-	ScoreText.setPosition(1600 * cox, 10 * coy);
-	ScoreText.setFillColor(sf::Color::Red);
-	// Инициализирую счётчик ракет
-	RocketsCount.setFont(textfont);
-	RocketsCount.setCharacterSize(48);
-	RocketsCount.setScale(cox, coy);
-	RocketsCount.setPosition(1300 * cox, 10 * coy);
-	RocketsCount.setFillColor(sf::Color::Red);
-	// Загружаю строку в результат
-	char buff[10];
-	score = 0;
-	itoa(score, buff, 10);
-	sf::String str = "Очки";
-	str += buff;
-	ScoreText.setString(str);
-	// Загружаю очки в рокетыный счётчик))
-	rockets = 0;
-	itoa(rockets, buff, 10);
-	sf::String str2 = "Рокеты ";
-	str += buff;
-	RocketsCount.setString(str2);
-}
 
-void Hud::UpdateHud(int lifecor,int fuelcor,int scorecor,int corrockets)
+namespace LevelLogic
 {
-	life = lifecor;
-	int x = 100 - lifecor;
-	int sizex = (x * 720) / 100;
-	int posx = 720 - sizex;
-	sizex *= cox;
-	posx *= cox;
-	lifedel.setPosition(sf::Vector2f(posx, 0));
-	lifedel.setSize(sf::Vector2f(sizex, 30 * coy));
-	fuel = fuelcor;
-	x = 100 - fuelcor;
-	sizex = (x * 640) / 100;
-	posx = 640 - sizex;
-	sizex *= cox;
-	posx *= cox;
-	fuelddel.setPosition(sf::Vector2f(posx, 32 * coy));
-	fuelddel.setSize(sf::Vector2f(sizex, 30 * coy));
-	score = scorecor;
-	char buff[10];
-	itoa(score, buff, 10);
-	sf::String str = "Очки";
-	str += buff;
-	ScoreText.setString(str);
-	rockets = corrockets;
-	itoa(rockets, buff, 10);
-	sf::String str2 = "Рокеты ";
-	str2 += buff;
-	RocketsCount.setString(str2);
-}
+	GameHud::GameHud(string BasePath, double cox, double coy, string LevelName)
+	{
+		this->cox = cox;
+		this->coy = coy;
+		this->BasePath = BasePath;
+		// SetUpText
+		GameFont.loadFromFile(BasePath + "/menu/font.ttf");
+		LevelText.setFont(GameFont);
+		LevelText.setCharacterSize(32U);
+		LevelText.setScale(cox, coy);
+		LevelText.setPosition(sf::Vector2f(1600 * cox, 0 * coy));
+		LevelText.setString("Уровень" + LevelName);
+		RocketsText.setFont(GameFont);
+		RocketsText.setCharacterSize(32U);
+		RocketsText.setScale(cox, coy);
+		RocketsText.setPosition(sf::Vector2f(1300 * cox, 0 * coy));
+		RocketsText.setString("Рокеты");
+		RocketsText.setColor(Color::Red);
+		LevelText.setColor(Color::Red);
+		BackImage.loadFromFile(BasePath + "\\Images\\BackImages\\BackHud.png");
+		BackImage.createMaskFromColor(Color::White);
+		BackTex.loadFromImage(BackImage);
+		BackTex.setSmooth(true);
+		BackSpr.setTexture(BackTex);
+		BackSpr.setScale(cox, coy);
+		BackLifeTex.loadFromFile(BasePath + "/Images/Hud/backlife.png");
+		FrontLifeTex.loadFromFile(BasePath + "/Images/Hud/frontlife.png");
+		BackLifeSpr.setTexture(BackLifeTex);
+		FrontLifeSpr.setTexture(FrontLifeTex);
+		BackLifeSpr.setScale(static_cast<float>(cox), static_cast<float>(coy));
+		FrontLifeSpr.setScale(static_cast<float>(cox), static_cast<float>(coy));
+		BackLifeSpr.setPosition(sf::Vector2f(10 * cox,10 * coy));
+		FrontLifeSpr.setPosition(sf::Vector2f(10 * cox, 10 * coy));
+		HealthText.setFont(GameFont);
+		HealthText.setString("Здоровье");
+		HealthText.setScale(static_cast<float>(cox), static_cast<float>(coy));
+		HealthText.setPosition(sf::Vector2f(420 * cox, 15 * coy));
+		HealthText.setFillColor(Color::Red);
+		CashText.setFont(GameFont);
+		CashText.setString("Деньги");
+		CashText.setScale(static_cast<float>(cox), static_cast<float>(coy));
+		CashText.setFillColor(Color::Red);
+		CashText.setPosition(Vector2f(1000 * cox, 0 * coy));
+		CashText.setCharacterSize(32U);
+	}
 
-void Hud::Draw(sf::RenderWindow &window)
-{
-	window.draw(BackHud);
-	window.draw(lifer);
-	window.draw(lifedel);
-	window.draw(fuelr);
-	window.draw(fuelddel);
-	window.draw(ScoreText);
-	window.draw(RocketsCount);
+	void GameHud::Draw(RenderWindow &window)
+	{
+		window.draw(BackSpr);
+		window.draw(RocketsText);
+		window.draw(LevelText);
+		window.draw(BackLifeSpr);
+		window.draw(FrontLifeSpr);
+		window.draw(HealthText);
+		window.draw(CashText);
+	}
+
+	void GameHud::Update(RenderWindow &window)
+	{
+		Draw(window);
+		UpdateText();
+		UpdateHealthBar();
+	}
+
+	void GameHud::UpdateText()
+	{
+		stringstream ss;
+		ss << "Ракеты "<< Rockets;
+		RocketsText.setString(ss.str());
+		ss.str(string());
+		ss << "Деньги " << Cash;
+		CashText.setString(ss.str());
+
+	}
+
+	void GameHud::SetParams(int Health, int Rockets,int Cash)
+	{
+		this->Cash = Cash;
+		this->Health = Health;
+		this->Rockets = Rockets;
+	}
+
+	void GameHud::UpdateHealthBar()
+	{
+		int posx = Health * 400 / 100;
+		//FrontLifeSpr.setPosition(sf::Vector2f(posx, 0));
+		FrontLifeSpr.setTextureRect(sf::IntRect(0,0,posx, 50));
+		//cout << posx << endl;
+	}
 }

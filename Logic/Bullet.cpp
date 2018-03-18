@@ -1,7 +1,7 @@
 #include "stdafx.h"
 #include "Bullet.h"
 
-Bullet::Bullet(sf::Vector2f position, double cx, double cy, char *image,int dir,float speed,double demage)
+Bullet::Bullet(sf::Vector2f position, double cx, double cy, const char *image,int dir,float speed,double demage)
 {
 	// Устанавливаю параметры пулю в том числе загружаю текстуру пули
 	this->demage = demage;

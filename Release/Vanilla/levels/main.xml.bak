@@ -1,0 +1,10 @@
+<levels>
+	<level Name="FirstLevel">
+		<BackGroundImage>Images/BackImages/level1back.png</BackGroundImage>
+		<BackMusic>8</BackMusic>
+		<EnemyPath>level1/pathTo1Enemy.xml</EnemyPath>
+		<SplashPath>Images/SplashPath.jpg</SplashPath>
+		<EndSplash>Images/EndSplash.jpg</EndSplash>
+		<StartRockets>2</StartRockets>
+	</level>
+</levels>

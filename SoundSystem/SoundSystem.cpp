@@ -6,126 +6,173 @@
 
 
 // Пример экспортированной переменной
-
 namespace SoundSystem
 {
-	SoundPlayer::SoundPlayer()
+
+
+	SoundSystem::SoundSystem(string BasePath, string PathToSoundConfig)
 	{
-		type = State::MainMenu;
-		Inicialize();
+		this->BasePath = BasePath;
+		this->PathToSoundConfig = PathToSoundConfig;
+		CreateMusicData(PathToSoundConfig);
+		CurrentVolume = 100;
+		MuteState = false;
 	}
-int	SoundPlayer::Inicialize()
+
+	void SoundSystem::CreateMusicData(string PathToSoundConfig)
 	{
-		switch (type)
+		vector<SoundData> MassOfSound;
+		ReadDataMusicDataFromFile(PathToSoundConfig, MassOfSound);
+		SoundCount = MassOfSound.size(); // Кол-во прочитанных записей о звуках
+		for (int i = 0; i < SoundCount; i++)
 		{
-		case State::MainMenu:
-			InicializeMainMenu();
-			break;
-		default:
-			return -1;
-			break;
+			pair<void*, int> temppair;
+			ifstream tempfile(BasePath + "/" + MassOfSound[i].Name, ios::binary | ios::ate);
+			if (!(tempfile.is_open())) throw Exceptions::SoundSystemError("Ошибка при инициализации звуковой системы");
+			temppair.second = static_cast<int>(tempfile.tellg()); // Считываем размер файла
+			temppair.first = (void*)new char[temppair.second];
+			tempfile.seekg(0, ios::beg);
+			tempfile.read((char*)temppair.first, temppair.second);
+			SoundSources.push_back(temppair);
 		}
-		return 0;
 	}
 
-int SoundSystem::SoundPlayer::ChangeType(State type)
-{
-	this->type = type;
-	Inicialize();
-	return 0;
-}
-int SoundPlayer::ChangeSoundState()
-{
-	switch (type)
+
+
+	void SoundSystem::ReadDataMusicDataFromFile(string PathToSoundConfig, vector<SoundData> &Data) // Читает информацию о звуках из xml конфига
 	{
-	case State::MainMenu:
-		if (MainM->select.getStatus() == sf::Sound::Status::Playing)
+		tinyxml2::XMLDocument xmldoc;
+		string FilePath = BasePath;
+		FilePath += "/";
+		FilePath += PathToSoundConfig;
+		xmldoc.LoadFile(FilePath.c_str());
+		if (xmldoc.ErrorID() != tinyxml2::XML_SUCCESS) throw Exceptions::SoundSystemError("невозможно открыть файл или файл поврежден");
+		tinyxml2::XMLNode *RootNode = xmldoc.FirstChildElement("sounds");
+		if (RootNode == NULL) throw Exceptions::SoundSystemError("Невозможно прочитать информацию о звуковых файлах");
+		tinyxml2::XMLElement *CurrentElenemt = RootNode->FirstChildElement("snd");
+		if (CurrentElenemt == NULL) throw Exceptions::SoundSystemError("Невозможно прочитать информацию о звуковых файлах");
+		int id = 0;
+		do
 		{
-			MainM->selectplay = true;
-		}
-		else MainM->selectplay = false;
-		break;
+			SoundData tempsnd;
+			tempsnd.id = id++;
+			tempsnd.Name = CurrentElenemt->GetText();
+			Data.push_back(tempsnd);
+			CurrentElenemt = CurrentElenemt->NextSiblingElement("snd");
+		} while (CurrentElenemt != NULL);
 	}
-	return 0;
-}
 
-int SoundPlayer::PlaySound(int id)
-{
-	ChangeSoundState();
-	switch (id)
+	void SoundSystem::StopMusic(int id)
 	{
-	case 1:
-		if (!(MainM->selectplay) && !MainM->onelement) MainM->select.play();
-		break;
-	case 2:
-		MainM->click.play();
-		break;
-	case 3:
-		if (!(MainM->back_music.getStatus() == sf::Music::Playing))
+		auto it = Musics.begin();
+		do
 		{
-			MainM->back_music.play();
+			if (it->id == id)
+			{
+				it->snd->stop();
+				delete it->snd;
+				Musics.erase(it);
+				break;
+			}
+			it++;
+		} while (it != Musics.end());
+	}
+	void SoundSystem::PlayMusic(int id, bool LoopState)
+	{
+		if (id < 0 || id >= SoundCount) throw Exceptions::SoundSystemError("Ид звукового файла неправильный");
+		SoundItem tempsnditem;
+		Musics.push_back(tempsnditem);
+
+		Musics[Musics.size() - 1].InitSound(id, SoundSources[id].first, SoundSources[id].second, LoopState);
+		if (!MuteState)
+		Musics[Musics.size() - 1].snd->setVolume(CurrentVolume);
+		else Musics[Musics.size() - 1].snd->setVolume(0);
+	}
+
+	void SoundSystem::PauseMusic(int id)
+	{
+		for (unsigned int i = 0; i < Musics.size(); i++)
+		{
+			if (Musics[i].id == id)
+			{
+				Musics[i].snd->pause();
+			}
 		}
-
 	}
-	return 0;
-}
 
-int SoundPlayer::InicializeMainMenu()
-{
-	// Inicializing select sound
-	MainM = new MainMSound;
-	MainM->selectbuf.loadFromFile("./sound/select.wav");
-	MainM->select.setBuffer(MainM->selectbuf);
-	MainM->selectplay = false;
-	MainM->onelement = false;
-	//Inicializing click sound
-	MainM->clickbuf.loadFromFile("./sound/click.wav");
-	MainM->click.setBuffer(MainM->clickbuf);
-	// Inicializing back theme music
-	MainM->back_music.openFromFile("./sound/backmenu.ogg");
-	MainM->back_music.setLoop(true);
-	return 0;
-}
-
-void SoundPlayer::SetVolume(float volume)
-{
-	this->volume = volume;
-	UpdateVolume();
-}
-
-int SoundPlayer::UpdateVolume()
-{
-	switch (type)
+	int SoundSystem::GetNumberOfMusic()
 	{
-	case State::MainMenu:
-		UpdateVolMainM();
-		break;
-	default:
-		return -1;
-		break;
+		return SoundCount;
 	}
-}
 
-int SoundPlayer::UpdateVolMainM()
-{
-	MainM->select.setVolume(volume);
-	MainM->click.setVolume(volume);
-	MainM->back_music.setVolume(volume);
-	return 0;
-}
-
-SoundPlayer::~SoundPlayer()
-{
-	switch (type)
+	void SoundSystem::ResumeSound(int id)
 	{
-	case State::MainMenu:
-		MainM->back_music.stop();
-		MainM->click.stop();
-		break;
+		for (unsigned int i = 0; i < Musics.size(); i++)
+		{
+			if (Musics[i].id == id)
+			{
+				Musics[i].snd->play();
+			}
+		}
 	}
-}
 
+	void SoundSystem::Update()
+	{
+		// Простой сборщик мусора
+		// Удаляет объекты если звуковой файл остановлен и он не должен проигрыаться циклически
+		for (unsigned int i = 0; i < Musics.size(); i++)
+		{
+			if (Musics[i].snd->getStatus() == sf::Music::Stopped && !Musics[i].snd->getLoop())
+			{
+				Musics.erase(Musics.begin() + i);
+				if (i != 0) i--;
+			}
+		}
+	}
 
-}
+	void SoundSystem::Mute()
+	{
+		MuteState = true;
+		for (unsigned int i = 0; i < Musics.size(); i++)
+		{
+			Musics[i].snd->setVolume(0);
+		}
+	}
 
+	void SoundSystem::UnMute()
+	{
+		MuteState = false;
+		for (unsigned int i = 0; i < Musics.size(); i++)
+		{
+			Musics[i].snd->setVolume(CurrentVolume);
+		}
+	}
 
+	void SoundSystem::SetVolume(float value)
+	{
+		CurrentVolume = value;
+		if (MuteState) return;
+		UnMute();
+	}
+
+	float SoundSystem::ReturnCurrentVolume()
+	{
+		return CurrentVolume;
+	}
+
+	SoundSystem::~SoundSystem()
+	{
+		auto MusicIt = Musics.begin();
+		// Удаляем все звуковые ноды
+		for (; MusicIt < Musics.end(); MusicIt++)
+		{
+			MusicIt->snd->stop();
+			delete MusicIt->snd;
+		}
+		auto DataIt = SoundSources.begin();
+		for (; DataIt < SoundSources.end(); DataIt++)
+		{
+			delete DataIt->first;
+		}
+	}
+ }

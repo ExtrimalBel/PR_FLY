@@ -1,0 +1,135 @@
+<Enemys>
+	<StayEnemy>
+	<EnemyImg>Images/Enemys/fenemy.png</EnemyImg>
+		<GunSpeed>5</GunSpeed>
+		<GunDemage>3</GunDemage>
+		<BulletSpeed>2</BulletSpeed>
+		<Speed>10</Speed>
+		<Health>10</Health>
+		<SpawnTime>0</SpawnTime>
+		<Reward>10</Reward>
+		<FrameCount>1</FrameCount>
+		<FrameTime>0</FrameTime>
+		<DeathFrameCount>13</DeathFrameCount>
+		<DeathFrameTime>0.1</DeathFrameTime>
+		<DeathAnimSpr>deathanim.png</DeathAnimSpr>
+		<BulletPath>bullet.png</BulletPath>
+		<Coord X="1200" Y="400"></Coord>
+		<Coord X="800" Y="400"></Coord>
+	</StayEnemy>
+	<CircleMovingEnemy>
+	<EnemyImg>Images/Enemys/fenemy.png</EnemyImg>
+		<GunSpeed>5</GunSpeed>
+		<GunDemage>3</GunDemage>
+		<BulletSpeed>2</BulletSpeed>
+		<Speed>10</Speed>
+		<Health>10</Health>
+		<SpawnTime>0</SpawnTime>
+		<Reward>10</Reward>
+		<FrameCount>1</FrameCount>
+		<FrameTime>0</FrameTime>
+		<DeathFrameCount>13</DeathFrameCount>
+		<DeathFrameTime>0.1</DeathFrameTime>
+		<DeathAnimSpr>deathanim.png</DeathAnimSpr>
+		<BulletPath>bullet.png</BulletPath>
+		<Coord X="0" Y="0"></Coord>
+		<Coord X="200" Y="200"></Coord>
+		<Coord X="200" Y="600"></Coord>
+		<Coord X="600" Y="600"></Coord>
+		<Coord X="600" Y="200"></Coord>
+	</CircleMovingEnemy>
+	<StayEnemy>
+	<EnemyImg>Images/Enemys/fenemy.png</EnemyImg>
+		<GunSpeed>5</GunSpeed>
+		<GunDemage>3</GunDemage>
+		<BulletSpeed>2</BulletSpeed>
+		<Speed>10</Speed>
+		<Health>10</Health>
+		<SpawnTime>0</SpawnTime>
+		<Reward>10</Reward>
+		<FrameCount>1</FrameCount>
+		<FrameTime>0</FrameTime>
+		<DeathFrameCount>13</DeathFrameCount>
+		<DeathFrameTime>0.1</DeathFrameTime>
+		<DeathAnimSpr>deathanim.png</DeathAnimSpr>
+		<BulletPath>bullet.png</BulletPath>
+		<Coord X="1200" Y="800"></Coord>
+		<Coord X="800" Y="800"></Coord>
+	</StayEnemy>
+	<SetMovingEnemy>
+		<EnemyImg>Images/Enemys/senemy.png</EnemyImg>
+		<GunSpeed>-1</GunSpeed>
+		<GunDemage>3</GunDemage>
+		<BulletSpeed>-1</BulletSpeed>
+		<Speed>10</Speed>
+		<Health>10</Health>
+		<SpawnTime>0</SpawnTime>
+		<Reward>10</Reward>
+		<FrameCount>1</FrameCount>
+		<FrameTime>0</FrameTime>
+		<Count>5</Count>
+		<Delay>2</Delay>
+		<DeathFrameCount>13</DeathFrameCount>
+		<DeathFrameTime>0.1</DeathFrameTime>
+		<DeathAnimSpr>deathanim.png</DeathAnimSpr>
+		<BulletPath>bullet.png</BulletPath>
+		<Coord X="2000" Y="270"></Coord>
+		<Coord X="-40" Y="270"></Coord>
+	</SetMovingEnemy>
+	<SetMovingEnemy>
+		<EnemyImg>Images/Enemys/senemy.png</EnemyImg>
+		<GunSpeed>-1</GunSpeed>
+		<GunDemage>3</GunDemage>
+		<BulletSpeed>-1</BulletSpeed>
+		<Speed>10</Speed>
+		<Health>10</Health>
+		<SpawnTime>0</SpawnTime>
+		<Reward>10</Reward>
+		<FrameCount>1</FrameCount>
+		<FrameTime>0</FrameTime>
+		<Count>5</Count>
+		<Delay>2</Delay>
+		<DeathFrameCount>13</DeathFrameCount>
+		<DeathFrameTime>0.1</DeathFrameTime>
+		<DeathAnimSpr>deathanim.png</DeathAnimSpr>
+		<BulletPath>bullet.png</BulletPath>
+		<Coord X="2000" Y="810"></Coord>
+		<Coord X="-40" Y="810"></Coord>
+	</SetMovingEnemy>
+	<MovingEnemy>
+	<EnemyImg>Images/Enemys/fenemy.png</EnemyImg>
+		<GunSpeed>5</GunSpeed>
+		<GunDemage>3</GunDemage>
+		<BulletSpeed>2</BulletSpeed>
+		<Speed>10</Speed>
+		<Health>10</Health>
+		<SpawnTime>7</SpawnTime>
+		<Reward>10</Reward>
+		<FrameCount>1</FrameCount>
+		<FrameTime>0</FrameTime>
+		<DeathFrameCount>13</DeathFrameCount>
+		<DeathFrameTime>0.1</DeathFrameTime>
+		<DeathAnimSpr>deathanim.png</DeathAnimSpr>
+		<BulletPath>bullet.png</BulletPath>
+		<Coord X="1920" Y="0"></Coord>
+		<Coord X="-20" Y="1080"></Coord>
+	</MovingEnemy>
+	<MovingEnemy>
+	<EnemyImg>Images/Enemys/fenemy.png</EnemyImg>
+		<GunSpeed>5</GunSpeed>
+		<GunDemage>3</GunDemage>
+		<BulletSpeed>2</BulletSpeed>
+		<Speed>10</Speed>
+		<Health>10</Health>
+		<SpawnTime>7</SpawnTime>
+		<Reward>10</Reward>
+		<FrameCount>1</FrameCount>
+		<FrameTime>0</FrameTime>
+		<DeathFrameCount>13</DeathFrameCount>
+		<DeathFrameTime>0.1</DeathFrameTime>
+		<BulletPath>bullet.png</BulletPath>
+		<DeathAnimSpr>deathanim.png</DeathAnimSpr>
+		<Coord X="-20" Y="1080"></Coord>
+		<Coord X="1920" Y="0"></Coord>
+	</MovingEnemy>
+</Enemys>

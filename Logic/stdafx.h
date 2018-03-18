@@ -19,8 +19,8 @@
 
 // TODO: Установите здесь ссылки на дополнительные заголовки, требующиеся для программы
 #include <algorithm>
-
+#include <SoundControl.h>
 #include "PixelPerfect.h"
 #include "ExceptionsDefenitions.hpp"
-
+#include <SoundControl.h>
 LOGIC_API void WriteLogFile(const char* szString);

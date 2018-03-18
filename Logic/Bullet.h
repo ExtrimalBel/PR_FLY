@@ -10,9 +10,10 @@ class Bullet
 	int direction; // Направление 1 - право 2 - лево
 	double speed; // Скорость пули
 	double demage; // Урон пули
-	bool Is_For_Delete = false;
+	
 public:
-	Bullet(sf::Vector2f position, double cx, double cy, char *image, int dir, float speed, double demage);
+	bool Is_For_Delete = false;
+	Bullet(sf::Vector2f position, double cx, double cy, const char *image, int dir, float speed, double demage);
 	Bullet(sf::Vector2f position, double cx, double cy, sf::Texture &text, int dir, float speed, double demage);
 	void Bullet::Move(float time);
 	void Draw(sf::RenderWindow &window) { window.draw(bulletrect); }

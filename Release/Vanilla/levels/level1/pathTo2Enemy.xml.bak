@@ -1,0 +1,16 @@
+<Enemys>
+	<SetMovingEnemy>
+		<EnemyImg>enemy.png</EnemyImg>
+		<GunSpeed>5</GunSpeed>
+		<GunDemage>1</GunDemage>
+		<BulletSpeed>2</BulletSpeed>
+		<Speed>10</Speed>
+		<Health>10</Health>
+		<SpawnTime>4</SpawnTime>
+		<Count>10</Count>
+		<Delay>3</Delay>
+		<BulletPath>bullet.png</BulletPath>
+		<Coord X="500" Y="0"></Coord>
+		<Coord X="500" Y="1080"></Coord>
+	</SetMovingEnemy>
+</Enemys>

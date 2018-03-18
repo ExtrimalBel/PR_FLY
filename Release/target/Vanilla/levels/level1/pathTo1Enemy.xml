@@ -1,0 +1,96 @@
+<Enemys>
+	<SetMovingEnemy>
+		<EnemyImg>Images/Enemys/senemy.png</EnemyImg>
+		<GunSpeed>0</GunSpeed>
+		<GunDemage>3</GunDemage>
+		<BulletSpeed>2</BulletSpeed>
+		<Speed>10</Speed>
+		<Health>10</Health>
+		<SpawnTime>5</SpawnTime>
+		<Count>10</Count>
+		<Delay>4</Delay>
+		<Reward>10</Reward>
+		<FrameCount>1</FrameCount>
+		<FrameTime>0.2</FrameTime>
+		<BulletPath>bullet.png</BulletPath>
+		<Coord X="1000" Y="0"></Coord>
+		<Coord X="1000" Y="1080"></Coord>
+	</SetMovingEnemy>
+	<SetMovingEnemy>
+		<EnemyImg>Images/Enemys/senemy.png</EnemyImg>
+		<GunSpeed>0</GunSpeed>
+		<GunDemage>3</GunDemage>
+		<BulletSpeed>2</BulletSpeed>
+		<Speed>10</Speed>
+		<Health>10</Health>
+		<SpawnTime>5</SpawnTime>
+		<Count>10</Count>
+		<Delay>4</Delay>
+		<Reward>10</Reward>
+		<FrameCount>1</FrameCount>
+		<FrameTime>0.2</FrameTime>
+		<BulletPath>bullet.png</BulletPath>
+		<Coord X="1300" Y="0"></Coord>
+		<Coord X="1300" Y="1080"></Coord>
+	</SetMovingEnemy>
+	<StayEnemy>
+	<EnemyImg>Images/Enemys/fenemy.png</EnemyImg>
+		<GunSpeed>5</GunSpeed>
+		<GunDemage>3</GunDemage>
+		<BulletSpeed>2</BulletSpeed>
+		<Speed>10</Speed>
+		<Health>10</Health>
+		<SpawnTime>0</SpawnTime>
+		<Reward>10</Reward>
+		<FrameCount>1</FrameCount>
+		<FrameTime>0</FrameTime>
+		<BulletPath>bullet.png</BulletPath>
+		<Coord X="1200" Y="400"></Coord>
+		<Coord X="800" Y="400"></Coord>
+	</StayEnemy>
+	<StayEnemy>
+	<EnemyImg>Images/Enemys/fenemy.png</EnemyImg>
+		<GunSpeed>5</GunSpeed>
+		<GunDemage>3</GunDemage>
+		<BulletSpeed>2</BulletSpeed>
+		<Speed>10</Speed>
+		<Health>10</Health>
+		<SpawnTime>0</SpawnTime>
+		<Reward>10</Reward>
+		<FrameCount>1</FrameCount>
+		<FrameTime>0</FrameTime>
+		<BulletPath>bullet.png</BulletPath>
+		<Coord X="1200" Y="800"></Coord>
+		<Coord X="800" Y="800"></Coord>
+	</StayEnemy>
+	<MovingEnemy>
+	<EnemyImg>Images/Enemys/fenemy.png</EnemyImg>
+		<GunSpeed>5</GunSpeed>
+		<GunDemage>3</GunDemage>
+		<BulletSpeed>2</BulletSpeed>
+		<Speed>10</Speed>
+		<Health>10</Health>
+		<SpawnTime>7</SpawnTime>
+		<Reward>10</Reward>
+		<FrameCount>1</FrameCount>
+		<FrameTime>0</FrameTime>
+		<BulletPath>bullet.png</BulletPath>
+		<Coord X="1920" Y="0"></Coord>
+		<Coord X="-20" Y="1080"></Coord>
+	</MovingEnemy>
+	<MovingEnemy>
+	<EnemyImg>Images/Enemys/fenemy.png</EnemyImg>
+		<GunSpeed>5</GunSpeed>
+		<GunDemage>3</GunDemage>
+		<BulletSpeed>2</BulletSpeed>
+		<Speed>10</Speed>
+		<Health>10</Health>
+		<SpawnTime>7</SpawnTime>
+		<Reward>10</Reward>
+		<FrameCount>1</FrameCount>
+		<FrameTime>0</FrameTime>
+		<BulletPath>bullet.png</BulletPath>
+		<Coord X="-20" Y="1080"></Coord>
+		<Coord X="1920" Y="0"></Coord>
+	</MovingEnemy>
+</Enemys>

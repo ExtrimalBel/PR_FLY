@@ -1,74 +1,51 @@
 #include "stdafx.h"
-#include "BaseForEnemys.h"
-#include <iostream>
+#include "MovingEnemy.h"
 
-namespace Enemys
+namespace Ships
 {
-	MovingEnemy::MovingEnemy(double cx, double cy, int health, double gunspeed, coord *beginofcoord, double speed, double demage) : BaseEnemy(cx, cy, health, gunspeed, speed, demage)
+	MovingEnemy::MovingEnemy(string BasePath, double cox, double coy, BaseEnemyState &EnemyState, SoundControl::SoundControlStruct &SndControl) : BaseEnemy(BasePath, cox, coy, EnemyState,SndControl)
 	{
-		coordinates = beginofcoord;
-		enemy.setPosition(coordinates->x, coordinates->y);
-		coordinates = coordinates->next;
-		x2 = coordinates->x;
-		y2 = coordinates->y;
-		coord *currentcoord = coordinates;
-		while (currentcoord->x != -2000)
-		{
-			std::cout << "x" << currentcoord->x << " y " << currentcoord->y << std::endl;
-			currentcoord = currentcoord->next;
-		}
-		enemyimg.loadFromFile("./img/game/sprite.png");
-		enemytex.loadFromImage(enemyimg);
-		enemytex.setSmooth(true);
-
-
-		enemy.setTexture(enemytex);
-		//enemy.setSize(sf::Vector2f(enemyimg.getSize().x, enemyimg.getSize().y));
-		enemy.setScale(cox, coy);
-		//enemy.setFillColor(sf::Color::Red);
+		float StartX = EnemyState.MovingCoordinates[0].first;
+		float StartY = EnemyState.MovingCoordinates[0].second;
+		IdOfNextCoord = 1; // ѕо сути при первом вызове Move будут установлены следующа€ пара координат
+		EnemySprite.setPosition(sf::Vector2f(StartX * cox, StartY * coy));
+		NextCoord.first = EnemyState.MovingCoordinates[1].first;
+		NextCoord.second = EnemyState.MovingCoordinates[1].second;
+		
 	}
-
-	void MovingEnemy::Update(float time, sf::RenderWindow &window)
-	{
-		Move(time);
-		Draw(window);
-		if (life <= 0) for_delete = true;
-	}
-
-	void MovingEnemy::Draw(sf::RenderWindow &window)
-	{
-		window.draw(enemy);
-	}
-
 
 	void MovingEnemy::Move(float time)
 	{
-		if (x2 == -2000)
-		{
-			return;
-		}
-		int xn, yn;
-		int x1 = enemy.getPosition().x;
-		int y1 = enemy.getPosition().y;
-		sf::Vector2f direction = sf::Vector2f(x2, y2) - enemy.getPosition();
+		int x2 = NextCoord.first * cox;
+		int y2 = NextCoord.second * coy;
+		sf::Vector2f TargetPoint(x2, y2);
+		sf::Vector2f direction = TargetPoint - EnemySprite.getPosition();
 		float magnitude = std::sqrt((direction.x * direction.x) + (direction.y * direction.y));
 		sf::Vector2f unitVector(direction.x / magnitude, direction.y / magnitude);
-		unitVector = unitVector * time * (float)speed;
+		unitVector = unitVector * time * (float)EnemyState.Speed;
 		unitVector.x *= cox;
 		unitVector.y *= coy;
-		sf::Vector2f playerpos = enemy.getPosition();
+		sf::Vector2f playerpos = EnemySprite.getPosition();
 		playerpos = playerpos + unitVector;
-		enemy.setPosition(playerpos.x, playerpos.y);
+		EnemySprite.setPosition(playerpos.x, playerpos.y);
 		if ((x2 - 4 < playerpos.x && x2 + 4 > playerpos.x) && (y2 - 4 < playerpos.y && y2 + 4 > playerpos.y))
 		{
-			coordinates = coordinates->next;
-			x2 = coordinates->x;
-			y2 = coordinates->y;
-			if (x2 == -2000)
+			IdOfNextCoord++;
+			if (IdOfNextCoord >= EnemyState.MovingCoordinates.size())
 			{
-				for_delete = true;
+				ForDelete = true;
 				return;
 			}
+
+			NextCoord.first = EnemyState.MovingCoordinates[IdOfNextCoord].first;
+			NextCoord.second = EnemyState.MovingCoordinates[IdOfNextCoord].second;
 		}
 	}
+	void MovingEnemy::Update(float time,RenderWindow &window)
+	{
+		BaseEnemy::Update(time,window);
+		if(!DeathAnim)Move(time);
+		Draw(window);
+	}
+	
 }

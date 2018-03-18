@@ -1,48 +1,9 @@
-﻿Сборка начата 11.10.2017 18:31:48.
-     1>Проект "C:\Users\Vitalik\Source\Repos\PR_FLY\Logic\Logic.vcxproj" в узле 2 (целевые объекты Build).
-     1>ClCompile:
-         D:\Programs\VS_INSTALL\VC\bin\CL.exe /c /I..\SoundSystem /I..\PR_FLY /I..\PR_FLY\phfsnew /I"..\PR_FLY\SFML-2.4.2\include" /ZI /nologo /W3 /WX- /Od /Oy- /D NOMINMAX /D SFML_DYNAMIC /D WIN32 /D _DEBUG /D _WINDOWS /D _USRDLL /D LOGIC_EXPORTS /D _WINDLL /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\Logic.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Background_Class.cpp
-         Background_Class.cpp
-     1>c:\users\vitalik\source\repos\pr_fly\logic\background_class.cpp(16): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
-     1>c:\users\vitalik\source\repos\pr_fly\logic\background_class.cpp(22): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
-     1>c:\users\vitalik\source\repos\pr_fly\logic\background_class.cpp(26): warning C4244: *=: преобразование "double" в "int", возможна потеря данных
-     1>c:\users\vitalik\source\repos\pr_fly\logic\background_class.cpp(63): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
-     1>c:\users\vitalik\source\repos\pr_fly\logic\background_class.cpp(63): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
-     1>c:\users\vitalik\source\repos\pr_fly\logic\background_class.cpp(64): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
-     1>c:\users\vitalik\source\repos\pr_fly\logic\background_class.cpp(75): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
-     1>c:\users\vitalik\source\repos\pr_fly\logic\background_class.cpp(92): warning C4018: <: несоответствие типов со знаком и без знака
-     1>c:\users\vitalik\source\repos\pr_fly\logic\background_class.cpp(95): warning C4146: применение унарного минуса к типу без знака; результат оставлен без знака
-       Link:
-         D:\Programs\VS_INSTALL\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Vitalik\Source\Repos\PR_FLY\Debug\Logic.dll" /INCREMENTAL /NOLOGO /LIBPATH:..\Debug /LIBPATH:..\PR_FLY\phfsnew /LIBPATH:"..\PR_FLY\SFML-2.4.2\lib" "sfml-audio-d.lib" openal32.lib flac.lib vorbisenc.lib vorbisfile.lib vorbis.lib ogg.lib physfs.lib "sfml-graphics-d.lib" "sfml-window-d.lib" "sfml-system-d.lib" "sfml-main-d.lib" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Vitalik\Source\Repos\PR_FLY\Debug\Logic.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Vitalik\Source\Repos\PR_FLY\Debug\Logic.lib" /MACHINE:X86 /DLL Debug\Background_Class.obj
-         Debug\BaseEnemy.obj
-         Debug\BaseMenu.obj
-         Debug\Bullet.obj
-         Debug\ConfigReader.obj
-         Debug\Intersectsmenager.obj
-         Debug\Level.obj
-         Debug\LevelBoss.obj
-         Debug\LevelMenager.obj
-         Debug\dllmain.obj
-         Debug\Enemy.obj
-         Debug\GameField.obj
-         Debug\GameMenu.obj
-         Debug\Hud.obj
-         Debug\loadgameclass.obj
-         Debug\Logic.obj
-         Debug\MovingEnemy.obj
-         Debug\PixelPerfect.obj
-         Debug\Player_Class.obj
-         Debug\SetOfBullets.obj
-         Debug\setofenemy.obj
-         Debug\Settings.obj
-         Debug\StationarEnemy.obj
-         Debug\stdafx.obj
-         Debug\Things.obj
-         Debug\transitscreen.obj
-         C:\Users\Vitalik\Source\Repos\PR_FLY\Debug\SoundSystem.lib
-         Logic.vcxproj -> C:\Users\Vitalik\Source\Repos\PR_FLY\Debug\Logic.dll
-     1>Сборка проекта "C:\Users\Vitalik\Source\Repos\PR_FLY\Logic\Logic.vcxproj" завершена (целевые объекты Build).
+﻿Сборка начата 18.03.2018 9:34:39.
+     1>Проект "D:\GAME_COLLEGE_L3\PR\PR_FLY\Logic\Logic.vcxproj" в узле 2 (целевые объекты Build).
+     1>Link:
+         Logic.vcxproj -> D:\GAME_COLLEGE_L3\PR\PR_FLY\Debug\Logic.dll
+     1>Сборка проекта "D:\GAME_COLLEGE_L3\PR\PR_FLY\Logic\Logic.vcxproj" завершена (целевые объекты Build).
 
 Сборка успешно завершена.
 
-Затраченное время: 00:00:00.36
+Затраченное время: 00:00:00.33

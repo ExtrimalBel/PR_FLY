@@ -4,12 +4,17 @@
 #include "coords.h"
 #include <fstream>
 #include "Bullet.h"
+#include "Intersectsmenager.h"
 
+namespace InterSects
+{
+	class IntersectsMenager;
+}
 
 
 class Level_Boss
 {
-	friend class PlayerO;
+	friend class InterSects::IntersectsMenager;
 	bool for_delete;
 	// Data
 	sf::Texture bllettext;

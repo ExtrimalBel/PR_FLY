@@ -1,44 +1,48 @@
-#ifndef GAMEF_H
-#define GAMEF_H
-
+#pragma once
+#include <SFML\Graphics.hpp>
+#include <string>
+#include <iostream>
+#include <vector>
+#include "PlayerClass.h"
+#include "Level.h"
+#include "LevelMenager.h"
+#include "UpgradeClass.h"
+#include "PlayerSaveSlotDef.h"
+#include <SoundControl.h>
+#include "SaveGame.h"
 #ifdef LOGIC_EXPORTS
 #define LOGIC_API __declspec(dllexport)
 #else
 #define LOGIC_API __declspec(dllimport)
 #endif
-#include "SFML\Graphics.hpp"
-#include "SFML\Audio.hpp"
-#include "Background_Class.h"
-
-#include "Hud.h"
-#include <vector>
-#include "LevelMenager.h"
-#include "phfsint.hpp"
-class LOGIC_API GameField
+using namespace std;
+using namespace sf;
+namespace Fields
 {
-	// Player object
-
-	PStatements StateP;
-	// BackGround
-	Back_Menu *BackM;
-
-	Hud *HD;
-	double xscale;
-	double yscale;
-	double fuel;
-	std::vector<sf::Vector2f> coordsxy;
-	LevelMenager *Men;
-	PhysControl Control;
-	PhysFsStream FileStream;
-	sf::Music Back_Theme;
-public:
-	GameField(double xsc, double ysc,int slot,sf::RenderWindow &window,bool Is_new,char *SaveFile);
-	void UpdateAll(float time, sf::RenderWindow &window);
-	void Draw(sf::RenderWindow &window);
-	int IfExit();
-	~GameField();
-
-};
-
-
-#endif
+	class LOGIC_API GameField
+	{
+		enum{Level,UpgradeScreen,Win,SaveState} GameFieldState;
+		struct FieldPointers//В структуре храняться указатели на класс уровня и на класс меню абгрейда
+		{
+			LevelLogic::Level *CurrentLevel;
+			LevelLogic::LevelMenager *LevelMenager;
+			LevelLogic::UpgradeScreen *UpgradeScreen;
+			LevelLogic::UpgradesMenager *UpgradeMenager;
+			Menus::SaveGameMenu *SaveMenu;
+		} Fpointers;
+		LoadAndSave::SaveSlot &CurrentSave;
+		SoundControl::SoundControlStruct SndControl;
+		double cox, coy;
+		string BasePath;
+		int Money; // Деньги
+		void ProcessLevel(float time,RenderWindow &window);
+		void ProcessUpgradeScreen(float time, RenderWindow &window);
+		void ProcessWinScreen(float time,RenderWindow &window);
+		void StartNewGame();
+		void ContinueGame();
+	public:
+		GameField(string BasePath, double cox, double coy, LoadAndSave::SaveSlot &CurrentSave,SoundControl::SoundControlStruct &SndControl);
+		void Upgrade(float time,RenderWindow &window);
+		~GameField();
+	};
+}

@@ -1,0 +1,9 @@
+<Player>
+	<PlayerImgPath>shipwithanim.png</PlayerImgPath>
+	<DeathImagePath>deathanim.png</DeathImagePath>
+	<AnimFrameCount>4</AnimFrameCount>
+	<DeathAnimFrameCount>13</DeathAnimFrameCount>
+	<AnimDelay>0.4</AnimDelay>
+	<Width>80</Width>
+	<Height>40</Height>
+</Player>

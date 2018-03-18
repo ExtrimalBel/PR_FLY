@@ -1,65 +1,55 @@
-#ifndef ENEM_H
-#define ENEM_H
+#pragma once
+#include <iostream>
+#include <string>
 #include <SFML\Graphics.hpp>
-#include <SFML\Audio.hpp>
-#include "PlayerS.h"
-#include <fstream>
-#include <vector>
-
-#ifdef LOGIC_EXPORTS
-#define LOGIC_API __declspec(dllexport)
-#else
-#define LOGIC_API __declspec(dllimport)
-#endif
-#include "BaseForEnemys.h"
-#include "coords.h"
-#include "stdafx.h"
+#include "MovingEnemy.h"
+#include "StayEnemy.h"
 #include "Bullet.h"
-/*
-Данный класс реализует "множество врагов на уровне"
-Его основа это связный список который содержит время появления врага
-и указатель на связный список координат по которым перемещается этот враг
-Объект читает информацию из специального файла в котором содержится информация о времени появления врага пи его координатам
-Ключевые слова этого файла:
--1000 - обязательно. Обозначает начало файла
--1001 - Заканчивает описание данного врага.
-TODO вынести код который чиатет иформацию о врагах в отдельный класс
-Поместить вражеские пули в данный класс 
-Переписать код в соответствии с новыми классами врагов
-*/
-
-
-class LOGIC_API SetOfEnemy
+#include "ExceptionsDefenitions.hpp"
+#include <SoundControl.h>
+#include "RandomMovingEnemy.h"
+#include "Chronometer.hpp"
+#include "CircleMoveEnemy.h"
+namespace InterSects
 {
-	friend class PlayerO;
-	double cox, coy;
-	int EnemyCount;
-	int EnemyLeft;
-	sf::Clock timer;
-	EnemyI *BeginofEnemy;
-	EnemyI *CurrentEnemy;
-	sf::IntRect GetIntersectRect(sf::IntRect first, sf::IntRect second);
-	// Векторы хранят информацию о врагах и о пулях выпущенных данными врагами
-	std::vector<Enemys::MovingEnemy> SetOfMovingEnemys;
-	std::vector<Bullet> SetOFMovingEnemysBullets;
-	std::vector<Bullet> SetOFStationarEnemysBullet;
-	std::vector<Enemys::StationarEnemy> SetOfStationarEnemys;
-	void DeleteEnemy(); // Удалет врагов помеченных на удаление
-	void UpdateBullets(float time, sf::RenderWindow &window); // Обновляет пули выпущенные врагами
-	void DeleteBullets(); // Удаляет пули помеченные на удаление
-	void addSetOfEnemy(std::ifstream &inputfile); // Формирует список врагов если обнаружено множесто врагов
-	void SortEnemyList();
-	void SwapEnemyInList(EnemyI *First, EnemyI *Second, EnemyI *tmpEn);
-public:
-
-	SetOfEnemy(const char *enemyfilename,double cx,double cy);
-	void Update(float time, sf::RenderWindow &window);
-
-
-
-	int ReturnEnemyLeftCount() { return EnemyLeft; }
-	void ResetClock() { timer.restart(); }
-	friend void CountDemageBeetwinPlayerAndEnemys(PlayerO &Player, SetOfEnemy &SetOFEnemys); // Считает урон для игрока и для врагов и отнимает его
-	void AddBullets();
-};
-#endif
+	class InterSectsMenager;
+}
+using namespace sf;
+using namespace std;
+using namespace sftools;
+namespace LevelLogic
+{
+	
+	
+	typedef vector<pair<Ships::BaseEnemyState, int>>::iterator EnemyConfigIt;
+	
+	
+	class SetOfEnemy
+	{
+		friend class InterSects::InterSectsMenager;
+		string BasePath;
+		double cox, coy;
+		int EnemyTotalCount;
+		int DeletedEnemy;
+		vector<Ships::EnemyNode> Enemys; // Корабли на уровне
+		vector<Bullet*> Bullets; // Выпущенные врагами пули
+		vector<pair<Ships::BaseEnemyState, int>> EnemySVector; // Конфиги врагов
+		SoundControl::SoundControlStruct &SndControl;
+		EnemyConfigIt ConfigIt;
+		void UpdateEnemys(float time, RenderWindow &window);
+		void ProcessEnemysShots(); // Обрабатывает выстрелы врагов
+		void SpawnNewEnemy();
+		void DeleteEnemys();
+		void DeleteBullets();
+		void UpdateBullets(float time, RenderWindow &window);
+		bool EndOfEnemys;
+		Chronometer SetClock;
+		
+	public:
+		void PauseInClock() { SetClock.pause(); cout << SetClock.getElapsedTime().asSeconds() << endl; }
+		void ResumeInClock() { SetClock.resume(); cout << SetClock.getElapsedTime().asSeconds() << endl; }
+		bool IFLevelEnd() { return (EnemyTotalCount == DeletedEnemy ? true : false); }
+		SetOfEnemy(string BasePath, double cox, double coy, vector<pair<Ships::BaseEnemyState, int>> &EnemysConfigs,SoundControl::SoundControlStruct &SndControl);
+		void Update(float time,RenderWindow &window);
+	};
+}
