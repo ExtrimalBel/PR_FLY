@@ -1,0 +1,15 @@
+﻿Сборка начата 16.03.2018 14:45:08.
+     1>Проект "D:\GAME_COLLEGE_L3\PR\PR_FLY\SoundSystem\SoundSystem.vcxproj" в узле 2 (целевые объекты Build).
+     1>Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\GAME_COLLEGE_L3\PR\PR_FLY\Static_Debug\SoundSystem.dll" /INCREMENTAL /NOLOGO /LIBPATH:"..\PR_FLY\SFML-2.4.2\lib" winmm.lib "sfml-audio-s-d.lib" openal32.lib flac.lib vorbisenc.lib vorbisfile.lib vorbis.lib ogg.lib "sfml-system-s-d.lib" "sfml-main.lib" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\GAME_COLLEGE_L3\PR\PR_FLY\Static_Debug\SoundSystem.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\GAME_COLLEGE_L3\PR\PR_FLY\Static_Debug\SoundSystem.lib" /MACHINE:X86 /DLL Static_Debug\dllmain.obj
+         Static_Debug\SoundControl.obj
+         Static_Debug\SoundSystem.obj
+         Static_Debug\stdafx.obj
+         Static_Debug\tinyxml2.obj
+            Создается библиотека D:\GAME_COLLEGE_L3\PR\PR_FLY\Static_Debug\SoundSystem.lib и объект D:\GAME_COLLEGE_L3\PR\PR_FLY\Static_Debug\SoundSystem.exp
+         SoundSystem.vcxproj -> D:\GAME_COLLEGE_L3\PR\PR_FLY\Static_Debug\SoundSystem.dll
+     1>Сборка проекта "D:\GAME_COLLEGE_L3\PR\PR_FLY\SoundSystem\SoundSystem.vcxproj" завершена (целевые объекты Build).
+
+Сборка успешно завершена.
+
+Затраченное время: 00:00:17.17

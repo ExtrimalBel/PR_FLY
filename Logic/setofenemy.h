@@ -9,6 +9,7 @@
 #include <SoundControl.h>
 #include "RandomMovingEnemy.h"
 #include "Chronometer.hpp"
+#include "CircleMoveEnemy.h"
 namespace InterSects
 {
 	class InterSectsMenager;

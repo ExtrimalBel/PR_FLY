@@ -94,6 +94,7 @@
     <ClInclude Include="BaseMenu.h" />
     <ClInclude Include="Bullet.h" />
     <ClInclude Include="Chronometer.hpp" />
+    <ClInclude Include="CircleMoveEnemy.h" />
     <ClInclude Include="ExceptionsDefenitions.hpp" />
     <ClInclude Include="GameDifficulty.h" />
     <ClInclude Include="GameField.h" />
@@ -127,6 +128,7 @@
     <ClCompile Include="BaseEnemy.cpp" />
     <ClCompile Include="BaseMenu.cpp" />
     <ClCompile Include="Bullet.cpp" />
+    <ClCompile Include="CircleMovingEnemy.cpp" />
     <ClCompile Include="GameDifficulty.cpp" />
     <ClCompile Include="GameField.cpp" />
     <ClCompile Include="dllmain.cpp">

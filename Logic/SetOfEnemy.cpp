@@ -73,6 +73,9 @@ namespace LevelLogic
 			break;
 		case 3:
 			TmpNode.EnemyClass = (void*) new Ships::RandomMovingEnemy(BasePath, cox, coy, (Ships::BaseEnemyState)ConfigIt->first, SndControl);
+		case 4:
+			TmpNode.EnemyClass = (void*) new Ships::CircleMovingEnemy(BasePath, cox, coy, (Ships::BaseEnemyState)ConfigIt->first, SndControl);
+			break;
 		default:
 			throw Exceptions::ProcessingEnemyCriticalError("Критическая ошибка при работе с классами врагов");
 			break;

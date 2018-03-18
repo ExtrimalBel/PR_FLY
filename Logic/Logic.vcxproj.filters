@@ -129,6 +129,9 @@
     <ClInclude Include="Chronometer.hpp">
       <Filter>Заголовочные файлы</Filter>
     </ClInclude>
+    <ClInclude Include="CircleMoveEnemy.h">
+      <Filter>Заголовочные файлы</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -210,6 +213,9 @@
       <Filter>Файлы исходного кода</Filter>
     </ClCompile>
     <ClCompile Include="RandomMovingEnemy.cpp">
+      <Filter>Файлы исходного кода</Filter>
+    </ClCompile>
+    <ClCompile Include="CircleMovingEnemy.cpp">
       <Filter>Файлы исходного кода</Filter>
     </ClCompile>
   </ItemGroup>

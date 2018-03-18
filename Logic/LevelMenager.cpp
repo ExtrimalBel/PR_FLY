@@ -90,6 +90,8 @@ namespace LevelLogic
 		ReadSetOfShipsData(Root, "SetStayEnemy", 2, ShipsVector);
 		WriteDataOfEnemyType(Root, "RandomMovingEnemy", 3,ShipsVector);
 		ReadSetOfShipsData(Root, "SetRandomMovingEnemy", 3, ShipsVector);
+		WriteDataOfEnemyType(Root, "CircleMovingEnemy", 4, ShipsVector);
+		ReadSetOfShipsData(Root, "SetCircleMovingEnemy", 4, ShipsVector);
 		for (int i = 0; i < ShipsVector.size(); i++)
 		{
 			auto it = ShipsVector.begin() + i;
