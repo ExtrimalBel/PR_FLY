@@ -41,7 +41,7 @@ namespace LevelLogic
 		Font GameFont;
 		Text SplashText;
 		Text ButtomText;
-		Text FailMessage; // Сообщение выводиться тогда, когда корабль игрока уничтожен
+		Text EndLevelMessage; // Сообщение выводиться тогда, когда корабль игрока уничтожен
 		double cox, coy;
 		SoundControl::SoundControlStruct SndControl; // Стуктура с указателями для работы со звуком
 		void UpdateSetOfEnemy(float time,RenderWindow &window);

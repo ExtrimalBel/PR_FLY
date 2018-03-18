@@ -19,8 +19,10 @@ namespace LevelLogic
 		PartOfLevel.PlayerClass->Rockets = CurrentLevelConfig->StartRocketsCount;
 	
 		BackGroundTex.loadFromFile(BasePath + "/" + CurrentLevelConfig->BackGroundPath);
-		BackGroundSpr.setTexture(BackGroundTex);
+		BackGroundTex.setSmooth(true);
+		BackGroundSpr.setTexture(BackGroundTex);	
 		BackGroundSpr.setScale(cox, coy);
+		BackGroundSpr.setPosition(0, 0);
 		SndControl.Playsnd(CurrentLevelConfig->BackGroundSoundId,true);
 		SplashTex.loadFromFile(BasePath + "/" + CurrentLevelConfig->SlpashPath);
 		SplashBack.setTexture(SplashTex);
@@ -43,11 +45,11 @@ namespace LevelLogic
 		ButtomText.setScale(cox, coy);
 		//SetUpHud
 		PartOfLevel.Hud = new LevelLogic::GameHud(BasePath, cox, coy, CurrentLevelConfig->LevelName);
-		FailMessage.setFont(GameFont);
-		FailMessage.setCharacterSize(48U);
-		FailMessage.setFillColor(sf::Color::Yellow);
-		FailMessage.setString("Вы уничтожены");
-		FailMessage.setPosition(Vector2f(static_cast<float>(700 * cox), static_cast<float>(520 * coy)));
+		EndLevelMessage.setFont(GameFont);
+		EndLevelMessage.setCharacterSize(48U);
+		EndLevelMessage.setFillColor(sf::Color::Yellow);
+
+		EndLevelMessage.setPosition(Vector2f(static_cast<float>(700 * cox), static_cast<float>(520 * coy)));
 		
 	}
 
@@ -87,6 +89,9 @@ namespace LevelLogic
 			PartOfLevel.Hud->Update(window);
 			if (PartOfLevel.SetOfEnemy->IFLevelEnd()) // Если уровень законнчен то переключиться на пока сообщения о завершении уровня
 			{
+				EndLevelMessage.setString("Уровень пройден");
+				SndControl.StopSound(CurrentLevelConfig->BackGroundSoundId);
+				SndControl.Playsnd(9, false);
 				delete PartOfLevel.SetOfEnemy;
 				LevelState = EndSplashScreen;
 				CurrentSave.Cash = PartOfLevel.PlayerClass->Cash;
@@ -94,6 +99,9 @@ namespace LevelLogic
 			}
 			if (PartOfLevel.PlayerClass->Health < 0) // Обрабатываем смерть игрока
 			{
+				EndLevelMessage.setString("Вы уничтожены");
+				SndControl.StopSound(CurrentLevelConfig->BackGroundSoundId);
+				SndControl.Playsnd(8, false);
 				LevelState = LoseGameSreen;
 				PartOfLevel.PlayerClass->SetDeathAnim(true);
 				SplashClock.restart(); // Аналогично с прошлым if-ом
@@ -109,7 +117,7 @@ namespace LevelLogic
 			}
 			break;
 		case EndSplashScreen:
-			if (SplashClock.getElapsedTime().asSeconds() > 3)
+			if (SplashClock.getElapsedTime().asSeconds() > 8)
 			{
 				delete PartOfLevel.Hud;
 				throw Exceptions::LevelEndEx("Уровень" + CurrentLevelConfig->LevelName + " Завершен успешно",true);
@@ -117,6 +125,7 @@ namespace LevelLogic
 			window.draw(BackGroundSpr);
 			PartOfLevel.Hud->Update(window);
 			PartOfLevel.PlayerClass->Update(time, window);
+			window.draw(EndLevelMessage);
 			
 			break;
 		case LoseGameSreen:
@@ -132,7 +141,7 @@ namespace LevelLogic
 			PartOfLevel.PlayerClass->Update(time, window);
 			PartOfLevel.SetOfEnemy->Update(time, window);
 			PartOfLevel.Hud->Update(window);
-			window.draw(FailMessage);
+			window.draw(EndLevelMessage);
 
 			break;
 		case LevelPause:

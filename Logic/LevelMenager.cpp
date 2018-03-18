@@ -152,6 +152,12 @@ namespace LevelLogic
 			TmpNode.first.Reward = atoi(TmpElement->GetText());
 			TmpElement = EnemyNode->FirstChildElement("FrameTime");
 			TmpNode.first.FrameTime = atof(TmpElement->GetText());
+			TmpElement = EnemyNode->FirstChildElement("DeathFrameTime");
+			if (TmpElement == NULL) throw Exceptions::LevelMenagerReadError(ErrorMessage);
+			TmpNode.first.DeathFrameTime = atof(TmpElement->GetText());
+			TmpElement = EnemyNode->FirstChildElement("DeathFrameCount");
+			if (TmpElement == NULL) throw Exceptions::LevelMenagerReadError(ErrorMessage);
+			TmpNode.first.DeathFrameCount = atoi(TmpElement->GetText());
 			TmpElement = EnemyNode->FirstChildElement("Coord");
 			if (TmpElement == NULL) throw Exceptions::LevelMenagerReadError(ErrorMessage);
 			do
@@ -173,6 +179,9 @@ namespace LevelLogic
 			TmpElement = EnemyNode->FirstChildElement("Delay");
 			if (TmpElement == NULL) throw Exceptions::LevelMenagerReadError(ErrorMessage);
 			DelayTime = atof(TmpElement->GetText());
+			TmpElement = EnemyNode->FirstChildElement("DeathAnimSpr");
+			if (TmpElement == NULL) throw Exceptions::LevelMenagerReadError(ErrorMessage);
+			TmpNode.first.DeathSprPath = TmpElement->GetText();
 			double TempDelay = TmpNode.first.SpawnTime;
 			int i = 0;
 			for (int i = 0; i < CountOfEnemys;i++,TempDelay += DelayTime)
@@ -193,6 +202,9 @@ namespace LevelLogic
 				It->first.FrameCount = TmpNode.first.FrameCount;
 				It->first.FrameTime = TmpNode.first.FrameTime;
 				It->first.Reward = TmpNode.first.Reward;
+				It->first.DeathFrameCount = TmpNode.first.DeathFrameCount;
+				It->first.DeathFrameTime = TmpNode.first.DeathFrameTime;
+				It->first.DeathSprPath = TmpNode.first.DeathSprPath;
 				It->second = Id;
 			}
 			EnemyNode = EnemyNode->NextSiblingElement(EnemyName.c_str());
@@ -246,6 +258,14 @@ namespace LevelLogic
 			if (TmpElement == NULL) throw Exceptions::LevelMenagerReadError(ErrorMessage);
 			EnemyIt->first.BulletSpeed = atof(TmpElement->GetText());
 			EnemyIt->first.BulletSpeed /= 10; 
+			TmpElement = EnemyNode->FirstChildElement("DeathFrameCount");
+			if (TmpElement == NULL) throw Exceptions::LevelMenagerReadError(ErrorMessage);
+			EnemyIt->first.DeathFrameCount = atoi(TmpElement->GetText());
+			TmpElement = EnemyNode->FirstChildElement("DeathFrameTime");
+			EnemyIt->first.DeathFrameTime = atof(TmpElement->GetText());
+			TmpElement = EnemyNode->FirstChildElement("DeathAnimSpr");
+			if (TmpElement == NULL) throw Exceptions::LevelMenagerReadError(ErrorMessage);
+			EnemyIt->first.DeathSprPath = TmpElement->GetText();
 			TmpElement = EnemyNode->FirstChildElement("Coord");
 			if (TmpElement == NULL) throw Exceptions::LevelMenagerReadError(ErrorMessage);
 			do

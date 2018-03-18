@@ -15,8 +15,8 @@ namespace LevelLogic
 		InitialSprites();
 		InitialText();
 		CheckIfLastUpgradeInstalled();
-		SndControl.Playsnd(Config->BackId,true);
-		
+		SndControl.Playsnd(Config->BackId, true);
+
 	}
 	UpgradeScreen::~UpgradeScreen()
 	{
@@ -59,15 +59,28 @@ namespace LevelLogic
 		NextLevelButtonSpr.setPosition(sf::Vector2f(static_cast<float>(cox * 1520), static_cast<float>(coy * 980)));
 		// SetUpExitButton
 		ExitButtonSpr.setTexture(ButtonTex);
-		ExitButtonSpr.setScale(static_cast<float>(cox),static_cast<float>(coy));
+		ExitButtonSpr.setScale(static_cast<float>(cox), static_cast<float>(coy));
 		ExitButtonSpr.setTextureRect(IntRect(300, 0, 300, 50));
-		ExitButtonSpr.setPosition(sf::Vector2f(static_cast<float>(80 * cox),static_cast<float>(980 * coy)));
+		ExitButtonSpr.setPosition(sf::Vector2f(static_cast<float>(80 * cox), static_cast<float>(980 * coy)));
 		// SetUp Save Button
 		SaveButton.setTexture(ButtonTex);
 		SaveButton.setScale(static_cast<float>(cox), static_cast<float>(coy));
 		SaveButton.setTextureRect(IntRect(600, 0, 300, 50));
 		SaveButton.setPosition(Vector2f(static_cast<float>(810 * cox), static_cast<float>(980 * coy)));
 
+		//SetUpCursorSprite
+		CursorTex.loadFromFile(BasePath + "/Images/cur.png");
+		CursorTex.setSmooth(true);
+		CursorSpr.setTexture(CursorTex);
+		CursorSpr.setScale((float)cox, (float)coy);
+		CursorSpr.setOrigin(Vector2f(CursorTex.getSize().x,0));
+
+	}
+
+
+	void UpgradeScreen::UpdateCursor(sf::Vector2f Mpos)
+	{
+		CursorSpr.setPosition(Mpos);
 	}
 
 	void UpgradeScreen::Draw(RenderWindow &window)
@@ -92,6 +105,7 @@ namespace LevelLogic
 			window.draw(ValuesOfUps[i]);
 		}
 		window.draw(NextLevelButtonSpr);
+		window.draw(CursorSpr);
 	}
 
 	void UpgradeScreen::InitialText()
@@ -207,6 +221,7 @@ namespace LevelLogic
 	{
 		CheckIfLastUpgradeInstalled();
 		UpdateText();
+		UpdateCursor(Vector2f(Mouse::getPosition(window)));
 		CheckIfExit(window);
 		CheckIfSave(window);
 		CheckIfNextLevel(window);
@@ -254,7 +269,7 @@ namespace LevelLogic
 				cout << "Armor Up" << endl;
 				CurrentUpStates->Armorid++;
 				StatsForUpgrade.Armor = NextUpData.first;
-				SndControl.Playsnd(Config->UpId++,false);
+				SndControl.Playsnd(Config->UpId,false);
 				CurrentCash -= NextUpData.second;
 			}
 			Sleep(200);

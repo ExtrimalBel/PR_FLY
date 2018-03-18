@@ -36,7 +36,7 @@ namespace Fields
 		catch (Exceptions::LevelEndEx &Ex)
 		{
 			SndControl.StopSound(Fpointers.LevelMenager->ReturnCurrentLevelConfig()->BackGroundSoundId);
-			window.setMouseCursorVisible(true);
+			//window.setMouseCursorVisible(true);
 			delete Fpointers.CurrentLevel;
 			Fpointers.LevelMenager->NextLevel();
 			if (Fpointers.LevelMenager->CheckIfLastLevel())
@@ -52,7 +52,7 @@ namespace Fields
 		}
 		catch (Exceptions::LevelFailEx &Ex)
 		{
-			window.setMouseCursorVisible(true);
+			//window.setMouseCursorVisible(true);
 			SndControl.StopSound(Fpointers.LevelMenager->ReturnCurrentLevelConfig()->BackGroundSoundId);
 			delete Fpointers.CurrentLevel;
 			if (Fpointers.LevelMenager->ReturnCurrentLevelConfig()->LevelNumber == 1)
@@ -112,6 +112,7 @@ namespace Fields
 			catch (Exceptions::GameWantToSave &Ex)
 			{
 				CurrentSave.Cash = Fpointers.UpgradeScreen->CurrentCash;
+				CurrentSave.PStates = Fpointers.UpgradeScreen->GetUpgradedStats();
 				Menus::IdOfSounds SndMenuId;
 				SndMenuId.ClickId = 0;
 				SndMenuId.SelectId = 1;

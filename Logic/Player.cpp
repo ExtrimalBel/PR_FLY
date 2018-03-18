@@ -57,7 +57,6 @@ namespace Ships
 		int xt, yt;
 		xt = pos.x;
 		yt = pos.y;
-		// Ïðîëâåðÿþ âûøåë ëè êîðàáëü èãðîêà çà ïðåäåëû äèàïàçîíà
 		if (pos.x < 100 * cox) xt = 60 * cox;
 		if (pos.x > 1780 * cox) xt = 1780 * cox;
 		if (pos.y > 980 * coy) yt = 980 * coy;
@@ -70,9 +69,7 @@ namespace Ships
 	{
 		float TimeFromLastShot = FirstGunClock.getElapsedTime().asSeconds();
 		if (TimeFromLastShot > Stats.FirstGunSpeed)
-		{
-			
-			FirstGunClock.restart();
+		{	
 			return true;
 		} return false;
 	}
@@ -83,9 +80,6 @@ namespace Ships
 		float TimeFromlastShot = SecondGunClock.getElapsedTime().asSeconds();
 		if (TimeFromlastShot > Stats.SecondGunSpeed)
 		{
-			
-			SecondGunClock.restart();
-			
 			return true;
 		} return false;
 	}
@@ -164,11 +158,13 @@ namespace Ships
 		BulletPos.y += PlayerParams.height / 2;
 		if (IfFirstGunShot() && sf::Mouse::isButtonPressed(Mouse::Left))
 		{
+			FirstGunClock.restart(); // Обнуляем таймер только в случае самого выстрела иначе задержка при стрельбе
 			SndControl.Playsnd(FirstShotSoundId, false);
 			PlayerBullets.push_back(new Bullet(BulletPos, cox, coy, (BasePath + "/Images/bullet.png").c_str(), 1, 0.5, Stats.FirstGunDemage));
 		}
 		if (IFSecondGunShot() && sf::Mouse::isButtonPressed(Mouse::Right) && Rockets > 0)
 		{
+			SecondGunClock.restart(); 
 			cout << "Rockets " << Rockets << endl;
 			Rockets--;
 			SndControl.Playsnd(SecondShotSoundId, false);

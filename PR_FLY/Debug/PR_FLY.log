@@ -1,4 +1,4 @@
-﻿Сборка начата 16.03.2018 9:47:16.
+﻿Сборка начата 18.03.2018 7:49:09.
      1>Проект "D:\College_Game_Level3\PR_FLY\PR_FLY\PR_FLY.vcxproj" в узле 2 (целевые объекты Build).
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I..\SoundSystem /I.\phfsnew /I..\Logic /I".\SFML-2.4.2\include" /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D SFML_DYNAMIC /D WIN32 /D _DEBUG /D _WINDOWS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /wd4244 /wd4118 /analyze- /errorReport:prompt Game.cpp main.cpp
@@ -15,8 +15,18 @@
      1>d:\college_game_level3\pr_fly\pr_fly\game.cpp(104): warning C4101: Ex: неиспользованная локальная переменная
      1>d:\college_game_level3\pr_fly\pr_fly\game.cpp(131): warning C4101: Ex: неиспользованная локальная переменная
          Создание кода...
-         Пропуск... (изменения не обнаружены)
+         Компиляция...
          main.cpp
+     1>d:\college_game_level3\pr_fly\logic\exceptionsdefenitions.hpp(61): warning C4275: class "Exceptions::BaseException", не являющийся dll-интерфейсом, использован в качестве базового для dll-интерфейса class "Exceptions::SettingsClose"
+                 d:\college_game_level3\pr_fly\logic\exceptionsdefenitions.hpp(17): см. объявление "Exceptions::BaseException"
+                 d:\college_game_level3\pr_fly\logic\exceptionsdefenitions.hpp(60): см. объявление "Exceptions::SettingsClose"
+     1>d:\college_game_level3\pr_fly\logic\exceptionsdefenitions.hpp(79): warning C4275: class "Exceptions::BaseException", не являющийся dll-интерфейсом, использован в качестве базового для dll-интерфейса class "Exceptions::ProcessingEnemyCriticalError"
+                 d:\college_game_level3\pr_fly\logic\exceptionsdefenitions.hpp(17): см. объявление "Exceptions::BaseException"
+                 d:\college_game_level3\pr_fly\logic\exceptionsdefenitions.hpp(78): см. объявление "Exceptions::ProcessingEnemyCriticalError"
+     1>d:\college_game_level3\pr_fly\logic\exceptionsdefenitions.hpp(152): warning C4275: class "Exceptions::BaseException", не являющийся dll-интерфейсом, использован в качестве базового для dll-интерфейса class "Exceptions::GameWantToSwitchToMenu"
+                 d:\college_game_level3\pr_fly\logic\exceptionsdefenitions.hpp(17): см. объявление "Exceptions::BaseException"
+                 d:\college_game_level3\pr_fly\logic\exceptionsdefenitions.hpp(151): см. объявление "Exceptions::GameWantToSwitchToMenu"
+         Создание кода...
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\College_Game_Level3\PR_FLY\Debug\PR_FLY.exe" /INCREMENTAL /NOLOGO /LIBPATH:".\SFML-2.4.2\lib" "sfml-audio-d.lib" openal32.lib flac.lib vorbisenc.lib vorbisfile.lib vorbis.lib ogg.lib "sfml-graphics-d.lib" "sfml-window-d.lib" "sfml-system-d.lib" "sfml-main-d.lib" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\College_Game_Level3\PR_FLY\Debug\PR_FLY.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /ENTRY:"main" /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\College_Game_Level3\PR_FLY\Debug\PR_FLY.lib" /MACHINE:X86 Debug\Game.obj
          Debug\main.obj
@@ -27,4 +37,4 @@
 
 Сборка успешно завершена.
 
-Затраченное время: 00:00:01.90
+Затраченное время: 00:00:03.70

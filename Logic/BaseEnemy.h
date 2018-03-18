@@ -26,10 +26,11 @@ namespace Ships
 		string EnemyImgPath; // Путь к текстуре врага
 		string EnemyBulletPath;
 		string DeathSprPath;
-		int DeathSprCount;
 		void InitStats(int Health, double GunSpeed, double GunDemage, double Speed, vector<pair<int, int>> &VectorWithCoord, string EnemyImgPath);
 		int FrameCount; // Число кадров в анимации
 		double FrameTime; // Время между сменой кадров
+		double DeathFrameTime;
+		int DeathFrameCount;
 		int Reward; // Кол-во денег начисляемых за уничтожение корабля
 	};
 	class BaseEnemy

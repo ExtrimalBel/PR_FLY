@@ -1,7 +1,7 @@
 <levels>
 	<level Name="Intro Level">
 		<BackGroundImage>Images/BackImages/level1back.png</BackGroundImage>
-		<BackMusic>9</BackMusic>
+		<BackMusic>11</BackMusic>
 		<EnemyPath>level1/pathTo1Enemy.xml</EnemyPath>
 		<SplashPath>Images/SplashPath.jpg</SplashPath>
 		<EndSplash>Images/EndSplash.jpg</EndSplash>
@@ -9,7 +9,7 @@
 	</level>
 	<level Name="Try to not dead">
 		<BackGroundImage>Images/BackImages/level1back.png</BackGroundImage>
-		<BackMusic>9</BackMusic>
+		<BackMusic>11</BackMusic>
 		<EnemyPath>level1/pathTo1Enemy.xml</EnemyPath>
 		<SplashPath>Images/SplashPath.jpg</SplashPath>
 		<EndSplash>Images/EndSplash.jpg</EndSplash>

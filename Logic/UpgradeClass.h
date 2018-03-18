@@ -43,6 +43,8 @@ namespace LevelLogic
 		Text ArmorText;
 		Text ValuesOfUps[5];
 		Text CashText;
+		Texture CursorTex;
+		Sprite CursorSpr;
 		void InitialText(); // Вызываеться из конструктора и инициализирует текст
 		void CheckIfSave(RenderWindow &window); // Проверяет запросил ли пользователь сохранение игры
 		void CheckIfExit(RenderWindow &window); 
@@ -59,6 +61,7 @@ namespace LevelLogic
 		void CheckIfLastUpgradeInstalled();
 		bool FinishiedUp[5];
 		void UpdateCash();
+		void UpdateCursor(sf::Vector2f Mpos);
 	public:
 		int CurrentCash; // Текущие "деньги"
 		void SetStats(Ships::PlayerStats &StatsForUpgrade) { this->StatsForUpgrade = StatsForUpgrade; }

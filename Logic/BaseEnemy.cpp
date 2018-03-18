@@ -47,8 +47,6 @@ namespace Ships
 		int W = SpriteParams.width / EnemyState.FrameCount;
 		EnemySprite.setTextureRect(IntRect(0,0,W,SpriteParams.height));
 		DeathAnim = false;
-		this->EnemyState.DeathSprCount = 13;
-		this->EnemyState.DeathSprPath = "deathanim.png";
 		
 		
 	}
@@ -72,16 +70,19 @@ namespace Ships
 	void BaseEnemy::ProcessEnemyAnim()
 	{
 		int TotalFrameCount = 0;
+		double FrameTime = 0;
 		if (DeathAnim)
 		{
-			TotalFrameCount = EnemyState.DeathSprCount;
+			TotalFrameCount = EnemyState.DeathFrameCount;
+			FrameTime = EnemyState.DeathFrameTime;
 		}
 		else
 		{
 			TotalFrameCount = EnemyState.FrameCount;
+			FrameTime = EnemyState.DeathFrameTime;
 		}
 		FloatRect ShipParams = EnemySprite.getLocalBounds();
-		if (AnimClock.getElapsedTime().asSeconds() > this->EnemyState.FrameTime)
+		if (AnimClock.getElapsedTime().asSeconds() > FrameTime)
 		{
 			CurrentFrame++;
 			if (CurrentFrame >= TotalFrameCount && DeathAnim) ForDelete = true;
@@ -95,10 +96,15 @@ namespace Ships
 	{
 		if (!DeathAnim && this->Health <= 0)
 		{
+			Vector2f PrevEnemyPosition = EnemySprite.getPosition();
 			EnemyText.loadFromFile(BasePath + "/" + EnemyState.DeathSprPath);
 			EnemySprite.setTexture(EnemyText);
 			EnemySprite.setScale(cox, coy);
-			EnemySprite.setTextureRect(IntRect(0,0,EnemyText.getSize().x / 13,EnemyText.getSize().y));
+			EnemySprite.setTextureRect(IntRect(0,0,EnemyText.getSize().x / EnemyState.DeathFrameCount,EnemyText.getSize().y));
+			float NewCenterX = EnemyText.getSize().x / (EnemyState.DeathFrameCount * 2);
+			float NewCenterY = EnemyText.getSize().y / 2;
+			EnemySprite.setOrigin(NewCenterX, NewCenterY);
+			EnemySprite.setPosition(PrevEnemyPosition);
 			DeathAnim = true;
 			CurrentFrame = 0;
 		}

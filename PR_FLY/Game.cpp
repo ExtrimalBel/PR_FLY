@@ -150,7 +150,7 @@ namespace MainGameClass
 					SS->PStates.LevelCoo = Ex.diflevel;
 					SS->LevelCoefficient = Ex.diflevel;
 					SS->NextLevel = 1;
-					SS->PStates.Armor = 60;
+					SS->PStates.Armor = 0;
 					SS->PStates.FirstGunDemage = 5;
 					SS->PStates.FirstGunSpeed = 0.5;
 					SS->PStates.SecondGunDemage = 10;
